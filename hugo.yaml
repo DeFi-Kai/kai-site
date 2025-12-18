@@ -1,4 +1,4 @@
-baseURL: "http://localhost:1313/"
+baseURL: "https://defi-kai.github.io/kai-site/"
 languageCode: "en-us"
 title: "Kai — DeFi Research"
 theme: "PaperMod"
