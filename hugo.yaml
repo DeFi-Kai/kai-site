@@ -1,0 +1,53 @@
+baseURL: "http://localhost:1313/"
+languageCode: "en-us"
+title: "Kai — DeFi Research"
+theme: "PaperMod"
+
+enableRobotsTXT: true
+
+params:
+  description: "DeFi market structure, onchain yield, and trading systems."
+  defaultTheme: light
+  disableThemeToggle: false
+  ShowReadingTime: true
+  ShowToc: true
+  ShowCodeCopyButtons: true
+  ShowBreadCrumbs: true
+
+  homeInfoParams:
+    Title: "Hi — I’m Kai"
+    Content: >
+      I write about DeFi market structure, onchain yield, and trading systems.
+      This site is the canonical archive of my work.
+
+  socialIcons:
+    - name: x
+      url: "https://x.com/defivaults"
+    - name: github
+      url: "https://github.com/YOUR_GITHUB"
+    - name: rss
+      url: "/index.xml"
+
+menu:
+  main:
+    - name: Essays
+      url: /essays/
+      weight: 1
+    - name: Research
+      url: /research/
+      weight: 2
+    - name: Guides
+      url: /guides/
+      weight: 3
+    - name: Journal
+      url: /journal/
+      weight: 4
+    - name: Reading
+      url: /reading/
+      weight: 5
+    - name: About
+      url: /about/
+      weight: 9
+    - name: CV
+      url: /cv/
+      weight: 10
