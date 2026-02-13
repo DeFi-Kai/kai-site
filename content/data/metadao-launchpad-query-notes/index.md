@@ -279,3 +279,5 @@ Join on `tx_id` and `outer_instruction_index` to match events to their parent in
 | Avici     | DGgYoUcu1aDZt4GEL5NQiducwHRGbkMWsUzsXh2j622G    | 2rYvdtK8ovuSziJuy5gTTPtviY5CfTnW6Pps4pk7ehEq | BANKJmvhT8tiJRsBSS1n2HryMBPvT5Ze4HU95DUAmeta |
 | Umbra     | 6VsC8PuKkXm5xo54c2vbrAaSfQipkpGHqNuKTxXFySx6    | 9kx7UDFzFt7e2V4pFtawnupKKvRR3EhV7P1Pxmc5XCQj | PRVT6TB7uss3FrUd2D9xs2zqDBsa3GbMJMwCQsgmeta  |
 | Omnipair  | 34rned2SLUcYjUrM9meQkuyJY4QDBcKhkcUPXCgGuXD9    | DHW6DToYjhwknzVCDvZ6r7hSv7ZpGw9adEN8NvZuUpVh | omfgRBnxHsNJh6YeGbGAmWenNkenzsXyBXm3WDhmeta  |
+| Ranger    | 55H1Q1YrHJQ93uhG4jqrBBHx3a8H7TCM8kvf2UM2g5q3    | 8Nmd13rpULJjY7h6oxCfuTWy8WkZxcuDrDWiSdnViVuo | RNGRtJMbCveqCp7AC6U95KmrdKecFckaJZiWbPGmeta  |
+| Solomon   | 98SPcyUZ2rqM2dgjCqqSXS4gJrNTLSNUAAVCF38xYj9u    | 634r63NH2qbTrSVyLieC3Ab3YKaEfoGnCLM8idZMEycE | SoLo9oxzLDpcq1dpqAgMwgce5WqkRDtNXK7EPnbmeta  |
