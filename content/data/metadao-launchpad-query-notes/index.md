@@ -1,6 +1,6 @@
 +++
 date = '2026-01-24T09:00:00-05:00'
-draft = true
+draft = false
 title = 'MetaDAO Launchpad Query Notes (Dune/ TrinoSQL)'
 +++
 
