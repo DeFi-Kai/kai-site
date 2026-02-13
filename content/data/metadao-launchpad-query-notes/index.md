@@ -271,6 +271,10 @@ Join on `tx_id` and `outer_instruction_index` to match events to their parent in
 
 [Transaction zdrYEdQQrP2C8XDGkY8M9LgNLLUX54yFJGWVoMPaxWMYJBN5tRrDagDzaF6ZdP7raYmLjm7N5i8Nug9VamVwbnR](https://solscan.io/tx/zdrYEdQQrP2C8XDGkY8M9LgNLLUX54yFJGWVoMPaxWMYJBN5tRrDagDzaF6ZdP7raYmLjm7N5i8Nug9VamVwbnR)
 
+---
+
+I compiled important accounts for each project so you don't have to worry about sluething:
+
 | Project   | Treasury account                                | Launch account                               | Token mint                                   |
 | --------- | ----------------------------------------------- | -------------------------------------------- | -------------------------------------------- |
 | Paystream | BpXtB2ASf2Tft97ewTd8PayXCqFQ6Wqod33qrwwfK9Vz    | 13YpYe4k5GPaD2vZvvY7v7if31S1Wu8yWShkQs8MzLNh | PAYZP1W3UmdEsNLJwmH61TNqACYJTvhXy8SCN4Tmeta  |
