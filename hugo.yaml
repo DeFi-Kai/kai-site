@@ -26,7 +26,7 @@ params:
       I write about DeFi market structure, onchain yield, and trading systems.
       This site is the canonical archive of my work.
 
-      [Daily DeFi Brief (local-LLM)](/briefs/latest/)
+      [Daily DeFi Brief (local-LLM)](briefs/latest/)
 
   socialIcons:
     - name: x
