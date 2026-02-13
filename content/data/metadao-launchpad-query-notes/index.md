@@ -270,3 +270,12 @@ Join on `tx_id` and `outer_instruction_index` to match events to their parent in
 [Transaction zwtWBrKobmdpY5ZPW5vdLyd2KFByyipYdij8jtB8g8V7CgTXzq5DQBExbqujQQhd8vCrBJmvMDyja5NaR9naxuH](https://solscan.io/tx/zwtWBrKobmdpY5ZPW5vdLyd2KFByyipYdij8jtB8g8V7CgTXzq5DQBExbqujQQhd8vCrBJmvMDyja5NaR9naxuH)
 
 [Transaction zdrYEdQQrP2C8XDGkY8M9LgNLLUX54yFJGWVoMPaxWMYJBN5tRrDagDzaF6ZdP7raYmLjm7N5i8Nug9VamVwbnR](https://solscan.io/tx/zdrYEdQQrP2C8XDGkY8M9LgNLLUX54yFJGWVoMPaxWMYJBN5tRrDagDzaF6ZdP7raYmLjm7N5i8Nug9VamVwbnR)
+
+| Project   | Treasury account                                | Launch account                               | Token mint                                   |
+| --------- | ----------------------------------------------- | -------------------------------------------- | -------------------------------------------- |
+| Paystream | BpXtB2ASf2Tft97ewTd8PayXCqFQ6Wqod33qrwwfK9Vz    | 13YpYe4k5GPaD2vZvvY7v7if31S1Wu8yWShkQs8MzLNh | PAYZP1W3UmdEsNLJwmH61TNqACYJTvhXy8SCN4Tmeta  |
+| ZKLSOL    | BNvDfXYG2FAyBDYD71Xr9GhKE18MbmhtjsLKsCuXho6z    | 4h248CdXdeWtxWnHxEPqa5ruYZaEwXRZPyDFYnndbzpR | ZKFHiLAfAFMTcDAuCtjNW54VzpERvoe7PBF9mYgmeta  |
+| Loyal     | AQyyTwCKemeeMu8ZPZFxrXMbVwAYTSbBhi1w4PBrhvYE    | E7kXdSdZrjVFDkLb6V7S8VihKookPviRJ7tXVik9qbdu | LYLikzBQtpa9ZgVrJsqYGQpR3cC1WMJrBHaXGrQmeta  |
+| Avici     | DGgYoUcu1aDZt4GEL5NQiducwHRGbkMWsUzsXh2j622G    | 2rYvdtK8ovuSziJuy5gTTPtviY5CfTnW6Pps4pk7ehEq | BANKJmvhT8tiJRsBSS1n2HryMBPvT5Ze4HU95DUAmeta |
+| Umbra     | 6VsC8PuKkXm5xo54c2vbrAaSfQipkpGHqNuKTxXFySx6    | 9kx7UDFzFt7e2V4pFtawnupKKvRR3EhV7P1Pxmc5XCQj | PRVT6TB7uss3FrUd2D9xs2zqDBsa3GbMJMwCQsgmeta  |
+| Omnipair  | 34rned2SLUcYjUrM9meQkuyJY4QDBcKhkcUPXCgGuXD9    | DHW6DToYjhwknzVCDvZ6r7hSv7ZpGw9adEN8NvZuUpVh | omfgRBnxHsNJh6YeGbGAmWenNkenzsXyBXm3WDhmeta  |
