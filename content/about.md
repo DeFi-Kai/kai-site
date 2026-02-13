@@ -11,15 +11,18 @@ title = 'About'
 - Research focused on DeFi market structure, onchain yield, and risk  
 - Produces long-form research, dashboards, and supporting analytical artifacts  
 
-**Grants Council Member** — *Solana ecosystem (Metaplex)*  
-*2024–2025*  
-- Evaluated grant proposals for NFT and fungible token development  
-- Provided proposal and funding guidance to grantees, contributing to successful external fundraising (~$10k)
+**Core Member** — *IslandDAO* 
+- Solana DecentraGrants Program: Evaluated grant proposals for NFT and fungible token development  
+- Metaplex Grants Program: Evaluated grant proposals for NFT and fungible token development  
 
 **Freelance Researcher**  
-- Conducted protocol and market research for platforms including Reserve Protocol and Arkham  
+- Conducted protocol and market research for platforms including Reserve Protocol and Arkham, and angel investors  
 - Focused on protocol mechanics, incentives, and ecosystem positioning  
 
-**Marketing Lead** — *Streamflow*  
+**Marketing Manager** — *Streamflow* 
+*2022-2024*  
 - Led marketing initiatives while supporting research and partnership efforts  
-- Helped position the protocol within the Solana ecosystem and supported early deal flow
+- Xandeum
+
+
+- Solana Turbine Q4 2025 Graduate

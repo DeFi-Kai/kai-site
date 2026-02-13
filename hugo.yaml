@@ -5,20 +5,28 @@ theme: "PaperMod"
 
 enableRobotsTXT: true
 
+markup:
+  tableOfContents:
+    startLevel: 2
+    endLevel: 3
+
 params:
   description: "DeFi market structure, onchain yield, and trading systems."
   defaultTheme: light
   disableThemeToggle: false
   ShowReadingTime: true
   ShowToc: true
+  UseHugoToc: true
   ShowCodeCopyButtons: true
   ShowBreadCrumbs: true
 
   homeInfoParams:
     Title: "Hi — I’m Kai"
-    Content: >
+    Content: |
       I write about DeFi market structure, onchain yield, and trading systems.
       This site is the canonical archive of my work.
+
+      [Daily DeFi Brief (local-LLM)](/briefs/latest/)
 
   socialIcons:
     - name: x
@@ -30,24 +38,12 @@ params:
 
 menu:
   main:
-    - name: Essays
-      url: /essays/
+    - name: Data
+      url: /data/
       weight: 1
     - name: Research
       url: /research/
       weight: 2
-    - name: Guides
-      url: /guides/
-      weight: 3
-    - name: Journal
-      url: /journal/
-      weight: 4
-    - name: Reading
-      url: /reading/
-      weight: 5
     - name: About
       url: /about/
       weight: 9
-    - name: CV
-      url: /cv/
-      weight: 10
