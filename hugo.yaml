@@ -13,6 +13,8 @@ markup:
 
 params:
   description: "DeFi market structure, onchain yield, and trading systems."
+  author:
+    name: "Kai"
   defaultTheme: light
   disableThemeToggle: false
   ShowReadingTime: true
