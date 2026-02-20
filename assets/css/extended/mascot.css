@@ -1,0 +1,38 @@
+.home-info {
+  padding-right: 120px;
+}
+
+.home-info::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 12px;
+  width: 96px;
+  height: 96px;
+  background: url("../../images/ghost-mascot.png") no-repeat center / contain;
+  image-rendering: pixelated;
+  opacity: 0.95;
+  pointer-events: none;
+}
+
+@media (max-width: 720px) {
+  .home-info {
+    padding-right: 0;
+  }
+
+  .home-info::after {
+    content: none;
+    display: none;
+  }
+
+  .logo a::after {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
+    vertical-align: middle;
+    background: url("../../images/ghost-mascot.png") no-repeat center / contain;
+    image-rendering: pixelated;
+  }
+}

@@ -13,8 +13,7 @@ markup:
 
 params:
   description: "DeFi market structure, onchain yield, and trading systems."
-  author:
-    name: "Kai"
+  author: "Kai"
   defaultTheme: light
   disableThemeToggle: false
   ShowReadingTime: true
@@ -22,6 +21,11 @@ params:
   UseHugoToc: true
   ShowCodeCopyButtons: true
   ShowBreadCrumbs: true
+
+  assets:
+    favicon: "images/ghost-mascot.png"
+    favicon16x16: "images/ghost-mascot.png"
+    favicon32x32: "images/ghost-mascot.png"
 
   homeInfoParams:
     Title: "Hi — I’m Kai"
@@ -47,6 +51,9 @@ menu:
     - name: Research
       url: /research/
       weight: 2
+    - name: Journal
+      url: /journal/
+      weight: 3
     - name: About
       url: /about/
       weight: 9
