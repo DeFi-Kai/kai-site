@@ -1,6 +1,7 @@
 baseURL: "https://defi-kai.github.io/kai-site/"
 languageCode: "en-us"
 title: "Kai — DeFi Research"
+author: "Kai"
 theme: "PaperMod"
 
 enableRobotsTXT: true
