@@ -1,1 +1,30 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url><loc>https://defi-kai.github.io/kai-site/</loc><lastmod>2026-02-13T09:15:00-05:00</lastmod></url><url><loc>https://defi-kai.github.io/kai-site/research/</loc><lastmod>2026-02-13T09:15:00-05:00</lastmod></url><url><loc>https://defi-kai.github.io/kai-site/research/aave-trojan-horse/</loc><lastmod>2026-02-13T09:00:00-05:00</lastmod></url><url><loc>https://defi-kai.github.io/kai-site/data/</loc><lastmod>2026-01-24T09:00:00-05:00</lastmod></url><url><loc>https://defi-kai.github.io/kai-site/data/metadao-launchpad-query-notes/</loc><lastmod>2026-01-24T09:00:00-05:00</lastmod></url><url><loc>https://defi-kai.github.io/kai-site/about/</loc><lastmod>2025-12-18T14:51:02-05:00</lastmod></url><url><loc>https://defi-kai.github.io/kai-site/categories/</loc></url><url><loc>https://defi-kai.github.io/kai-site/tags/</loc></url></urlset>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:1313/kai-site/journal/</loc>
+    <lastmod>2026-02-20T09:00:00-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/kai-site/</loc>
+    <lastmod>2026-02-20T09:00:00-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/kai-site/research/</loc>
+    <lastmod>2026-02-13T09:15:00-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/kai-site/research/aave-trojan-horse/</loc>
+    <lastmod>2026-02-13T09:00:00-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/kai-site/data/</loc>
+    <lastmod>2026-01-24T09:00:00-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/kai-site/data/metadao-launchpad-query-notes/</loc>
+    <lastmod>2026-01-24T09:00:00-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/kai-site/about/</loc>
+    <lastmod>2025-12-18T14:51:02-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/kai-site/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/kai-site/tags/</loc>
+  </url>
+</urlset>

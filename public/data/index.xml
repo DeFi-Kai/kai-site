@@ -1,3 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Data on Kai — DeFi Research</title><link>https://defi-kai.github.io/kai-site/data/</link><description>Recent content in Data on Kai — DeFi Research</description><generator>Hugo -- 0.152.2</generator><language>en-us</language><lastBuildDate>Sat, 24 Jan 2026 09:00:00 -0500</lastBuildDate><atom:link href="https://defi-kai.github.io/kai-site/data/index.xml" rel="self" type="application/rss+xml"/><item><title>MetaDAO Launchpad Query Notes (Dune/ TrinoSQL)</title><link>https://defi-kai.github.io/kai-site/data/metadao-launchpad-query-notes/</link><pubDate>Sat, 24 Jan 2026 09:00:00 -0500</pubDate><guid>https://defi-kai.github.io/kai-site/data/metadao-launchpad-query-notes/</guid><description>&lt;p&gt;&lt;img alt="MetaDAO launch architecture" loading="lazy" src="https://defi-kai.github.io/kai-site/data/metadao-launchpad-query-notes/images/MetaDAO_launch_architecture_diagram.excalidraw.png"&gt;&lt;/p&gt;
-&lt;p&gt;While building the &lt;a href="https://dune.com/blocmates_research/metadao-blocmates-pro"&gt;MetaDAO dashboard&lt;/a&gt; at Blocmates, &lt;a href="https://x.com/563defi"&gt;@563defi&lt;/a&gt; and I spent some time digging into MetaDAO&amp;rsquo;s launchpad program to understand the existing Dune queries, build on them, and create new ones.&lt;/p&gt;
-&lt;p&gt;These are my notes, which I will be referring back to as I verify &amp;amp; build out more queries on MetaDAO&amp;rsquo;s activity. This can also be used as context to feed to an LLM for generating simple queries.&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Data on Kai — DeFi Research</title>
+    <link>http://localhost:1313/kai-site/data/</link>
+    <description>Recent content in Data on Kai — DeFi Research</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 24 Jan 2026 09:00:00 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/kai-site/data/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MetaDAO Launchpad Query Notes (Dune/ TrinoSQL)</title>
+      <link>http://localhost:1313/kai-site/data/metadao-launchpad-query-notes/</link>
+      <pubDate>Sat, 24 Jan 2026 09:00:00 -0500</pubDate>
+      <guid>http://localhost:1313/kai-site/data/metadao-launchpad-query-notes/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;MetaDAO launch architecture&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/kai-site/data/metadao-launchpad-query-notes/images/MetaDAO_launch_architecture_diagram.excalidraw.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;While building the &lt;a href=&#34;https://dune.com/blocmates_research/metadao-blocmates-pro&#34;&gt;MetaDAO dashboard&lt;/a&gt; at Blocmates, &lt;a href=&#34;https://x.com/563defi&#34;&gt;@563defi&lt;/a&gt; and I spent some time digging into MetaDAO&amp;rsquo;s launchpad program to understand the existing Dune queries, build on them, and create new ones.&lt;/p&gt;
+&lt;p&gt;These are my notes, which I will be referring back to as I verify &amp;amp; build out more queries on MetaDAO&amp;rsquo;s activity. This can also be used as context to feed to an LLM for generating simple queries.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
