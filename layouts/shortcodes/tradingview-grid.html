@@ -1,0 +1,60 @@
+{{- $symbolsParam := .Get "symbols" | default "" -}}
+{{- $height := .Get "height" | default "520px" -}}
+{{- $interval := .Get "interval" | default "D" -}}
+{{- $timezone := .Get "timezone" | default "Etc/UTC" -}}
+{{- $theme := .Get "theme" | default "dark" -}}
+{{- $style := .Get "style" | default "1" -}}
+{{- $locale := .Get "locale" | default "en" -}}
+{{- $allowSymbolChangeParam := .Get "allow_symbol_change" | default "false" -}}
+{{- $allowSymbolChangeLower := lower (printf "%v" $allowSymbolChangeParam) -}}
+{{- $allowSymbolChange := or (eq $allowSymbolChangeLower "true") (eq $allowSymbolChangeLower "1") (eq $allowSymbolChangeLower "yes") -}}
+{{- $placeholdersParam := .Get "placeholders" | default "true" -}}
+{{- $placeholdersLower := lower (printf "%v" $placeholdersParam) -}}
+{{- $placeholders := or (eq $placeholdersLower "true") (eq $placeholdersLower "1") (eq $placeholdersLower "yes") -}}
+
+{{- $symbols := slice -}}
+{{- if $symbolsParam -}}
+  {{- range (split $symbolsParam ",") -}}
+    {{- $trimmed := trim . " " -}}
+    {{- if $trimmed -}}
+      {{- $symbols = $symbols | append $trimmed -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+<div class="tv-grid">
+  {{- range $index, $symbol := $symbols -}}
+  {{- if lt $index 4 -}}
+  <div class="tv-item" style="height: {{ $height }};">
+    <div class="tradingview-widget-container" style="height: {{ $height }}; width: 100%;">
+      <div class="tradingview-widget-container__widget" style="height: 100%; width: 100%;"></div>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+        {{
+          dict
+            "autosize" true
+            "symbol" $symbol
+            "interval" $interval
+            "timezone" $timezone
+            "theme" $theme
+            "style" $style
+            "locale" $locale
+            "allow_symbol_change" $allowSymbolChange
+            "support_host" "https://www.tradingview.com"
+          | jsonify
+          | safeJS
+        }}
+      </script>
+    </div>
+  </div>
+  {{- end -}}
+  {{- end -}}
+
+  {{- if $placeholders -}}
+    {{- $count := len $symbols -}}
+    {{- if lt $count 4 -}}
+      {{- range $i := seq (sub 4 $count) -}}
+      <div class="tv-item tv-placeholder" style="height: {{ $height }};">TradingView chart TBD</div>
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+</div>

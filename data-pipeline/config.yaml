@@ -1,0 +1,34 @@
+post_id: aave-six-months-later
+datasets:
+  - name: defi_tvl_6m
+    source: defillama
+    kind: historical_tvl
+    params:
+      scope: global
+      months: 6
+    output: static/data/placeholder-post/defi-tvl-6m.csv
+  - name: outstanding_loans_marketshare
+    source: defillama
+    kind: outstanding_loans_marketshare
+    params:
+      start_date: "2025-05-01"
+      top_n: 5
+      percent: true
+    output: static/data/aave-six-months-later/outstanding-loans-marketshare.csv
+  - name: lending_revenue_marketshare
+    source: defillama
+    kind: lending_revenue_marketshare
+    params:
+      start_date: "2025-05-01"
+      top_n: 5
+      data_type: "dailyRevenue"
+      percent: false
+    output: static/data/aave-six-months-later/lending-revenue-marketshare.csv
+  - name: lending_mcap_to_outstanding_loans
+    source: defillama
+    kind: lending_mcap_to_outstanding_loans
+    params:
+      start_date: "2025-05-01"
+      top_n: 5
+      debug_output: static/data/aave-six-months-later/mcap-to-outstanding-loans-debug.csv
+    output: static/data/aave-six-months-later/mcap-to-outstanding-loans.csv

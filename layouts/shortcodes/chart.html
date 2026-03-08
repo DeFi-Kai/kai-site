@@ -1,0 +1,304 @@
+{{- $src := .Get "src" -}}
+{{- if not $src -}}
+  {{- errorf "chart shortcode requires src" -}}
+{{- end -}}
+{{- $type := .Get "type" | default "line" -}}
+{{- $title := .Get "title" | default "" -}}
+{{- $x := .Get "x" | default "" -}}
+{{- $y := .Get "y" | default "" -}}
+{{- $height := .Get "height" | default "400px" -}}
+{{- $colors := .Get "colors" | default "" -}}
+{{- $ariaLabel := $title | default "Chart" -}}
+{{- $ymin := .Get "ymin" | default "" -}}
+{{- $ymax := .Get "ymax" | default "" -}}
+{{- $stackedParam := .Get "stacked" | default "" -}}
+{{- $stackedLower := lower (printf "%v" $stackedParam) -}}
+{{- $stacked := or (eq $stackedLower "true") (eq $stackedLower "1") (eq $stackedLower "yes") -}}
+
+{{- partial "chart-js.html" . -}}
+
+{{- $counter := .Page.Scratch.Get "chart_counter" | default 0 -}}
+{{- $counter = add $counter 1 -}}
+{{- .Page.Scratch.Set "chart_counter" $counter -}}
+{{- $containerId := printf "chart-container-%d" $counter -}}
+{{- $canvasId := printf "chart-canvas-%d" $counter -}}
+
+<div class="chart-block" id="{{ $containerId }}">
+  {{- if $title -}}
+  <div class="chart-title">{{ $title }}</div>
+  {{- end -}}
+  <div class="chart-canvas" style="height: {{ $height }};">
+    <canvas id="{{ $canvasId }}" role="img" aria-label="{{ $ariaLabel }}"></canvas>
+  </div>
+</div>
+
+<script>
+(() => {
+  const chartJsUrl = {{ "vendor/chartjs/chart.umd.min.js" | relURL | jsonify | safeJS }};
+  const papaUrl = {{ "vendor/papaparse/papaparse.min.js" | relURL | jsonify | safeJS }};
+
+  const loadScript = (src) => new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = src;
+    script.async = true;
+    script.onload = () => resolve();
+    script.onerror = () => reject(new Error(`Failed to load ${src}`));
+    document.head.appendChild(script);
+  });
+
+  const ensureDeps = () => {
+    if (window.__chartDepsPromise) {
+      return window.__chartDepsPromise;
+    }
+    window.__chartDepsPromise = new Promise(async (resolve, reject) => {
+      if (typeof Chart !== "undefined" && typeof Papa !== "undefined") {
+        resolve();
+        return;
+      }
+      const tasks = [];
+      if (typeof Chart === "undefined") {
+        tasks.push(loadScript(chartJsUrl));
+      }
+      if (typeof Papa === "undefined") {
+        tasks.push(loadScript(papaUrl));
+      }
+      const results = await Promise.allSettled(tasks);
+      const failed = results.find((result) => result.status === "rejected");
+      if (failed) {
+        reject(failed.reason);
+        return;
+      }
+      if (typeof Chart === "undefined" || typeof Papa === "undefined") {
+        reject(new Error("Chart.js or PapaParse not loaded"));
+        return;
+      }
+      resolve();
+    });
+    return window.__chartDepsPromise;
+  };
+
+  const onReady = () => {
+    ensureDeps().then(() => {
+
+    const config = {{
+      dict
+        "src" ($src | relURL)
+        "type" $type
+        "title" $title
+        "x" $x
+        "y" $y
+        "colors" $colors
+        "ymin" $ymin
+        "ymax" $ymax
+        "stacked" $stacked
+        "containerId" $containerId
+        "canvasId" $canvasId
+      | jsonify
+      | safeJS
+    }};
+
+    const container = document.getElementById(config.containerId);
+    const canvas = document.getElementById(config.canvasId);
+    if (!container || !canvas) {
+      return;
+    }
+
+    const parseList = (value) =>
+      value.split(",").map((item) => item.trim()).filter(Boolean);
+
+    const basePalette = [
+      "#2f6b5f",
+      "#b36b00",
+      "#2f4b7c",
+      "#a05195",
+      "#d45087",
+      "#6b7c93",
+      "#006d77",
+      "#bc5090"
+    ];
+
+    const buildColors = (count, custom) => {
+      const output = [];
+      const source = custom && custom.length ? custom : basePalette;
+      for (let i = 0; i < count; i += 1) {
+        if (i < source.length) {
+          output.push(source[i]);
+        } else {
+          const hue = Math.round((360 / count) * i);
+          output.push(`hsl(${hue}, 65%, 55%)`);
+        }
+      }
+      return output;
+    };
+
+    const hexToRgba = (hex, alpha) => {
+      const raw = hex.replace("#", "");
+      if (raw.length !== 6) {
+        return hex;
+      }
+      const r = parseInt(raw.slice(0, 2), 16);
+      const g = parseInt(raw.slice(2, 4), 16);
+      const b = parseInt(raw.slice(4, 6), 16);
+      return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+    };
+
+    const withAlpha = (color, alpha) => {
+      if (color.startsWith("#")) {
+        return hexToRgba(color, alpha);
+      }
+      if (color.startsWith("rgb(")) {
+        const values = color.replace("rgb(", "").replace(")", "");
+        return `rgba(${values}, ${alpha})`;
+      }
+      return color;
+    };
+
+    const customColors = config.colors ? parseList(config.colors) : [];
+
+    fetch(config.src)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Failed to fetch ${config.src}`);
+        }
+        return response.text();
+      })
+      .then((csvText) => {
+        const parsed = Papa.parse(csvText, {
+          header: true,
+          dynamicTyping: true,
+          skipEmptyLines: true
+        });
+
+        const rows = parsed.data || [];
+        const fields = (parsed.meta && parsed.meta.fields) || [];
+        if (!rows.length || !fields.length) {
+          console.warn("No chart data for", config.src);
+          return;
+        }
+
+        const xColumn = config.x || fields[0];
+        let yColumns = [];
+        if (config.y) {
+          yColumns = parseList(config.y);
+        } else {
+          yColumns = fields.filter((field) => field !== xColumn);
+        }
+
+        if (!yColumns.length) {
+          console.warn("No y-axis columns for", config.src);
+          return;
+        }
+
+        const labels = rows.map((row) => row[xColumn]);
+        let chartType = config.type || "line";
+        const isArea = chartType === "area";
+        if (isArea) {
+          chartType = "line";
+        }
+        const isPie = chartType === "pie" || chartType === "doughnut";
+
+        let datasets = [];
+        if (isPie) {
+          const yKey = yColumns[0];
+          const pieColors = buildColors(labels.length, customColors);
+          datasets = [
+            {
+              label: yKey,
+              data: rows.map((row) => row[yKey]),
+              backgroundColor: pieColors,
+              borderColor: "rgba(255, 255, 255, 0.6)",
+              borderWidth: 1
+            }
+          ];
+        } else {
+          const seriesColors = buildColors(yColumns.length, customColors);
+          datasets = yColumns.map((column, index) => {
+            const baseColor = seriesColors[index % seriesColors.length];
+            return {
+              label: column,
+              data: rows.map((row) => row[column]),
+              borderColor: baseColor,
+              backgroundColor: withAlpha(baseColor, isArea ? 0.2 : 0.1),
+              fill: isArea,
+              tension: 0.3,
+              borderWidth: 2,
+              pointRadius: 2,
+              pointHoverRadius: 4
+            };
+          });
+        }
+
+        const style = getComputedStyle(container);
+        const gridColor = style.getPropertyValue("--chart-grid").trim() || "rgba(0, 0, 0, 0.08)";
+        const textColor = style.getPropertyValue("--chart-text").trim() || "rgba(0, 0, 0, 0.75)";
+        const showLegend = isPie || yColumns.length > 1;
+
+        const options = {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: showLegend,
+              labels: {
+                color: textColor,
+                boxWidth: 14
+              }
+            },
+            tooltip: {
+              mode: "index",
+              intersect: false
+            }
+          }
+        };
+
+        if (!isPie) {
+          const yMin = config.ymin !== "" ? Number(config.ymin) : null;
+          const yMax = config.ymax !== "" ? Number(config.ymax) : null;
+          options.scales = {
+            x: {
+              stacked: !!config.stacked,
+              grid: {
+                color: gridColor
+              },
+              ticks: {
+                color: textColor
+              }
+            },
+            y: {
+              stacked: !!config.stacked,
+              min: Number.isFinite(yMin) ? yMin : undefined,
+              max: Number.isFinite(yMax) ? yMax : undefined,
+              grid: {
+                color: gridColor
+              },
+              ticks: {
+                color: textColor
+              }
+            }
+          };
+        }
+
+        new Chart(canvas, {
+          type: chartType,
+          data: {
+            labels,
+            datasets
+          },
+          options
+        });
+      })
+      .catch((error) => {
+        console.error("Chart failed to load", error);
+      });
+    }).catch((error) => {
+      console.warn("Chart.js or PapaParse not loaded", error);
+    });
+  };
+
+  if (document.readyState === "complete") {
+    onReady();
+  } else {
+    window.addEventListener("load", onReady);
+  }
+})();
+</script>

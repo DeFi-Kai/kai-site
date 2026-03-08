@@ -1,0 +1,5 @@
+{{- if not (.Page.Scratch.Get "chartjs_loaded") -}}
+  {{- .Page.Scratch.Set "chartjs_loaded" true -}}
+  <script src="{{ "vendor/chartjs/chart.umd.min.js" | relURL }}" defer></script>
+  <script src="{{ "vendor/papaparse/papaparse.min.js" | relURL }}" defer></script>
+{{- end -}}
