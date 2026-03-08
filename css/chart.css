@@ -1,0 +1,82 @@
+.chart-block {
+  --chart-grid: rgba(0, 0, 0, 0.08);
+  --chart-text: rgba(0, 0, 0, 0.75);
+  --chart-bg: rgba(0, 0, 0, 0.02);
+  --chart-border: rgba(0, 0, 0, 0.08);
+  margin: 1.5rem 0;
+  padding: 1rem 1rem 1.25rem;
+  border-radius: 10px;
+  border: 1px solid var(--chart-border);
+  background: var(--chart-bg);
+}
+
+html[data-theme="dark"] .chart-block {
+  --chart-grid: rgba(255, 255, 255, 0.12);
+  --chart-text: rgba(255, 255, 255, 0.8);
+  --chart-bg: rgba(255, 255, 255, 0.04);
+  --chart-border: rgba(255, 255, 255, 0.12);
+}
+
+.chart-title {
+  margin: 0 0 0.75rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--chart-text);
+}
+
+.chart-canvas {
+  position: relative;
+  width: 100%;
+}
+
+.tv-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+  align-items: stretch;
+}
+
+.tv-item {
+  border-radius: 10px;
+  border: 1px solid var(--chart-border, rgba(0, 0, 0, 0.08));
+  background: var(--chart-bg, rgba(0, 0, 0, 0.02));
+  padding: 0.5rem;
+  display: flex;
+  align-items: stretch;
+}
+
+.tv-item .tradingview-widget-container,
+.tv-item .tradingview-widget-container__widget {
+  height: 100%;
+  width: 100%;
+}
+
+.tv-placeholder {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--chart-text, rgba(0, 0, 0, 0.65));
+  font-size: 0.95rem;
+  border: 1px dashed var(--chart-border, rgba(0, 0, 0, 0.16));
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.01);
+}
+
+html[data-theme="dark"] .tv-item {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+html[data-theme="dark"] .tv-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+@media (max-width: 900px) {
+  .tv-grid {
+    grid-template-columns: 1fr;
+  }
+}
