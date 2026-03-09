@@ -23,6 +23,8 @@ def _fetch_historical_tvl(scope: str) -> list[dict]:
     if scope == "global":
         url = f"{BASE_URL}/charts"
         data = http_get_json(url)
+        if not isinstance(data, list):
+            return []
         normalized = []
         for entry in data:
             if not isinstance(entry, dict):
@@ -41,22 +43,34 @@ def _fetch_historical_tvl(scope: str) -> list[dict]:
             })
         return normalized
     url = f"{BASE_URL}/v2/historicalChainTvl/{scope}"
-    return http_get_json(url)
+    data = http_get_json(url)
+    if isinstance(data, list):
+        return [entry for entry in data if isinstance(entry, dict)]
+    return []
 
 
 def _fetch_protocols() -> list[dict]:
     url = f"{BASE_URL}/protocols"
-    return http_get_json(url)
+    data = http_get_json(url)
+    if isinstance(data, list):
+        return [entry for entry in data if isinstance(entry, dict)]
+    return []
 
 
 def _fetch_protocol(slug: str) -> dict:
     url = f"{BASE_URL}/protocol/{slug}"
-    return http_get_json(url)
+    data = http_get_json(url)
+    if isinstance(data, dict):
+        return data
+    return {}
 
 
 def _fetch_fees_overview(data_type: str) -> dict:
     url = f"{BASE_URL}/overview/fees"
-    return http_get_json(url, params={"dataType": data_type})
+    data = http_get_json(url, params={"dataType": data_type})
+    if isinstance(data, dict):
+        return data
+    return {}
 
 
 def _fetch_coingecko_market_caps(gecko_id: str, start_ts: int, end_ts: int) -> list:
@@ -67,7 +81,11 @@ def _fetch_coingecko_market_caps(gecko_id: str, start_ts: int, end_ts: int) -> l
         "to": end_ts,
     }
     data = http_get_json(url, params=params)
-    return data.get("market_caps", [])
+    if isinstance(data, dict):
+        market_caps = data.get("market_caps", [])
+        if isinstance(market_caps, list):
+            return market_caps
+    return []
 
 
 def _extract_borrowed_series(chain_tvls: dict) -> Dict[int, float]:
@@ -120,6 +138,15 @@ def _normalize_name(value: str) -> str:
     return "".join(ch for ch in value.lower() if ch.isalnum())
 
 
+def _resolve_repo_root(output_path: Path) -> Path:
+    parts = output_path.parts
+    if "static" in parts:
+        static_index = parts.index("static")
+        if static_index > 0:
+            return Path(*parts[:static_index])
+    return output_path.parent
+
+
 def _collect_lending_name_keys(protocols: Iterable[dict]) -> Dict[str, str]:
     name_map: Dict[str, str] = {}
     for protocol in protocols:
@@ -141,17 +168,32 @@ def build_lending_revenue_marketshare(dataset: dict, output_path: Path) -> None:
 
     start_date = datetime.strptime(start_date_str, "%Y-%m-%d").date()
 
-    protocols = _fetch_protocols()
-    lending_slugs = {protocol.get("slug") for protocol in protocols if protocol.get("category") == "Lending"}
-
     overview = _fetch_fees_overview(data_type)
     overview_protocols = overview.get("protocols", [])
     lending_protocols = [
         protocol for protocol in overview_protocols
-        if protocol.get("slug") in lending_slugs
+        if protocol.get("category") == "Lending"
     ]
 
     lending_name_keys = _collect_lending_name_keys(lending_protocols)
+
+    ranked = []
+    for protocol in lending_protocols:
+        total_30d = protocol.get("total30d")
+        if not isinstance(total_30d, (int, float)):
+            total_30d = 0.0
+        ranked.append((float(total_30d), protocol))
+    ranked.sort(reverse=True, key=lambda item: item[0])
+
+    top_protocols = [protocol for _, protocol in ranked[:top_n]]
+    top_names = []
+    top_name_keys = set()
+    for protocol in top_protocols:
+        name = protocol.get("name") or protocol.get("displayName") or protocol.get("slug")
+        if not isinstance(name, str) or not name:
+            continue
+        top_names.append(name)
+        top_name_keys.add(_normalize_name(name))
 
     breakdown = overview.get("totalDataChartBreakdown", [])
     if not isinstance(breakdown, list):
@@ -193,14 +235,11 @@ def build_lending_revenue_marketshare(dataset: dict, output_path: Path) -> None:
         all_dates.update(series.keys())
     sorted_dates = sorted(all_dates)
 
-    latest_date = max(sorted_dates)
-    latest_values = []
-    for name, series in series_by_name.items():
-        latest_values.append((series.get(latest_date, 0.0), name))
-    latest_values.sort(reverse=True, key=lambda item: item[0])
+    if not top_names:
+        write_csv(output_path, ["date", "Other"], [])
+        return
 
-    top_names = [name for _, name in latest_values[:top_n]]
-    other_names = [name for _, name in latest_values[top_n:]]
+    other_names = [name for name in series_by_name.keys() if _normalize_name(name) not in top_name_keys]
 
     headers = ["date"] + top_names + ["Other"]
     rows = []
@@ -213,7 +252,7 @@ def build_lending_revenue_marketshare(dataset: dict, output_path: Path) -> None:
             continue
         row = [entry_date.isoformat()]
         for name in top_names:
-            value = series_by_name[name].get(entry_date, 0.0)
+            value = series_by_name.get(name, {}).get(entry_date, 0.0)
             if as_percent:
                 value = (value / total) * 100
             row.append(value)
@@ -266,12 +305,16 @@ def build_lending_mcap_to_outstanding_loans(dataset: dict, output_path: Path) ->
     protocol_series: Dict[str, Dict[date, float]] = {}
     protocol_names: Dict[str, str] = {}
     protocol_gecko: Dict[str, str] = {}
+    protocol_details: Dict[str, dict] = {}
 
     for protocol in lending_protocols:
         slug = protocol.get("slug")
         if not slug:
             continue
-        detail = _fetch_protocol(slug)
+        detail = protocol_details.get(slug)
+        if detail is None:
+            detail = _fetch_protocol(slug)
+            protocol_details[slug] = detail
         chain_tvls = detail.get("chainTvls", {})
         series = _extract_borrowed_series(chain_tvls)
         if not series:
@@ -287,6 +330,14 @@ def build_lending_mcap_to_outstanding_loans(dataset: dict, output_path: Path) ->
         protocol_series[slug] = filtered_series
         protocol_names[slug] = detail.get("name") or protocol.get("name") or slug
         gecko_id = detail.get("gecko_id")
+        if not isinstance(gecko_id, str) or not gecko_id:
+            parent_slug = detail.get("parentProtocolSlug") or protocol.get("parentProtocolSlug")
+            if isinstance(parent_slug, str) and parent_slug:
+                parent_detail = protocol_details.get(parent_slug)
+                if parent_detail is None:
+                    parent_detail = _fetch_protocol(parent_slug)
+                    protocol_details[parent_slug] = parent_detail
+                gecko_id = parent_detail.get("gecko_id")
         if isinstance(gecko_id, str) and gecko_id:
             protocol_gecko[slug] = gecko_id
 
@@ -303,7 +354,7 @@ def build_lending_mcap_to_outstanding_loans(dataset: dict, output_path: Path) ->
     top_slugs = [slug for slug in top_slugs if slug in protocol_gecko]
 
     if debug_output:
-        repo_root = output_path.parents[2]
+        repo_root = _resolve_repo_root(output_path)
         debug_path = Path(debug_output)
         if not debug_path.is_absolute():
             debug_path = repo_root / debug_path

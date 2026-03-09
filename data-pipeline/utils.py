@@ -4,13 +4,32 @@ import csv
 from pathlib import Path
 from typing import Iterable
 
+import time
+
 import requests
 
 
-def http_get_json(url: str, params: dict | None = None, timeout: int = 30):
-    response = requests.get(url, params=params, timeout=timeout)
-    response.raise_for_status()
-    return response.json()
+def http_get_json(
+    url: str,
+    params: dict | None = None,
+    timeout: int = 60,
+    retries: int = 3,
+    backoff_seconds: float = 1.5,
+):
+    last_error = None
+    for attempt in range(1, retries + 1):
+        try:
+            response = requests.get(url, params=params, timeout=timeout)
+            response.raise_for_status()
+            return response.json()
+        except requests.exceptions.RequestException as exc:
+            last_error = exc
+            if attempt < retries:
+                time.sleep(backoff_seconds * attempt)
+                continue
+            raise
+    if last_error:
+        raise last_error
 
 
 def ensure_dir(path: Path) -> None:

@@ -798,30 +798,7 @@
     window.addEventListener(&#34;load&#34;, onReady);
   }
 })();
-&lt;/script&gt;
-
-&lt;div class=&#34;tv-grid&#34;&gt;&lt;div class=&#34;tv-item&#34;&gt;
-    &lt;div class=&#34;tradingview-widget-container&#34; style=&#34;height: 520px; width: 100%;&#34;&gt;
-      &lt;div class=&#34;tradingview-widget-container__widget&#34; style=&#34;height: 100%; width: 100%;&#34;&gt;&lt;/div&gt;
-      &lt;script type=&#34;text/javascript&#34; src=&#34;https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js&#34; async&gt;
-        {&#34;allow_symbol_change&#34;:false,&#34;autosize&#34;:true,&#34;interval&#34;:&#34;D&#34;,&#34;locale&#34;:&#34;en&#34;,&#34;style&#34;:&#34;1&#34;,&#34;support_host&#34;:&#34;https://www.tradingview.com&#34;,&#34;symbol&#34;:&#34;COINBASE:AAVEUSD/COINBASE:MORPHOUSD&#34;,&#34;theme&#34;:&#34;dark&#34;,&#34;timezone&#34;:&#34;Etc/UTC&#34;}
-      &lt;/script&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;&lt;div class=&#34;tv-item&#34;&gt;
-    &lt;div class=&#34;tradingview-widget-container&#34; style=&#34;height: 520px; width: 100%;&#34;&gt;
-      &lt;div class=&#34;tradingview-widget-container__widget&#34; style=&#34;height: 100%; width: 100%;&#34;&gt;&lt;/div&gt;
-      &lt;script type=&#34;text/javascript&#34; src=&#34;https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js&#34; async&gt;
-        {&#34;allow_symbol_change&#34;:false,&#34;autosize&#34;:true,&#34;interval&#34;:&#34;D&#34;,&#34;locale&#34;:&#34;en&#34;,&#34;style&#34;:&#34;1&#34;,&#34;support_host&#34;:&#34;https://www.tradingview.com&#34;,&#34;symbol&#34;:&#34;BINANCE:AAVEUSDT/BINANCE:FLUIDUSDT&#34;,&#34;theme&#34;:&#34;dark&#34;,&#34;timezone&#34;:&#34;Etc/UTC&#34;}
-      &lt;/script&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;&lt;div class=&#34;tv-item&#34;&gt;
-    &lt;div class=&#34;tradingview-widget-container&#34; style=&#34;height: 520px; width: 100%;&#34;&gt;
-      &lt;div class=&#34;tradingview-widget-container__widget&#34; style=&#34;height: 100%; width: 100%;&#34;&gt;&lt;/div&gt;
-      &lt;script type=&#34;text/javascript&#34; src=&#34;https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js&#34; async&gt;
-        {&#34;allow_symbol_change&#34;:false,&#34;autosize&#34;:true,&#34;interval&#34;:&#34;D&#34;,&#34;locale&#34;:&#34;en&#34;,&#34;style&#34;:&#34;1&#34;,&#34;support_host&#34;:&#34;https://www.tradingview.com&#34;,&#34;symbol&#34;:&#34;BINANCE:AAVEUSDT/BINANCE:EULUSDT&#34;,&#34;theme&#34;:&#34;dark&#34;,&#34;timezone&#34;:&#34;Etc/UTC&#34;}
-      &lt;/script&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;&lt;div class=&#34;tv-item tv-placeholder&#34;&gt;TradingView chart TBD&lt;/div&gt;&lt;/div&gt;</description>
+&lt;/script&gt;</description>
     </item>
     <item>
       <title>Sample Chart Post</title>

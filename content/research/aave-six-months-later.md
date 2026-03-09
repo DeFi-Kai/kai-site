@@ -15,5 +15,3 @@ Outline pending final data spec.
 {{< chart src="/data/aave-six-months-later/lending-revenue-marketshare.csv" type="area" title="Lending Revenue (Daily, USD)" stacked="true" height="420px" >}}
 
 {{< chart src="/data/aave-six-months-later/mcap-to-outstanding-loans.csv" type="line" title="Mcap / Outstanding Loans" height="420px" >}}
-
-{{< tradingview-grid symbols="COINBASE:AAVEUSD/COINBASE:MORPHOUSD,MEXC:AAVEUSDT/MEXC:FLUIDUSDT,BINANCE:AAVEUSDT/BINANCE:EULUSDT" height="520px" theme="dark" interval="D" timezone="Etc/UTC" >}}
