@@ -4,7 +4,7 @@ draft = false
 title = 'Aave Six Months Later'
 +++
 
-![Aave Six Months Later](/images/aave-six-months-later/aave-six-months-later-new.png)
+{{< img src="images/aave-six-months-later/aave-six-months-later-new.png" alt="Aave Six Months Later" >}}
 
 In July 2025, we published a research report on Aave at Blocmates predicting the protocol would reach $157M in Annually Recurring Revenue (ARR). Six months later, Aave ended 2025 with a 90-day ARR of ~$160M -- ~2% above our base case target.
 
@@ -24,7 +24,7 @@ Despite the ups and downs, Aave exited 2025 with a 90-day ARR of ~$160M -- ~2% a
 
 Here are our projections from the original report in July 25':
 
-![Revenue projections](/images/aave-six-months-later/image16.jpg)
+{{< img src="images/aave-six-months-later/image16.jpg" alt="Revenue projections" >}}
 
 Source(s): Token Terminal and Chaos Labs
 
@@ -32,7 +32,7 @@ Source(s): Token Terminal and Chaos Labs
 
 Crypto's total market cap peaked at $4.28T in October 2025. Shortly after, the entire crypto market took a hit, dropping 30% to $3T -- a ~$1.3T decline.
 
-![Crypto total market cap](/images/aave-six-months-later/market-cap-peak.png)
+{{< img src="images/aave-six-months-later/market-cap-peak.png" alt="Crypto total market cap" >}}
 
 [source](https://coinmarketcap.com/charts/)
 
@@ -40,7 +40,7 @@ Naturally, this downwards trend bled into the lending market sector: active loan
 
 As demand lessened throughout the entire industry it caused deposit rates to deteriorate. In July 2025, the interest rate for USDC on Aave's Ethereum deployment sat at 4.21%, but by year's end it dropped by nearly 80 basis points to 3.41%.
 
-![Aave USDC rates](/images/aave-six-months-later/usdc-rate.png)
+{{< img src="images/aave-six-months-later/usdc-rate.png" alt="Aave USDC rates" >}}
 
 [source](https://aave.tokenlogic.xyz/rates)
 
