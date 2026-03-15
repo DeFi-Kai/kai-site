@@ -2,6 +2,7 @@
 (() => {
   const anchors = document.querySelectorAll('a[href]');
   anchors.forEach((anchor) => {
+    if (anchor.closest('#menu')) return;
     const href = anchor.getAttribute('href');
     if (!href) return;
     if (href.startsWith('#')) return;
