@@ -144,7 +144,7 @@ Below, I detail the rough timeline of events over the last few months in Aave's 
 
 Currently, the DAO has passed the Aave Will Win Snapshot, and is set to move the proposal to an official onchain vote. When it surfaced, this proposal was a major point of contention, and its support from Aave Labs is what essentially led to the departure of BGD Labs and ACI. However, the proposal hasn't undergone an official onchain vote, and Aave Labs members are reportedly making amendments to the original proposal with plans to launch it in phases.
 
-### Closing Thoughts
+## Closing Thoughts
 
 From a revenue standpoint, Aave (led by Aave V3) has performed exceptionally over the last few months, even with the delay of Aave V4. Aave grew its revenue 57% YoY in 2025 and maintained its position as the dominant lending venue.
 
