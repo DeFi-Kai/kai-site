@@ -82,7 +82,7 @@
 
     const config = {{
       dict
-        "src" ($src | relURL)
+        "src" ($src | strings.TrimPrefix "/" | relURL)
         "type" $type
         "title" $title
         "x" $x
