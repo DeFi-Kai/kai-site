@@ -1,1 +1,15 @@
-{{- /* Reserved for site-level footer extensions. */ -}}
+<script>
+(() => {
+  const anchors = document.querySelectorAll('a[href]');
+  anchors.forEach((anchor) => {
+    const href = anchor.getAttribute('href');
+    if (!href) return;
+    if (href.startsWith('#')) return;
+    if (href.startsWith('javascript:')) return;
+    if (href.startsWith('mailto:')) return;
+    if (href.startsWith('tel:')) return;
+    anchor.setAttribute('target', '_blank');
+    anchor.setAttribute('rel', 'noopener');
+  });
+})();
+</script>
