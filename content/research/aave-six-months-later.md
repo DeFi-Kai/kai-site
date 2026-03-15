@@ -6,7 +6,7 @@ title = 'Aave Six Months Later'
 
 {{< img src="images/aave-six-months-later/aave-six-months-later-new.png" alt="Aave Six Months Later" >}}
 
-In July 2025, we published a research report on Aave at Blocmates predicting the protocol would reach $157M in Annually Recurring Revenue (ARR). Six months later, Aave ended 2025 with a 90-day ARR of ~$160M -- ~2% above our base case target.
+In July 2025, we published [a research report](https://x.com/blocmates/status/1951422453734953348) on Aave at Blocmates predicting the protocol would reach $157M in Annually Recurring Revenue (ARR). Six months later, Aave ended 2025 with a 90-day ARR of ~$160M -- ~2% above our base case target.
 
 Full-year 2025 revenue came in at $135.2M, 86% of the base case target -- and is currently running at **$130M ARR** (90-day) in March 2026 with **$26.5B** in total value locked across all deployments and a **~63% market share**.
 
