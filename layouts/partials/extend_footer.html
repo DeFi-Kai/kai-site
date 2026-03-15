@@ -4,6 +4,7 @@
   anchors.forEach((anchor) => {
     if (anchor.closest('#menu')) return;
     if (anchor.closest('.logo')) return;
+    if (anchor.closest('.post-entry')) return;
     const href = anchor.getAttribute('href');
     if (!href) return;
     if (href.startsWith('#')) return;
