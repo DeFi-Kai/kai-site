@@ -39,7 +39,7 @@ params:
     - name: x
       url: "https://x.com/defivaults"
     - name: github
-      url: "https://github.com/YOUR_GITHUB"
+      url: "https://github.com/DeFi-Kai"
     - name: rss
       url: "/index.xml"
 
