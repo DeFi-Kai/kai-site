@@ -21,6 +21,9 @@ params:
   UseHugoToc: true
   ShowCodeCopyButtons: true
   ShowBreadCrumbs: true
+  mainSections:
+    - research
+    - journal
 
   assets:
     favicon: "images/ghost-mascot.png"
