@@ -719,7 +719,23 @@ These are my notes, which I will be referring back to as I verify &amp; build ou
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
         <path d="M12 6H0l6-6z" />
     </svg>
-</a>
+</a><script>
+(() => {
+  const anchors = document.querySelectorAll('a[href]');
+  anchors.forEach((anchor) => {
+    if (anchor.closest('#menu')) return;
+    const href = anchor.getAttribute('href');
+    if (!href) return;
+    if (href.startsWith('#')) return;
+    if (href.startsWith('javascript:')) return;
+    if (href.startsWith('mailto:')) return;
+    if (href.startsWith('tel:')) return;
+    anchor.setAttribute('target', '_blank');
+    anchor.setAttribute('rel', 'noopener');
+  });
+})();
+</script>
+
 
 <script>
     let menu = document.getElementById('menu');

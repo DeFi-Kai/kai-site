@@ -98,21 +98,14 @@
 <article class="post-entry"> 
   <header class="entry-header">
     <h2 class="entry-hint-parent">Aave Six Months Later
-      <span class="entry-hint" title="Draft">
-        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
-          <path
-            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
-        </svg>
-      </span>
     </h2>
   </header>
   <div class="entry-content">
-    <p>Initial notes for the six-month follow-up.
-Key metrics and charts will be added next.
-Outline pending final data spec.
-Outstanding Loans Market Share Lending Revenue (Daily, USD) Mcap / Outstanding Loans </p>
+    <p> In July 2025, we published a research report on Aave at Blocmates predicting the protocol would reach $157M in Annually Recurring Revenue (ARR). Six months later, Aave ended 2025 with a 90-day ARR of ~$160M – ~2% above our base case target.
+Full-year 2025 revenue came in at $135.2M, 86% of the base case target – and is currently running at $130M ARR (90-day) in March 2026 with $26.5B in total value locked across all deployments and a ~63% market share.
+...</p>
   </div>
-  <footer class="entry-footer"><span title='2026-03-07 10:30:00 -0500 EST'>March 7, 2026</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Kai</span></footer>
+  <footer class="entry-footer"><span title='2026-03-07 10:30:00 -0500 EST'>March 7, 2026</span>&nbsp;·&nbsp;<span>10 min</span>&nbsp;·&nbsp;<span>Kai</span></footer>
   <a class="entry-link" aria-label="post link to Aave Six Months Later" href="http://localhost:1313/research/aave-six-months-later/"></a>
 </article>
 
@@ -160,7 +153,23 @@ Outstanding Loans Market Share Lending Revenue (Daily, USD) Mcap / Outstanding L
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
         <path d="M12 6H0l6-6z" />
     </svg>
-</a>
+</a><script>
+(() => {
+  const anchors = document.querySelectorAll('a[href]');
+  anchors.forEach((anchor) => {
+    if (anchor.closest('#menu')) return;
+    const href = anchor.getAttribute('href');
+    if (!href) return;
+    if (href.startsWith('#')) return;
+    if (href.startsWith('javascript:')) return;
+    if (href.startsWith('mailto:')) return;
+    if (href.startsWith('tel:')) return;
+    anchor.setAttribute('target', '_blank');
+    anchor.setAttribute('rel', 'noopener');
+  });
+})();
+</script>
+
 
 <script>
     let menu = document.getElementById('menu');
