@@ -9,20 +9,20 @@ ShowToc = false
 
 **Research Analyst** — *[Blocmates](https://www.blocmates.com/)*  
 *2024-Present*  
-- Research DeFi market structure, onchain yield, and protocol risk, producing long-form reports and due diligence
 - Maintain and iterate on an AI-driven analytics pipeline (Claude Code → Dune → GitHub) for data-backed reporting
+- Research DeFi market structure, onchain yield, and protocol risk, producing long-form reports and due diligence
 
-**Core Member** — *[IslandDAO](https://islanddao.org/)* 
-*2022-Present*
+**Core Member** — *[IslandDAO](https://islanddao.org/)*  
+*2022-Present*  
 - [Solana DecentraGrants Program](https://v2.realms.today/dao/6yU77XJakREaptpqFbu5azT7uzxa6RPswhpTAYX9pq1o): Oversaw $57K in funds, filtering applications and advising projects on viability and user adoption
 - [Metaplex Grants Program](https://github.com/metaplex-foundation/dao/discussions/9): Allocated $150K+ to high-impact projects as a Grants Council administrator and multisig signer
 - Provided product positioning and UX feedback for 30+ early-stage Solana projects, including Jito, Lulo, and Tensor Trade
 
 **Freelance Researcher**  
-*2021-2025*
+*2021-2025*  
 - Provided protocol and market research for [Reserve Protocol](https://reserve.org/), [Arkham](https://intel.arkm.com/), and angel investors, focusing on mechanics, incentives, and competitive positioning
 
-**Marketing Manager** — *[Streamflow](https://streamflow.finance/)* 
+**Marketing Manager** — *[Streamflow](https://streamflow.finance/)*  
 *2022-2024*  
 - Sourced and closed the [Xandeum](https://www.xandeum.network/) partnership, driving $3M+ in TVL growth
 - Contributed to partnerships and co-marketing efforts across a small, cross-functional team
