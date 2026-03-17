@@ -16,11 +16,11 @@ ShowToc = false
 *2022-Present*  
 - [Solana DecentraGrants Program](https://v2.realms.today/dao/6yU77XJakREaptpqFbu5azT7uzxa6RPswhpTAYX9pq1o): Oversaw $57K in funds, filtering applications and advising projects on viability and user adoption
 - [Metaplex Grants Program](https://github.com/metaplex-foundation/dao/discussions/9): Allocated $150K+ to high-impact projects as a Grants Council administrator and multisig signer
-- Provided product positioning and UX feedback for 30+ early-stage Solana projects, including Jito, Lulo, and Tensor Trade
 
 **Freelance Researcher**  
 *2021-2025*  
-- Provided protocol and market research for [Reserve Protocol](https://reserve.org/), [Arkham](https://intel.arkm.com/), and angel investors, focusing on mechanics, incentives, and competitive positioning
+- Produced protocol and market research for [Reserve Protocol](https://reserve.org/), [Arkham](https://intel.arkm.com/), and angel investors, focusing on mechanics, incentives, and competitive positioning
+- Provided product positioning and UX feedback for 30+ early-stage Solana projects, including Jito, Lulo, and Tensor Trade
 
 **Marketing Manager** — *[Streamflow](https://streamflow.finance/)*  
 *2022-2024*  
