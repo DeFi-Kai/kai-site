@@ -7,23 +7,30 @@ ShowToc = false
 
 ## Experience
 
-**Research Analyst** — *Blocmates*  
-*Current*  
-- Research focused on DeFi market structure, onchain yield, and risk  
-- Produces long-form research, dashboards, and supporting analytical artifacts  
+**Research Analyst** — *[Blocmates](https://www.blocmates.com/)*  
+*2024-Present*  
+- Research DeFi market structure, onchain yield, and protocol risk, producing long-form reports and due diligence
+- Maintain and iterate on an AI-driven analytics pipeline (Claude Code → Dune → GitHub) for data-backed reporting
 
-**Core Member** — *IslandDAO* 
-- Solana DecentraGrants Program: Evaluated grant proposals for NFT and fungible token development  
-- Metaplex Grants Program: Evaluated grant proposals for NFT and fungible token development  
+**Core Member** — *[IslandDAO](https://islanddao.org/)* 
+*2022-Present*
+- [Solana DecentraGrants Program](https://v2.realms.today/dao/6yU77XJakREaptpqFbu5azT7uzxa6RPswhpTAYX9pq1o): Oversaw $57K in funds, filtering applications and advising projects on viability and user adoption
+- [Metaplex Grants Program](https://github.com/metaplex-foundation/dao/discussions/9): Allocated $150K+ to high-impact projects as a Grants Council administrator and multisig signer
+- Provided product positioning and UX feedback for 30+ early-stage Solana projects, including Jito, Lulo, and Tensor Trade
 
 **Freelance Researcher**  
-- Conducted protocol and market research for platforms including Reserve Protocol and Arkham, and angel investors  
-- Focused on protocol mechanics, incentives, and ecosystem positioning  
+*2021-2025*
+- Provided protocol and market research for [Reserve Protocol](https://reserve.org/), [Arkham](https://intel.arkm.com/), and angel investors, focusing on mechanics, incentives, and competitive positioning
 
-**Marketing Manager** — *Streamflow* 
+**Marketing Manager** — *[Streamflow](https://streamflow.finance/)* 
 *2022-2024*  
-- Led marketing initiatives while supporting research and partnership efforts  
-- Xandeum
+- Sourced and closed the [Xandeum](https://www.xandeum.network/) partnership, driving $3M+ in TVL growth
+- Contributed to partnerships and co-marketing efforts across a small, cross-functional team
+- Authored website copy, blog posts, and marketing collateral
 
+## Skills & Credentials
 
-- Solana Turbine Q4 2025 Graduate
+DeFi Research | Data Analytics | SQL | Technical Writing | Ecosystem Development
+
+- [Solana Turbin3](https://www.turbin3.org/) Q4 2025 Graduate
+- Azure Fundamentals Certification
