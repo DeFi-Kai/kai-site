@@ -40,7 +40,7 @@ DeFi Research | Data Analytics | SQL | Technical Writing | Ecosystem Development
 > "I think you're looking for Kai. He's a real one with an authentic interest in research and doesn't fear exploring new territories. He is also an incredibly kind and humble human being. Meeting him in person was one of my highlights of Accelerate!"
 > — **beeman**, Solana developer and open-source evangelist ([@beeman_nl](https://x.com/beeman_nl/status/1989277821165080786))
 
-*On my Jupiter Lend Liquidations research:*
+*On my [Jupiter Lend Liquidations research](https://x.com/AlexanderGreyDT/status/1993790979699064886):*
 > "Amazing work from a great researcher. Proud of the potential of Q4 Research cohort at Solana Turbine."
 > — **Alexander Grey**, Business Development at Ackee ([@AlexanderGreyDT](https://x.com/AlexanderGreyDT/status/1993790979699064886))
 
