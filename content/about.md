@@ -36,6 +36,12 @@ DeFi Research | Protocol Analysis | Market Research | Ecosystem Development | SQ
 - [Solana Turbin3](https://www.turbin3.org/) Q4 2025 Graduate
 - Azure Fundamentals Certification
 
+## Projects
+
+**[Jupiter Lend Liquidation Decoder](https://x.com/DefiVaults/status/1989206474468335981?s=20)** — Solana Turbin3 Q4 2025 Capstone
+- Built a fully decoded Jupiter Lend liquidation table from raw Solana instruction data, reverse-engineering Anchor discriminators and inner instruction patterns
+- Analyzed $1.28M in liquidations during the October 10, 2025 mass liquidation event
+
 ## Recognition
 
 > "I think you're looking for Kai. He's a real one with an authentic interest in research and doesn't fear exploring new territories. He is also an incredibly kind and humble human being. Meeting him in person was one of my highlights of Accelerate!"
