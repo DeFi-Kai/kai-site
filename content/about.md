@@ -49,7 +49,7 @@ DeFi Research | Protocol Analysis | Market Research | Ecosystem Development | SQ
 
 *On my [Jupiter Lend Liquidations research](https://x.com/AlexanderGreyDT/status/1993790979699064886):*
 > "Amazing work from a great researcher. Proud of the potential of Q4 Research cohort at Solana Turbine."
-> — **Alexander Grey**, Business Development at Ackee ([@AlexanderGreyDT](https://x.com/AlexanderGreyDT/status/1993790979699064886))
+> — **Alexander Grey**, Solana Turbin3 Instructor & Business Development at Ackee ([@AlexanderGreyDT](https://x.com/AlexanderGreyDT/status/1993790979699064886))
 
 *On my [Hitchhiker's Guide to Meteora DLMM Vaults](https://x.com/DefiVaults/status/1841697312973693270):*
 > "This is incredible. As someone that's been scarred from some IL experiences, this is super helpful. Would honestly be pretty cool if they included this as a metric within their UI."
