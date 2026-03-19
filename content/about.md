@@ -14,8 +14,8 @@ ShowToc = false
 
 **Core Contributor & Consultant** — *[IslandDAO](https://islanddao.org/)*  
 *2023-Present*  
-- [Solana DecentraGrants Program](https://v2.realms.today/dao/6yU77XJakREaptpqFbu5azT7uzxa6RPswhpTAYX9pq1o): Oversaw $57K in funds, filtering applications and advising projects on viability and user adoption
-- [Metaplex Grants Program](https://github.com/metaplex-foundation/dao/discussions/9): Allocated $150K+ to high-impact projects as a Grants Council administrator and multisig signer
+- [Solana DecentraGrants Program](https://v2.realms.today/dao/6yU77XJakREaptpqFbu5azT7uzxa6RPswhpTAYX9pq1o): Helped oversee $57K in funds, filtering applications and advising projects on viability and user adoption
+- [Metaplex Grants Program](https://github.com/metaplex-foundation/dao/discussions/9): Allocated $150K+ to high-impact projects as a Grants Council member and multisig signer
 - Provided product positioning and UX feedback for 20+ early-stage Solana projects, including Jito, Lulo, and Tensor Trade
 
 **Freelance Researcher**  
