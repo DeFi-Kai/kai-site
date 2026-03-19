@@ -31,7 +31,7 @@ ShowToc = false
 
 ## Skills & Credentials
 
-DeFi Research | Protocol Analysis | Blockchain Data Analysis | Ecosystem Development | SQL | Python | Technical Writing | Project Management
+Blockchain Data Analysis | Decentralized Finance (DeFi) Research | Protocol Analysis | SQL | Python | Technical Writing | Ecosystem Development | Project Management
 
 - [Solana Turbin3](https://www.turbin3.org/) Q4 2025 Graduate
 - Azure Fundamentals Certification
