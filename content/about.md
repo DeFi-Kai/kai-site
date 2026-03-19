@@ -54,3 +54,9 @@ DeFi Research | Protocol Analysis | Market Research | Ecosystem Development | SQ
 *On my [Hitchhiker's Guide to Meteora DLMM Vaults](https://x.com/DefiVaults/status/1841697312973693270):*
 > "This is incredible. As someone that's been scarred from some IL experiences, this is super helpful. Would honestly be pretty cool if they included this as a metric within their UI."
 > — **kellen**, onchain data analyst ([@runkellen](https://x.com/runkellen/status/1841707176274100240?s=20))
+
+
+## References
+
+- Head of Research, Blocmates - (@563defi)
+- Founder, Blocmates - (@Grantblocmates)
