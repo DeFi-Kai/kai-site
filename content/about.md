@@ -58,5 +58,5 @@ DeFi Research | Protocol Analysis | Market Research | Ecosystem Development | SQ
 
 ## References
 
-- Head of Research, Blocmates - (@563defi)
-- Founder, Blocmates - (@Grantblocmates)
+- Head of Research, Blocmates - ([@563defi](https://x.com/563defi))
+- Founder, Blocmates - ([@Grantblocmates](https://x.com/Grantblocmates))
