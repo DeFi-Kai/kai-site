@@ -23,7 +23,7 @@ ShowToc = false
 - Produced protocol and market research for [Reserve Protocol](https://reserve.org/), [Arkham](https://intel.arkm.com/), and angel investors, focusing on mechanics, incentives, and competitive positioning
 
 
-**Marketing Manager** — *[Streamflow](https://streamflow.finance/)*  
+**Marketing Manager** — *[Streamflow Finance](https://streamflow.finance/)*  
 *2022-2023*  
 - Sourced and closed the [Xandeum](https://www.xandeum.network/) partnership, driving $3M+ in TVL growth
 - Contributed to partnerships and co-marketing efforts across a small, cross-functional team
