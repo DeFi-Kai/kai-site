@@ -14,8 +14,8 @@ ShowToc = false
 
 **Core Contributor & Consultant** — *[IslandDAO](https://islanddao.org/)*  
 *2023-Present*  
-- [Solana DecentraGrants Program](https://v2.realms.today/dao/6yU77XJakREaptpqFbu5azT7uzxa6RPswhpTAYX9pq1o): Helped oversee $57K in funds, filtering applications and advising projects on viability and user adoption
-- [Metaplex Grants Program](https://github.com/metaplex-foundation/dao/discussions/9): Allocated $150K+ to high-impact projects as a Grants Council member and multisig signer
+- [Solana DecentraGrants Program](https://v2.realms.today/dao/6yU77XJakREaptpqFbu5azT7uzxa6RPswhpTAYX9pq1o): Co-managed $57K in funds, filtering applications and advising projects on viability and user adoption
+- [Metaplex Grants Program](https://github.com/metaplex-foundation/dao/discussions/9): Allocated $150K+ to high-impact projects as a Grants Council Member and multisig signer
 - Provided product positioning and UX feedback for 20+ early-stage Solana projects, including Jito, Lulo, and Tensor Trade
 
 **Freelance Researcher**  
@@ -41,6 +41,10 @@ Blockchain Data Analysis | Decentralized Finance (DeFi) Research | Protocol Anal
 **[Jupiter Lend Liquidation Decoder](https://x.com/DefiVaults/status/1989206474468335981?s=20)** — Solana Turbin3 Q4 2025 Capstone
 - Built a fully decoded Jupiter Lend liquidation table from raw Solana instruction data, reverse-engineering Anchor discriminators and inner instruction patterns
 - Analyzed $1.28M in liquidations during the October 10, 2025 mass liquidation event
+
+**[MetaDAO Analytics Dashboard](https://dune.com/blocmates_research/metadao-blocmates-pro)** — Blocmates
+- Built Dune (Trino SQL) queries tracking fund commitments, token claims, refunds, and treasury flows across three MetaDAO launchpad program versions
+- Powered by an AI-driven analytics pipeline (Claude Code → Dune → GitHub)
 
 ## Recognition
 
