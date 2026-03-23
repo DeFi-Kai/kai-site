@@ -46,6 +46,10 @@ Blockchain Data Analysis | Decentralized Finance (DeFi) Research | Protocol Anal
 - Built Dune (Trino SQL) queries tracking fund commitments, token claims, refunds, and treasury flows across three MetaDAO launchpad program versions
 - Powered by an AI-driven analytics pipeline (Claude Code → Dune → GitHub)
 
+**[Local AI Research Assistant](https://defi-kai.github.io/kai-site/journal/building-local-ai-system/)**
+- Built a local AI system that aggregates crypto news, DeFi metrics, and governance data into a daily briefing using Python, locally hosted LLMs, and multiple APIs
+- Reduced daily research intake time from 1-2 hours to ~20 minutes
+
 ## Recognition
 
 > "I think you're looking for Kai. He's a real one with an authentic interest in research and doesn't fear exploring new territories. He is also an incredibly kind and humble human being. Meeting him in person was one of my highlights of Accelerate!"
