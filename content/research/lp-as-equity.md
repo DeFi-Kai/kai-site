@@ -165,39 +165,4 @@ Perp DEX tokens are a marketing budget. The LP is the equity.
 
 ## Sources and methodology
 
-**Time windows**
-
-- LP vs. token 12m returns: 2025-04-13 to 2026-04-12. LIT is inception-to-date (<1 year).
-- LP comparison (HLP, OLP, gUSDC, ALP, LLP): 2025-12-01 to 2026-04-11.
-- LTM fees (P/S section): rolling 362-365 day windows ending 2026-04-11, per DefiLlama.
-
-**Returns, Sharpe, MDD**
-
-- Returns are NAV-based (share price), not TVL-based. Deposits and withdrawals are excluded from the numerator.
-- Sharpe = (mean daily return / stdev daily return) x sqrt(365), risk-free = 0. For stablecoin LPs, using a T-bill or on-chain USDC lending benchmark (around 4-5%) would roughly halve reported Sharpes; relative rankings are preserved.
-- MDD = max peak-to-trough decline over the period.
-- gUSDC's Sharpe of 12.39 reflects near-zero realized volatility over the window and should be read as no drawdowns, not skill-adjusted alpha at that magnitude.
-
-**P/S ratios**
-
-- Token P/S = Token FDV / (token fee share x LTM fees)
-- LP P/S = LP TVL / (LP fee share x LTM fees)
-- FDV is used on both sides so each ratio represents the full diluted claim on revenue.
-- Gains gUSDC-Arbitrum LP fees apply a 95% USDC share estimate to Arbitrum fees (the only non-exact input).
-
-**JLP caveat**
-
-- JLP is an index of SOL/BTC/ETH/USDC, so returns reflect directional exposure on top of fees. Over the period, JLP outperformed the raw BTC/SOL/ETH basket by around 18%, isolating the fee contribution.
-
-**Primary sources**
-
-- Hyperliquid API - HLP vault `account_value` and `pnlHistory` (`api.hyperliquid.xyz/info`, `vaultDetails`)
-- Lighter API - LLP NAV (`mainnet.zklighter.elliot.ai`)
-- Avantis analytics - [analytics.avantisfi.com](https://analytics.avantisfi.com/)
-- Dune:
-  - Gains - [dune.com/queries/3385617/5681244](https://dune.com/queries/3385617/5681244)
-  - Jupiter JLP - [dune.com/mhshirani/jlp-dashboard](https://dune.com/mhshirani/jlp-dashboard)
-  - Ostium - [dune.com/queries/4074369/6870602](https://dune.com/queries/4074369/6870602)
-  - Aster - [dune.com/asterdex/aster-overview](https://dune.com/asterdex/aster-overview)
-- DefiLlama - fees, per-chain breakdowns, yield pool TVL
-- CoinGecko - token prices, FDV, supply
+Full appendix: [LP-as-Equity sources and methodology](https://github.com/DeFi-Kai/lp-as-equity-sources)
