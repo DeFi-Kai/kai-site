@@ -5,6 +5,7 @@
     if (anchor.closest('#menu')) return;
     if (anchor.closest('.logo')) return;
     if (anchor.closest('.post-entry')) return;
+    if (anchor.closest('.breadcrumbs')) return;
     const href = anchor.getAttribute('href');
     if (!href) return;
     if (href.startsWith('#')) return;
