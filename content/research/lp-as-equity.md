@@ -2,7 +2,6 @@
 date = '2026-04-15T09:00:00-04:00'
 draft = false
 title = 'LP-as-Equity'
-summary = 'Perp DEX LPs are the equity: they underwrite risk, compound fees directly into NAV, and have outperformed most corresponding tokens.'
 +++
 
 *Perp DEX LPs are equity. They earn fees that compound directly into NAV. They are mechanically linked to protocol performance via vault design, which makes them a better indicator of protocol health than tokens.*
@@ -15,7 +14,7 @@ Over the past year, Perp DEX LPs have returned -1% to 46% while most of their co
 
 The market effectively pays a liquidity premium for the worse-performing asset.
 
-## Why the LP earns its fees
+## LP-as-Equity: Why the LP earns its fees
 
 Perp DEXs are structurally credit systems where LPs loan capital to leverage traders. In return, share prices increase as the vault earns revenue (spread, funding, fees, etc.). But, LP profitability is ultimately determined by order flow.
 
