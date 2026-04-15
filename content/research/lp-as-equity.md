@@ -4,8 +4,6 @@ draft = false
 title = 'LP-as-Equity'
 +++
 
-*Perp DEX LPs are equity. They earn fees that compound directly into NAV. They are mechanically linked to protocol performance via vault design, which makes them a better indicator of protocol health than tokens.*
-
 The default assumption in crypto is that the token is the equity. But, for perp DEXs, the LP is what equity actually looks like.
 
 LPs have a direct, mechanical claim on protocol revenue, including fees, spread, and liquidation penalties. LP revenue compounds into share price without needing a buyer on the other side. In contrast, tokens require someone else to bid.
