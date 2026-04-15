@@ -1,0 +1,29 @@
+{{- if (.Param "ShowBreadCrumbs") -}}
+    {{- $url := replace .Parent.Permalink (printf "%s" site.Home.Permalink) "" -}}
+    {{- $lang_url := strings.TrimPrefix (printf "%s/" .Lang) $url -}}
+    {{- $scratch := newScratch -}}
+    {{- $crumbs := slice -}}
+
+    {{- range split $lang_url "/" -}}
+        {{- $scratch.Add "path" (printf "%s/" .) -}}
+        {{- $bc_pg := site.GetPage ($scratch.Get "path") -}}
+        {{- if and $bc_pg (gt (len .) 0) -}}
+            {{- $crumbs = $crumbs | append (dict "Permalink" $bc_pg.Permalink "Name" $bc_pg.Name) -}}
+        {{- end -}}
+    {{- end -}}
+
+    {{- if and (eq (len $crumbs) 0) (eq .Kind "section") -}}
+        {{- $crumbs = $crumbs | append (dict "Permalink" .Permalink "Name" .Name) -}}
+    {{- end -}}
+
+    {{- if gt (len $crumbs) 0 -}}
+<div class="breadcrumbs">
+        {{- range $index, $crumb := $crumbs -}}
+            {{- if gt $index 0 -}}
+                {{- print "&nbsp;»&nbsp;" | safeHTML -}}
+            {{- end -}}
+            <a href="{{ $crumb.Permalink }}">{{ $crumb.Name }}</a>
+        {{- end -}}
+</div>
+    {{- end -}}
+{{- end -}}
