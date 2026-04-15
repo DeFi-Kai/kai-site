@@ -24,13 +24,11 @@ Let's consider Hyperliquid. The HLP vault's quoting logic sets the spread, which
 
 Each LP carries design trade-offs that balance trader execution quality and vault profitability. In this way, an LP's design is essentially the underwriting criteria which reflect the risk-return profile.
 
-Comparing the performance across 5 USDC-based LPs since December 2025 demonstrates the gaps in efficiency from one strategy to another.
+Comparing the performance across 5 USDC-based LPs since December 2025 demonstrates the gaps in risk-adjusted efficiency from one strategy to another. More volume and better risk-management translate to lower MDDs, higher Sharpes, and overall higher yields.
 
 {{< img src="images/lp-as-equity/lp-comparison-bsc-dec2025-2026-04-13.png" alt="Comparison chart of USDC-based perp DEX LP performance" >}}
 
 *Sources: Dune, Lighter API, Hyperliquid.*
-
-The differences demonstrate how platforms compete on risk-adjusted efficiency. More volume and better risk-management translate to lower MDDs, higher Sharpes, and overall higher yields.
 
 While HLP and OLP returned 6-7%, HLP demonstrated better operational efficiency. HLP achieved a Sharpe of 1.39 and MDD of -0.5%, compared to OLP which recorded a Sharpe of 0.84 and MDD of -6.2%. In other words, OLP experienced 26% more volatility and still returned less than HLP.
 
@@ -68,9 +66,7 @@ Tokens direct incentives away from the LP and cost the project more dilution.
 
 ## LP vs. token performance
 
-The structure of LPs allows them to capture and retain value more efficiently than governance tokens.
-
-The LP reprices in real time based on fees, trader PNL, and liquidation revenue which flow directly into the NAV.
+The structure of LPs allows them to capture and retain value more efficiently than governance tokens. The LP reprices in real time based on fees, trader PNL, and liquidation revenue which flow directly into the NAV.
 
 In comparison, tokens require buyers for the price to increase. Tokens are also exposed to sentiment and narrative which affect their ability to retain value long term.
 
@@ -97,9 +93,7 @@ Over the last year, HLP's share price grew 23%, compared to HYPE's price, which 
 
 *Sources: CoinGecko, Hyperliquid.*
 
-Tokens and LPs are essentially priced as claims on the same revenue through different channels.
-
-To see how the market prices these cash claims, we compare token vs. LP P/S on Gains, Hyperliquid, Avantis, and Jupiter, the 4 protocols with clean data on fees and FDV.
+Tokens and LPs are essentially priced as claims on the same revenue through different channels. To see how the market prices these cash claims, we compare token vs. LP P/S on Gains, Hyperliquid, Avantis, and Jupiter, the 4 protocols with clean data on fees and FDV.
 
 To calculate P/S:
 
@@ -123,17 +117,15 @@ Comparing the two ratios tells us how the market values sentiment-driven token r
 
 Notably, Gains' token-to-LP P/S ratio sits at 0.37x, meaning the market values the LP's claim on fees more than the token's. This signals misaligned incentives.
 
-Gains' token, GNS, is fully diluted with a $17m marketcap. Gains directs around 60% of total trading fees to GNS buybacks. Meanwhile, gVault LPs earn 15%.
+Gains' token, GNS, is fully diluted with a $17m marketcap. Gains directs around 60% of total trading fees to GNS buybacks and 15% to gVault LPs.
 
-Over the last year, the team spent around $6m in buybacks. The GNS token is down 45% with an MDD of around 71%, compared to gUSDC which increased by 10% with no drawdowns.
+Over the last year, the team spent around $6m in buybacks. Meanwhile, the GNS token is down 45% with an MDD of around 71%, compared to gUSDC which increased by 10% with no drawdowns.
 
 {{< img src="images/lp-as-equity/gains-gusdc-vs-gns-chart-2026-04-13.png" alt="gUSDC versus GNS performance chart" >}}
 
 *Sources: CoinGecko, Dune.*
 
-Gains directs the majority of fees to GNS, yet the market is not pricing GNS positively on its claim on revenue.
-
-Projects that direct fees to the token (via buyback) over the LP are actively subsidizing token growth instead of rewarding the equity that runs the platform.
+Gains directs the majority of fees to GNS, yet the market is not pricing GNS positively on its claim on revenue. Projects that direct fees to the token (via buyback) over the LP are actively subsidizing token growth instead of rewarding the equity that runs the platform.
 
 Similarly, Jupiter's LP outperformed its token despite more fees routed to token buybacks.
 
