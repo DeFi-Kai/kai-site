@@ -17,7 +17,7 @@ params:
   defaultTheme: light
   disableThemeToggle: false
   ShowReadingTime: true
-  ShowToc: true
+  ShowToc: false
   UseHugoToc: true
   ShowCodeCopyButtons: true
   ShowBreadCrumbs: true

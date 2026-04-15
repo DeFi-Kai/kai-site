@@ -163,6 +163,6 @@ The market pays a liquidity premium for the token and a liquidity discount for t
 
 Perp DEX tokens are a marketing budget. The LP is the equity.
 
-## Sources and methodology
+---
 
-Full appendix: [LP-as-Equity sources and methodology](https://github.com/DeFi-Kai/lp-as-equity-sources)
+Sources and methodology: [LP-as-Equity sources and methodology](https://github.com/DeFi-Kai/lp-as-equity-sources)
