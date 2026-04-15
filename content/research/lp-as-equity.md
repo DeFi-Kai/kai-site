@@ -157,4 +157,4 @@ Perp DEX tokens are a marketing budget. The LP is the equity.
 
 ---
 
-Sources and methodology: [LP-as-Equity sources and methodology](https://github.com/DeFi-Kai/lp-as-equity-sources)
+Sources and methodology: [DeFi-Kai LP-as-Equity sources and methodology](https://github.com/DeFi-Kai/lp-as-equity-sources)
