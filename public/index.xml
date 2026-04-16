@@ -1,81 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Kai — DeFi Research</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on Kai — DeFi Research</description>
-    <generator>Hugo -- 0.152.2</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 15 Mar 2026 09:00:00 -0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Building a Local AI System to Stay Ahead of the Crypto News Cycle</title>
-      <link>http://localhost:1313/journal/building-local-ai-system/</link>
-      <pubDate>Sun, 15 Mar 2026 09:00:00 -0500</pubDate>
-      <guid>http://localhost:1313/journal/building-local-ai-system/</guid>
-      <description>&lt;img src=&#34;http://localhost:1313/images/building-local-ai-system/hero.png&#34; alt=&#34;Local AI system overview&#34; loading=&#34;lazy&#34; /&gt;
-
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Kai — DeFi Research</title><link>https://defi-kai.github.io/kai-site/</link><description>Recent content on Kai — DeFi Research</description><generator>Hugo -- 0.152.2</generator><language>en-us</language><lastBuildDate>Wed, 15 Apr 2026 09:00:00 -0400</lastBuildDate><atom:link href="https://defi-kai.github.io/kai-site/index.xml" rel="self" type="application/rss+xml"/><item><title>LP-as-Equity</title><link>https://defi-kai.github.io/kai-site/research/lp-as-equity/</link><pubDate>Wed, 15 Apr 2026 09:00:00 -0400</pubDate><guid>https://defi-kai.github.io/kai-site/research/lp-as-equity/</guid><description>&lt;p&gt;The default assumption in crypto is that the token is the equity. But, for perp DEXs, the LP is what equity actually looks like.&lt;/p&gt;
+&lt;p&gt;LPs have a direct, mechanical claim on protocol revenue, including fees, spread, and liquidation penalties. LP revenue compounds into share price without needing a buyer on the other side. In contrast, tokens require someone else to bid.&lt;/p&gt;
+&lt;p&gt;Over the past year, Perp DEX LPs have returned -1% to 46% while most of their corresponding tokens are down 45% to 58%.&lt;/p&gt;</description></item><item><title>Building a Local AI System to Stay Ahead of the Crypto News Cycle</title><link>https://defi-kai.github.io/kai-site/journal/building-local-ai-system/</link><pubDate>Sun, 15 Mar 2026 09:00:00 -0500</pubDate><guid>https://defi-kai.github.io/kai-site/journal/building-local-ai-system/</guid><description>&lt;img src="https://defi-kai.github.io/kai-site/images/building-local-ai-system/hero.png" alt="Local AI system overview" loading="lazy" /&gt;
 &lt;p&gt;As a Research Analyst I&amp;rsquo;ve struggled to keep up with current events while working on reports.&lt;/p&gt;
 &lt;p&gt;For starters, there are so many aspects to screening a business, and deep research requires you to understand the nuances of a project from a technical, financial, and microeconomic standpoint.&lt;/p&gt;
-&lt;p&gt;Imagine splitting your time cycling through onchain data to visualize economic flow, reading whitepapers to model a project&amp;rsquo;s mechanics, and comparing sector competitors. Meanwhile, Trump announces another tariff which triggers mass liquidations, or a new stablecoin bill is passed making your overall thesis invalid.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Aave Six Months Later</title>
-      <link>http://localhost:1313/research/aave-six-months-later/</link>
-      <pubDate>Sat, 07 Mar 2026 10:30:00 -0500</pubDate>
-      <guid>http://localhost:1313/research/aave-six-months-later/</guid>
-      <description>&lt;img src=&#34;http://localhost:1313/images/aave-six-months-later/aave-six-months-later-new.png&#34; alt=&#34;Aave Six Months Later&#34; loading=&#34;lazy&#34; /&gt;
-
-&lt;p&gt;In July 2025, we published &lt;a href=&#34;https://x.com/blocmates/status/1951422453734953348&#34;&gt;a research report&lt;/a&gt; on Aave at Blocmates predicting the protocol would reach $157M in Annually Recurring Revenue (ARR). Six months later, Aave ended 2025 with a 90-day ARR of ~$160M &amp;ndash; ~2% above our base case target.&lt;/p&gt;
-&lt;p&gt;Full-year 2025 revenue came in at $135.2M, 86% of the base case target &amp;ndash; and is currently running at &lt;strong&gt;$130M ARR&lt;/strong&gt; (90-day) in March 2026 with &lt;strong&gt;$26.5B&lt;/strong&gt; in total value locked across all deployments and a &lt;strong&gt;~63% market share&lt;/strong&gt;.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Sample Chart Post</title>
-      <link>http://localhost:1313/research/sample-chart/</link>
-      <pubDate>Sat, 07 Mar 2026 10:00:00 -0500</pubDate>
-      <guid>http://localhost:1313/research/sample-chart/</guid>
-      <description>Placeholder post to validate chart rendering.</description>
-    </item>
-    <item>
-      <title>Aave: The Bank of DeFi</title>
-      <link>http://localhost:1313/research/aave-trojan-horse/</link>
-      <pubDate>Fri, 13 Feb 2026 09:00:00 -0500</pubDate>
-      <guid>http://localhost:1313/research/aave-trojan-horse/</guid>
-      <description>@aave has grown to become DeFi&amp;rsquo;s Trojan Horse, reaching a scale comparable to traditional banks. With $35 billion in TVL and $57 billion in net deposits, it now controls 25% of DeFi TVL and ranks among the 50 largest US banks by assets under management (AUM).</description>
-    </item>
-    <item>
-      <title>MetaDAO Launchpad Query Notes (Dune/ TrinoSQL)</title>
-      <link>http://localhost:1313/data/metadao-launchpad-query-notes/</link>
-      <pubDate>Sat, 24 Jan 2026 09:00:00 -0500</pubDate>
-      <guid>http://localhost:1313/data/metadao-launchpad-query-notes/</guid>
-      <description>&lt;p&gt;&lt;img alt=&#34;MetaDAO launch architecture&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/data/metadao-launchpad-query-notes/images/MetaDAO_launch_architecture_diagram.excalidraw.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;While building the &lt;a href=&#34;https://dune.com/blocmates_research/metadao-blocmates-pro&#34;&gt;MetaDAO dashboard&lt;/a&gt; at Blocmates, &lt;a href=&#34;https://x.com/563defi&#34;&gt;@563defi&lt;/a&gt; and I spent some time digging into MetaDAO&amp;rsquo;s launchpad program to understand the existing Dune queries, build on them, and create new ones.&lt;/p&gt;
-&lt;p&gt;These are my notes, which I will be referring back to as I verify &amp;amp; build out more queries on MetaDAO&amp;rsquo;s activity. This can also be used as context to feed to an LLM for generating simple queries.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>About</title>
-      <link>http://localhost:1313/about/</link>
-      <pubDate>Thu, 18 Dec 2025 14:51:02 -0500</pubDate>
-      <guid>http://localhost:1313/about/</guid>
-      <description>&lt;h2 id=&#34;experience&#34;&gt;Experience&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Research Analyst&lt;/strong&gt; — &lt;em&gt;Blocmates&lt;/em&gt;&lt;br&gt;
-&lt;em&gt;Current&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Imagine splitting your time cycling through onchain data to visualize economic flow, reading whitepapers to model a project&amp;rsquo;s mechanics, and comparing sector competitors. Meanwhile, Trump announces another tariff which triggers mass liquidations, or a new stablecoin bill is passed making your overall thesis invalid.&lt;/p&gt;</description></item><item><title>Aave Six Months Later</title><link>https://defi-kai.github.io/kai-site/research/aave-six-months-later/</link><pubDate>Sat, 07 Mar 2026 10:30:00 -0500</pubDate><guid>https://defi-kai.github.io/kai-site/research/aave-six-months-later/</guid><description>&lt;img src="https://defi-kai.github.io/kai-site/images/aave-six-months-later/aave-six-months-later-new.png" alt="Aave Six Months Later" loading="lazy" /&gt;
+&lt;p&gt;In July 2025, we published &lt;a href="https://x.com/blocmates/status/1951422453734953348"&gt;a research report&lt;/a&gt; on Aave at Blocmates predicting the protocol would reach $157M in Annually Recurring Revenue (ARR). Six months later, Aave ended 2025 with a 90-day ARR of ~$160M &amp;ndash; ~2% above our base case target.&lt;/p&gt;
+&lt;p&gt;Full-year 2025 revenue came in at $135.2M, 86% of the base case target &amp;ndash; and is currently running at &lt;strong&gt;$130M ARR&lt;/strong&gt; (90-day) in March 2026 with &lt;strong&gt;$26.5B&lt;/strong&gt; in total value locked across all deployments and a &lt;strong&gt;~63% market share&lt;/strong&gt;.&lt;/p&gt;</description></item><item><title>Aave: The Bank of DeFi</title><link>https://defi-kai.github.io/kai-site/research/aave-trojan-horse/</link><pubDate>Fri, 13 Feb 2026 09:00:00 -0500</pubDate><guid>https://defi-kai.github.io/kai-site/research/aave-trojan-horse/</guid><description>@aave has grown to become DeFi&amp;rsquo;s Trojan Horse, reaching a scale comparable to traditional banks. With $35 billion in TVL and $57 billion in net deposits, it now controls 25% of DeFi TVL and ranks among the 50 largest US banks by assets under management (AUM).</description></item><item><title>MetaDAO Launchpad Query Notes (Dune/ TrinoSQL)</title><link>https://defi-kai.github.io/kai-site/data/metadao-launchpad-query-notes/</link><pubDate>Sat, 24 Jan 2026 09:00:00 -0500</pubDate><guid>https://defi-kai.github.io/kai-site/data/metadao-launchpad-query-notes/</guid><description>&lt;p&gt;&lt;img alt="MetaDAO launch architecture" loading="lazy" src="https://defi-kai.github.io/kai-site/data/metadao-launchpad-query-notes/images/MetaDAO_launch_architecture_diagram.excalidraw.png"&gt;&lt;/p&gt;
+&lt;p&gt;While building the &lt;a href="https://dune.com/blocmates_research/metadao-blocmates-pro"&gt;MetaDAO dashboard&lt;/a&gt; at Blocmates, &lt;a href="https://x.com/563defi"&gt;@563defi&lt;/a&gt; and I spent some time digging into MetaDAO&amp;rsquo;s launchpad program to understand the existing Dune queries, build on them, and create new ones.&lt;/p&gt;
+&lt;p&gt;These are my notes, which I will be referring back to as I verify &amp;amp; build out more queries on MetaDAO&amp;rsquo;s activity. This can also be used as context to feed to an LLM for generating simple queries.&lt;/p&gt;</description></item><item><title>About</title><link>https://defi-kai.github.io/kai-site/about/</link><pubDate>Thu, 18 Dec 2025 14:51:02 -0500</pubDate><guid>https://defi-kai.github.io/kai-site/about/</guid><description>&lt;h2 id="experience"&gt;Experience&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Research Analyst&lt;/strong&gt; — &lt;em&gt;&lt;a href="https://www.blocmates.com/"&gt;Blocmates&lt;/a&gt;&lt;/em&gt;&lt;br&gt;
+&lt;em&gt;2024-Present&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Research focused on DeFi market structure, onchain yield, and risk&lt;/li&gt;
-&lt;li&gt;Produces long-form research, dashboards, and supporting analytical artifacts&lt;/li&gt;
+&lt;li&gt;Maintain and iterate on an AI-driven analytics pipeline (&lt;a href="https://dune.com/blocmates_research/metadao-blocmates-pro"&gt;Claude Code → Dune → GitHub&lt;/a&gt;) for data-backed reporting&lt;/li&gt;
+&lt;li&gt;Research DeFi market structure, onchain yield, and protocol risk, producing long-form reports and due diligence&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Core Member&lt;/strong&gt; — &lt;em&gt;IslandDAO&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Core Contributor &amp;amp; Consultant&lt;/strong&gt; — &lt;em&gt;&lt;a href="https://islanddao.org/"&gt;IslandDAO&lt;/a&gt;&lt;/em&gt;&lt;br&gt;
+&lt;em&gt;2023-Present&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Solana DecentraGrants Program: Evaluated grant proposals for NFT and fungible token development&lt;/li&gt;
-&lt;li&gt;Metaplex Grants Program: Evaluated grant proposals for NFT and fungible token development&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://v2.realms.today/dao/6yU77XJakREaptpqFbu5azT7uzxa6RPswhpTAYX9pq1o"&gt;Solana DecentraGrants Program&lt;/a&gt;: Co-managed $57K in funds, filtering applications and advising projects on viability and user adoption&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/metaplex-foundation/dao/discussions/9"&gt;Metaplex Grants Program&lt;/a&gt;: Allocated $150K+ to high-impact projects as a Grants Council Member and multisig signer&lt;/li&gt;
+&lt;li&gt;Provided product positioning and UX feedback for 20+ early-stage Solana projects, including Jito, Lulo, and Tensor Trade&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Freelance Researcher&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Conducted protocol and market research for platforms including Reserve Protocol and Arkham, and angel investors&lt;/li&gt;
-&lt;li&gt;Focused on protocol mechanics, incentives, and ecosystem positioning&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Marketing Manager&lt;/strong&gt; — &lt;em&gt;Streamflow&lt;/em&gt;
-&lt;em&gt;2022-2024&lt;/em&gt;&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+&lt;p&gt;&lt;strong&gt;Freelance Researcher&lt;/strong&gt;&lt;br&gt;
+&lt;em&gt;2021-2025&lt;/em&gt;&lt;/p&gt;</description></item></channel></rss>
