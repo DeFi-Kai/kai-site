@@ -24,33 +24,29 @@ Here are our projections from the original report in July 25':
 
 Source(s): Token Terminal and Chaos Labs
 
-**Here's what happened in H2 2025:**
+**Here's what happened:**
 
-Crypto's total market cap peaked at $4.28T in October 2025. Shortly after, the entire crypto market took a hit, dropping 30% to $3T -- a ~$1.3T decline.
+H2 2025 played out in two phases: expansion through September and October, followed by a sharp Q4 pullback. Crypto's total market cap peaked at $4.28T in October before falling 30% to $3T by December 2025.
 
 {{< img src="images/aave-six-months-later/market-cap-peak.png" alt="Crypto total market cap" >}}
 
 [source](https://coinmarketcap.com/charts/)
 
-Naturally, this downwards trend bled into the lending market sector: active loans across the entire lending industry peaked in September at $44.97B but dropped to $34.99B by the end of December ([source](https://tokenterminal.com/explorer/markets/lending)).
+That reversal filtered into lending. Active loans across the sector peaked at $44.97B in September and fell to $34.99B by the end of December ([source](https://tokenterminal.com/explorer/markets/lending)).
 
-As demand lessened throughout the entire industry it caused deposit rates to deteriorate. In July 2025, the interest rate for USDC on Aave's Ethereum deployment sat at 4.21%, but by year's end it dropped by nearly 80 basis points to 3.41%.
+Lower borrowing demand also compressed deposit rates. On Aave's Ethereum deployment, the USDC rate fell from 4.21% in July 2025 to 3.41% by year-end.
 
 {{< img src="images/aave-six-months-later/usdc-rate.png" alt="Aave USDC rates" >}}
 
 [source](https://aave.tokenlogic.xyz/rates)
 
-Aave's metrics followed a similar trend: from July to September Active loans grew ~41% from ~$20.6B to $29B. But in H2 2025, active loans dropped ~28% from $29B to $21B ([source](https://tokenterminal.com/explorer/markets/lending/metrics/active-loans)).
+Aave followed the same pattern, but still finished the year well above where it started. Active loans grew ~41% from ~$20.6B in July to $29B in September, then retraced to $21B by December ([source](https://tokenterminal.com/explorer/markets/lending/metrics/active-loans)).
 
-Despite this drop, Active loans were still up 43% over the course of 2025 ($14.7B to $21B).
+Even after that retracement, active loans were still up 43% over the course of 2025 ($14.7B to $21B).
 
-As a result, lending revenue across V3 and V2 (including SVR, liquidiations, and flashloans) ended the year at $152M ARR (14% above our $133M exit-ARR projection).
+Lending revenue across V3 and V2 (including SVR, liquidations, and flash loans) ended the year at $152M ARR, 14% above our $133M exit-ARR projection.
 
-However, the outperformance was almost entirely driven by SVR liquidations, which made up **$20.4M of that figure** -- way above our $8M projection for the entire liquidations/SVR/other category.
-
-GHO was a different story. The GHO supply grew roughly 141% through 2025 going from ~$150M at the start of the year to ~$361M by year-end. Impressive growth, but GHO supply still fell short of our expected $627M, with **EoY ARR for GHO falling to $7.9M**.
-
-Across all projects, ARR reached a total of $160.2M by the end of the year.
+That outperformance was driven almost entirely by SVR liquidations, which made up **$20.4M of that figure** -- well above our $8M projection for the entire liquidations/SVR/other category.
 
 | Stream                           | Jul-25 ARR | EoY 2025 ARR | 2025 Actual |
 | -------------------------------- | ---------- | ------------ | ----------- |
@@ -60,6 +56,10 @@ Across all projects, ARR reached a total of $160.2M by the end of the year.
 | **TOTAL**                        | **$99.7M** | **$160.2M**  | **$135.2M** |
 
 Via TokenTerminal
+
+GHO was a different story. The GHO supply grew roughly 141% through 2025 going from ~$150M at the start of the year to ~$361M by year-end. Impressive growth, but GHO supply still fell short of our expected $627M, with **EoY ARR for GHO falling to $7.9M**.
+
+Across all projects, ARR reached a total of $160.2M by the end of the year.
 
 ## Revisiting the four catalysts
 
