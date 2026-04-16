@@ -8,6 +8,8 @@ title = 'Aave Six Months Later'
 
 *In July 2025, we published [a research report](https://x.com/blocmates/status/1951422453734953348) on Aave predicting the protocol would reach $157M in Annually Recurring Revenue (ARR). Six months later, Aave ended 2025 with a 90-day ARR of ~$160M -- ~2% above our base case target.*
 
+The original thesis was built on four catalysts: the V4 upgrade, SVR revenue growth, the Horizon instance deployment, and regulatory tailwinds from the GENIUS Act and CLARITY Act.
+
 This writeup will revisit the projections from the original thesis and cover what we got right, what we missed, and what it means for the road ahead.
 
 ## The revenue story
