@@ -6,7 +6,7 @@ title = 'Aave Six Months Later'
 
 {{< img src="images/aave-six-months-later/aave-six-months-later-new.png" alt="Aave Six Months Later" >}}
 
-*In July 2025, we published [a research report](https://x.com/blocmates/status/1951422453734953348) on Aave predicting the protocol would reach $157M in Annually Recurring Revenue (ARR). Six months later, Aave ended 2025 with a 90-day ARR of ~$160M -- ~2% above our base case target.*
+In July 2025, we published [a research report](https://x.com/blocmates/status/1951422453734953348) on Aave predicting the protocol would reach $157M in Annually Recurring Revenue (ARR). Six months later, Aave ended 2025 with a 90-day ARR of ~$160M -- ~2% above our base case target.
 
 The original thesis was built on four catalysts: the V4 upgrade, SVR revenue growth, the Horizon instance deployment, and regulatory tailwinds from the GENIUS Act and CLARITY Act.
 
