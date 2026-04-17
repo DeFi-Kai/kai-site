@@ -6,7 +6,7 @@
 &lt;p&gt;While building the &lt;a href="https://dune.com/blocmates_research/metadao-blocmates-pro"&gt;MetaDAO dashboard&lt;/a&gt; at Blocmates, &lt;a href="https://x.com/563defi"&gt;@563defi&lt;/a&gt; and I spent some time digging into MetaDAO&amp;rsquo;s launchpad program to understand the existing Dune queries, build on them, and create new ones.&lt;/p&gt;
 &lt;p&gt;These are my notes, which I will be referring back to as I verify &amp;amp; build out more queries on MetaDAO&amp;rsquo;s activity. This can also be used as context to feed to an LLM for generating simple queries.&lt;/p&gt;</description></item><item><title>About</title><link>https://defi-kai.github.io/kai-site/about/</link><pubDate>Thu, 18 Dec 2025 14:51:02 -0500</pubDate><guid>https://defi-kai.github.io/kai-site/about/</guid><description>&lt;h2 id="experience"&gt;Experience&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Research Analyst&lt;/strong&gt; — &lt;em&gt;&lt;a href="https://www.blocmates.com/"&gt;Blocmates&lt;/a&gt;&lt;/em&gt;&lt;br&gt;
-&lt;em&gt;2024-Present&lt;/em&gt;&lt;/p&gt;
+&lt;em&gt;2024-2026&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Maintain and iterate on an AI-driven analytics pipeline (&lt;a href="https://dune.com/blocmates_research/metadao-blocmates-pro"&gt;Claude Code → Dune → GitHub&lt;/a&gt;) for data-backed reporting&lt;/li&gt;
 &lt;li&gt;Research DeFi market structure, onchain yield, and protocol risk, producing long-form reports and due diligence&lt;/li&gt;
