@@ -1,6 +1,6 @@
 +++
 date = '2026-03-07T10:30:00-05:00'
-draft = false
+draft = true
 title = 'Aave Six Months Later'
 +++
 
@@ -34,7 +34,7 @@ H2 2025 played out in two phases: expansion through September and October, follo
 
 That reversal filtered into lending. Active loans across the sector peaked at $44.97B in September and fell to $34.99B by the end of December ([source](https://tokenterminal.com/explorer/markets/lending)).
 
-Lower borrowing demand also compressed deposit rates. On Aave's Ethereum deployment, the USDC rate fell from 4.21% in July 2025 to 3.41% by year-end.
+One visible expression of that softer demand on Aave was deposit rates. On Ethereum, the USDC rate fell from 4.21% in July 2025 to 3.41% by year-end.
 
 {{< img src="images/aave-six-months-later/usdc-rate.png" alt="Aave USDC rates" >}}
 
@@ -44,22 +44,21 @@ Aave followed the same pattern, but still finished the year well above where it 
 
 Even after that retracement, active loans were still up 43% over the course of 2025 ($14.7B to $21B).
 
-Lending revenue across V3 and V2 (including SVR, liquidations, and flash loans) ended the year at $152M ARR, 14% above our $133M exit-ARR projection.
+Even with that Q4 slowdown, non-GHO protocol revenue ended the year at $152.2M ARR, 14% above our $133M base-case forecast. The reason is that softer lending conditions were more than offset by stronger liquidation- and SVR-driven revenue than we modeled.
 
-That outperformance was driven almost entirely by SVR liquidations, which made up **$20.4M of that figure** -- well above our $8M projection for the entire liquidations/SVR/other category.
+To make the comparison apples-to-apples, I combine the original Lending and Liquidations / SVR / Other buckets into a single non-GHO protocol line.
 
-| Stream                           | Jul-25 ARR | EoY 2025 ARR | 2025 Actual |
-| -------------------------------- | ---------- | ------------ | ----------- |
-| V3 (lending + liq + SVR + flash) | $86.3M     | $148.2M      | $116.5M     |
-| V2 (legacy lending)              | $3.9M      | $4.0M        | $9.3M       |
-| GHO                              | $9.5M      | $7.9M        | $9.4M       |
-| **TOTAL**                        | **$99.7M** | **$160.2M**  | **$135.2M** |
+| Bucket                                            | Base Case (YE'25 ARR) | Actual YE'25 ARR | Delta      | 2025 Actual Revenue |
+| ------------------------------------------------- | --------------------- | ---------------- | ---------- | ------------------- |
+| Protocol revenue (V2, V3, SVR liquidations, etc.) | $133.0M               | $152.2M          | +$19.2M    | $125.8M             |
+| GHO                                               | $24.0M                | $7.9M            | -$16.1M    | $9.4M               |
+| **TOTAL**                                         | **$157.0M**           | **$160.2M**      | **+$3.2M** | **$135.2M**         |
 
-Via TokenTerminal
+Via TokenTerminal.
 
-GHO was a different story. The GHO supply grew roughly 141% through 2025 going from ~$150M at the start of the year to ~$361M by year-end. Impressive growth, but GHO supply still fell short of our expected $627M, with **EoY ARR for GHO falling to $7.9M**.
+The headline ARR call was roughly right, but the mix was not: GHO underperformed, while non-GHO protocol revenue, especially SVR-driven revenue, came in stronger than expected.
 
-Across all projects, ARR reached a total of $160.2M by the end of the year.
+*One clarification: the original report projected exit ARR, not actual 2025 revenue. Aave ended the year at $160.2M ARR, but generated $135.2M of actual revenue in 2025. That gap is expected: ARR annualizes the year-end run-rate, while actual revenue includes the lower-earning months earlier in the year.*
 
 ## Revisiting the four catalysts
 
