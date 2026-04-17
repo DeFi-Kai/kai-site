@@ -7,16 +7,16 @@ ShowToc = false
 
 ## Experience
 
-**Research Analyst** — *[Blocmates](https://www.blocmates.com/)*  
-*2024-2026*  
-- Maintain and iterate on an AI-driven analytics pipeline ([Claude Code → Dune → GitHub](https://dune.com/blocmates_research/metadao-blocmates-pro)) for data-backed reporting
-- Research DeFi market structure, onchain yield, and protocol risk, producing long-form reports and due diligence
-
 **Core Contributor & Consultant** — *[IslandDAO](https://islanddao.org/)*  
 *2023-Present*  
 - [Solana DecentraGrants Program](https://v2.realms.today/dao/6yU77XJakREaptpqFbu5azT7uzxa6RPswhpTAYX9pq1o): Co-managed $57K in funds, filtering applications and advising projects on viability and user adoption
 - [Metaplex Grants Program](https://github.com/metaplex-foundation/dao/discussions/9): Allocated $150K+ to high-impact projects as a Grants Council Member and multisig signer
 - Provided product positioning and UX feedback for 20+ early-stage Solana projects, including Jito, Lulo, and Tensor Trade
+
+**Research Analyst** — *[Blocmates](https://www.blocmates.com/)*  
+*2024-2026*  
+- Maintain and iterate on an AI-driven analytics pipeline ([Claude Code → Dune → GitHub](https://dune.com/blocmates_research/metadao-blocmates-pro)) for data-backed reporting
+- Research DeFi market structure, onchain yield, and protocol risk, producing long-form reports and due diligence
 
 **Freelance Researcher**  
 *2021-2025*  
