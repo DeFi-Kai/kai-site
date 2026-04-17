@@ -15,8 +15,8 @@ ShowToc = false
 
 **Research Analyst** — *[Blocmates](https://www.blocmates.com/)*  
 *2024-2026*  
-- Maintain and iterate on an AI-driven analytics pipeline ([Claude Code → Dune → GitHub](https://dune.com/blocmates_research/metadao-blocmates-pro)) for data-backed reporting
-- Research DeFi market structure, onchain yield, and protocol risk, producing long-form reports and due diligence
+- Maintained and iterated on an AI-driven analytics pipeline ([Claude Code → Dune → GitHub](https://dune.com/blocmates_research/metadao-blocmates-pro)) for data-backed reporting
+- Researched DeFi market structure, onchain yield, and protocol risk, producing long-form reports and due diligence
 
 **Freelance Researcher**  
 *2021-2025*  
