@@ -8,7 +8,7 @@ ShowToc = false
 ## Experience
 
 **Research Analyst** — *[Blocmates](https://www.blocmates.com/)*  
-*2024-Present*  
+*2024-2026*  
 - Maintain and iterate on an AI-driven analytics pipeline ([Claude Code → Dune → GitHub](https://dune.com/blocmates_research/metadao-blocmates-pro)) for data-backed reporting
 - Research DeFi market structure, onchain yield, and protocol risk, producing long-form reports and due diligence
 
@@ -38,7 +38,7 @@ Blockchain Data Analysis | Decentralized Finance (DeFi) Research | Protocol Anal
 
 ## Projects
 
-**[Jupiter Lend Liquidation Decoder](https://x.com/DefiVaults/status/1989206474468335981?s=20)** — Solana Turbin3 Q4 2025 Capstone
+**[Jupiter Lend Liquidation Decoder](https://x.com/DefiVaults/status/1989206474468335981?s=20)** — Solana Turbin3 Q4 2025 Final Project
 - Built a fully decoded Jupiter Lend liquidation table from raw Solana instruction data, reverse-engineering Anchor discriminators and inner instruction patterns
 - Analyzed $1.28M in liquidations during the October 10, 2025 mass liquidation event
 
