@@ -1,359 +1,359 @@
 slug,name,gecko_id,latest_outstanding_loans,selected
-aave-v3,Aave V3,aave,36401158435.0,yes
-morpho-v1,Morpho V1,morpho,8609063740.0,yes
-maple,Maple,syrup,4602905469.0,yes
-kamino-lend,Kamino Lend,kamino,2220399225.0,yes
-sparklend,SparkLend,spark-2,1937604938.0,yes
-fluid-lending,Fluid Lending,instadapp,1735249790.0,no
-euler-v2,Euler V2,euler,1686633928.0,no
-jupiter-lend,Jupiter Lend,jupiter-exchange-solana,1271477532.0,no
-compound-v3,Compound V3,compound-governance-token,1141007950.0,no
-venus-core-pool,Venus Core Pool,venus,971232405.0,no
-fira,Fira,,839016365.0,no
-tydro,Tydro,,617774257.0,no
-dolomite,Dolomite,dolomite,603770998.0,no
-hyperlend-pooled,HyperLend Pooled,hyperlend,409127393.0,no
-justlend,JustLend,just,404089508.0,no
-lista-lending,Lista Lending,lista,372027187.0,no
-save,Save,save,285763586.0,no
-cooler-loans,Cooler Loans,,250229289.0,no
-neverland,Neverland,,227610567.0,no
-navi-lending,NAVI Lending,navi,193444473.0,no
-tectonic,Tectonic,tectonic,164274929.0,no
-cap,cap,,147432735.0,no
-alphalend,AlphaLend,bluefin,130334499.0,no
-suilend,Suilend,suilend,107782489.0,no
-loopscale,Loopscale,,106574514.0,no
-venus-flux,Venus Flux,venus,105320638.0,no
-benqi-lending,Benqi Lending,benqi,99489845.0,no
-cream-lending,CREAM Lending,cream-2,93441456.0,no
-curve-llamalend,Curve LlamaLend,curve-dao-token,86218029.0,no
-rhea-lend,Rhea Lend,rhea-2,84091792.0,no
-echelon-market,Echelon Market,,80876629.0,no
-seamless-v2,Seamless V2,seamless-protocol,75861097.0,no
-blend-pools-v2,Blend Pools V2,,75819844.0,no
-yeilend,YeiLend,yei-finance,70169069.0,no
-moonwell-lending,Moonwell Lending,moonwell-artemis,69859319.0,no
-flux-finance,Flux Finance,,67725008.0,no
-curvance,Curvance,,63298149.0,no
-silo-v2,Silo V2,silo-finance-2,55104142.0,no
-gearbox,Gearbox,gearbox,49797339.0,no
-project-0,Project 0,,46965724.0,no
-hydration-lending,Hydration Lending,,40715947.0,no
-etherfi-borrowing-market,EtherFi Borrowing Market,ether-fi,40527426.0,no
-aave-v2,Aave V2,aave,39031031.0,no
-hypurrfi-pooled,HypurrFi Pooled,,38015418.0,no
-kinetic,Kinetic,joule-2,30374435.0,no
-capyfi,Capyfi,,30252878.0,no
-wing-finance,Wing Finance,wing-finance,29519617.0,no
-realt-rmm-marketplace-v2,RealT RMM Marketplace V2,realtoken-ecosystem-governance,29239794.0,no
-vires-finance,Vires Finance,vires-finance,29153530.0,no
-compound-v2,Compound V2,compound-governance-token,28673703.0,no
-native-credit-pool,Native Credit Pool,,27954349.0,no
-folks-finance-lending,Folks Finance Lending,folks,26601353.0,no
-termmax,TermMax,,23138500.0,no
-40-acres,40 Acres,,22763148.0,no
-rho-markets,Rho Markets,,22375686.0,no
-metalx-lending,MetalX Lending,proton-loan,21583558.0,no
-layerbank,LayerBank,lineabank,20719921.0,no
-aave-v4,Aave V4,aave,20596898.0,no
-scallop-lend,Scallop Lend,scallop-2,19947892.0,no
-folks-finance-xchain,Folks Finance xChain,folks,17900365.0,no
-vesu,Vesu,,17116230.0,no
-current,Current,,16875889.0,no
-aave-aptos,Aave Aptos,aave,14775643.0,no
-fraxlend,Fraxlend,frax-share,14768698.0,no
-liqwid,Liqwid,liqwid-finance,14468935.0,no
-zest-v2,Zest V2,,12939237.0,no
-zerolend-lending,ZeroLend Lending,zerolend,11757508.0,no
-evaa-protocol,EVAA Protocol,,9910519.0,no
-bamm,BAMM,frax-share,9318977.0,no
-tarot,Tarot,tarot-2,9092635.0,no
-tropykus-rsk,Tropykus RSK,,8985000.0,no
-altitude.fi,Altitude.Fi,,8790637.0,no
-more-markets,MORE Markets,,8605930.0,no
-aries-markets,Aries Markets,,8066804.0,no
-purrlend,Purrlend,,7452532.0,no
-bonzo-finance,Bonzo Finance,bonzo-finance,7276549.0,no
-takara-lend,Takara Lend,,7105538.0,no
+aave-v3,Aave V3,aave,35667030350.0,yes
+morpho-v1,Morpho V1,morpho,8313424504.0,yes
+maple,Maple,syrup,4269856219.0,yes
+kamino-lend,Kamino Lend,kamino,2196174358.0,yes
+sparklend,SparkLend,spark-2,1905621689.0,yes
+euler-v2,Euler V2,euler,1681523826.0,no
+fluid-lending,Fluid Lending,instadapp,1641263590.0,no
+jupiter-lend,Jupiter Lend,jupiter-exchange-solana,1250510175.0,no
+compound-v3,Compound V3,compound-governance-token,1202524497.0,no
+venus-core-pool,Venus Core Pool,venus,969129019.0,no
+fira,Fira,,839002088.0,no
+dolomite,Dolomite,dolomite,624347724.0,no
+tydro,Tydro,,509904775.0,no
+justlend,JustLend,just,405476402.0,no
+hyperlend-pooled,HyperLend Pooled,hyperlend,397870106.0,no
+lista-lending,Lista Lending,lista,371348787.0,no
+save,Save,save,285811513.0,no
+cooler-loans,Cooler Loans,,250506617.0,no
+neverland,Neverland,,243375142.0,no
+navi-lending,NAVI Lending,navi,188063029.0,no
+tectonic,Tectonic,tectonic,163973049.0,no
+cap,cap,,147002189.0,no
+alphalend,AlphaLend,bluefin,128777024.0,no
+loopscale,Loopscale,,106459058.0,no
+suilend,Suilend,suilend,104365532.0,no
+venus-flux,Venus Flux,venus,104046304.0,no
+benqi-lending,Benqi Lending,benqi,98930253.0,no
+cream-lending,CREAM Lending,cream-2,93429252.0,no
+curve-llamalend,Curve LlamaLend,curve-dao-token,86043233.0,no
+rhea-lend,Rhea Lend,rhea-2,84078478.0,no
+echelon-market,Echelon Market,,83516177.0,no
+blend-pools-v2,Blend Pools V2,,75867906.0,no
+moonwell-lending,Moonwell Lending,moonwell-artemis,68098208.0,no
+yeilend,YeiLend,yei-finance,68048372.0,no
+flux-finance,Flux Finance,,67720639.0,no
+curvance,Curvance,,61918349.0,no
+silo-v2,Silo V2,silo-finance-2,54084530.0,no
+project-0,Project 0,,48828233.0,no
+seamless-v2,Seamless V2,seamless-protocol,43770884.0,no
+gearbox,Gearbox,gearbox,43115034.0,no
+etherfi-borrowing-market,EtherFi Borrowing Market,ether-fi,40578587.0,no
+hydration-lending,Hydration Lending,,38780644.0,no
+aave-v2,Aave V2,aave,38514506.0,no
+hypurrfi-pooled,HypurrFi Pooled,,37218565.0,no
+kinetic,Kinetic,joule-2,30636808.0,no
+capyfi,Capyfi,,29703562.0,no
+realt-rmm-marketplace-v2,RealT RMM Marketplace V2,realtoken-ecosystem-governance,29245064.0,no
+vires-finance,Vires Finance,vires-finance,29152646.0,no
+wing-finance,Wing Finance,wing-finance,28868929.0,no
+compound-v2,Compound V2,compound-governance-token,28540835.0,no
+folks-finance-lending,Folks Finance Lending,folks,25631719.0,no
+aave-v4,Aave V4,aave,24872289.0,no
+native-credit-pool,Native Credit Pool,,23970864.0,no
+termmax,TermMax,,23896084.0,no
+40-acres,40 Acres,,22765889.0,no
+rho-markets,Rho Markets,,21795326.0,no
+metalx-lending,MetalX Lending,proton-loan,21386344.0,no
+layerbank,LayerBank,lineabank,20197589.0,no
+scallop-lend,Scallop Lend,scallop-2,19585033.0,no
+folks-finance-xchain,Folks Finance xChain,folks,17828387.0,no
+vesu,Vesu,,16732755.0,no
+current,Current,,16114862.0,no
+aave-aptos,Aave Aptos,aave,14808976.0,no
+fraxlend,Fraxlend,frax-share,14765867.0,no
+liqwid,Liqwid,liqwid-finance,14323912.0,no
+zest-v2,Zest V2,,12990257.0,no
+templar-protocol,Templar Protocol,,11829238.0,no
+zerolend-lending,ZeroLend Lending,zerolend,11408367.0,no
+evaa-protocol,EVAA Protocol,,9705550.0,no
+bamm,BAMM,frax-share,9364067.0,no
+tropykus-rsk,Tropykus RSK,,8945306.0,no
+altitude.fi,Altitude.Fi,,8781796.0,no
+tarot,Tarot,tarot-2,8779696.0,no
+more-markets,MORE Markets,,8390667.0,no
+aries-markets,Aries Markets,,7881667.0,no
+purrlend,Purrlend,,7791410.0,no
+bonzo-finance,Bonzo Finance,bonzo-finance,7175939.0,no
+takara-lend,Takara Lend,,7075615.0,no
 pac-finance,Pac Finance,,6567852.0,no
-compound-blue,Compound Blue,,6482918.0,no
-primefi,PrimeFi,primefi,5957566.0,no
-templar-protocol,Templar Protocol,,5906648.0,no
-shoebill-v2,Shoebill V2,,5577985.0,no
-unitus,Unitus,unitus-2,4473915.0,no
+compound-blue,Compound Blue,,6162532.0,no
+shoebill-v2,Shoebill V2,,5513378.0,no
+primefi,PrimeFi,primefi,5278474.0,no
+unitus,Unitus,unitus-2,4527177.0,no
 aptin-finance-v2,Aptin Finance V2,,4320983.0,no
-hatom-lending,Hatom Lending,hatom,4225776.0,no
-affluent,Affluent,,3855527.0,no
-kinza-finance,Kinza Finance,,3731910.0,no
-zest-v1,Zest V1,,3471442.0,no
-radiant-v2,Radiant V2,radiant-capital,3067637.0,no
-moveposition,MovePosition,,2923998.0,no
-umee,Umee,umee,2922654.0,no
+hatom-lending,Hatom Lending,hatom,4119511.0,no
+kinza-finance,Kinza Finance,,3708445.0,no
+affluent,Affluent,,3559837.0,no
+zest-v1,Zest V1,,3287772.0,no
+radiant-v2,Radiant V2,radiant-capital,3040892.0,no
 ploutos-money,Ploutos Money,,2906040.0,no
-sovryn-lend,Sovryn Lend,sovryn,2634110.0,no
-colend-protocol,Colend Protocol,,2535069.0,no
-init-capital,INIT Capital,,2397026.0,no
-fluidtokens,FluidTokens,fluidtokens,2374081.0,no
-neptune-finance,Neptune Finance,,2282293.0,no
-wepiggy,WePiggy,wepiggy-coin,2269181.0,no
-termfinance-lend,TermFinance Lend,,2174903.0,no
-nostra-money-market,Nostra Money Market,nostra,2127352.0,no
-silo-v1,Silo V1,silo-finance-2,2085738.0,no
-extra-finance-xlend,Extra Finance Xlend,extra-finance,1937474.0,no
+umee,Umee,umee,2900631.0,no
+moveposition,MovePosition,,2663881.0,no
+sovryn-lend,Sovryn Lend,sovryn,2602964.0,no
+colend-protocol,Colend Protocol,,2526645.0,no
+init-capital,INIT Capital,,2390500.0,no
+fluidtokens,FluidTokens,fluidtokens,2311953.0,no
+wepiggy,WePiggy,wepiggy-coin,2221042.0,no
+neptune-finance,Neptune Finance,,2198923.0,no
+termfinance-lend,TermFinance Lend,,2172673.0,no
+nostra-money-market,Nostra Money Market,nostra,2096038.0,no
+silo-v1,Silo V1,silo-finance-2,1967954.0,no
+extra-finance-xlend,Extra Finance Xlend,extra-finance,1961709.0,no
 starlay-finance,Starlay Finance,starlay-finance,1890147.0,no
-mesher,Mesher,donkey-token,1882654.0,no
-hydro-lending,Hydro Lending,hydro-protocol-2,1851707.0,no
-permapod,Permapod,,1827327.0,no
-carrot-lend,Carrot Lend,carrot-2,1807811.0,no
-superlend,Superlend,,1805214.0,no
-bend,BEND,,1689432.0,no
-root-finance,Root Finance,,1565412.0,no
-valas-finance,Valas Finance,valas-finance,1525706.0,no
-canto-lending,Canto Lending,,1510942.0,no
-hundred-finance,Hundred Finance,hundred-finance,1407895.0,no
-sakefinance,SakeFinance,sone,1357237.0,no
-alpaca-finance-2.0,Alpaca Finance 2.0,alpaca-finance,1336415.0,no
-venus-isolated-pools,Venus Isolated Pools,venus,1334997.0,no
-inertia,INERTIA,,1309211.0,no
-hyperdrive-hl,Hyperdrive HL,,1251588.0,no
-joule-finance,Joule Finance,,1217701.0,no
-defituna-lending,DefiTuna Lending,defituna,1197910.0,no
-joe-lend,Joe Lend,joe,1146737.0,no
-tender-finance,Tender Finance,tender-fi,1063631.0,no
-chainflip-lending,Chainflip Lending,chainflip,954676.0,no
-shadelend,ShadeLend,silk-bcec1136-561c-4706-a42c-8b67d0d7f7d2,925206.0,no
-daolama,DAOLama,,872779.0,no
-smartcredit,SmartCredit,smartcredit-token,862636.0,no
-paraspace-lending-v1,ParaSpace Lending V1,,844566.0,no
-kona-lend,Kona Lend,,812791.0,no
-parallel-lending,Parallel Lending,,800122.0,no
-mendi-finance,Mendi Finance,mendi-finance,781477.0,no
-echo-lending,Echo Lending,,755586.0,no
-hypurrfi-isolated,HypurrFi Isolated,,753386.0,no
-avalon-finance,Avalon Finance,,750205.0,no
-filda,FilDA,filda,746715.0,no
-lendle-pooled-markets,Lendle Pooled Markets,lendle,742173.0,no
-pando-rings,Pando Rings,,737742.0,no
-kava-lend,Kava Lend,kava-lend,724451.0,no
-exactly,Exactly,exa,702076.0,no
-tokos,Tokos,,675949.0,no
-phiat-protocol,Phiat Protocol,phiat-protocol,668659.0,no
-fungify,Fungify,fungify-token,635687.0,no
-townsquare,TownSquare,,507555.0,no
-hyperlend-isolated,HyperLend Isolated,hyperlend,457686.0,no
-granary-finance,Granary Finance,granary,454184.0,no
-aurigami,Aurigami,aurigami,451277.0,no
+mesher,Mesher,donkey-token,1869758.0,no
+permapod,Permapod,,1827542.0,no
+hydro-lending,Hydro Lending,hydro-protocol-2,1773591.0,no
+carrot-lend,Carrot Lend,carrot-2,1769988.0,no
+superlend,Superlend,,1751408.0,no
+bend,BEND,,1675349.0,no
+valas-finance,Valas Finance,valas-finance,1562099.0,no
+canto-lending,Canto Lending,,1517010.0,no
+hundred-finance,Hundred Finance,hundred-finance,1402628.0,no
+inertia,INERTIA,,1358008.0,no
+sakefinance,SakeFinance,sone,1340939.0,no
+venus-isolated-pools,Venus Isolated Pools,venus,1307450.0,no
+hyperdrive-hl,Hyperdrive HL,,1237860.0,no
+alpaca-finance-2.0,Alpaca Finance 2.0,alpaca-finance,1220589.0,no
+joule-finance,Joule Finance,,1212935.0,no
+defituna-lending,DefiTuna Lending,defituna,1191167.0,no
+joe-lend,Joe Lend,joe,1141580.0,no
+root-finance,Root Finance,,1069617.0,no
+tender-finance,Tender Finance,tender-fi,1043662.0,no
+chainflip-lending,Chainflip Lending,chainflip,960785.0,no
+shadelend,ShadeLend,silk-bcec1136-561c-4706-a42c-8b67d0d7f7d2,918234.0,no
+smartcredit,SmartCredit,smartcredit-token,845930.0,no
+paraspace-lending-v1,ParaSpace Lending V1,,825254.0,no
+kona-lend,Kona Lend,,798171.0,no
+daolama,DAOLama,,788275.0,no
+parallel-lending,Parallel Lending,,784740.0,no
+mendi-finance,Mendi Finance,mendi-finance,764188.0,no
+hypurrfi-isolated,HypurrFi Isolated,,746258.0,no
+pando-rings,Pando Rings,,737743.0,no
+lendle-pooled-markets,Lendle Pooled Markets,lendle,732963.0,no
+avalon-finance,Avalon Finance,,727542.0,no
+filda,FilDA,filda,725781.0,no
+echo-lending,Echo Lending,,718832.0,no
+kava-lend,Kava Lend,kava-lend,706811.0,no
+exactly,Exactly,exa,703485.0,no
+tokos,Tokos,,670583.0,no
+phiat-protocol,Phiat Protocol,phiat-protocol,648698.0,no
+fungify,Fungify,fungify-token,635518.0,no
+townsquare,TownSquare,,505095.0,no
+hyperlend-isolated,HyperLend Isolated,hyperlend,458694.0,no
 unilend-protocol,Unilend Protocol,,449701.0,no
-iron-bank,Iron Bank,iron-bank,416198.0,no
-polter-finance,Polter Finance,polter-finance,400827.0,no
-weft-v2,Weft V2,weft-finance,398269.0,no
-amply-finance,Amply Finance,,395577.0,no
-teller,Teller,,384742.0,no
-everything,Everything,everything,379540.0,no
-radiant-v1,Radiant V1,radiant-capital,378820.0,no
-zentra-finance,Zentra Finance,,374023.0,no
-accumulated-finance-lending,Accumulated Finance Lending,,360731.0,no
+granary-finance,Granary Finance,granary,445914.0,no
+aurigami,Aurigami,aurigami,438655.0,no
+iron-bank,Iron Bank,iron-bank,411565.0,no
+amply-finance,Amply Finance,,389602.0,no
+polter-finance,Polter Finance,polter-finance,389249.0,no
+teller,Teller,,384313.0,no
+everything,Everything,everything,379070.0,no
+zentra-finance,Zentra Finance,,366093.0,no
+radiant-v1,Radiant V1,radiant-capital,344978.0,no
+accumulated-finance-lending,Accumulated Finance Lending,,344920.0,no
 sentiment,Sentiment,,342748.0,no
-zebradao,ZebraDAO,,333638.0,no
-knightswap-lending,KnightSwap Lending,knightswap,308154.0,no
+zebradao,ZebraDAO,,329115.0,no
+knightswap-lending,KnightSwap Lending,knightswap,308064.0,no
 quantus-lend,Quantus Lend,,290803.0,no
-klaybank,KlayBank,,282540.0,no
-swaylend,Swaylend,,260841.0,no
-deepr-finance,Deepr Finance,deepr,256891.0,no
-wefi,wefi,wefi-finance,247726.0,no
-sumer.money,Sumer.money,,246862.0,no
+klaybank,KlayBank,,277816.0,no
+swaylend,Swaylend,,261019.0,no
+deepr-finance,Deepr Finance,deepr,253178.0,no
+wefi,wefi,wefi-finance,245533.0,no
 leaper-finance,Leaper Finance,,241048.0,no
-reactorfusion,ReactorFusion,reactorfusion,235538.0,no
-compound-v1,Compound V1,compound-governance-token,223660.0,no
-segment-finance,Segment Finance,segment,214176.0,no
-liquidium,Liquidium,liquidium-token,213594.0,no
-sturdy-v2,Sturdy V2,sturdy,193189.0,no
-wemix.fi-lend,WEMIX.FI Lend,,190254.0,no
-abel-finance,ABEL Finance,abel-finance,187498.0,no
-linx-app,Linx App,,178893.0,no
-untitledbank,UntitledBank,,177635.0,no
-moonwell-apollo,Moonwell Apollo,moonwell,175548.0,no
-superposition,Superposition,,173966.0,no
-wanlend,WanLend,,169867.0,no
-fathom-lending,Fathom Lending,fathom-protocol,168443.0,no
-tranquil-finance,Tranquil Finance,tranquil-finance,165950.0,no
-multichainz,MultichainZ,,161692.0,no
-omnibtc,OmniBTC,,160387.0,no
-moola-market,Moola Market,moola-market,160336.0,no
-ajna-v2,Ajna V2,ajna-protocol,155442.0,no
-yldr,YLDR,,151864.0,no
-sonne-finance,Sonne Finance,sonne-finance,149720.0,no
-seamless-v1,Seamless V1,seamless-protocol,145146.0,no
-zenolend,ZenoLend,,141402.0,no
-lore-finance,Lore Finance,,139758.0,no
-keom-protocol,Keom Protocol,,130669.0,no
-eralend,EraLend,,127213.0,no
-rain.fi,Rain.fi,,122979.0,no
-harbor-market,Harbor Market,harbor-3,120240.0,no
-edel,Edel,edel,114884.0,no
-hyperyield,HyperYield,,110908.0,no
-apebank,ApeBank,,109718.0,no
-increment-lending,Increment Lending,,109629.0,no
-omm,Omm,omm-tokens,107881.0,no
-interlay-lending,Interlay Lending,interlay,107254.0,no
-aave-v1,Aave V1,aave,96850.0,no
-orbiter-one,Orbiter One,,95546.0,no
-meso-finance,Meso Finance,meso-finance,90642.0,no
-whitehole-finance,Whitehole Finance,,87208.0,no
+reactorfusion,ReactorFusion,reactorfusion,230524.0,no
+sumer.money,Sumer.money,,223066.0,no
+compound-v1,Compound V1,compound-governance-token,217017.0,no
+liquidium,Liquidium,liquidium-token,213590.0,no
+segment-finance,Segment Finance,segment,213007.0,no
+sturdy-v2,Sturdy V2,sturdy,193525.0,no
+wemix.fi-lend,WEMIX.FI Lend,,189774.0,no
+abel-finance,ABEL Finance,abel-finance,184014.0,no
+linx-app,Linx App,,178906.0,no
+untitledbank,UntitledBank,,175178.0,no
+basic,Basic,,174214.0,no
+moonwell-apollo,Moonwell Apollo,moonwell,173939.0,no
+wanlend,WanLend,,170559.0,no
+superposition,Superposition,,167876.0,no
+fathom-lending,Fathom Lending,fathom-protocol,164254.0,no
+weft-v2,Weft V2,weft-finance,161182.0,no
+multichainz,MultichainZ,,160859.0,no
+omnibtc,OmniBTC,,159720.0,no
+moola-market,Moola Market,moola-market,159253.0,no
+tranquil-finance,Tranquil Finance,tranquil-finance,156713.0,no
+ajna-v2,Ajna V2,ajna-protocol,155253.0,no
+sonne-finance,Sonne Finance,sonne-finance,147745.0,no
+yldr,YLDR,,145232.0,no
+seamless-v1,Seamless V1,seamless-protocol,143038.0,no
+zenolend,ZenoLend,,139042.0,no
+lore-finance,Lore Finance,,135349.0,no
+keom-protocol,Keom Protocol,,129278.0,no
+rain.fi,Rain.fi,,122486.0,no
+edel,Edel,edel,119884.0,no
+eralend,EraLend,,118644.0,no
+harbor-market,Harbor Market,harbor-3,117705.0,no
+interlay-lending,Interlay Lending,interlay,108395.0,no
+omm,Omm,omm-tokens,107908.0,no
+apebank,ApeBank,,107884.0,no
+hyperyield,HyperYield,,106878.0,no
+increment-lending,Increment Lending,,106159.0,no
+aave-v1,Aave V1,aave,96120.0,no
+orbiter-one,Orbiter One,,94087.0,no
+meso-finance,Meso Finance,meso-finance,87455.0,no
+whitehole-finance,Whitehole Finance,,87008.0,no
 syno-finance,SYNO Finance,synonym-finance,86812.0,no
-jet-v1,Jet V1,jet,83652.0,no
-nusa,Nusa,nusa-finance,77588.0,no
-vicuna-lending,Vicuna Lending,,74100.0,no
-green-planet,Green Planet,planet-finance,71402.0,no
+jet-v1,Jet V1,jet,83144.0,no
+nusa,Nusa,nusa-finance,76322.0,no
+vicuna-lending,Vicuna Lending,,72801.0,no
+green-planet,Green Planet,planet-finance,70953.0,no
+supralend,Supralend,,68900.0,no
 reax-lending,Reax Lending,,68851.0,no
-supralend,Supralend,,66702.0,no
-apeswap-lending,ApeSwap Lending,abond,65474.0,no
-bastion,Bastion,bastion-protocol,65447.0,no
-mahalend,MahaLend,,64575.0,no
-iolend,IOLEND,iolend,61809.0,no
-uwu-lend,UwU Lend,uwu-lend,60841.0,no
+apeswap-lending,ApeSwap Lending,abond,64978.0,no
+mahalend,MahaLend,,64572.0,no
+iolend,IOLEND,iolend,61507.0,no
+uwu-lend,UwU Lend,uwu-lend,60753.0,no
 udonfi-lending,UdonFi Lending,,57438.0,no
-twyne,Twyne,,57275.0,no
-lucky-peaches,Lucky Peaches,,56543.0,no
-machfi,MachFi,,56428.0,no
-forlend,forlend,,53132.0,no
-aso-finance,Aso Finance,aso-finance,52862.0,no
-sorta-finance,Sorta Finance,,50830.0,no
-wild-credit,Wild Credit,wild-credit,50326.0,no
-midas-capital,Midas Capital,,49955.0,no
-puzzle-lend,Puzzle Lend,puzzle-swap,49860.0,no
-omnipair,Omnipair,omnipair,49680.0,no
-cog,Cog,,49504.0,no
-nostra-money-market-alpha,Nostra Money Market Alpha,nostra,47127.0,no
-rhombus-protocol,Rhombus Protocol,,42452.0,no
-minterest,Minterest,minterest,42158.0,no
+lucky-peaches,Lucky Peaches,,56612.0,no
+machfi,MachFi,,56383.0,no
+twyne,Twyne,,55355.0,no
+bastion,Bastion,bastion-protocol,53774.0,no
+aso-finance,Aso Finance,aso-finance,53275.0,no
+forlend,forlend,,53134.0,no
+omnipair,Omnipair,omnipair,51164.0,no
+sorta-finance,Sorta Finance,,50461.0,no
+midas-capital,Midas Capital,,48996.0,no
+puzzle-lend,Puzzle Lend,puzzle-swap,48877.0,no
+wild-credit,Wild Credit,wild-credit,48659.0,no
+cog,Cog,,48232.0,no
+nostra-money-market-alpha,Nostra Money Market Alpha,nostra,46637.0,no
 impermax-v3,Impermax V3,impermax-2,41809.0,no
-shadex,ShadeX,silk-bcec1136-561c-4706-a42c-8b67d0d7f7d2,41575.0,no
-hana-finance,Hana Finance,,41532.0,no
-ion-protocol,Ion Protocol,,39030.0,no
+minterest,Minterest,minterest,41747.0,no
+rhombus-protocol,Rhombus Protocol,,40902.0,no
+hana-finance,Hana Finance,,40841.0,no
+ion-protocol,Ion Protocol,,37843.0,no
 ambit-finance,Ambit Finance,ambit-finance,35082.0,no
-iloop,ILoop,,34585.0,no
-xpert,Xpert,,34084.0,no
-basic,Basic,,32364.0,no
-levvy-for-tokens,Levvy for Tokens,,30908.0,no
-orcadao,OrcaDAO,orcadao,30496.0,no
-takotako,TakoTako,,28054.0,no
+xpert,Xpert,,33486.0,no
+iloop,ILoop,,33280.0,no
+orcadao,OrcaDAO,orcadao,30482.0,no
+levvy-for-tokens,Levvy for Tokens,,29672.0,no
+takotako,TakoTako,,28062.0,no
 sio2-finance,SiO2 Finance,,26963.0,no
-siennalend,SiennaLend,sienna,26489.0,no
 liquidops,LiquidOps,liquidops,25809.0,no
 blend-pools,Blend Pools,,24749.0,no
-peridot,Peridot,,22777.0,no
-lumen-money,Lumen Money,,20488.0,no
-sendit,Sendit,,20184.0,no
-trava-finance,Trava Finance,trava-finance,19899.0,no
-beta-finance-v1,Beta Finance V1,beta-finance,19270.0,no
-fringe-v2,Fringe V2,fringe-finance,19198.0,no
-lendexe-finance,LendeXe Finance,lendexe,18861.0,no
-coslend,Coslend,,18520.0,no
+siennalend,SiennaLend,sienna,24716.0,no
+peridot,Peridot,,22586.0,no
+shadex,ShadeX,silk-bcec1136-561c-4706-a42c-8b67d0d7f7d2,20575.0,no
+lumen-money,Lumen Money,,20030.0,no
+trava-finance,Trava Finance,trava-finance,19765.0,no
+fringe-v2,Fringe V2,fringe-finance,19160.0,no
+beta-finance-v1,Beta Finance V1,beta-finance,19047.0,no
+sendit,Sendit,,18856.0,no
+lendexe-finance,LendeXe Finance,lendexe,18572.0,no
+molend,Molend,,18516.0,no
 jiblend,JIBLEND,,18410.0,no
 magnify-cash,Magnify Cash,magnify-cash,18336.0,no
-ghost,Ghost,kujira,18072.0,no
-lendle-isolated-markets,Lendle Isolated Markets,lendle,17970.0,no
-hover,Hover,hover,17169.0,no
-molend,Molend,,16950.0,no
-ultraswap,Ultraswap,folks,16852.0,no
-morpho-v0-aavev2,Morpho V0 AaveV2,morpho,16636.0,no
-lander,Lander,,16196.0,no
-loanshark-core,Loanshark Core,,16189.0,no
-pike-v2,Pike V2,pike-finance,15917.0,no
-betterlend,BetterLend,,15744.0,no
-basilisk,Basilisk,,15630.0,no
+coslend,Coslend,,18198.0,no
+ghost,Ghost,kujira,18048.0,no
+lendle-isolated-markets,Lendle Isolated Markets,lendle,17390.0,no
+hover,Hover,hover,17075.0,no
+ultraswap,Ultraswap,folks,16853.0,no
+morpho-v0-aavev2,Morpho V0 AaveV2,morpho,16547.0,no
+loanshark-core,Loanshark Core,,16007.0,no
+lander,Lander,,15944.0,no
+betterlend,BetterLend,,15778.0,no
+basilisk,Basilisk,,15416.0,no
+pike-v2,Pike V2,pike-finance,15388.0,no
 meridian-lend,Meridian Lend,meridian-mst,14992.0,no
-hakura-protocol,Hakura Protocol,,13924.0,no
-voltage-lending,Voltage Lending,fusefi,13494.0,no
-netweave-lending,NetWeave Lending,,13386.0,no
+hakura-protocol,Hakura Protocol,,13758.0,no
+voltage-lending,Voltage Lending,fusefi,13464.0,no
 aptin-finance-v1,Aptin Finance V1,,13379.0,no
-qielend,QIELend,,12821.0,no
-agave,Agave,agave-token,11450.0,no
-beta-finance-v2,Beta Finance V2,beta-finance,11044.0,no
-fmoney,fMoney,fantom-money-market,10120.0,no
-lodestar-v1,Lodestar V1,lodestar,9792.0,no
-aqualoan,AquaLoan,,9403.0,no
-metalend,MetaLend,,9218.0,no
+netweave-lending,NetWeave Lending,,13280.0,no
+qielend,QIELend,,12800.0,no
+agave,Agave,agave-token,11284.0,no
+beta-finance-v2,Beta Finance V2,beta-finance,10884.0,no
+aqualoan,AquaLoan,,9397.0,no
+fmoney,fMoney,fantom-money-market,9254.0,no
 pinjam-labs,Pinjam Labs,pinjam-kava,9210.0,no
+metalend,MetaLend,,9203.0,no
+lodestar-v1,Lodestar V1,lodestar,9074.0,no
 market,Market,,8755.0,no
-surge,Surge,,8255.0,no
-votre,Votre,,7764.0,no
-nexion-lending,Nexion Lending,nexion,7066.0,no
-chedda-finance,Chedda Finance,,6980.0,no
+surge,Surge,,8190.0,no
+votre,Votre,,7592.0,no
+chedda-finance,Chedda Finance,,6982.0,no
 shroomy-protocol-lending,Shroomy Protocol Lending,shroomy,6885.0,no
 shoebill-v1,Shoebill V1,,6674.0,no
-cygnusdao,CygnusDAO,cygnusdao,6502.0,no
-bitlen-finance,Bitlen Finance,,6250.0,no
+cygnusdao,CygnusDAO,cygnusdao,6508.0,no
+nexion-lending,Nexion Lending,nexion,6446.0,no
+bitlen-finance,Bitlen Finance,,6123.0,no
 yusan,Yusan,,6011.0,no
 246club,246Club,,5520.0,no
-enzo-finance,ENZO Finance,,5133.0,no
-huckleberry-lending,Huckleberry Lending,huckleberry,5052.0,no
-zarban,Zarban,,4684.0,no
-roe-finance,Roe Finance,,4632.0,no
-sculptor-finance,Sculptor Finance,,4611.0,no
-edge-protocol,Edge Protocol,,4503.0,no
-rocifi-v2,RociFi V2,,4374.0,no
-yupana,Yupana,,4158.0,no
-multiplier,Multiplier,multiplier,3966.0,no
-morpho-v0-compoundv2,Morpho V0 CompoundV2,morpho,3880.0,no
-palmy-finance,Palmy Finance,,3747.0,no
-solidlizard-lending,SolidLizard Lending,solidlizard,3705.0,no
-lendos,lendOS,,3512.0,no
-u235,U235,,3376.0,no
-lodestar-v0,Lodestar V0,lodestar,2978.0,no
-usdfi-lending,USDFI Lending,,2520.0,no
-mooncake-finance,Mooncake Finance,,2391.0,no
+enzo-finance,ENZO Finance,,5094.0,no
+huckleberry-lending,Huckleberry Lending,huckleberry,4915.0,no
+zarban,Zarban,,4665.0,no
+sculptor-finance,Sculptor Finance,,4590.0,no
+roe-finance,Roe Finance,,4540.0,no
+edge-protocol,Edge Protocol,,4392.0,no
+rocifi-v2,RociFi V2,,4344.0,no
+yupana,Yupana,,4067.0,no
+multiplier,Multiplier,multiplier,3902.0,no
+solidlizard-lending,SolidLizard Lending,solidlizard,3853.0,no
+morpho-v0-compoundv2,Morpho V0 CompoundV2,morpho,3830.0,no
+lendos,lendOS,,3441.0,no
+u235,U235,,3288.0,no
+lodestar-v0,Lodestar V0,lodestar,2967.0,no
+palmy-finance,Palmy Finance,,2617.0,no
+usdfi-lending,USDFI Lending,,2506.0,no
+mooncake-finance,Mooncake Finance,,2369.0,no
 rheo,Rheo,,2368.0,no
-glyph,Glyph,,2298.0,no
-nxfi-protocol,NxFi Protocol,,2274.0,no
-yieldlend,YieldLend,,2242.0,no
+nxfi-protocol,NxFi Protocol,,2272.0,no
+glyph,Glyph,,2248.0,no
+yieldlend,YieldLend,,2196.0,no
 pike-v1,Pike V1,pike-finance,1984.0,no
-weft-v1,Weft V1,weft-finance,1923.0,no
-ilend-v1,iLend V1,,1746.0,no
-elara,Elara,,1702.0,no
-morpho-v0-aavev3,Morpho V0 AaveV3,morpho,1630.0,no
-vmex-finance,VMEX Finance,vmex,1385.0,no
-torches,Torches,,1090.0,no
-tezfin,TezFin,,1046.0,no
+weft-v1,Weft V1,weft-finance,1862.0,no
+ilend-v1,iLend V1,,1691.0,no
+elara,Elara,,1688.0,no
+morpho-v0-aavev3,Morpho V0 AaveV3,morpho,1576.0,no
+vmex-finance,VMEX Finance,vmex,1366.0,no
 kokomo-finance,Kokomo Finance,,1006.0,no
-ilend-v2,iLend V2,,965.0,no
-hashstack,Hashstack,,888.0,no
-mage-finance,Mage Finance,,865.0,no
+tezfin,TezFin,,1004.0,no
+ilend-v2,iLend V2,,952.0,no
+hashstack,Hashstack,,886.0,no
+mage-finance,Mage Finance,,846.0,no
 grace,Grace,,840.0,no
-algofi-lend,Algofi Lend,,768.0,no
-seismic,Seismic,,620.0,no
-fuji-v2,Fuji V2,,514.0,no
+algofi-lend,Algofi Lend,,749.0,no
+torches,Torches,,694.0,no
+seismic,Seismic,,602.0,no
+fuji-v2,Fuji V2,,513.0,no
 fringe-v1,Fringe V1,fringe-finance,492.0,no
-trustin-finance,Trustin Finance,,422.0,no
-bencufi,BencuFi,,420.0,no
-tashi,Tashi,tashi,353.0,no
-0xlend,0xLend,,349.0,no
-kilolend,KiloLend,,342.0,no
+trustin-finance,Trustin Finance,,419.0,no
+bencufi,BencuFi,,409.0,no
+0xlend,0xLend,,348.0,no
+tashi,Tashi,tashi,343.0,no
+kilolend,KiloLend,,336.0,no
 elys-earn,Elys Earn,,328.0,no
-nyke-finance,Nyke Finance,,298.0,no
+nyke-finance,Nyke Finance,,288.0,no
 unlockd-v2,Unlockd V2,,262.0,no
-zoro-protocol,Zoro Protocol,,254.0,no
 monolend,MonoLend,monolend,254.0,no
-lendlord,LendLord,,253.0,no
-nebula-lending,Nebula Lending,,192.0,no
+lendlord,LendLord,,252.0,no
+zoro-protocol,Zoro Protocol,,246.0,no
+nebula-lending,Nebula Lending,,194.0,no
 friendly-market,Friendly Market,,178.0,no
-stackfi,StackFi,,162.0,no
+stackfi,StackFi,,158.0,no
 commodo,Commodo,,155.0,no
 avalon-usdalend,Avalon USDaLend,,126.0,no
-ajna-v1,Ajna V1,ajna-protocol,124.0,no
+ajna-v1,Ajna V1,ajna-protocol,122.0,no
 joltify-lend,Joltify Lend,joltify,104.0,no
 haven1-hlend,Haven1 hLend,,99.0,no
 bitfire,BitFire,,82.0,no
-liqee,Liqee,,56.0,no
+liqee,Liqee,,53.0,no
 quokkalend,QuokkaLend,,33.0,no
 jolt,Jolt,,30.0,no
 aimstrong,AImstrong,,28.0,no
 dforce-lending,dForce Lending,dforce-token,26.0,no
-ionise,Ionise,,26.0,no
 novation,Novation,,26.0,no
-nearlend-dao,Nearlend DAO,nearlend-dao,18.0,no
+ionise,Ionise,,24.0,no
+nearlend-dao,Nearlend DAO,nearlend-dao,16.0,no
 unlockd-v1,Unlockd V1,,12.0,no
 dahlia,Dahlia,,12.0,no
 l2finance,L2FINANCE,,12.0,no
@@ -369,9 +369,9 @@ dtrinity-dlend,dTRINITY dLEND,,0.0,no
 impermax-v2,Impermax V2,impermax-2,0.0,no
 hadouken-lend,Hadouken Lend,,0.0,no
 orbit-protocol,Orbit Protocol,orbit-protocol,0.0,no
+enclabs,Enclabs,,0.0,no
 ironclad-finance,Ironclad Finance,,0.0,no
 dorkfi,DorkFi,,0.0,no
-enclabs,Enclabs,,0.0,no
 geist-finance,Geist Finance,geist-finance,0.0,no
 astrol,Astrol,,0.0,no
 fountain-protocol,Fountain Protocol,fountain-protocol,0.0,no
@@ -382,11 +382,11 @@ aave-arc,Aave Arc,aave,0.0,no
 oxygen,Oxygen,oxygen,0.0,no
 w3bank,w3bank,,0.0,no
 onyx-protocol,Onyx Protocol,Chain-2,0.0,no
-euler-v1,Euler V1,euler,0.0,no
-rocifi-v1,RociFi V1,,0.0,no
 mimas-finance,Mimas Finance,mimas,0.0,no
-gloop,Gloop,,0.0,no
+rocifi-v1,RociFi V1,,0.0,no
+euler-v1,Euler V1,euler,0.0,no
 ooki,Ooki,ooki,0.0,no
+gloop,Gloop,,0.0,no
 ram-protocol,Ram Protocol,,0.0,no
 zkfinance,zkFinance,,0.0,no
 aquarius-loan,Aquarius Loan,aquarius-loan,0.0,no
@@ -399,13 +399,14 @@ vee-finance,Vee Finance,vee-finance,0.0,no
 ocp-finance,OCP Finance,omni-consumer-protocol,0.0,no
 chee-finance,Chee Finance,,0.0,no
 hector-lending,Hector Lending,hector-dao,0.0,no
+percentme,Percentme,,0.0,no
 agora,Agora,agora-defi,0.0,no
 smardex-p2p-lending,SMARDEX P2P Lending,,0.0,no
 renec-lend,Renec Lend,,0.0,no
 blend-finance,Blend Finance,,0.0,no
 annex,Annex,annex,0.0,no
-mantra-dao,MANTRA DAO,mantra-dao,0.0,no
 strike,Strike,strike,0.0,no
+mantra-dao,MANTRA DAO,mantra-dao,0.0,no
 quickswap-lend,Quickswap Lend,,0.0,no
 klend,KLend,klend,0.0,no
 fortress-loans,Fortress Loans,fortress,0.0,no
@@ -414,8 +415,8 @@ metapoly,Metapoly,,0.0,no
 bao-markets,BAO Markets,bao-finance-v2,0.0,no
 evolve,Evolve,,0.0,no
 lava,Lava,,0.0,no
-srwa-lending,SRWA Lending,,0.0,no
 spiritswap-lending,SpiritSwap Lending,spiritswap,0.0,no
+srwa-lending,SRWA Lending,,0.0,no
 augmented-finance,Augmented Finance,augmented-finance,0.0,no
 evoq-finance,Evoq Finance,,0.0,no
 jax-finance,Jax Finance,,0.0,no
@@ -442,13 +443,13 @@ lnd,LND,,0.0,no
 rikkei-finance,Rikkei Finance,rikkei-finance,0.0,no
 ssap,SSAP,,0.0,no
 usury-finance,Usury Finance,,0.0,no
-betterbank,BetterBank,,0.0,no
 tempest-capital,Tempest Capital,tempest,0.0,no
+betterbank,BetterBank,,0.0,no
 fusefi-lending,Fusefi Lending,fusefi,0.0,no
 pu239,Pu239,,0.0,no
 xbank-finance,xBank Finance,,0.0,no
-cashcow-finance,CashCow Finance,cashcow-finance,0.0,no
 swirllend,SwirlLend,,0.0,no
+cashcow-finance,CashCow Finance,cashcow-finance,0.0,no
 paperdao,PaperDAO,,0.0,no
 mare-finance-v2,Mare Finance V2,mare-finance,0.0,no
 milkyway-protocol-milkomeda,MilkyWay Protocol Milkomeda,,0.0,no
@@ -477,9 +478,8 @@ yuzu-market,Yuzu Market,,0.0,no
 alien-finance,Alien Finance,alien-finance,0.0,no
 altr-lend,Altr Lend,,0.0,no
 lumin-finance,Lumin Finance,,0.0,no
-percentme,Percentme,,0.0,no
 firoza-finance,Firoza Finance,,0.0,no
 unleash-protocol,Unleash Protocol,,0.0,no
 teralend,Teralend,,0.0,no
 palomino-finance,Palomino Finance,,0.0,no
-prime-protocol,Prime Protocol,,-9614.0,no
+prime-protocol,Prime Protocol,,-11570.0,no
