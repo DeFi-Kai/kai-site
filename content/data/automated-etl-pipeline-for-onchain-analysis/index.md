@@ -71,4 +71,4 @@ Once queries are created successfully, the user validates outputs in Dune's UI a
 
 To close the loop, the agent runs `pull_from_dune.py` to capture any UI edits (or no-op if unchanged), commits the synced state, and opens a PR.
 
-Merge when ready.
+You or team members can merge the PR.
