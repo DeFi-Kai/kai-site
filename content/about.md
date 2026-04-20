@@ -29,13 +29,6 @@ ShowToc = false
 - Contributed to partnerships and co-marketing efforts across a small, cross-functional team
 - Authored website copy, blog posts, and marketing collateral
 
-## Skills & Credentials
-
-Blockchain Data Analysis | Decentralized Finance (DeFi) Research | Protocol Analysis | SQL | Python | Technical Writing | Ecosystem Development | Project Management
-
-- [Solana Turbin3](https://www.turbin3.org/) Q4 2025 Graduate
-- Azure Fundamentals Certification
-
 ## Projects
 
 **[Jupiter Lend Liquidation Decoder](https://x.com/DefiVaults/status/1989206474468335981?s=20)** — Solana Turbin3 Q4 2025 Final Project
@@ -49,6 +42,13 @@ Blockchain Data Analysis | Decentralized Finance (DeFi) Research | Protocol Anal
 **[Local AI Research Assistant](https://defi-kai.github.io/kai-site/journal/building-local-ai-system/)**
 - Built a local AI system that aggregates crypto news, DeFi metrics, and governance data into a daily briefing using Python, locally hosted LLMs, and multiple APIs
 - Reduced daily research intake time from 1-2 hours to ~20 minutes
+
+## Skills & Credentials
+
+Blockchain Data Analysis | Decentralized Finance (DeFi) Research | Protocol Analysis | SQL | Python | Technical Writing | Ecosystem Development | Project Management
+
+- [Solana Turbin3](https://www.turbin3.org/) Q4 2025 Graduate
+- Azure Fundamentals Certification
 
 ## Recognition
 
