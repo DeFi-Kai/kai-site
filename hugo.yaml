@@ -22,6 +22,7 @@ params:
   ShowCodeCopyButtons: true
   ShowBreadCrumbs: true
   mainSections:
+    - data
     - research
     - journal
 

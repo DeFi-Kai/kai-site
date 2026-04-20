@@ -6,7 +6,7 @@ title = 'Building a Local AI System to Stay Ahead of the Crypto News Cycle'
 
 {{< img src="images/building-local-ai-system/hero.png" alt="Local AI system overview" >}}
 
-With Crypto operating 24/7, it's challenging to keep up with current news while also going deep on a report. Writing forces you to focus on a project or sector deeply, but you still have to track headlines that could change your thesis or reframe the data. 
+With Crypto operating 24/7 it's challenging to keep up with current news while also going deep on a report. Writing forces you to focus on a project or sector deeply, but you still have to track headlines that could change your thesis or reframe the data. 
 
 To solve this, I vibecoded [an AI research assistant](https://defi-kai.github.io/kai-site/briefs/latest/) to keep me up to date with the latest news in crypto and finances everyday, in around 20 minutes reading time -- down from 1-2 hours. It runs on locally hosted models including OpenAI's GPT OSS 20b, and Deepseek R1 via LM studio.
 ## What's included

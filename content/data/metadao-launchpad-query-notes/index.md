@@ -4,8 +4,6 @@ draft = false
 title = 'MetaDAO Launchpad Query Notes (Dune/ TrinoSQL)'
 +++
 
-![MetaDAO launch architecture](images/MetaDAO_launch_architecture_diagram.excalidraw.png)
-
 While building the [MetaDAO dashboard](https://dune.com/blocmates_research/metadao-blocmates-pro) at Blocmates, [@563defi](https://x.com/563defi) and I spent some time digging into MetaDAO's launchpad program to understand the existing Dune queries, build on them, and create new ones.
 
 These are my notes, which I will be referring back to as I verify & build out more queries on MetaDAO's activity. This can also be used as context to feed to an LLM for generating simple queries.
