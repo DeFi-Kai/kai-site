@@ -1,6 +1,6 @@
 +++
 date = '2026-04-19T20:15:00-04:00'
-draft = true
+draft = false
 title = 'Automated ETL Pipeline for Onchain Analysis'
 categories = ['Data']
 +++
