@@ -14,7 +14,7 @@ In this essay, I'll explain why LPs are equity for Perp DEXs, and introduce a fr
 
 ## LP-as-Equity
 
-Perp DEXs are essentially credit systems where LPs loan capital to leverage traders. In return, share prices increase as the vault earns revenue (spread, funding, fees, etc.). But, LP profitability is ultimately determined by order flow.
+Perp DEXs are essentially credit systems where LPs loan capital to leverage traders. In return, share prices increase as the vault earns revenue (spread, funding, fees, etc.). But LP profitability is ultimately determined by order flow.
 
 As the direct counterparty to traders, LPs absorb the directional risk of every position. For that reason, it is in the protocol's best interest to attract uninformed flow and resolve toxic flow.
 
