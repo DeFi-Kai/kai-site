@@ -4,7 +4,7 @@ draft = false
 title = 'LP-as-Equity'
 +++
 
-The default assumption in crypto is that the token is the equity. However, for Perp DEXs, Liquidity Pools (LPs) are structurally closer to equity.  
+The default assumption in crypto is that the token is the equity. However, for Perp DEXs, Liquidity Pools (LPs) are structurally the equity.  
 
 LPs (e.g. HLP, JLP, etc.) underwrite risk and receive a direct claim on protocol revenue, including fees, spread, and liquidation penalties which compound directly into NAV without needing a buyer. Unlike AMMs, on Perp DEXs, LPs are the counterparty to traders which causes NAV to reprice on whether the team maintains the house edge —a proxy for the team's operational efficiency.
 
