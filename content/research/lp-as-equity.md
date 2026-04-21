@@ -24,7 +24,7 @@ Let's consider Hyperliquid. The HLP vault's quoting logic sets the spread, which
 
 Each LP carries design trade-offs that balance trader execution quality and vault profitability. In this way, an LP's design is essentially the underwriting criteria which reflect the risk-return profile.
 
-Comparing the performance across 5 USDC-based LPs since December 2025 demonstrates the gaps in risk-adjusted efficiency from one strategy to another. More volume and better risk-management translate to lower MDDs, higher Sharpes, and overall higher yields.
+Comparing the performance across 5 USDC-based LPs since December 2025 demonstrates the gaps in risk-adjusted efficiency from one strategy to another. More volume and better risk-management translate to lower draw downs, higher Sharpes, and overall higher yields.
 
 {{< img src="images/lp-as-equity/lp-comparison-bsc-dec2025-2026-04-13.png" alt="Comparison chart of USDC-based perp DEX LP performance" >}}
 
