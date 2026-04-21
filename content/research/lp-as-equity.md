@@ -4,15 +4,15 @@ draft = false
 title = 'LP-as-Equity'
 +++
 
-The default assumption in crypto is that the token is the equity. But, for perp DEXs, the LP is what equity actually looks like.
+The default assumption in crypto is that the token is the equity. However, for Perp DEXs, Liquidity Pools (LPs) are the equity.  
 
-LPs have a direct, mechanical claim on protocol revenue, including fees, spread, and liquidation penalties. LP revenue compounds into share price without needing a buyer on the other side. In contrast, tokens require someone else to bid.
+LPs (e.g. HLP, JLP, etc.) underwrite risk and receive a direct, mechanical claim on protocol revenue, including fees, spread, and liquidation penalties which compound directly into NAV without needing a buyer. Unlike AMMs (e.g. Uniswap etc.), on Perp DEXs, LPs are the counterparty to traders, causing NAV to reprice on whether the team maintains the house edge —a proxy for the team's operational efficiency.
 
-Over the past year, Perp DEX LPs have returned -1% to 46% while most of their corresponding tokens are down 45% to 58%.
+In contrast, tokens require someone else to bid for the asset to hold its value. Over the past year, USD-based Perp DEX LPs have returned 10% to 46% while every corresponding token is down 45% to 58%, except for HYPE. Yet many teams route fees to the token (via buybacks, staking, etc.) at the expense of the protocol's actual equity —the LP. 
 
-The market effectively pays a liquidity premium for the worse-performing asset.
+In this essay, I'll explain why LPs are equity for Perp DEXs, and introduce a framework for valuing Perp DEX tokens relative to their LPs. 
 
-## LP-as-Equity: Why the LP earns its fees
+## LP-as-Equity
 
 Perp DEXs are structurally credit systems where LPs loan capital to leverage traders. In return, share prices increase as the vault earns revenue (spread, funding, fees, etc.). But, LP profitability is ultimately determined by order flow.
 
