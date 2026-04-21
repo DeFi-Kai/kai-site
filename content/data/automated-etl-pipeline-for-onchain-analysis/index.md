@@ -5,15 +5,19 @@ title = 'Automated ETL Pipeline for Onchain Analysis'
 categories = ['Data']
 +++
 
-Onchain analysis is often bottlenecked by SQL and data plumbing. Researchers end up spending too much time writing queries and moving data between Dune and external APIs.
+Onchain analysis is often bottlenecked by SQL and data plumbing. Researchers end up spending a lot of time writing queries and moving data between Dune and external APIs.
 
 At Blocmates, we solved this with an [agent-driven ETL pipeline](https://github.com/DeFi-Kai/dune-etl-agent) that automates dashboard production for the research team.
 
 You fill out a data spec, the agent writes, tests, and pushes queries to Dune using GitHub for version control. If the spec involves heavy API usage, the agent sets up a GitHub Action to collect data and load it into Dune. Queries are generated in minutes and are then ready for visualization in Dune's UI.
 
-We used this workflow to produce the [MetaDAO dashboard](https://dune.com/blocmates_research/metadao-blocmates-pro).
+We used this workflow to produce dashboards for [MetaDAO's iCO metrics](https://dune.com/blocmates_research/metadao-blocmates-pro) and [Chain GDP](https://dune.com/blocmatesresearch/chain-gdp), a valuation framework for L1 blockchains.
 
 ![MetaDAO dashboard produced by the ETL pipeline](images/Screenshot%20From%202026-04-19%2019-57-37.png)
+*MetaDAO ICO dashboard*
+
+![Chain GDP dashboard produced by the ETL pipeline](images/Screenshot%20From%202026-04-20%2012-54-30.png)
+*Chain GDP dashboard*
 
 Here's how it works.
 
