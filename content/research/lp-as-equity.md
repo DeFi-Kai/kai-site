@@ -4,9 +4,12 @@ draft = false
 title = 'LP-as-Equity'
 +++
 
-The default assumption in crypto is that the token is the equity. However, for Perp DEXs, Liquidity Pools (LPs) are structurally the equity.  
 
-LPs (e.g. HLP, JLP) underwrite leverage and receive a direct claim on protocol revenue, including fees, spread, and liquidation penalties that compound directly into NAV without needing a buyer. Unlike AMMs, on Perp DEXs, LPs are the counterparty to traders which causes the LP to reprice on whether the team maintains the house edge —a proxy for the team's operational efficiency.
+Since the inception of ICOs, the default assumption in crypto has been that tokens are equity. Teams use tokens to raise capital and grant holders governance rights. Moreover, CEX listings give tokens narrative legibility comparable to equity. This framework holds roughly for most projects.
+
+However, this framework breaks with Perp DEXs, where there are two capital mechanisms that support the protocol: the token as the fundraising vehicle, and the LP, supporting risk-management. In these systems, Liquidity Pools (LPs) are the equity.
+
+LPs (e.g. HLP, JLP) underwrite leverage and receive a direct claim on protocol revenue, including fees, spread, and liquidation penalties that compound directly into NAV without needing a buyer. Unlike AMMs, on Perp DEXs, LPs are the counterparty to traders which causes NAV to reprice on whether the team maintains the house edge —a proxy for the team's operational efficiency.
 
 In contrast, tokens require someone else to bid for the asset to hold its value. Over the past year, USD-based Perp DEX LPs have returned 10% to 46% while every corresponding token is down 45% to 58%, except for HYPE. Still, many teams continue to route fees to the token (via buybacks, staking, etc.) at the expense of the protocol's actual equity —the LP. 
 
