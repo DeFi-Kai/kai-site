@@ -3,15 +3,13 @@ date = '2026-04-15T09:00:00-04:00'
 draft = false
 title = 'LP-as-Equity'
 +++
+The default assumption in crypto is that the token is the equity. However, for Perp DEXs, Liquidity Pools (LPs) are structurally equity.
 
-The default assumption in crypto is that the token is the equity. However, for Perp DEXs, Liquidity Pools (LPs) are structurally equity.  
+LPs (e.g. HLP, JLP) underwrite leverage and receive a direct claim on protocol revenue, including fees, spread, and liquidation penalties that compound directly into NAV without needing a buyer. Unlike AMMs, on Perp DEXs, LPs are the counterparty to traders which causes the LP to reprice on whether the team maintains the house edge —a proxy for the team’s operational efficiency.
 
-LPs (e.g. HLP, JLP) underwrite leverage and receive a direct claim on protocol revenue, including fees, spread, and liquidation penalties that compound directly into NAV without needing a buyer. Unlike AMMs, on Perp DEXs, LPs are the counterparty to traders which causes the LP to reprice on whether the team maintains the house edge —a proxy for the team's operational efficiency.
+In contrast, tokens require someone else to bid for the asset to hold its value. Over the past year, USD-based Perp DEX LPs have returned 10% to 46% while every corresponding token is down 45% to 58%, except for HYPE. Yet many teams route fees to the token (via buybacks, staking, etc.) at the expense of the protocol’s actual equity —the LP.
 
-In contrast, tokens require someone else to bid for the asset to hold its value. Over the past year, USD-based Perp DEX LPs have returned 10% to 46% while every corresponding token is down 45% to 58%, except for HYPE. Yet many teams route fees to the token (via buybacks, staking, etc.) at the expense of the protocol's actual equity —the LP. 
-
-In this essay, I'll explain why LPs are equity for Perp DEXs, and introduce a framework for valuing Perp DEX tokens relative to their LPs. 
-
+In this essay, I’ll explain why LPs are equity for Perp DEXs, and introduce a framework for valuing Perp DEX tokens relative to their LPs.
 ## LP-as-Equity
 
 Perp DEXs are essentially credit systems where LPs loan capital to leverage traders. In return, share prices increase as the vault earns revenue (spread, funding, fees, etc.). But LP profitability is ultimately determined by order flow.
