@@ -10,9 +10,9 @@ Mechanically, Perp DEXs are credit facilities for leverage traders. LPs like HLP
 At this stage, Perp DEX LPs are the equity of the protocol and the token is the marketing budget. Fees routed to the token via buybacks and staking leak to sellers while fees to the LP increase the protocol's risk capacity and compound directly into NAV. More capital means greater leverage absorption at the cost of lower forward yield per unit —the same dilution dynamic equity holders accept when a company raises at NAV. In contrast, tokens require someone else to bid for the asset to hold its value. Over the past year, USD-based Perp DEX LPs have returned 10% to 46% while every corresponding token is down 45% to 58%, except for HYPE. 
 
 In this essay, I'll explain why LPs are equity for Perp DEXs, and introduce a framework for valuing Perp DEX tokens relative to their LPs. 
-## LP-as-Equity
+## LP-as-Equity: Why LPs are economically-aligned
 
-Perp DEXs are essentially credit systems where LPs loan capital to leverage traders. In return, share prices increase as the vault earns revenue (spread, funding, fees, etc.). But LP profitability is ultimately determined by order flow.
+LP profitability is ultimately determined by order flow.
 
 As the direct counterparty to traders, LPs absorb the directional risk of every position. For that reason, it is in the protocol's best interest to attract uninformed flow and resolve toxic flow.
 
