@@ -3,8 +3,6 @@ date = '2026-04-15T09:00:00-04:00'
 draft = false
 title = 'LP-as-Equity'
 +++
-Perp DEX competition started where most crypto competition starts: marketing. Hyperliquid's success led many teams to optimize for large airdrop campaigns and token buybacks to align incentives with tokenholders. But as the category becomes more mature, Perps are commoditizing and competition is shifting from marketing into risk management. The challenge becomes which team can design the most capital-efficient risk engine. 
-
 Mechanically, Perp DEXs are credit facilities for leverage traders. LPs like HLP and JLP issue on-demand loans to leverage traders and receive a claim on interest income: fees, spread, and liquidation penalties. The vault's design (market-making logic, spread, oracles) determines how each position is priced and marked, effectively setting the terms for loans. NAV reprices on whether the system mitigates adverse selection while capturing spread —a proxy for the team's operational efficiency. 
 
 At this stage, Perp DEX LPs are the equity of the protocol and the token is the marketing budget. Fees routed to the token via buybacks and staking leak to sellers while fees to the LP increase the protocol's risk capacity and compound directly into NAV. More capital means greater leverage absorption at the cost of lower forward yield per unit —the same dilution dynamic equity holders accept when a company raises at NAV. In contrast, tokens require someone else to bid for the asset to hold its value. Over the past year, USD-based Perp DEX LPs have returned 10% to 46% while every corresponding token is down 45% to 58%, except for HYPE. 
