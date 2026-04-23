@@ -5,7 +5,7 @@ title = 'Automated ETL Pipeline for Onchain Analysis'
 categories = ['Data']
 +++
 
-Onchain analysis is often bottlenecked by SQL and data plumbing. Researchers end up spending a lot of time writing queries and moving data between Dune and external APIs.
+Onchain analysis is constrained by SQL and data plumbing. Researchers end up spending too much time writing queries and moving data between Dune and external APIs.
 
 At Blocmates, we solved this with an [agent-driven ETL pipeline](https://github.com/DeFi-Kai/dune-etl-agent) that automates dashboard production for the research team.
 
