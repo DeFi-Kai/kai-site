@@ -3,16 +3,17 @@ date = '2026-04-15T09:00:00-04:00'
 draft = false
 title = 'LP-as-Equity'
 +++
-Since the early days of GMX, Perp DEXs have operated on two balance sheets —the token as the fundraising vehicle, and the LP which underwrites the risk engine. In these systems, tokens and LPs compete as separate claims on the same revenue. This split exists because of how perp DEXs function under the hood.
+Since the early days of GMX, Perp DEXs have operated on two balance sheets —the token as the fundraising vehicle, and the LP which underwrites the risk engine. In these systems, tokens and LPs compete as separate claims on the same revenue. The key question is which balance sheet should receive the larger share of fees.
 
-Mechanically, Perp DEXs are credit facilities for leverage traders. LPs like HLP and JLP issue on-demand loans and earn interest income through fees, spread, and liquidation penalties. The vault’s design (market-making logic, spread, oracles) determines how positions are priced and marked, effectively setting the terms of these loans. NAV reprices on whether the system mitigates adverse selection while capturing spread —a proxy for the team's operational efficiency. 
+The answer starts with the mechanics. Perp DEXs are credit facilities for leverage traders. LPs like HLP and JLP issue on-demand loans and earn interest income through fees, spread, and liquidation penalties. The vault’s design (market-making logic, spread, oracles) determines how positions are priced and marked, effectively setting the terms of these loans. NAV then reflects how well the system captures spread while mitigating adverse selection, making it a proxy for operational efficiency.
 
-Given the design of Perp DEXs, LPs function as the equity of the protocol while the token acts as the marketing budget. Fees routed to the token via buybacks and staking leak to sellers while fees to the LP increase the protocol's risk capacity and compound directly into NAV. More capital in the LP means greater leverage absorption at the cost of lower forward yield per unit —the same dilution dynamic equity holders accept when a company raises at NAV. In contrast, tokens require someone else to bid for the asset to hold its value. Over the past year, USD-based Perp DEX LPs have returned 10% to 46% while every corresponding token is down 45% to 58%, except for HYPE. 
+Given that design, LPs function as the equity of the protocol while the token acts more like a marketing budget. Fees routed to the token through buybacks and staking often leak to sellers, while fees routed to the LP expand the protocol’s risk capacity and compound directly into NAV. More capital in the LP allows the system to absorb more leverage, albeit with lower forward yield per unit —similar to equity-style dilution. Tokens, by contrast, depend on external demand to sustain their value. Over the past year, USD-based Perp DEX LPs have returned 10% to 46%, while every corresponding token is down 45% to 58%, except HYPE.
 
-In this essay, I'll explain why LPs are equity for Perp DEXs, and introduce a framework for valuing Perp DEX tokens relative to their LPs. 
+In this essay, I’ll explain why LPs are equity for Perp DEXs, and introduce a framework for valuing Perp DEX tokens relative to their LPs.
+
 ## LP-as-Equity: Why LPs are economically-aligned
 
-LP profitability is ultimately determined by order flow.
+LP profitability is ultimately determined by the exchanges ability to control order-flow quality. 
 
 As the direct counterparty to traders, LPs absorb the directional risk of every position. For that reason, it is in the protocol's best interest to attract uninformed flow and resolve toxic flow.
 
