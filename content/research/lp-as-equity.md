@@ -3,9 +3,9 @@ date = '2026-04-15T09:00:00-04:00'
 draft = false
 title = 'LP-as-Equity'
 +++
-Perp DEXs operate on two balance sheets —the token as the fundraising vehicle, and the LP as the capital provider. The token redistributes its fee share through buybacks and staking while the LP compounds fees and trader pnl into NAV. Yet for an asset to capture durable value, it must manage risk, and only one of these vehicles does so.
+Perp DEXs operate on two balance sheets —the token as the fundraising vehicle, and the LP as the capital provider. Teams must choose how to split fees, and the split reveals their thesis on value capture. Yet for an asset to capture durable value, it has to manage risk, and only one of these vehicles does so.
 
-Mechanically, Perp DEXs are credit facilities where LPs loan capital to leverage traders. LPs like HLP and JLP underwrite loans and, in return, earn fees, spread, and liquidation penalties. The protocol's design (market-making logic, oracles, etc.) determines how positions are priced and marked, effectively setting the terms of these loans. Since LPs are the counterparty to traders, NAV reprices based on how well the system captures spread while mitigating adverse selection, making it a proxy for operational efficiency.
+Mechanically, Perp DEXs are credit facilities where LPs loan capital to leverage traders. LPs like HLP and JLP underwrite loans and in return, earn fees, spread, and liquidation penalties. The protocol's design (market-making logic, fees, oracle, and liquidation engine) determines how positions are priced and marked, effectively setting the terms of these loans. Because LPs are the counterparty to traders, NAV reprices based on how well the system captures spread and mitigates adverse selection —making NAV a proxy for operational efficiency.
 
 Given that design, LPs function as the equity of the protocol while the token acts more like a marketing budget. Fees routed to the token through buybacks and staking often leak to sellers, while fees routed to the LP expand the protocol’s risk capacity and compound directly into NAV. Over the past year, USD-based LPs have returned 10% to 46%, while every corresponding token is down 45% to 58%, except HYPE (the exception we’ll return to later).
 
@@ -20,7 +20,7 @@ The vault's design, including pricing, oracles, and execution, is the operationa
 
 Let's consider Hyperliquid. The HLP vault's quoting logic sets the spread, which is effectively the protocol's take rate. In times of volatility, the vault widens the spread to reduce the vault's exposure to adverse selection. In addition, Hyperliquid uses private oracles to perform timely liquidations and reduce latency arbitrage.
 
-Each LP carries design trade-offs that balance trader execution quality and vault profitability. In this way, an LP's design is essentially the underwriting criteria which reflect the risk-return profile.
+Each design trade-off balances trader execution quality and vault profitability. In this way, an LP's design is essentially the underwriting criteria which reflect the risk-return profile.
 
 Comparing the performance across 5 USDC-based LPs since December 2025 demonstrates the gaps in risk-adjusted efficiency from one strategy to another. More volume and better risk-management translate to lower draw downs, higher Sharpes, and overall higher yields.
 
@@ -28,7 +28,7 @@ Comparing the performance across 5 USDC-based LPs since December 2025 demonstrat
 
 *Sources: Dune, Lighter API, Hyperliquid.*
 
-While HLP and OLP returned 6-7%, HLP demonstrated better operational efficiency. HLP achieved a Sharpe of 1.39 and MDD of -0.5%, compared to OLP which recorded a Sharpe of 0.84 and MDD of -6.2%. In other words, OLP experienced 26% more volatility and still returned less than HLP.
+While HLP and OLP returned 6-7%, HLP demonstrated better operational efficiency. HLP achieved a Sharpe of 1.39 and max draw down (MDD) of -0.5%, compared to OLP which recorded a Sharpe of 0.84 and MDD of -6.2%. In other words, OLP experienced 26% more volatility and still returned less than HLP.
 
 In comparison, gUSDC, ALP, and LLP resembled cash-plus instruments the most, yielding around 3% with sub-2% volatility.
 
