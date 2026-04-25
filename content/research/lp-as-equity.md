@@ -3,6 +3,8 @@ date = '2026-04-15T09:00:00-04:00'
 draft = false
 title = 'LP-as-Equity'
 +++
+Perp DEXs operate on two balance sheets —the token as the fundraising vehicle, and the LP as the capital provider. The token captures fees via buybacks and staking while fees to the LP compound into NAV. Yet durable value capture follows risk, and only one of these vehicles manages any.
+
 Mechanically, Perp DEXs are credit facilities for leverage traders. LPs like HLP and JLP underwrite loans and earn fees, spread, and liquidation penalties. The protocol's design (market-making logic, oracles, etc.) determines how positions are priced and marked, effectively setting the terms of these loans. Since LPs are the counterparty to traders, NAV reprices based on how well the system captures spread while mitigating adverse selection, making it a proxy for operational efficiency.
 
 Given that design, LPs function as the equity of the protocol while the token acts more like a marketing budget. Fees routed to the token through buybacks and staking often leak to sellers, while fees routed to the LP expand the protocol’s risk capacity and compound directly into NAV. Over the past year, USD-based LPs have returned 10% to 46%, while every corresponding token is down 45% to 58%, except HYPE (the exception we’ll return to later).
