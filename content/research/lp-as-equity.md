@@ -3,18 +3,6 @@ date = '2026-04-15T09:00:00-04:00'
 draft = false
 title = 'LP-as-Equity'
 +++
-LPs are both equity and collateral 
-
-
-
-Tokens and LPs are claims on the same fee stream, routed through different channels.
-
-Traders want deeper liquidity, and tokenholders want a higher marketcap. only one of these functions reinforces the system.
-
-Tokens do not scale with revenue. Tokens scale with sentiment. Token prices are disconnected from the protocol
-
-
-
 Perp DEXs operate on two balance sheets —the token as the fundraising vehicle, and the LP as the capital provider. Teams must choose how to split fees, and the split reveals their thesis on value capture. Yet for an asset to capture durable value, it has to manage risk, and only one of these vehicles does so.
 
 Mechanically, Perp DEXs are credit facilities where LPs loan capital to leverage traders. LPs like HLP and JLP underwrite loans and in return, earn fees, spread, and liquidation penalties. The protocol's design (market-making logic, fees, oracle, and liquidation engine) determines how positions are priced and marked, effectively setting the terms of these loans. Because LPs are the counterparty to traders, NAV reprices based on how well the system captures spread and mitigates adverse selection —making NAV a proxy for operational efficiency.
