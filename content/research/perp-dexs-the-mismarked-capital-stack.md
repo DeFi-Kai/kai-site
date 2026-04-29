@@ -1,15 +1,16 @@
 +++
 date = '2026-04-15T09:00:00-04:00'
 draft = false
-title = 'LP-as-Equity'
+title = 'Perp DEXs: The Mismarked Capital Stack'
+aliases = ['/research/lp-as-equity/']
 +++
-Perp DEXs operate on two balance sheets —the token as the fundraising vehicle, and the LP as the capital provider. Teams must choose how to split fees, and the split reveals their thesis on value capture. Yet for an asset to capture durable value, it has to manage risk, and only one of these vehicles does so.
+Since the early days of GMX, the market has treated the token as the equity-like asset and the LP as the yield product. The token captures the narrative and gives investors a liquid claim on protocol growth. Meanwhile, the LP is usually evaluated on its APY.
 
-Mechanically, Perp DEXs are credit facilities where LPs loan capital to leverage traders. LPs like HLP and JLP underwrite loans and in return, earn fees, spread, and liquidation penalties. The protocol's design (market-making logic, fees, oracle, and liquidation engine) determines how positions are priced and marked, effectively setting the terms of these loans. Because LPs are the counterparty to traders, NAV reprices based on how well the system captures spread and mitigates adverse selection —making NAV a proxy for operational efficiency.
+That framing misses the risk structure of the exchange. Every leveraged position creates exposure that has to be priced and resolved, and in pool-based designs, the LP carries that exposure. When the system prices risk well, trading revenue accrues to LP NAV. When it does not, trader P&L from toxic flow hits the LP first. LP NAV therefore becomes a live mark on the protocol’s underwriting quality.
 
-Given that design, LPs function as the equity of the protocol while the token acts more like a marketing budget. Fees routed to the token through buybacks and staking often leak to sellers, while fees routed to the LP expand the protocol’s risk capacity and compound directly into NAV. Over the past year, USD-based LPs have returned 10% to 46%, while every corresponding token is down 45% to 58%, except HYPE (the exception we’ll return to later).
+The token only deserves a comparable claim if it performs a required function in the capital stack: absorbing risk, securing infrastructure, or controlling durable cash flows. Without that role, fees routed to the token extract value from the instrument underwriting the business.
 
-In this essay, I’ll explain why LPs are equity for Perp DEXs, and introduce a framework for valuing Perp DEX tokens relative to their LPs.
+This essay introduces a framework for evaluating Perp DEX capital stacks: how LPs underwrite risk, how tokens justify their fee claims, and how the market prices each instrument relative to the revenue it receives.
 ## LP-as-Equity: Why LPs are economically-aligned
 
 LP profitability is ultimately determined by the exchanges ability to control order-flow quality. 

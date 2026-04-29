@@ -1,0 +1,9 @@
+User-agent: *
+{{- if hugo.IsProduction | or (eq site.Params.env "production") }}
+Disallow:
+{{- else }}
+Disallow: /
+{{- end }}
+# Redirect handled by Hugo alias:
+# /research/lp-as-equity/ -> /research/perp-dexs-the-mismarked-capital-stack/
+Sitemap: {{ "sitemap.xml" | absURL }}
