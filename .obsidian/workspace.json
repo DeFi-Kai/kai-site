@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/research/lp-as-equity.md",
+                "file": "content/data/automated-etl-pipeline-for-onchain-analysis/index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "lp-as-equity"
+              "title": "index"
             }
           }
         ]
@@ -186,8 +186,16 @@
   },
   "active": "43ef31b5fdeb382d",
   "lastOpenFiles": [
-    "content/data/automated-etl-pipeline-for-onchain-analysis/index.md",
+    "content/research/prime-intellects-case-for-decentralized-ai/Image 14.png",
+    "content/research/prime-intellects-case-for-decentralized-ai/Image 12.png",
+    "content/research/prime-intellects-case-for-decentralized-ai/Image 11.png",
+    "content/research/prime-intellects-case-for-decentralized-ai/index.md",
+    "content/research/prime-intellects-case-for-decentralized-ai",
+    "content/research/prime-intellects-case-for-decentralized-ai.md",
+    "layouts/robots.txt",
     "content/research/lp-as-equity.md",
+    "content/research/perp-dexs-the-mismarked-capital-stack.md",
+    "content/data/automated-etl-pipeline-for-onchain-analysis/index.md",
     "public/data/automated-etl-pipeline-for-onchain-analysis/images/Screenshot From 2026-04-20 12-54-30.png",
     "content/data/automated-etl-pipeline-for-onchain-analysis/images/Screenshot From 2026-04-20 12-54-30.png",
     "Screenshot From 2026-04-20 12-54-30.png",
