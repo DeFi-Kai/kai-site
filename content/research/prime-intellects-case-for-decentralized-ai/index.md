@@ -72,6 +72,10 @@ Prime Intellect is one of several teams pursuing this design space. Competing pr
 - **Templar** — live on Bittensor mainnet (subnet 3), pre-training a 1.2B-parameter model with plans to scale.
 - **Macrocosmos** — live on Bittensor mainnet (subnets 9 and 37, focused on pre-training and post-training respectively).
 
+![Competitive landscape chart](Image%2012.png)
+
+By development stage, the Bittensor subnets and Prime Intellect are furthest along. The Bittensor projects benefit from running on an established subnet economy with existing token incentives. On the other hand, Prime Intellect is operating independent infrastructure with its own coordination, verification, and incentive layers being built in parallel.
+
 | Platform            | Pre-training | Post-training | Inference |
 | ------------------- | :----------: | :-----------: | :-------: |
 | **Prime Intellect** |      ✓       |       ✓       |     ✓     |
@@ -83,9 +87,6 @@ Prime Intellect is one of several teams pursuing this design space. Competing pr
 | Targon              |              |               |     ✓     |
 | Akash               |              |               |     ✓     |
 | IO                  |              |               |     ✓     |
-By development stage, the Bittensor subnets and Prime Intellect are furthest along. The Bittensor projects benefit from running on an established subnet economy with existing token incentives. On the other hand, Prime Intellect is operating independent infrastructure with its own coordination, verification, and incentive layers being built in parallel.
-
-![Competitive landscape chart](Image%2012.png)
 
 ## Conclusion
 Prime Intellect's distinguishing choice has been to build coordination, verification, and incentives as one integrated system rather than slot into an existing subnet economy. Yet distributed training only matters if the coordination layer can move gradients across the public internet without destroying the economics.
