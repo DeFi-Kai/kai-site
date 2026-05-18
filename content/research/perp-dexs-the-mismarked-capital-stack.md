@@ -137,6 +137,36 @@ Over the last year, the pool earned $384m in fees plus trader PNL, helping it ou
 {{< img src="images/lp-as-equity/jupiter-jlp-vs-jup-chart-2026-04-13.png" alt="JLP versus JUP performance chart" >}}
 
 *Sources: CoinGecko, Dune.*
+## Sizing the Perp DEX book
+To size a book across Perp DEXes we begin by determining whether a platform's token justifies value capture. Using the above set as an example, Hyperliquid is the only project whose token serves a fundamental job in the system (i.e. underwriting risk, securing infrastructure, or controlling durable cashflows).
+
+Across the remaining projects, we must examine the venue by assessing LP profitability over the last 90 days. The cleanest read is trader PnL net of platform fees. When traders win more than they pay in fees, the LP is paying out. The vault's pricing, oracle, or liquidation logic is losing to its counterparties. No fee share fixes a vault that loses to its flow.
+
+Once an LP passes the trader-PnL filter, three inputs decide its weight:
+
+1. Risk-adjusted return. Rank by NAV-based Sharpe.
+2. Drawdown tolerance. Size inverse to MDD. A vault with 0.8% MDD takes a larger weight than a vault with 6% MDD at the same Sharpe.
+3. Position cap. The maximum position is the lower of 35% of the LP sleeve or roughly 5% of the pool's TVL. The 35% rule caps platform-level risk: an oracle failure, a freeze decision, a governance turn. The TVL rule caps venue-level concentration. LP shares price on NAV, so a withdrawal does not move the share price. What scales with your share of pool TVL is exit time, exposure to deposit caps and withdrawal queues, and how much of a venue failure you absorb.
+
+The framework sorts each instrument into one of three buckets (with an additional cash bucket as dry powder for favorable entry points). Sizing follows from the bucket. The Bucket A criterion is set at one or more rather than two or more so the bucket can grow as more tokens earn fundamental jobs in their systems.
+
+| Sleeve                | Criteria                                                                                                          | Range   |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------- | ------- |
+| Bucket A tokens       | Tokens that clear one or more criteria and have structural fee capture (ex: HYPE)                                 | 25%–50% |
+| Bucket B filtered LPs | LPs that pass the trader-PnL filter and rank cleanly on Sharpe and MDD (ex: HLP, LLP, OLP, gUSDC, ALP)            | 35%–55% |
+| Bucket C shorts       | Tokens whose protocols direct fees to a buyback the market does not pay for, draining operational runway (ex: GNS) | 0%–10%  |
+| Cash                  | Cash is non-zero on purpose. HYPE buys back if multiples compress, and LP entry caps lift when fees grow.         | 5%–15%  |
+
+A book built from the bucket ranges and the within-bucket weights looks like this:
+
+| Position  | Bucket | Weight |
+| --------- | ------ | ------ |
+| HYPE      | A      | 40%    |
+| HLP       | B      | 16%    |
+| gUSDC     | B      | 16%    |
+| LLP       | B      | 9%     |
+| GNS short | C      | 5%     |
+| Cash      | Cash   | 14%    |
 
 ## Closing thoughts
 
