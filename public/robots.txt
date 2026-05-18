@@ -1,3 +1,5 @@
 User-agent: *
 Disallow:
+# Redirect handled by Hugo alias:
+# /research/lp-as-equity/ -> /research/perp-dexs-the-mismarked-capital-stack/
 Sitemap: https://defi-kai.github.io/kai-site/sitemap.xml

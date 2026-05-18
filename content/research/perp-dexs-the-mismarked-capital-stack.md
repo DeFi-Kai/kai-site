@@ -150,12 +150,12 @@ Once an LP passes the trader-PnL filter, three inputs decide its weight:
 
 The framework sorts each instrument into one of three buckets (with an additional cash bucket as dry powder for favorable entry points). Sizing follows from the bucket. The Bucket A criterion is set at one or more rather than two or more so the bucket can grow as more tokens earn fundamental jobs in their systems.
 
-| Sleeve                | Criteria                                                                                                          | Range   |
-| --------------------- | ----------------------------------------------------------------------------------------------------------------- | ------- |
-| Bucket A tokens       | Tokens that clear one or more criteria and have structural fee capture (ex: HYPE)                                 | 25%–50% |
-| Bucket B filtered LPs | LPs that pass the trader-PnL filter and rank cleanly on Sharpe and MDD (ex: HLP, LLP, OLP, gUSDC, ALP)            | 35%–55% |
+| Sleeve                | Criteria                                                                                                           | Range   |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------ | ------- |
+| Bucket A tokens       | Tokens that clear two or more criteria and have structural fee capture (ex: HYPE)                                  | 25%–50% |
+| Bucket B filtered LPs | LPs that pass the trader-PnL filter and rank cleanly on Sharpe and MDD (ex: HLP, LLP, OLP, gUSDC, ALP)             | 35%–55% |
 | Bucket C shorts       | Tokens whose protocols direct fees to a buyback the market does not pay for, draining operational runway (ex: GNS) | 0%–10%  |
-| Cash                  | Cash is non-zero on purpose. HYPE buys back if multiples compress, and LP entry caps lift when fees grow.         | 5%–15%  |
+| Cash                  | Cash is non-zero on purpose. HYPE buys back if multiples compress, and LP entry caps lift when fees grow.          | 5%–15%  |
 
 A book built from the bucket ranges and the within-bucket weights looks like this:
 
