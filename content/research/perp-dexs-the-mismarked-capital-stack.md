@@ -144,9 +144,9 @@ Across the remaining projects, we must examine the venue by assessing LP profita
 
 Once an LP passes the trader-PnL filter, three inputs decide its weight:
 
-1. Risk-adjusted return. Rank by NAV-based Sharpe.
-2. Drawdown tolerance. Size inverse to MDD. A vault with 0.8% MDD takes a larger weight than a vault with 6% MDD at the same Sharpe.
-3. Position cap. The maximum position is the lower of 35% of the LP sleeve or roughly 5% of the pool's TVL. The 35% rule caps platform-level risk: an oracle failure, a freeze decision, a governance turn. The TVL rule caps venue-level concentration. LP shares price on NAV, so a withdrawal does not move the share price. What scales with your share of pool TVL is exit time, exposure to deposit caps and withdrawal queues, and how much of a venue failure you absorb.
+1. **Risk-adjusted return**: Rank by NAV-based Sharpe.
+2. **Drawdown tolerance**: Size inverse to MDD. A vault with 0.8% MDD takes a larger weight than a vault with 6% MDD at the same Sharpe.
+3. **Position cap**: The maximum position is the lower of 35% of the LP sleeve or roughly 5% of the pool's TVL. The 35% rule caps platform-level risk: an oracle failure, a freeze decision, a governance turn. And the TVL rule caps venue-level concentration. 
 
 The framework sorts each instrument into one of three buckets (with an additional cash bucket as dry powder for favorable entry points). Sizing follows from the bucket. The Bucket A criterion is set at one or more rather than two or more so the bucket can grow as more tokens earn fundamental jobs in their systems.
 
