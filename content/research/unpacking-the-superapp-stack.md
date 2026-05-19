@@ -137,15 +137,15 @@ Lack of regulatory clarity already presents friction: Hyperliquid is currently i
 
 Phantom is the third archetype: a mobile-first wallet that owns distribution and composes with whatever infrastructure wins. It does not run its own AMM, perps engine, or chain. It routes swaps through Jupiter, perps through Hyperliquid, and earns fees on volume across both. The product is a UX layer over the existing DeFi stack. The bet is that whoever owns the user can rent the rails.
 
-The Hyperliquid integration shows the model in motion. Phantom drove $1.9 billion in volume and 16K new users to Hyperliquid in the 10 days after the July 2025 launch ([Source](https://www.flowscan.xyz/builders?builder=phantom)). Builder Code revenue from the perp integration came to $458K in that window ([Source](https://defillama.com/protocol/phantom-perps)). Total Phantom revenue across all wallet activity in the same 10 days was $7.9 million ([Source](https://defillama.com/protocol/phantom)).
+For example, Phantom drove $1.9 billion in volume and 16K new users to Hyperliquid in the 10 days after the July 2025 launch ([Source](https://www.flowscan.xyz/builders?builder=phantom)). Builder Code revenue from the perp integration came to $458K in that window ([Source](https://defillama.com/protocol/phantom-perps)). In comparison, the Phantom revenue across all wallet activity in the same 10 days was $7.9 million ([Source](https://defillama.com/protocol/phantom)).
 
-The bigger number is the cumulative one. Phantom has produced $559 million in lifetime revenue from the aggregation model, without owning a single piece of infrastructure ([Source](https://defillama.com/protocol/phantom)). The Hyperliquid integration is one line in a diversified revenue stack.
+Phantom has produced $559 million in lifetime revenue from the aggregation model, without owning a single piece of infrastructure ([Source](https://defillama.com/protocol/phantom)). The Hyperliquid integration is one line in a diversified revenue stack.
 
 **Why this matters for the Robinhood comparison.**
 
-Phantom and Robinhood compete for the same prize: retail attention. Hyperliquid does not. Robinhood's full-stack bet rests on the premise that building the rails is necessary to control UX and capture margin. Phantom shows the rails are increasingly commodity. If users can switch between infrastructure providers without leaving the wallet, the value of owning rails collapses to whatever margin the wallet negotiates with each rail.
+Phantom and Robinhood compete for the same thing: retail attention. Robinhood's full-stack bet rests on the premise that building the rails is necessary to control UX and capture margin. Phantom shows the rails are increasingly commodity. If users can switch between infrastructure providers without leaving the wallet, the value of owning rails collapses to whatever margin the wallet negotiates with each rail.
 
-That makes Phantom, not Hyperliquid, the structural threat to Robinhood. Robinhood's edge is regulated distribution to US retail. Phantom's wedge is mobile-first distribution to users who do not need a US brokerage. If onchain off-ramps mature, that cohort widens.
+That makes Phantom, rather than Hyperliquid, the structural competitor to Robinhood. Robinhood's edge is regulated distribution to US retail. Phantom's wedge is mobile-first distribution to users who do not need a US brokerage. If onchain off-ramps mature, Phantom's opportunity widens.
 
 **The bear case?**
 
@@ -179,7 +179,7 @@ At present, Hyperliquid's HIP-3 framework gives it the broadest product scope am
 ### What we're watching
 
 - **The regulatory clock on Hyperliquid US access.** A US license unlocks the largest retail pool and changes the Robinhood comparison directly.
-- **Whether Robinhood licenses or partners on infra rather than building it.** A pure-build path is expensive. A partnership signal would be different.
+- **Whether Robinhood licenses or partners on infra rather than building it.** A pure-build path is expensive. A partnership, however, would be different.
 - **Take rate compression in Builder Codes.** As more wallets compete for the same protocols, Builder Code fees may compress.
 - **Phantom's product roadmap.** Does it stay pure distribution or move into infra. Either is a strong signal for the broader thesis.
 - **HIP-3 adoption velocity.** Number of markets, builder concentration, and which asset classes attract real volume.
