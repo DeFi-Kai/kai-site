@@ -1,22 +1,20 @@
 +++
-date = '2026-05-19T12:30:00-04:00'
+date = '2025-07-30T09:00:00-04:00'
 draft = false
 title = 'Unpacking the Superapp Stack'
 +++
-
-{{< img src="images/superapp-stack/robinhood-vs-hyperliquid-1.png" alt="Robinhood vs Hyperliquid chart 1" >}}
 
 Over the past year, trading platforms like Robinhood, Bybit, and Kraken have rolled out onchain protocols to extend their product offerings. By tapping into decentralized protocols they're able to deliver new services at scale, ranging from tokenized equities to non-custodial trading.
 
 As this trend continues, the competition between Web2 and Web3 is converging into a race to build **Superapps**: platforms that combine mobile-first distribution with blockchain infrastructure.
 
-{{< img src="images/superapp-stack/robinhood-vs-hyperliquid-2.png" alt="Robinhood vs Hyperliquid chart 2" >}}
+{{< img src="images/superapp-stack/robinhood-vs-hyperliquid-2.png" alt="Robinhood vs Hyperliquid chart 2" class="centered-image" >}}
 
 Mobile-first apps like **Robinhood** start from the top down: It already commands retail distribution and is now building on Arbitrum rails underneath to extend its product suite onchain. In contrast, **Hyperliquid** runs the opposite playbook: It specializes in perp infrastructure and lets other frontends - mobile or web - plug in through Builder Codes.
 
 The projects that win will dominate at least one layer of the stack. The strongest will capture value from both.
 
-{{< img src="images/superapp-stack/robinhood-vs-hyperliquid-3.png" alt="Robinhood vs Hyperliquid chart 3" >}}
+{{< img src="images/superapp-stack/robinhood-vs-hyperliquid-3.png" alt="Robinhood vs Hyperliquid chart 3" class="centered-image" >}}
 
 This report compares how Robinhood and Hyperliquid are approaching this challenge and building on the Superapp stack.
 
@@ -31,7 +29,7 @@ As a result, it's becoming useful to identify projects by what they own:
 - **Distribution.** Mobile-first apps that own the user. Examples: Binance Exchange, Robinhood, Phantom.
 - **Composable rails.** Blockchain infrastructure that apps plug into. Examples: Uniswap Hooks, Hyperliquid Builder Codes, Aave API, Pendle SDK.
 
-{{< img src="images/superapp-stack/Drawing-2026-05-19-12.35.55.excalidraw.png" alt="Superapp stack diagram" >}}
+{{< img src="images/superapp-stack/Drawing-2026-05-19-12.35.55.excalidraw.png" alt="Superapp stack diagram" class="centered-image" >}}
 
 Teams competing for the Superapp opportunity choose from three strategic positions:
 
@@ -45,7 +43,7 @@ This report covers all three. The thesis is that the middle position, owning som
 
 As a mobile-first app, Robinhood has become the most active trading venue for U.S. retail. As of May 2025, it serves 25.8 million funded accounts and manages $255 billion in platform assets across equities, options, crypto, and cash.
 
-{{< img src="images/superapp-stack/robinhood-vs-hyperliquid-5.png" alt="Robinhood accounts and assets chart" >}}
+{{< img src="images/superapp-stack/robinhood-vs-hyperliquid-5.png" alt="Robinhood accounts and assets chart" class="centered-image" >}}
 
 [Source](https://investors.robinhood.com/static-files/da19a20a-8e88-445e-8c71-3a1029ac0c51)
 
@@ -57,7 +55,7 @@ In this model, Robinhood doesn't provide liquidity directly. It originates retai
 
 Lately, they're moving to meet the demand for crypto among retail traders. In Q1 2025, the leading source of transaction-based revenue were crypto transactions, which produced $252 million in revenue. For context, Robinhood's options revenue was $240 million and equities revenue was $56 million for the same period.
 
-{{< img src="images/superapp-stack/robinhood-vs-hyperliquid-6.png" alt="Robinhood revenue mix chart" >}}
+{{< img src="images/superapp-stack/robinhood-vs-hyperliquid-6.png" alt="Robinhood revenue mix chart" class="centered-image" >}}
 
 To expand liquidity Robinhood acquired Bitstamp, giving it control of the 15th largest CEX. Most recently, they've deployed an L2 on Arbitrum and announced plans to eventually migrate to a standalone L1. The chain hosts tokenized US equities for EU customers.
 
@@ -85,13 +83,13 @@ In the age of Superapps, companies will either integrate crypto meaningfully, or
 
 Hyperliquid, the leading perp DEX, has set itself apart with faster asset listings, deeper leverage, and an aggressive approach to developer integrations. By mid-2025, the protocol was processing over $150 billion in monthly volume, translating to $908 million in annualized revenue.
 
-{{< img src="images/superapp-stack/robinhood-vs-hyperliquid-7.png" alt="Hyperliquid growth chart" >}}
+{{< img src="images/superapp-stack/robinhood-vs-hyperliquid-7.png" alt="Hyperliquid growth chart" class="centered-image" >}}
 
 [Source](https://defillama.com/protocol/perps/hyperliquid)
 
 This performance has also helped drive growth for DEXes, with DEX perp volume now running at roughly 8% of CEX perp volume, as of July 2025.
 
-{{< img src="images/superapp-stack/robinhood-vs-hyperliquid-8.png" alt="DEX to CEX perp volume chart" >}}
+{{< img src="images/superapp-stack/robinhood-vs-hyperliquid-8.png" alt="DEX to CEX perp volume chart" class="centered-image" >}}
 
 [Source](https://www.theblock.co/data/decentralized-finance/derivatives/dex-to-cex-futures-trade-volume)
 
@@ -103,13 +101,13 @@ Hyperliquid's frontend drives most volume today. But the Builder Code system is 
 
 Builder codes let developers embed Hyperliquid's perps into their own apps and share in order fill fees. As of July 2025, 181 builders have integrated Hyperliquid via Builder Codes, generating $11 million in protocol revenue.
 
-{{< img src="images/superapp-stack/robinhood-vs-hyperliquid-9.png" alt="Hyperliquid builder code chart" >}}
+{{< img src="images/superapp-stack/robinhood-vs-hyperliquid-9.png" alt="Hyperliquid builder code chart" class="centered-image" >}}
 
 [Source](https://www.hypeburn.fun/builders)
 
 One of the most impactful recent integrations was with Phantom, which went live on July 9th 2025. In just 10 days, Phantom drove over 16K new users and facilitated $1.9 billion in volume on Hyperliquid.
 
-{{< img src="images/superapp-stack/robinhood-vs-hyperliquid-10.png" alt="Phantom integration chart" >}}
+{{< img src="images/superapp-stack/robinhood-vs-hyperliquid-10.png" alt="Phantom integration chart" class="centered-image" >}}
 
 [Source](https://www.flowscan.xyz/builders?builder=phantom)
 
@@ -163,7 +161,7 @@ Historically, centralized exchanges have had a clear edge due to off-ramp access
 
 At present, Hyperliquid's HIP-3 framework gives it the broadest product scope among the three. Robinhood will need to move faster on onchain features like strategy vaults and synthetic assets to keep pace. Phantom benefits regardless of which infrastructure provider wins, as long as the aggregation model remains composable.
 
-{{< img src="images/superapp-stack/robinhood-vs-hyperliquid-11.png" alt="Superapp stack closing chart" >}}
+{{< img src="images/superapp-stack/robinhood-vs-hyperliquid-11.png" alt="Superapp stack closing chart" class="centered-image" >}}
 
 ### How the three are priced today
 

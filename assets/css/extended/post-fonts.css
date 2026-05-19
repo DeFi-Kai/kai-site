@@ -5,3 +5,8 @@
 .post-single {
   font-family: var(--post-font-family);
 }
+
+.post-single img.centered-image {
+  display: block;
+  margin: 1.25rem auto;
+}
