@@ -7,7 +7,7 @@ title = 'Aave: The Bank of DeFi'
 *This report was originally published on [Blocmates](https://x.com/blocmates/status/1951422453734953348).*
 
 ---
-Aave has grown into DeFi's Trojan Horse reaching a scale comparable to traditional banks. With $35B in TVL and $57B in net deposits, it now controls 25% of DeFi TVL and ranks among the 50 largest U.S. banks by assets under management (AUM).
+Aave has grown to become DeFi’s Trojan Horse, reaching a scale comparable to traditional banks. With $35 billion in TVL and $57 billion in net deposits, it now controls 25% of DeFi TVL and ranks among the 50 largest US banks by assets under management (AUM).
 {{< img src="images/aave-the-bank-of-defi/image11.jpg" alt="Aave chart" >}}
 
 In 2024, the protocol made $86M in revenue (a 280% YoY increase). As of July 2025, annualized revenue is ~ $100M, but with upcoming catalysts like Aave V4, Chainlink SVR's full rollout, Horizon adoption, and improving U.S. regulation, they have the **potential to reach $150M+ in ARR by year-end.**   
