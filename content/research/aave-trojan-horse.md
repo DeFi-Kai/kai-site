@@ -2,6 +2,8 @@
 date = '2025-08-02T09:00:00-04:00'
 draft = false
 title = 'Aave: The Bank of DeFi'
+slug = 'aave-the-bank-of-defi'
+aliases = ['/research/aave-trojan-horse/']
 +++
 
 *This report was originally published on [Blocmates](https://x.com/blocmates/status/1951422453734953348).*
