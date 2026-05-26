@@ -13,7 +13,7 @@ Of those teams, **Prime Intellect** is among the furthest along, having publicly
 ## What Prime Intellect is building
 Prime Intellect is building a single network where any participant can rent GPUs for inference, contribute compute to community-trained models in exchange for a share of ownership, or crowdsource compute for their own training runs. Think Hugging Face combined with a shared-ownership layer.
 
-The team raised $15 million in February 2025, led by Founders Fund, bringing total funding north of $20 million. The round included Menlo Ventures alongside angels including Andrej Karpathy, Hugging Face's Clem Delangue, SemiAnalysis's Dylan Patel, Together AI's Tri Dao, Balaji Srinivasan, and Stability's Emad Mostaque.
+The team raised $15 million Series A round, in February 2025, led by Founders Fund, bringing total funding north of $20 million. The round included Menlo Ventures alongside angels including Andrej Karpathy, Hugging Face’s Clem Delangue, SemiAnalysis’s Dylan Patel, Together AI’s Tri Dao, Balaji Srinivasan, and Stability’s Emad Mostaque.
 
 The team built its infrastructure by training real models in public. To date, three artifacts have been produced:
 - **INTELLECT-1** — a 10B-parameter model based on the Llama-3 architecture, trained across five countries on three continents during a closed testnet run. The exercise was less about the resulting model and more about pressure-testing PRIME, the team's distributed training framework, under realistic network conditions.
