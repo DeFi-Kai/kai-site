@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/research/unpacking-the-superapp-stack.md",
+                "file": "content/research/prime-intellects-case-for-decentralized-ai/index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "unpacking-the-superapp-stack"
+              "title": "index"
             }
           }
         ]
@@ -185,6 +185,7 @@
   },
   "active": "43ef31b5fdeb382d",
   "lastOpenFiles": [
+    "content/research/unpacking-the-superapp-stack.md",
     "public/research/aave-the-bank-of-defi/index.html",
     "public/research/aave-the-bank-of-defi",
     "public/images/aave-the-bank-of-defi/image9.png",
@@ -205,11 +206,9 @@
     "public/research/unpacking-the-superapp-stack",
     "public/images/superapp-stack",
     "static/images/superapp-stack",
-    "content/research/unpacking-the-superapp-stack.md",
     "content/research/crypto-superapp-stack/index.md",
     "content/research/robinhood-vs-hyperliquid-superapp-stack/index.md",
     "content/research/crypto-superapp-stack",
-    "content/research/robinhood-vs-hyperliquid-superapp-stack",
     "content/data/automated-etl-pipeline-for-onchain-analysis/index.md",
     "content/research/prime-intellects-case-for-decentralized-ai/index.md",
     "content/research/prime-intellects-case-for-decentralized-ai.md",
