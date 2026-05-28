@@ -33,7 +33,7 @@ ShowToc = false
 
 **[Jupiter Lend Liquidation Decoder](https://x.com/DefiVaults/status/1989206474468335981?s=20)** — Solana Turbin3 Q4 2025 Final Project
 - Built a fully decoded Jupiter Lend liquidation table from raw Solana instruction data, reverse-engineering Anchor discriminators and inner instruction patterns
-- Analyzed $1.28M in liquidations during the October 10, 2025 mass liquidation event
+- Analyzed $1.29M in liquidations during the October 10, 2025 mass liquidation event
 
 **[MetaDAO Analytics Dashboard](https://dune.com/blocmates_research/metadao-blocmates-pro)** — Blocmates
 - Built Dune (Trino SQL) queries tracking fund commitments, token claims, refunds, and treasury flows across three MetaDAO launchpad program versions
