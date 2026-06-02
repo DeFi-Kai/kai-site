@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/research/prime-intellects-case-for-decentralized-ai/index.md",
+                "file": "content/research/aave-six-months-later.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "aave-six-months-later"
             }
           }
         ]
@@ -185,6 +185,7 @@
   },
   "active": "43ef31b5fdeb382d",
   "lastOpenFiles": [
+    "content/research/prime-intellects-case-for-decentralized-ai/index.md",
     "content/research/unpacking-the-superapp-stack.md",
     "public/research/aave-the-bank-of-defi/index.html",
     "public/research/aave-the-bank-of-defi",
@@ -210,7 +211,6 @@
     "content/research/robinhood-vs-hyperliquid-superapp-stack/index.md",
     "content/research/crypto-superapp-stack",
     "content/data/automated-etl-pipeline-for-onchain-analysis/index.md",
-    "content/research/prime-intellects-case-for-decentralized-ai/index.md",
     "content/research/prime-intellects-case-for-decentralized-ai.md",
     "content/research/lp-as-equity.md",
     "content/research/aave-six-months-later.md",
