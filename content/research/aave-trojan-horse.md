@@ -1,6 +1,6 @@
 +++
 date = '2025-08-02T09:00:00-04:00'
-draft = false
+draft = true
 title = 'Aave: The Bank of DeFi'
 slug = 'aave-the-bank-of-defi'
 aliases = ['/research/aave-trojan-horse/']

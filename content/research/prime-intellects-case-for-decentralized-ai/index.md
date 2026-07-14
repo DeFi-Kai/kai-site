@@ -1,6 +1,6 @@
 +++
 date = '2025-05-14T09:00:00-04:00'
-draft = false
+draft = true
 title = "Prime Intellect's Case for Decentralized AI"
 +++
 Frontier model training has consolidated into a small set of operators with the capital to assemble tightly-coupled GPU clusters. That concentration produces the fastest path to capability, but it also limits the decisions about what gets trained, on what data, and on what terms to those same operators.
