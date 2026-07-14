@@ -51,8 +51,6 @@ In its current state, lending is a power law category. Aave controls 34% of all 
 | Fluid\*      |        $739M |          $1.24B |          1.6% |     $74M |      $12.6M |
 | Compound     |        $569M |           $848M |          3.2% |     $38M |       $2.4M |
 
-\* Fees/Revenue TTM use the whole-protocol endpoint (Spark, Fluid — includes non-lending arms); Active Loans, TVL and Share are the lending market only. \*\* Jupiter Lend is lend-only; the TTM loan-book average covers ~323 days (launched Aug 2025), not a full year. TVL = net (deposits − borrowed); % of Category = each protocol's TVL ÷ whole DeFi Lending-category TVL ($39.2B). These eight = 73% of the category.
-
 *Source: DefiLlama*
 
 While the lending category is consolidating, the business of lending dollars against crypto collateral is becoming commoditized. With more competition, best practices diffuse across venues. And because the smart contracts are open source, rivals fork the winning design outright, making convergence mechanical.
@@ -104,10 +102,6 @@ Morpho, the second largest venue on EVM chains, has conceded the price war, redu
 Since price (gross borrow yields) is being largely competed away and capture (take rates) is converging to a banded range, revenue growth shows up in the only active lever left: scale (active loans).
 
 Revenue expressed as a formula is:
-
-- Revenue = Scale × Price × Capture
-- = Active Loans × Gross Yield × Take Rate
-
 {{< img src="images/defi-lending-endgame/formula-revenue.png" alt="Revenue formula" >}}
 
 The market is essentially betting on whose loan book can compound over time and expand beyond the cyclicality of crypto. Scale is the active lever and distribution is the moat. And projects are approaching the scale issue with drastically different strategies.
@@ -119,11 +113,6 @@ Most lending protocols are moving on from monolithic architecture and adopting m
 {{< img src="images/defi-lending-endgame/lending-integrated-unbundled.png" alt="Integrated versus unbundled lending models" >}}
 
 *Source: protocol docs*
-
-|                | Integrated (protocol curates)   | Unbundled (third parties curate) |
-| -------------- | ------------------------------- | -------------------------------- |
-| **Monolithic** | Aave v3, Compound, Fluid, Sparklend | —                        |
-| **Modular**    | Aave v4, Jupiter Lend               | Morpho, Euler v2, Kamino |
 
 On one hand, Aave is modular but integrated. It recently launched modular markets with v4 in late March 2026. In v4, hubs (markets) hold liquidity which seed multiple spokes (vaults). Although Aave v4 is modular in architecture it remains an integrated stack: the protocol still approves and vets every spoke. The protocol is the curator. It sets every LTV, oracle, and listing, bears the risk decision, and takes the reserve factor on borrow interest plus secondary skims (liquidations, flash loans, licensing).
 
@@ -147,12 +136,6 @@ Morpho has set its take to zero and passes all yield to vault curators and depos
 
 Calculating the Economic profit (EP) of each venue shows us where the real profit in lending actually sits. Economic profit (EP) is what a venue earns above its cost of capital. Specifically, the EP measures the profit the platform earned after subtracting the minimum profit that capital could have earned elsewhere.
 
-EP = earnings − r × capital-at-risk
-
-- Assumptions/inputs:
-	- r = 15% (equity hurdle: S&P long-run total return ~10% plus a ~5% crypto/illiquidity premium)
-	- capital-at-risk = 2.5% of TTM-average loan book + pledged slashable backstop (Aave Umbrella $155M; Spark Risk Capital $39.3M)
-	- earnings = DefiLlama revenue − token incentives
 
 {{< img src="images/defi-lending-endgame/formula-economic-profit.png" alt="Economic profit formula" >}}
 
@@ -226,8 +209,6 @@ On the other hand, Euler also has a thin take rate of ~6%, but with a P/S of 0.4
 ### Aave: Compounder
 
 Aave is a compounder so it's valued on earnings and the durability of its growth. Those earnings reach the token directly, since Aavenomics 3.0 routes protocol and GHO revenue into automated AAVE buybacks. We use the Gordon Growth Model to assess its growth in perpetuity.
-
-g = r - 1 / (P/E)
 
 {{< img src="images/defi-lending-endgame/formula-gordon-growth.png" alt="Gordon growth formula" >}}
 
