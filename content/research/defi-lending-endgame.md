@@ -30,8 +30,6 @@ Total active loans peaked at $52.3B in September 2025 at the height of the bull 
 
 BTC and ETH (incl. LSTs and BTC wrappers) make up 76% of net total value locked (TVL) across Aave, Morpho, and SparkLend: 77% on Aave, 67% on Morpho, 87% on SparkLend.
 
-*Source: DefiLlama*
-
 {{< img src="images/defi-lending-endgame/lending-share-of-crypto-dual-axis.png" alt="DeFi lending vs BTC and ETH market cap" >}}
 
 *Source: DefiLlama + CoinGecko*
