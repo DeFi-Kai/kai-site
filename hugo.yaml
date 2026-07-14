@@ -42,8 +42,6 @@ params:
       url: "https://x.com/defivaults"
     - name: github
       url: "https://github.com/DeFi-Kai"
-    - name: rss
-      url: "/index.xml"
 
 menu:
   main:
