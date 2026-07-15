@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/research/aave-six-months-later.md",
+                "file": "content/research/defi-lending-endgame.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "aave-six-months-later"
+              "title": "defi-lending-endgame"
             }
           }
         ]
@@ -183,8 +183,12 @@
       "bases:Create new base": false
     }
   },
-  "active": "43ef31b5fdeb382d",
+  "active": "baea9f3609d71a07",
   "lastOpenFiles": [
+    "content/research/defi-lending-endgame.md.tmp.541317.a85a9692101e",
+    "content/research/defi-lending-endgame.md.tmp.541317.2ee1a59a539d",
+    "hugo.yaml.tmp.541317.c85ccc4c5b8d",
+    "content/research/aave-six-months-later.md",
     "content/research/prime-intellects-case-for-decentralized-ai/index.md",
     "content/research/unpacking-the-superapp-stack.md",
     "public/research/aave-the-bank-of-defi/index.html",
@@ -206,14 +210,11 @@
     "public/research/unpacking-the-superapp-stack/index.html",
     "public/research/unpacking-the-superapp-stack",
     "public/images/superapp-stack",
-    "static/images/superapp-stack",
     "content/research/crypto-superapp-stack/index.md",
     "content/research/robinhood-vs-hyperliquid-superapp-stack/index.md",
-    "content/research/crypto-superapp-stack",
     "content/data/automated-etl-pipeline-for-onchain-analysis/index.md",
     "content/research/prime-intellects-case-for-decentralized-ai.md",
     "content/research/lp-as-equity.md",
-    "content/research/aave-six-months-later.md",
     "content/journal/building-local-ai-system.md"
   ]
 }
