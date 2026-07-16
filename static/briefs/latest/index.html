@@ -462,8 +462,8 @@
             <h1>Market Brief</h1>
             <div class="header-subtitle">by Kai's Research Assistant</div>
             <div class="header-meta">
-             <span class="report-date">July 14, 2026</span>
-             <span class="report-time">10:31 UTC</span>
+             <span class="report-date">July 15, 2026</span>
+             <span class="report-time">14:36 UTC</span>
            </div>
          </div>
          <div class="header-right">
@@ -477,30 +477,30 @@
        <section class="hero-metrics">
          <div class="metric-card">
            <div class="metric-label">DeFi TVL</div>
-           <div class="metric-value">$78.58B</div>
-           <div class="metric-change negative">▼ -0.53%</div>
+           <div class="metric-value">$80.71B</div>
+           <div class="metric-change positive">▲ +3.42%</div>
          </div>
          <div class="metric-card">
            <div class="metric-label">Sentiment</div>
-           <div class="metric-value fear">22</div>
+           <div class="metric-value fear">25</div>
            <div class="metric-change warning">Extreme Fear</div>
          </div>
          <div class="metric-card">
            <div class="metric-label">Stablecoin Liq.</div>
-           <div class="metric-value">$306.46B</div>
+           <div class="metric-value">$306.56B</div>
            <div class="metric-change neutral">N/A</div>
          </div>
           <div class="metric-card">
             <div class="metric-label">24h Trading Volume (CEX + DEX volume)</div>
-            <div class="metric-value">$125.28B</div>
-            <div class="metric-change negative">▼ -44.12% vs yesterday</div>
+            <div class="metric-value">$154.83B</div>
+            <div class="metric-change negative">▼ -47.93% vs yesterday</div>
           </div>
         </section>
 
        <section class="executive-summary">
          <div class="summary-header">Executive Summary</div>
          <div class="summary-content">
-           <p><span class="empty">Summary unavailable.</span></p>
+           <p>I’m sorry, but I don’t have the specific figures for the 24‑hour <strong>TVL</strong> shifts or the stablecoin liquidity you’re asking about, so I can’t produce a complete summary with explicit numbers.</p>
            
          </div>
        </section>
@@ -508,7 +508,7 @@
       <section class="section">
         <div class="section-header">
           <h2>Sentiment</h2>
-          <span class="section-meta">Updated 10:31 UTC</span>
+          <span class="section-meta">Updated 14:36 UTC</span>
         </div>
         <div class="subsection-header">
           <h3>Fear &amp; Greed Index</h3>
@@ -517,41 +517,103 @@
           <div class="fear-greed-gauge">
             <img src="https://alternative.me/crypto/fear-and-greed-index.png" alt="Latest Crypto Fear &amp; Greed Index" />
             <div class="gauge-label">
-              <span class="value fear">22</span>
+              <span class="value fear">25</span>
               <span class="label">Extreme Fear</span>
-              <span class="change warning">-21.43% from yesterday</span>
+              <span class="change warning">+13.64% from yesterday</span>
             </div>
           </div>
           <div class="fear-greed-chart">
             <canvas id="fng-chart"></canvas>
           </div>
         </div>
-        <div class="empty">Reddit sentiment data unavailable.</div>
+        
+          <div class="reddit-sentiment">
+            <div class="subsection-header">
+              <h3>Reddit Sentiment</h3>
+              <span class="subsection-meta">Based on 71 posts, 179 comments across 1 subreddits</span>
+            </div>
+            <div class="sentiment-overview">
+              <div class="sentiment-score-card">
+                <div class="score-gauge" style="--score: -25">
+                  <span class="score-value">-25</span>
+                </div>
+                <div class="score-label fear">Fear</div>
+                <div class="confidence">Confidence: 70%</div>
+              </div>
+              <div class="sentiment-indicators">
+                <div class="indicator-card">
+                  <div class="indicator-label">Retail Euphoria</div>
+                  <div class="indicator-bar"><div class="bar-fill low" style="width: 30%"></div></div>
+                  <div class="indicator-value">0.3</div>
+                </div>
+                <div class="indicator-card">
+                  <div class="indicator-label">Capitulation Signal</div>
+                  <div class="indicator-bar"><div class="bar-fill low" style="width: 20%"></div></div>
+                  <div class="indicator-value">0.2</div>
+                </div>
+              </div>
+            </div>
+            <div class="subreddit-breakdown">
+              <h4>By Subreddit</h4>
+              <div class="subreddit-bars"><div class="sub-row"><span class="sub-name">r/defi</span><div class="sub-bar"><div class="bar-segment negative" style="width: 25%"></div></div><span class="sub-score negative">-25</span></div></div>
+            </div>
+            <div class="dominant-narratives">
+              <h4>Dominant Narratives</h4>
+              <div class="narrative-tags"><span class="narrative-tag neutral">Crypto adoption barriers are due to educational gaps rather than technical limitations. (high)</span></div>
+            </div>
+            <div class="sentiment-findings">
+              <div class="findings-column concerns">
+                <h4>Key Concerns</h4>
+                <ul><li>Merchant awareness and understanding of crypto payment systems</li><li>Persistence of misconceptions about how crypto payments function</li></ul>
+              </div>
+              <div class="findings-column optimism">
+                <h4>Key Optimism</h4>
+                <ul><li>Recognition that current obstacles are not fundamental but rather due to lack of knowledge</li><li>Potential for increased adoption once misunderstandings are cleared</li></ul>
+              </div>
+            </div>
+            <div class="methodology-section">
+              <details>
+                <summary>How to read this</summary>
+                <div class="methodology-content">
+                  <p>This score aggregates sentiment from 8 crypto subreddits, weighted by community relevance. Posts and top comments from the past 24 hours are sampled and analyzed by LLM for directional sentiment (bullish/bearish/neutral) and conviction strength.</p>
+                  <div class="score-guide">
+                    <div class="score-range extreme-fear">-100 to -60: Extreme Fear</div>
+                    <div class="score-range fear">-60 to -20: Fear</div>
+                    <div class="score-range neutral">-20 to +20: Neutral</div>
+                    <div class="score-range greed">+20 to +60: Greed</div>
+                    <div class="score-range extreme-greed">+60 to +100: Extreme Greed</div>
+                  </div>
+                  <p><strong>Retail Euphoria</strong> (0–10) measures speculative fervor—high values often precede corrections. <strong>Capitulation Signal</strong> (0–10) measures despair—high values historically coincide with bottoms. The most reliable reversal signal is low euphoria combined with high capitulation.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        
       </section>
 
     <section class="section">
       <div class="section-header">
         <h2>DeFi Overview</h2>
-        <span class="section-meta">Updated 10:31 UTC</span>
+        <span class="section-meta">Updated 14:36 UTC</span>
       </div>
       <div class="volume-headline cards">
         <div class="cex-card volume-headline-card">
           <div class="headline-label">24h Open Interest</div>
-          <div class="headline-value">$19.18B</div>
-          <div class="metric-change positive">▲ +0.63% vs yesterday</div>
+          <div class="headline-value">$19.22B</div>
+          <div class="metric-change positive">▲ +0.19% vs yesterday</div>
         </div>
         <div class="cex-card volume-headline-card">
           <div class="headline-label">Outstanding Loans</div>
-          <div class="headline-value">$24.39B</div>
-          <div class="metric-change positive">▲ +0.19% vs yesterday</div>
+          <div class="headline-value">$24.86B</div>
+          <div class="metric-change positive">▲ +0.08% vs yesterday</div>
         </div>
       </div>
       <div class="chart-with-context">
         <div class="chart-container"><div class="defi-chart-card"><canvas id="defi-tvl-shifts-chart"></canvas></div></div>
         <div class="chart-insights">
           <h4>24h TVL Shifts</h4>
-          <div class="md-block"><p>DeFi TVL ($73.33B total) decreased by 0.53 percent over the last 24 hours led by Bitcoin, Hyperliquid L1, Provenance.</p></div>
-          <div class="shift-table"><div class="shift-row"><span class="shift-chain">Ethereum</span><span class="shift-change negative">-$161.22M (-0.40%)</span></div><div class="shift-row"><span class="shift-chain">Bitcoin</span><span class="shift-change positive">+$97.38M (+2.78%)</span></div><div class="shift-row"><span class="shift-chain">Tron</span><span class="shift-change negative">-$70.42M (-1.47%)</span></div><div class="shift-row"><span class="shift-chain">Hyperliquid L1</span><span class="shift-change negative">-$59.91M (-4.21%)</span></div><div class="shift-row"><span class="shift-chain">Base</span><span class="shift-change negative">-$49.85M (-1.12%)</span></div></div>
+          <div class="md-block"><p>DeFi TVL ($75.44B total) increased by 3.42 percent over the last 24 hours led by Ethereum, Base, Bitcoin.</p></div>
+          <div class="shift-table"><div class="shift-row"><span class="shift-chain">Ethereum</span><span class="shift-change positive">+$1.69B (+4.28%)</span></div><div class="shift-row"><span class="shift-chain">Base</span><span class="shift-change positive">+$174.64M (+3.99%)</span></div><div class="shift-row"><span class="shift-chain">Bitcoin</span><span class="shift-change positive">+$137.66M (+3.85%)</span></div><div class="shift-row"><span class="shift-chain">Solana</span><span class="shift-change positive">+$119.16M (+2.48%)</span></div><div class="shift-row"><span class="shift-chain">BSC</span><span class="shift-change positive">+$62.73M (+1.28%)</span></div></div>
         </div>
       </div>
     </section>
@@ -559,7 +621,7 @@
       <section class="section">
         <div class="section-header">
           <h2>Crypto Trading Volume</h2>
-          <span class="section-meta">Updated 10:31 UTC</span>
+          <span class="section-meta">Updated 14:36 UTC</span>
         </div>
         <div class="volume-grid">
           <div class="volume-column">
@@ -567,8 +629,8 @@
             <div class="volume-headline">
               <div class="cex-card volume-headline-card">
                 <div class="headline-label">24h CEX Volume</div>
-                <div class="headline-value">$118.62B</div>
-                <div class="metric-change negative">▼ -45.28% vs yesterday</div>
+                <div class="headline-value">$147.76B</div>
+                <div class="metric-change negative">▼ -49.12% vs yesterday</div>
               </div>
             </div>
             <div class="cex-grid single">
@@ -580,8 +642,8 @@
             <div class="volume-headline">
               <div class="cex-card volume-headline-card">
                 <div class="headline-label">24h DEX Volume</div>
-                <div class="headline-value">$6.66B</div>
-                <div class="metric-change negative">▼ -9.90% vs yesterday</div>
+                <div class="headline-value">$7.08B</div>
+                <div class="metric-change positive">▲ +1.85% vs yesterday</div>
               </div>
             </div>
             <div class="cex-grid single">
@@ -599,16 +661,16 @@
      <section class="section">
        <div class="section-header">
          <h2>Protocol Movers</h2>
-         <span class="section-meta">Updated 10:31 UTC</span>
+         <span class="section-meta">Updated 14:36 UTC</span>
        </div>
        <div class="movers-grid">
          <div class="movers-card winners">
            <h4>Top Gainers</h4>
-           <table class="movers-table"><thead><tr><th>Protocol</th><th>24h</th><th>TVL</th></tr></thead><tbody><tr><td class="protocol-name"><strong>Babylon Protocol</strong></td><td class="change positive">5.61%</td><td class="tvl">$3B</td></tr><tr><td class="protocol-name"><strong>Fluid Lending</strong></td><td class="change positive">2.83%</td><td class="tvl">$638M</td></tr><tr><td class="protocol-name"><strong>Uniswap V2</strong></td><td class="change positive">2.72%</td><td class="tvl">$775M</td></tr><tr><td class="protocol-name"><strong>Figure Markets Exchange</strong></td><td class="change positive">2.44%</td><td class="tvl">$2B</td></tr><tr><td class="protocol-name"><strong>Pendle</strong></td><td class="change positive">1.60%</td><td class="tvl">$1B</td></tr></tbody></table>
+           <table class="movers-table"><thead><tr><th>Protocol</th><th>24h</th><th>TVL</th></tr></thead><tbody><tr><td class="protocol-name"><strong>SparkLend</strong></td><td class="change positive">6.82%</td><td class="tvl">$4B</td></tr><tr><td class="protocol-name"><strong>HashKey Exchange</strong></td><td class="change positive">5.92%</td><td class="tvl">$1B</td></tr><tr><td class="protocol-name"><strong>Spark Liquidity Layer</strong></td><td class="change positive">5.53%</td><td class="tvl">$2B</td></tr><tr><td class="protocol-name"><strong>SSV Network</strong></td><td class="change positive">5.51%</td><td class="tvl">$9B</td></tr><tr><td class="protocol-name"><strong>Tornado Cash</strong></td><td class="change positive">5.49%</td><td class="tvl">$531M</td></tr></tbody></table>
          </div>
          <div class="movers-card losers">
            <h4>Top Losers</h4>
-           <table class="movers-table"><thead><tr><th>Protocol</th><th>24h</th><th>TVL</th></tr></thead><tbody><tr><td class="protocol-name"><strong>Portal</strong></td><td class="change negative">-3.21%</td><td class="tvl">$3B</td></tr><tr><td class="protocol-name"><strong>Lombard LBTC</strong></td><td class="change negative">-3.14%</td><td class="tvl">$574M</td></tr><tr><td class="protocol-name"><strong>Gemini</strong></td><td class="change negative">-2.69%</td><td class="tvl">$4B</td></tr><tr><td class="protocol-name"><strong>Lighter Bridge</strong></td><td class="change negative">-2.68%</td><td class="tvl">$510M</td></tr><tr><td class="protocol-name"><strong>Kinetiq kHYPE</strong></td><td class="change negative">-2.50%</td><td class="tvl">$921M</td></tr></tbody></table>
+           <table class="movers-table"><thead><tr><th>Protocol</th><th>24h</th><th>TVL</th></tr></thead><tbody><tr><td class="protocol-name"><strong>Spark Savings</strong></td><td class="change negative">-4.01%</td><td class="tvl">$1B</td></tr><tr><td class="protocol-name"><strong>USDD</strong></td><td class="change negative">-2.94%</td><td class="tvl">$1B</td></tr><tr><td class="protocol-name"><strong>Portal</strong></td><td class="change negative">-1.59%</td><td class="tvl">$2B</td></tr><tr><td class="protocol-name"><strong>Ondo Yield Assets</strong></td><td class="change negative">-0.54%</td><td class="tvl">$3B</td></tr><tr><td class="protocol-name"><strong>Circle USYC</strong></td><td class="change negative">-0.37%</td><td class="tvl">$3B</td></tr></tbody></table>
          </div>
        </div>
      </section>
@@ -616,7 +678,7 @@
      <section class="section">
        <div class="section-header">
          <h2>Stablecoin Liquidity</h2>
-         <span class="section-meta">Updated 10:31 UTC</span>
+         <span class="section-meta">Updated 14:36 UTC</span>
        </div>
        <div class="chart-with-context">
          <div class="chart-container"><div class="defi-chart-card"><canvas id="stablecoin-chart"></canvas></div></div>
@@ -630,7 +692,7 @@
      <section class="section">
        <div class="section-header">
          <h2>Charts</h2>
-         <span class="section-meta">Updated 10:31 UTC</span>
+         <span class="section-meta">Updated 14:36 UTC</span>
        </div>
        <div class="chart-grid" id="chart-grid">
          <div class="chart-card" id="chart-0" data-index="0">
@@ -725,7 +787,7 @@
      <section class="section">
        <div class="section-header">
          <h2>Headlines</h2>
-         <span class="section-meta">Updated 10:31 UTC</span>
+         <span class="section-meta">Updated 14:36 UTC</span>
        </div>
        <div class="news-block">
               <div class="news-block-header"><h3>crypto regulation</h3></div>
@@ -745,14 +807,14 @@
      <section class="section">
        <div class="section-header">
          <h2>Governance</h2>
-         <span class="section-meta">Updated 10:31 UTC</span>
+         <span class="section-meta">Updated 14:36 UTC</span>
        </div>
        <details class="governance-block">
               <summary><h3>Aave</h3></summary>
               <div class="md-block governance-master"><span class="empty">No summary available.</span></div>
-              <ul><li><strong><a href="https://governance.aave.com/t/25307">[ARFC] Aave App Launch</a></strong><div class="md-block governance-summary"><p>image2 1920×1081 193 KB 1. Aave for Everyone Aave App is designed to meet the usability bar of leading fintech apps: the Fintech Test .</p></div></li>
-<li><strong><a href="https://governance.aave.com/t/25301">Risk Stewards: Supply Cap Increases on Aave V3 / 2026.07.11</a></strong><div class="md-block governance-summary"><p>Summary LlamaRisk recommends the following parameter changes based on user behavior, on-chain liquidity, and position health observed in the latest review of Aave V3 reserves. Aave V3 MegaETH: Increase supply cap for stcUSD from 40,000,000 to 60,000,000.</p></div></li>
-<li><strong><a href="https://governance.aave.com/t/25308">Risk Stewards: Supply and Borrow Cap Increases on Aave V3 / 2026.07.13</a></strong><div class="md-block governance-summary"><p>Summary LlamaRisk recommends the following parameter changes based on user behavior, on-chain liquidity, and position health observed in the latest review of Aave V3 reserves. Aave V3 Core: Increase borrow cap for USDT from 2,340,000,000 to 2,574,000,000.</p></div></li></ul>
+              <ul><li><strong><a href="https://governance.aave.com/t/25319">Aave Grants DAO: is the program still active and accepting applications?</a></strong><div class="md-block governance-summary"><p>Hi, I am planning a public-good submission for the Code audits or Developer tooling category at Aave Grants DAO, but I want to confirm the program is currently active before committing the build effort. A few signals on public surfaces look quiet, so this is a sanity-check rather than an application: - aavegrants.org ’s most recent dated content is the May 10 2021 “Hello World!” post.</p></div></li>
+<li><strong><a href="https://governance.aave.com/t/25313">Risk Stewards: Supply and Borrow Cap Increases on Aave V3 / 2026.07.14</a></strong><div class="md-block governance-summary"><p>Summary LlamaRisk recommends the following parameter changes based on user behavior, on-chain liquidity, and position health observed in the latest review of Aave V3 reserves. Aave V3 Core: Increase supply cap for USDe from 626,000,000 to 751,200,000.</p></div></li>
+<li><strong><a href="https://governance.aave.com/t/25307">[ARFC] Aave App Launch</a></strong><div class="md-block governance-summary"><p>image2 1920×1081 193 KB 1. Aave for Everyone Aave App is designed to meet the usability bar of leading fintech apps: the Fintech Test .</p></div></li></ul>
             </details><details class="governance-block">
               <summary><h3>Uniswap</h3></summary>
               <div class="md-block governance-master"><span class="empty">No summary available.</span></div>
@@ -763,8 +825,8 @@
               <summary><h3>Compound</h3></summary>
               <div class="md-block governance-master"><span class="empty">No summary available.</span></div>
               <ul><li><strong><a href="https://www.comp.xyz/t/7935">Increase Collateral Factor for rsETH on Ethereum WETH Comet to Enable Orderly Unwind</a></strong><div class="md-block governance-summary"><p>Increase Collateral Factor for rsETH on Ethereum WETH Comet to Enable Orderly Unwind Summary Following the ongoing isolation of rsETH on the Ethereum WETH Comet, there is a mechanical constraint that prevents existing rsETH-backed borrowers from unwinding their positions in an orderly manner. With the rsETH borrow collateral factor currently at 0%, the Comet requires a borrower to fully repay their outstanding WETH debt before any rsETH collateral can be withdrawn .</p></div></li>
-<li><strong><a href="https://www.comp.xyz/t/7929">Deprecation of Polygon and Unichain Comets</a></strong><div class="md-block governance-summary"><p>Deprecation of Polygon and Unichain Comets Simple Summary Gauntlet recommends the following changes to risk parameters to deprecate all active comets on Polygon (USDC and USDT) and on Unichain (USDC and WETH). These markets have seen limited adoption in the last 180 days, with borrow volume either decreasing or remaining flat.</p></div></li>
-<li><strong><a href="https://www.comp.xyz/t/7272">Compound Community Calls Thread</a></strong><div class="md-block governance-summary"><p>1916×1038 27.7 KB This forum post will serve as the thread for future Compound Community Calls . These are recurring, open calls where developers, delegates, grantees, and community members come together to discuss protocol upgrades, market updates, governance programs, and any other ecosystem initiatives.</p></div></li></ul>
+<li><strong><a href="https://www.comp.xyz/t/6177">Tané Delegate Platform</a></strong><div class="md-block governance-summary"><p>Tané Delegate tane-logo 480×480 9.53 KB Name: Tané Delegate Address: tanegov.eth / 0xB79294D00848a3A4C00c22D9367F19B4280689D7 Tally Delegate Profile: Tané - tanegov.eth's Delegate Profile Introduction Tané is formed with a group of crypto-native product builders, based in Tokyo, Dubai and New York. We are backed by SoftBank, and Japanese tech giants like DeNA, GREE, MIXI, and closely work with the big Japanese enterprises and have great relationship with Japanese crypto communities.</p></div></li>
+<li><strong><a href="https://www.comp.xyz/t/7927">Compound Foundation: Monthly V4 Programme Update [June 2026]</a></strong><div class="md-block governance-summary"><p>COMPOUND FOUNDATION · V4 PROGRAM UPDATE Monthly V4 Program Update: Executive Summary Compound Foundation · Reporting period: June 2026 A condensed summary of the first recurring monthly update under the V4 funding program. The deck remains the full source of detail here .</p></div></li></ul>
             </details><details class="governance-block">
               <summary><h3>Curve</h3></summary>
               <div class="md-block governance-master"><span class="empty">No summary available.</span></div>
@@ -772,14 +834,14 @@
             </details><details class="governance-block">
               <summary><h3>Arbitrum</h3></summary>
               <div class="md-block governance-master"><span class="empty">No summary available.</span></div>
-              <ul><li><strong><a href="https://forum.arbitrum.foundation/t/31048">[Constitutional] AIP: Ratification of Security Council Election Process Improvements</a></strong><div class="md-block governance-summary"><p>Abstract In September 2025, the ArbitrumDAO showed varying degrees of support for five Security Council Election process improvements via a temperature check . This updated temperature check aims to ratify the DAO’s support for the inclusion of four and omission of one of the originally proposed improvements, ahead of an on-chain vote.</p></div></li>
-<li><strong><a href="https://forum.arbitrum.foundation/t/22217">Cp0x Delegate Communication Thread</a></strong><div class="md-block governance-summary"><p>The thread will be updated periodically with community messages to ensure transparency and justification for the Cp0x team as delegates CONTACTS Team name: Cp0x aka cryptocp0x.nft Twitter Profile : https://x.com/cp0xdotcom?s=20 Snapshot Profile : Snapshot Tally Profile with the exact % of participation at each moment : Tally | cp0x ABOUT Cp0x is infrastructure, education, community . We are actively fighting for the development of the DAO and have at least 10 projects with delegations.</p></div></li>
-<li><strong><a href="https://forum.arbitrum.foundation/t/31066">[RFC] New state representation for Arbitrum: proof-format change and request for feedback</a></strong><div class="md-block governance-summary"><p>Abstract Offchain is researching a change to how Arbitrum commits to its state: replacing the Merkle-Patricia Trie (MPT) with a new verifiable data structure (plus auxiliary verifiable structures). The primary motivation for this change is to scale Arbitrum chains to new heights that optimizing the MPT cannot alone achieve.</p></div></li></ul>
+              <ul><li><strong><a href="https://forum.arbitrum.foundation/t/31072">CoBuilders, Building on Arbitrum</a></strong><div class="md-block governance-summary"><p>Why this thread This is the first entry in a thread we will keep updating with each meaningful contribution we make to Arbitrum, so the community has a single place to follow our work. Who is CoBuilders Founded in 2024, CoBuilders is a Web3 studio that builds and runs experienced, blockchain-native, interdisciplinary teams that help the most impactful decentralized finance projects turn their vision into reality.</p></div></li>
+<li><strong><a href="https://forum.arbitrum.foundation/t/31071">July 14, 2026 - Open Discussion of Proposals Governance Call</a></strong><div class="md-block governance-summary"><p>Logistics The link to join today’s governance call to discuss the proposal pipeline and notable discussions is also on the governance calendar. Date: July 14, 2026 Time: 16:00 - 17:00 UTC Video call link: Google Meet meeting Approach The agenda below will be fluid.</p></div></li>
+<li><strong><a href="https://forum.arbitrum.foundation/t/30049">OpCo Staff <> DAO calls</a></strong><div class="md-block governance-summary"><p>On Oct 1st 2025 we held the first DAO &lt;&gt; OpCo Staff Call , marking the beginning of a regular bi-weekly touchpoint between DAO delegates/contributors and the OpCo team. Below is a quick recap of what was discussed: DAO Goals &amp; Initiatives OpCo’s medium-term goals will be focused on: DAO strategy &amp; growth (including SOS) Driving efficiencies across the DAO and AAEs Community re-engagement initiatives Operational Updates - A Program Manager starts October 13th to lead the governance workstream Kicked off hiring for legal counsel - Currently onboarding an accounting firm Work underway on OpCo’s website The recording can be found here On October 14th, we held the second OpCo Office Hours call.</p></div></li></ul>
             </details><details class="governance-block">
               <summary><h3>Optimism</h3></summary>
               <div class="md-block governance-master"><span class="empty">No summary available.</span></div>
-              <ul><li><strong><a href="https://gov.optimism.io/t/10749">Optimism Security Council Operating Budget for Seasons 10 and 11</a></strong><div class="md-block governance-summary"><p>OPSC Operating Budget for Seasons 10 and 11 Proposed Lead: alisha.eth Proposed Operating Budget: 5,040,000 OP Contact Info: DM @Alisha on the forum Council Charter Link to existing Security Council Charter on GitHub. No major changes are proposed to the Security Council Charter for this budget cycle.</p></div></li>
-<li><strong><a href="https://gov.optimism.io/t/10529">Guide to Season 9</a></strong><div class="md-block governance-summary"><p>Guide to Season 9 Season 9 begins on January 29th and runs through June 3rd. We’re excited to embark on Season 9!</p></div></li>
+              <ul><li><strong><a href="https://gov.optimism.io/t/10529">Guide to Season 9</a></strong><div class="md-block governance-summary"><p>Guide to Season 9 Season 9 begins on January 29th and runs through June 3rd. We’re excited to embark on Season 9!</p></div></li>
+<li><strong><a href="https://gov.optimism.io/t/10749">Optimism Security Council Operating Budget for Seasons 10 and 11</a></strong><div class="md-block governance-summary"><p>OPSC Operating Budget for Seasons 10 and 11 Proposed Lead: alisha.eth Proposed Operating Budget: 5,040,000 OP Contact Info: DM @Alisha on the forum Council Charter Link to existing Security Council Charter on GitHub. No major changes are proposed to the Security Council Charter for this budget cycle.</p></div></li>
 <li><strong><a href="https://gov.optimism.io/t/10685">Season 9 Final Report</a></strong><div class="md-block governance-summary"><p>Highlights The Grants Council closed Season 9 submissions on May 20th. Submission flow increased significantly in the final two cycles, bringing the Season 9 total to 38 applications.</p></div></li></ul>
             </details>
      </section>
@@ -787,7 +849,7 @@
      <section class="section">
        <div class="section-header">
          <h2>Watchlist</h2>
-         <span class="section-meta">Updated 10:31 UTC</span>
+         <span class="section-meta">Updated 14:36 UTC</span>
        </div>
        <div class="watchlist-grid"><div class="watchlist-card">
               <div class="watchlist-header">
@@ -811,11 +873,13 @@
      <details class="trends-section" open>
        <summary class="section-header">
          <h2>Trends Analysis</h2>
-         <span class="section-meta">Updated 10:31 UTC</span>
+         <span class="section-meta">Updated 14:36 UTC</span>
        </summary>
        <div class="trends-content">
-         <div class="empty">No trends available.</div>
-         
+         <table class="trend-table"><thead><tr><th>Scale</th><th>Confidence</th><th>Trend</th><th>Sources</th></tr></thead><tbody><tr><td><span class="empty">N/A</span></td><td><span class="empty">N/A</span></td><td class="md-block"><ul>
+<li><strong>[Scale: Macro / Governance] (High) Trend:</strong> Global regulators are tightening oversight of cryptocurrency activity, moving from isolated enforcement to coordinated cross‑border actions. <strong>Evidence:</strong> The US Treasury’s $130 M freeze on Iran‑linked crypto wallets and the Federal Reserve Board’s enforcement action against TS Banking Group illustrate a pattern of heightened regulatory scrutiny across multiple jurisdictions. - <strong>[Scale: Governance] (Med) Trend:</strong> Decentralized autonomous organizations are adopting streamlined, expedited governance mechanisms to accelerate protocol upgrades. <strong>Evidence:</strong> The repeated use of five‑day Snapshot votes for fee parameter updates in the UNIfication series shows a shift toward faster on‑chain decision making within DAO ecosystems. - <strong>[Scale: Macro / Sector] (High) Trend:</strong> Semiconductor demand is being driven by AI and data‑center expansion, reinforcing the resilience of chip makers like ASML. <strong>Evidence:</strong> ASML’s 4 % share rise after a second sales forecast hike underscores sustained AI‑chip demand, aligning with broader market expectations for high‑performance computing. - <strong>[Scale: Macro / Governance] (Med) Trend:</strong> Economic policy is increasingly targeting underserved nonmetropolitan regions to address income disparities. <strong>Evidence:</strong> The release of a list of distressed or underserved middle‑income geographies by federal agencies signals a strategic focus on regional economic development, complementing broader fiscal initiatives. - <strong>[Scale: Macro / Sector] (Low) Trend:</strong> Bitcoin’s price trajectory is being monitored through specific technical targets, indicating continued speculative interest in the asset. <strong>Evidence:</strong> The announcement of an $80 K August target for BTC reflects ongoing market attention to key resistance levels, though it remains a narrower, short‑term signal compared to broader macro trends.</li>
+</ul></td><td><span class="empty">See sources below.</span></td></tr></tbody></table>
+         <details class="trend-sources"><summary><strong>Sources</strong></summary><div class="trend-sources-list"><a href="https://www.cnbc.com/2026/07/15/trump-iran-hormuz-strikes-power-plants-targeted.html">1</a>, <a href="https://www.cnbc.com/2026/07/15/asml-2q-earnings-ai-chips-orders.html">2</a>, <a href="https://decrypt.co/373439/openai-new-gpt-5-6-prompt-guide-chatgpt">3</a>, <a href="https://www.cnbc.com/2026/07/14/new-york-ai-data-center-ban.html">4</a>, <a href="https://www.wsj.com/cmo-today/ai-videos-are-flooding-tiktok-shop-c86a88e0?mod=rss_Technology">5</a>, <a href="https://www.federalreserve.gov/newsevents/pressreleases/enforcement20260709a.htm">6</a>, <a href="https://www.coindesk.com/business/2026/07/15/stripe-mounts-blockbuster-usd53-billion-bid-to-buy-paypal">7</a>, <a href="https://cointelegraph.com/markets/bitcoin-gets-new-80k-august-target-watch-these-btc-price-levels-next?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">8</a>, <a href="https://www.theblock.co/post/408357/us-treasury-freezes-130-million-iran-linked-wallets?utm_source=rss&utm_medium=rss">9</a>, <a href="https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260630a.htm">10</a>, <a href="https://governance.aave.com/t/25319">11</a>, <a href="https://governance.aave.com/t/25313">12</a>, <a href="https://governance.aave.com/t/25307">13</a>, <a href="https://gov.uniswap.org/t/26162">14</a>, <a href="https://gov.uniswap.org/t/24140">15</a>, <a href="https://gov.uniswap.org/t/26168">16</a>, <a href="https://www.comp.xyz/t/7935">17</a>, <a href="https://www.comp.xyz/t/6177">18</a>, <a href="https://www.comp.xyz/t/7927">19</a>, <a href="https://forum.arbitrum.foundation/t/31072">20</a>, <a href="https://forum.arbitrum.foundation/t/31071">21</a>, <a href="https://forum.arbitrum.foundation/t/30049">22</a>, <a href="https://gov.optimism.io/t/10529">23</a>, <a href="https://gov.optimism.io/t/10749">24</a>, <a href="https://gov.optimism.io/t/10685">25</a>, <a href="https://crypto.news/robinhood-chain-generates-843k-pays-ethereum-just-1-6k">26</a>, <a href="https://tradingkey.com/news/market-movers/262032054-market-movers-ethusd-20260715">27</a>, <a href="https://changelly.com/blog/ethereum-eth-price-predictions/">28</a>, <a href="https://openpr.com/news/4577293/ethereum-price-prediction-meets-pepeto-why-this-presale-could">29</a>, <a href="https://news.bitcoin.com/morgan-stanley-ether-solana-etf-coinbase-custody/">30</a>, <a href="https://hokanews.com/2026/07/ethereums-future-depends-on-low-fees.html">31</a>, <a href="https://fortune.com/article/price-of-ethereum-07-15-2026">32</a>, <a href="https://www.benzinga.com/money/ethereum-eth-price-predictions">33</a>, <a href="https://hokanews.com/2026/07/solana-dominates-24h-dex-volume-rankings.html">34</a>, <a href="https://fool.com/investing/2026/07/14/this-cryptocurrency-could-overtake-bitcoin">35</a>, <a href="https://fxstreet.com/cryptocurrencies/news/ripple-xrp-price-forecast-xrp-holds-support-but-weak-on-chain-activity-caps-gains-202607141230">36</a>, <a href="https://grafa.com/en/news/crypto/ethereum-holds-key-support-despite-price-drop">37</a>, <a href="https://fxstreet.com/cryptocurrencies/news/crypto-today-bitcoin-ethereum-xrp-extend-sideways-trading-amid-etf-outflows-us-iran-war-escalation-202607141055">38</a>, <a href="https://cryptonews.net/news/analytics/33145198/">39</a>, <a href="https://analyticsinsight.net/ethereum/ethereum-price-prediction-eth-breaks-key-resistance-eyes-2220-next">40</a>, <a href="https://reddit.com/r/ethereum/comments/1ux4r44/cointer_free_wallet_monitoring_and_dashboard_for/">41</a>, <a href="https://reddit.com/r/ethereum/comments/1ux07e3/is_it_legit_from_customer_support/">42</a>, <a href="https://reddit.com/r/ethereum/comments/1uww3o5/daily_general_discussion_july_15_2026/">43</a>, <a href="https://reddit.com/r/ethereum/comments/1uwq50m/can_blockchain_become_a_trust_layer_for_realworld/">44</a>, <a href="https://reddit.com/r/ethereum/comments/1uwc64c/i_asked_ai_to_explain_the_5_ethereum_entities_as/">45</a>, <a href="https://ethresear.ch/t/25254">46</a>, <a href="https://ethresear.ch/t/17538">47</a>, <a href="https://ethresear.ch/t/25459">48</a>, <a href="https://ethresear.ch/t/25248">49</a>, <a href="https://ethresear.ch/t/25456">50</a>, <a href="https://ethresear.ch/t/20660">51</a>, <a href="https://ethresear.ch/t/25089">52</a>, <a href="https://ethresear.ch/t/25353">53</a>, <a href="https://ethresear.ch/t/25338">54</a>, <a href="https://ethresear.ch/t/25065">55</a>, <a href="https://ccn.com/analysis/crypto/sol-price-stalls-record-solana-network-activity-60-support">56</a>, <a href="https://openpr.com/news/4577142/solana-sol-price-prediction-shows-strength-while-pepeto">57</a>, <a href="https://changelly.com/blog/solana-price-prediction/">58</a>, <a href="https://streetinsider.com/MarketMediaWire/Best+Crypto+to+Buy+Now+for+Smart+Buyers+Shortlist:+BlockDAG,+Solana,+Dogecoin,+and+Chainlink%C2%A0/26767135.html">59</a>, <a href="https://en.coin-turk.com/solana-faces-key-test-at-76-60-as-recovery-eyes-80-98-128/">60</a>, <a href="https://openpr.com/news/4576772/how-to-exchange-solana-for-bitcoin-and-why-it-s-worth-doing-right">61</a>, <a href="https://changelly.com/blog/solana-price-prediction">62</a>, <a href="https://u.today/sbis-solana-news-is-not-bad-for-xrp-analyst-says">63</a>, <a href="https://fxstreet.com/cryptocurrencies/news/solana-price-forecast-sol-recovers-on-retail-support-despite-muted-etf-inflows-202607150706">64</a>, <a href="https://coinpedia.org/price-analysis/solana-sol-price-prediction-heres-what-could-push-sol-above-100">65</a>, <a href="https://blockhead.co/2026/07/14/sbi-holdings-taps-solana-to-build-japans-onchain-financial-market">66</a>, <a href="https://tronweekly.com/solana-price-eyes-84-as-key-support-holds">67</a>, <a href="https://cryptonews.net/news/analytics/33147063">68</a>, <a href="https://reddit.com/r/solana/comments/1ux315r/sbi_global_asset_management_and_digift_launch_jx/">69</a>, <a href="https://reddit.com/r/solana/comments/1ux1eda/bot_traded_more_volume_on_solana_on_sunday_than/">70</a>, <a href="https://reddit.com/r/solana/comments/1uwzsy2/dapp_revenue_on_solana_keeps_telling_the_same/">71</a>, <a href="https://reddit.com/r/solana/comments/1uwxk9l/superteam_defi_bounty_for_your_opinion/">72</a>, <a href="https://reddit.com/r/solana/comments/1uwkyih/token2022_utility_extensions_are_more_useful_than/">73</a>, <a href="https://forum.solana.com/t/4874">74</a>, <a href="https://forum.solana.com/t/4944">75</a>, <a href="https://forum.solana.com/t/4937">76</a>, <a href="https://forum.solana.com/t/4236">77</a>, <a href="https://forum.solana.com/t/4515">78</a>, <a href="https://forum.solana.com/t/4810">79</a>, <a href="https://forum.solana.com/t/4803">80</a>, <a href="https://forum.solana.com/t/3643">81</a>, <a href="https://forum.solana.com/t/4762">82</a>, <a href="https://forum.solana.com/t/4759">83</a></div></details>
        </div>
      </details>
 
@@ -824,16 +888,16 @@
          <span>RSS Feed</span>
          <span class="rss-count">10 items</span>
        </summary>
-       <ul class="rss-list"><li><a href="https://www.wsj.com/tech/ai/can-ai-make-better-drugs-not-on-wall-streets-timeline-98a50d9d?mod=rss_Technology">Can AI Make Better Drugs? Not on Wall Street’s Timeline</a></li>
-<li><a href="https://www.cnbc.com/2026/07/13/trump-2020-election-intelligence-speech.html">Trump to claim declassified intel reveals 2020 election interference: MS NOW</a></li>
-<li><a href="https://www.federalreserve.gov/newsevents/pressreleases/enforcement20260709a.htm">Federal Reserve Board issues enforcement action with TS Banking Group, Inc. and TS Contrarian Bancshares, Inc.</a></li>
-<li><a href="https://decrypt.co/373401/the-odyssey-director-chris-nolan-ai-slop">'The Odyssey' Director Chris Nolan: Young Audiences are Rejecting 'AI Slop'</a></li>
-<li><a href="https://www.wsj.com/us-news/new-york-set-to-temporarily-ban-large-new-data-centers-3755924c?mod=rss_Technology">New York Set to Temporarily Ban Large New Data Centers</a></li>
-<li><a href="https://www.coindesk.com/markets/2026/07/14/solo-btc-miner-makes-usd200-000-using-usd150-equipment">Solo bitcoin miner makes $200,000 using $150 equipment</a></li>
+       <ul class="rss-list"><li><a href="https://www.cnbc.com/2026/07/15/trump-iran-hormuz-strikes-power-plants-targeted.html">U.S. launches fresh wave of strikes on Iran, as analysts warn conflict risks becoming 'forever war'</a></li>
+<li><a href="https://www.cnbc.com/2026/07/15/asml-2q-earnings-ai-chips-orders.html">ASML rises 4% after hiking sales forecast for second time this year on strong AI chip demand</a></li>
 <li><a href="https://decrypt.co/373439/openai-new-gpt-5-6-prompt-guide-chatgpt">Stop Over-Prompting: OpenAI’s New GPT-5.6 Guidelines Change Everything</a></li>
-<li><a href="https://www.theblock.co/post/408064/hyperliquid-hip-3-markets-surge-50-perp-volume-onchain-stock-trading-grows?utm_source=rss&utm_medium=rss">Hyperliquid’s HIP-3 markets surge to nearly 50% of perp volume as onchain stock trading grows</a></li>
-<li><a href="https://www.federalreserve.gov/newsevents/pressreleases/other20260701a.htm">Federal Reserve issues initial findings from its 2025 triennial payments study</a></li>
-<li><a href="https://www.wsj.com/tech/personal-tech/usb-c-cable-phone-charger-problems-c8beedec?mod=rss_Technology">Using the Wrong USB-C Charger? That Cheap Cable Can Fry Your Phone</a></li></ul>
+<li><a href="https://www.cnbc.com/2026/07/14/new-york-ai-data-center-ban.html">New York becomes first U.S. state to impose AI data center ban</a></li>
+<li><a href="https://www.wsj.com/cmo-today/ai-videos-are-flooding-tiktok-shop-c86a88e0?mod=rss_Technology">AI Videos Are Flooding TikTok Shop</a></li>
+<li><a href="https://www.federalreserve.gov/newsevents/pressreleases/enforcement20260709a.htm">Federal Reserve Board issues enforcement action with TS Banking Group, Inc. and TS Contrarian Bancshares, Inc.</a></li>
+<li><a href="https://www.coindesk.com/business/2026/07/15/stripe-mounts-blockbuster-usd53-billion-bid-to-buy-paypal">Stripe mounts blockbuster $53 billion bid to buy PayPal</a></li>
+<li><a href="https://cointelegraph.com/markets/bitcoin-gets-new-80k-august-target-watch-these-btc-price-levels-next?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Bitcoin gets new $80K August target: Watch these BTC price levels next</a></li>
+<li><a href="https://www.theblock.co/post/408357/us-treasury-freezes-130-million-iran-linked-wallets?utm_source=rss&utm_medium=rss">US Treasury freezes over $130 million tied to Iran-linked crypto wallets</a></li>
+<li><a href="https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260630a.htm">Agencies release list of distressed or underserved nonmetropolitan middle-income geographies</a></li></ul>
      </details>
 
   <script>
@@ -909,7 +973,7 @@
         });
       }
 
-      const defiData = {"labels": ["2026-07-08", "2026-07-09", "2026-07-10", "2026-07-11", "2026-07-12", "2026-07-13", "2026-07-14"], "series": {"Hyperliquid L1": [1468845985.0, 1442146141.0, 1431227575.0, 1420422353.0, 1419818300.0, 1423832556.0, 1363922100.0], "Base": [4415797650.0, 4339416777.0, 4390253568.0, 4456636934.0, 4446003758.0, 4452168538.0, 4402313779.0], "BSC": [4929194077.0, 4858401589.0, 4890785013.0, 4941653275.0, 4950900122.0, 4947267625.0, 4899895839.0], "Ethereum": [39411088981.0, 39090624948.0, 38734266835.0, 40321644421.0, 39779442966.0, 39973237904.0, 39812018972.0], "Arbitrum": [1235411297.0, 1221676652.0, 1232721762.0, 1253036728.0, 1247207241.0, 1253688385.0, 1234972672.0], "Polygon": [914496356.0, 954172827.0, 962241798.0, 950150467.0, 969965259.0, 911585548.0, 931509211.0], "Solana": [5005579444.0, 4939069332.0, 4957994709.0, 4930192312.0, 4845691273.0, 4845122802.0, 4801038767.0], "Bitcoin": [3503320129.0, 3429243684.0, 3503056563.0, 3562501248.0, 3543437165.0, 3499732627.0, 3597107958.0], "Tron": [4924968947.0, 4727447038.0, 4899440902.0, 4787671148.0, 4775547437.0, 4795275832.0, 4724855770.0], "Provenance": [1426344235.0, 1459645523.0, 1453811686.0, 1461305298.0, 1462526678.0, 1462481696.0, 1500103407.0], "Other": [11435981771.0, 11241072045.0, 11292693497.0, 11410799236.0, 11413475511.0, 11438212141.0, 11314410277.0]}};
+      const defiData = {"labels": ["2026-07-09", "2026-07-10", "2026-07-11", "2026-07-12", "2026-07-13", "2026-07-14", "2026-07-15"], "series": {"Hyperliquid L1": [1442146141.0, 1431227575.0, 1420422353.0, 1419818300.0, 1425598232.0, 1359838063.0, 1406172985.0], "Base": [4339416777.0, 4390253568.0, 4456636934.0, 4446003758.0, 4452169257.0, 4375038864.0, 4549680750.0], "BSC": [4858401589.0, 4890785013.0, 4941653275.0, 4950900122.0, 4947268395.0, 4884108007.0, 4946833075.0], "Ethereum": [38917001208.0, 38551467910.0, 40128314098.0, 39577986836.0, 39759827567.0, 39472308846.0, 41162259635.0], "Arbitrum": [1221676652.0, 1232721762.0, 1253036728.0, 1247207241.0, 1253689525.0, 1233254298.0, 1265526684.0], "Polygon": [954172827.0, 962241798.0, 950150467.0, 969965259.0, 911585606.0, 927845868.0, 929375284.0], "Solana": [4939069332.0, 4957994709.0, 4930192312.0, 4845691273.0, 4845122802.0, 4800400716.0, 4919561218.0], "Bitcoin": [3429243684.0, 3503056563.0, 3562501248.0, 3543437165.0, 3499732627.0, 3575503292.0, 3713160811.0], "Tron": [4727447038.0, 4899440902.0, 4787671148.0, 4775547437.0, 4795275832.0, 4707278830.0, 4744010545.0], "Provenance": [1459645523.0, 1453811686.0, 1461305298.0, 1462526678.0, 1462481696.0, 1486226821.0, 1500325417.0], "Other": [11241131318.0, 11292753397.0, 11410973378.0, 11413702948.0, 11438408935.0, 11344389644.0, 11569985148.0]}};
       if (defiData.labels && defiData.labels.length) {
         const ctx = document.getElementById('defi-tvl-chart');
        if (ctx) {
@@ -962,7 +1026,7 @@
       }
     }
 
-      const tvlShiftData = {"labels": ["Ethereum", "Bitcoin", "Tron", "Hyperliquid L1", "Base", "BSC", "Solana", "Provenance", "Polygon", "Arbitrum"], "changes": [-161218932.0, 97375331.0, -70420062.0, -59910456.0, -49854759.0, -47371786.0, -44084035.0, 37621711.0, 19923663.0, -18715713.0], "colors": ["#dc2626", "#16a34a", "#dc2626", "#dc2626", "#dc2626", "#dc2626", "#dc2626", "#16a34a", "#16a34a", "#dc2626"], "pct_changes": [-0.40331717032076436, 2.7823648654974806, -1.4685299546288957, -4.207689713761539, -1.1197859778775516, -0.9575343318929508, -0.9098641417675258, 2.572456879487673, 2.185605404090939, -1.49285206945584]};
+      const tvlShiftData = {"labels": ["Ethereum", "Base", "Bitcoin", "Solana", "BSC", "Hyperliquid L1", "Tron", "Arbitrum", "Provenance", "Polygon"], "changes": [1689950789.0, 174641886.0, 137657519.0, 119160502.0, 62725068.0, 46334922.0, 36731715.0, 32272386.0, 14098596.0, 1529416.0], "colors": ["#16a34a", "#16a34a", "#16a34a", "#16a34a", "#16a34a", "#16a34a", "#16a34a", "#16a34a", "#16a34a", "#16a34a"], "pct_changes": [4.281357838968304, 3.991779077370957, 3.8500179627299307, 2.48230322945398, 1.2842686506952998, 3.4073852806986773, 0.780317383493512, 2.6168476406153176, 0.9486167118497991, 0.16483513617371628]};
       if (tvlShiftData.labels && tvlShiftData.labels.length) {
         const ctxShift = document.getElementById('defi-tvl-shifts-chart');
         if (ctxShift) {
@@ -1013,7 +1077,7 @@
       const cexDivisor = cexCurrency === 'USD' ? 1e9 : 1;
       const cexSuffix = cexCurrency === 'USD' ? 'B' : ' BTC';
       const cexPrefix = cexCurrency === 'USD' ? '$' : '';
-      const cexVolumeData = {"labels": ["2026-07-07", "2026-07-08", "2026-07-09", "2026-07-10", "2026-07-11", "2026-07-12", "2026-07-13", "2026-07-14"], "series": {"Binance": [6853957069.029361, 6510340542.695868, 6055589105.817113, 6552315354.061034, 4126035921.3159857, 3722480986.365472, 7157116051.538045, 6385535647.0980425], "Coinbase Exchange": [1295241136.0136354, 1261744332.548887, 977763669.1215657, 1123912582.4087064, 506396847.05166703, 495711282.8829179, 1337533098.6773398, 1197610114.0846467], "OKX": [2434371786.448754, 2140069028.9263444, 2292616175.4945793, 1571046230.6517355, 1255460337.562882, 976158519.3974495, 1435723885.5989077, 1128103063.7539818], "Hibt": [609902070.4486133, 791996975.5453123, 511669713.8337022, 566240593.5151184, 334198738.44550985, 433357399.5260653, 673581856.2843262, 538084407.0979708], "bitcastle": [381799237.57021666, 412257049.2768397, 360072396.9111578, 379986402.54865867, 216451481.7008768, 292547786.33251446, 477099436.1618038, 384402913.6375628], "Other": [163958514849.69016, 293698092113.9299, 249138391231.80426, 251022027075.6255, 200311067788.14774, 168781796410.2617, 205716234968.5348, 108987295163.71507]}};
+      const cexVolumeData = {"labels": ["2026-07-08", "2026-07-09", "2026-07-10", "2026-07-11", "2026-07-12", "2026-07-13", "2026-07-14", "2026-07-15"], "series": {"Binance": [6746768969.523665, 6223682242.92358, 6742899256.750727, 4385942245.497368, 3839831329.537635, 7258205697.90705, 7974829475.323142, 7995233943.149028], "OKX": [2201196358.432139, 2363488195.587616, 1629899436.913351, 1326239542.9154856, 944424310.4155674, 1484730961.37475, 1452703444.9524975, 1527075779.6393185], "Coinbase Exchange": [1319912865.8349473, 1019374983.1099933, 1182356312.237284, 555907927.7417083, 522820818.55664396, 1403134705.7218482, 1364289401.5044482, 1383832490.0717697], "Hibt": [816703104.4722729, 527631110.5414265, 583904313.8815137, 344623976.63985693, 446875865.01865333, 694594057.9695206, 718221696.3566457, 743301690.8779122], "Bitrue": [393342222.4096525, 451766830.5163522, 382449454.8429899, 234531037.77568197, 343483677.582556, 427645454.0116426, 409627207.4573997, 412503589.8993928], "Other": [160574353352.46777, 268986731871.1576, 268851004011.3297, 211881887664.37872, 180164063740.91193, 223378023323.55023, 278482117179.29663, 135696671360.45456]}};
       if (cexVolumeData.labels && cexVolumeData.labels.length) {
         const cexVolumeCtx = document.getElementById('cex-volume-chart');
         if (cexVolumeCtx) {
@@ -1068,7 +1132,7 @@
       }
     
 
-      const dexVolumeData = {"labels": ["2026-07-08", "2026-07-09", "2026-07-10", "2026-07-11", "2026-07-12", "2026-07-13", "2026-07-14"], "series": {"Uniswap V4": [1045636756.0, 922083465.0, 1089800873.0, 847509130.0, 1117223569.0, 1496452323.0, 1266827002.0], "Uniswap V3": [785342957.0, 593691774.0, 667181283.0, 918765823.0, 865881185.0, 1206742964.0, 1037194209.0], "PumpSwap": [908856423.0, 425852810.0, 352237508.0, 286716526.0, 313079409.0, 372699447.0, 372699447.0], "Kalshi": [461485090.0, 299224626.0, 362952065.0, 383733753.0, 582347446.0, 305381804.0, 305381804.0], "Aerodrome Slipstream": [475324669.0, 416125077.0, 376560533.0, 249183157.0, 259861836.0, 416526119.0, 375649758.0], "Other": [4247515824.0, 4110683819.0, 3618689519.0, 2704027964.0, 2569858194.0, 3594198638.0, 3302684223.0]}};
+      const dexVolumeData = {"labels": ["2026-07-09", "2026-07-10", "2026-07-11", "2026-07-12", "2026-07-13", "2026-07-14", "2026-07-15"], "series": {"Uniswap V4": [922083465.0, 1089800873.0, 847509130.0, 1117223569.0, 1496452323.0, 1462906208.0, 1599902723.0], "Uniswap V3": [593691774.0, 667181283.0, 918765823.0, 865881185.0, 1206742964.0, 1172853846.0, 1218597081.0], "PumpSwap": [425852810.0, 352237508.0, 286716526.0, 313079409.0, 372699447.0, 473083283.0, 473083283.0], "Aerodrome Slipstream": [416125077.0, 376560533.0, 249183157.0, 259861836.0, 416526119.0, 417866035.0, 406879722.0], "Kalshi": [299224626.0, 362952065.0, 383733753.0, 582347446.0, 305381804.0, 291052875.0, 291052875.0], "Other": [4115161245.0, 3621186928.0, 2708172347.0, 2569901985.0, 3964513605.0, 3129429979.0, 3085917487.0]}};
       if (dexVolumeData.labels && dexVolumeData.labels.length) {
         const dexVolumeCtx = document.getElementById('dex-volume-chart');
         if (dexVolumeCtx) {
@@ -1120,7 +1184,7 @@
         }
       }
 
-      const dexCexRatioData = {"labels": ["2026-07-07", "2026-07-08", "2026-07-09", "2026-07-10", "2026-07-11", "2026-07-12", "2026-07-13"], "ratios": [4.514322793826482, 2.2202557850912594, 2.493837812713594, 2.063405797251213, 2.7609491540210516, 4.231204610418518, 3.0721954433119643]};
+      const dexCexRatioData = {"labels": ["2026-07-08", "2026-07-09", "2026-07-10", "2026-07-11", "2026-07-12", "2026-07-13", "2026-07-14"], "ratios": [3.9360937966507183, 2.3142172905805314, 1.930784343172922, 2.6097554392950277, 4.167429271615986, 2.960707760327823, 2.4364289248574202]};
       if (dexCexRatioData.labels && dexCexRatioData.labels.length) {
         const ratioCtx = document.getElementById('dex-cex-ratio-chart');
         if (ratioCtx) {
@@ -1161,7 +1225,7 @@
         }
       }
 
-      const stablecoinData = {"labels": ["2026-07-01", "2026-07-02", "2026-07-03", "2026-07-04", "2026-07-05", "2026-07-06", "2026-07-07", "2026-07-08", "2026-07-09", "2026-07-10", "2026-07-11", "2026-07-12", "2026-07-13", "2026-07-14"], "series": [309713768979.0, 309721888265.0, 309498974361.0, 309376299276.0, 309348200906.0, 310032296591.0, 309720035545.0, 307644580030.0, 308450167073.0, 308541261756.0, 308711653899.0, 308603049113.0, 308671279166.0, 306462938213.99]};
+      const stablecoinData = {"labels": ["2026-07-02", "2026-07-03", "2026-07-04", "2026-07-05", "2026-07-06", "2026-07-07", "2026-07-08", "2026-07-09", "2026-07-10", "2026-07-11", "2026-07-12", "2026-07-13", "2026-07-14", "2026-07-15"], "series": [309047871878.0, 308735924861.0, 308569119120.0, 308545455702.0, 309226549722.0, 308791149394.0, 306838833161.0, 306868734590.0, 307735514886.0, 307905907030.0, 307840988693.0, 307865532296.0, 306468261569.0, 306561794801.25]};
       if (stablecoinData.labels && stablecoinData.labels.length) {
         const ctxStable = document.getElementById('stablecoin-chart');
        if (ctxStable) {

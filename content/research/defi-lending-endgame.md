@@ -71,11 +71,11 @@ Defensibility of take is inversely proportional to how much of it comes from the
 | ------------ | ---------------------: | -----------------: | -------------------------------: | --------------------------------: | -----------------------------: |
 | Aave         |                  13.2% |              12.4% |                            0.60% |                               84% |                            16% |
 | Morpho       |                     0% |                 0% |                            0.00% |                                 — |                              — |
-| Sparklend    |                 11.8%† |               7.2% |                            1.46% |                               19% |                            81% |
+| Sparklend    |                  11.8% |               7.2% |                            1.46% |                               19% |                            81% |
 | Kamino       |                  15.0% |              14.8% |                            1.01% |                               87% |                            13% |
 | Jupiter Lend |                   5.3% |               5.3% |                            0.23% |                              100% |                             0% |
 | Euler        |                   5.7% |               0.0% |                            0.35% |                                0% |         100% (a separate skim) |
-| Fluid        |                 17.0%† |              12.0% |                            1.01% |                               54% |                            46% |
+| Fluid        |                  17.0% |              12.0% |                            1.01% |                               54% |                            46% |
 | Compound     |                   6.3% |               6.3% |                            0.28% |                              100% |                             0% |
 
 *Source: DefiLlama*
@@ -265,9 +265,9 @@ The invalidation is revenue staying flat past its current seven-month plateau wh
 
 ### Morpho: Expensive Option
 
-Morpho takes 0% of fees to gain scale and operates in anticipation of a future fee switch. Since it can't currently be valued on earnings it must be valued on switching the fee switch on. This places the whole valuation on the 10.6x P/S, which is the richest in the cohort.
+Morpho takes 0% of fees to gain scale and operates in anticipation of a future fee switch. Since it can't currently be valued on earnings it must be valued on switching the fee switch on. This places the whole valuation on the 10.6x P/S, based on its gross fees, which is the richest in the cohort.
 
-If we use the current P/S and plug in hypothetical take-rates we can find what the P/E might be when an eventual fee switch occurs.
+If we use the current P/S and plug in hypothetical take-rates we can find what the P/E might be when an eventual fee switch occurs and Morpho begins to earn revenue.
 
 P/E = P/S / take rate
 
