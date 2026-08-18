@@ -36,18 +36,18 @@ BTC and ETH (incl. LSTs and BTC wrappers) make up 76% of net total value locked 
 
 Leverage often rises after spot peaks, as shown in August 2025. Following a peak, people borrow to re-enter, and inversely when spot prices fall loans decrease due to de-risking (repaid loans) and liquidations.
 
-In its current state, lending is a power law category. Aave controls 34% of all DeFi lending TVL, and the top three protocols control 62%.
+In its current state, lending is a power law category. Aave holds 43% of DeFi active loans, and the top three protocols hold 66%.
 
-| Protocol     | Active Loans | Avg Loans (TTM) | % of Category | Fees TTM | Revenue TTM |
-| ------------ | -----------: | --------------: | ------------: | -------: | ----------: |
-| Aave         |      $10.50B |         $20.23B |         34.3% |    $927M |     $122.3M |
-| Morpho       |       $3.69B |          $3.55B |         18.2% |    $209M |          $0 |
-| Sparklend\*  |       $1.81B |          $1.71B |          9.5% |    $211M |      $24.9M |
-| Kamino       |        $952M |          $1.32B |          2.7% |     $80M |      $12.1M |
-| Jupiter Lend |        $859M |       $637M\*\* |          2.5% |     $26M |       $1.4M |
-| Euler        |        $603M |          $1.08B |          0.8% |     $67M |       $3.8M |
-| Fluid\*      |        $739M |          $1.24B |          1.6% |     $74M |      $12.6M |
-| Compound     |        $569M |           $848M |          3.2% |     $38M |       $2.4M |
+| Protocol     | Active Loans | Avg Loans (TTM) | % of Category (TVL) | Fees TTM | Revenue TTM |
+| ------------ | -----------: | --------------: | ------------------: | -------: | ----------: |
+| Aave         |      $10.50B |         $20.23B |               34.3% |    $927M |     $122.3M |
+| Morpho       |       $3.69B |          $3.55B |               18.2% |    $209M |          $0 |
+| Sparklend\*  |       $1.81B |          $1.71B |                9.5% |    $211M |      $24.9M |
+| Kamino       |        $952M |          $1.32B |                2.7% |     $80M |      $12.1M |
+| Jupiter Lend |        $859M |       $637M\*\* |                2.5% |     $26M |       $1.4M |
+| Euler        |        $603M |          $1.08B |                0.8% |     $67M |       $3.8M |
+| Fluid\*      |        $739M |          $1.24B |                1.6% |     $74M |      $12.6M |
+| Compound     |        $569M |           $848M |                3.2% |     $38M |       $2.4M |
 
 *Source: DefiLlama*
 
@@ -146,6 +146,7 @@ Calculating the Economic profit (EP) of each venue shows us where the real profi
 | Jupiter Lend |    $1.4M |          $15.9M |       $2.4M |  −$1.0M | fail    |
 | Fluid        |    $4.7M |          $30.9M |       $4.6M |  +$0.1M | pass    |
 | Euler        |   −$1.1M |          $27.1M |       $4.1M |  −$5.2M | fail    |
+| Morpho       |    $0.0M |          $88.8M |      $13.3M | −$13.3M | fail    |
 
 *Source: DefiLlama + framework (assumptions above)*
 
@@ -167,7 +168,7 @@ Fluid sits at +$0.1M in economic profit and barely clears the hurdle. While its 
 
 Aave makes up the entire profit pool with $21.9M in economic profit. Without Aave, total economic profit for the lending sector nets to -$0.5M. Aave's bar is short but it's also the widest, so it holds the largest pool in absolute dollars.
 
-All other protocols including Morpho, Compound, Jupiter Lend, and Euler are in economic deficits with Euler being the least profitable at −$5.2M in EP.
+All other protocols including Compound, Jupiter Lend, Euler, and Morpho are in economic deficits with Morpho being the least profitable at −$13.3M in EP. 
 
 Morpho is the only protocol that is deliberately operating beneath the hurdle. It purposely earns nothing on real capital at risk, which is the price it pays to buy scale. Its planning to expand its bar, and eventually flip it above the line once it enables fee share, to become the largest profit pool. As a second order effect of Morpho's zero-take, lenders will expect higher yields across the market which squeezes rivals' reserve fees.
 
