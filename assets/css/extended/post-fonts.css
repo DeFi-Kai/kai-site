@@ -10,3 +10,10 @@
   display: block;
   margin: 1.25rem auto;
 }
+
+/* Cover image: extra breathing room before the first line of body text.
+   The img shortcode emits a bare <img> as a direct child of .post-content,
+   so it only carries the theme's 1rem margin. */
+.post-content > img:first-child {
+  margin-bottom: 2rem;
+}

@@ -7,6 +7,7 @@ slug = 'defi-lending-endgame'
 
 {{< img src="images/defi-lending-endgame/defi-lending-profit-pool-cover.png" alt="DeFi lending profit pool" >}}
 
+
 *Originally published July 14, 2026. Updated August 25, 2026 to separate the [AAVE/MORPHO thesis]({{< relref "/research/aave-morpho-trade" >}}) into a standalone report.*
 
 ---
