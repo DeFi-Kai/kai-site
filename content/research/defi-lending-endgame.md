@@ -1,7 +1,7 @@
 +++
 date = '2026-07-14T09:00:00-04:00'
 draft = false
-title = 'The DeFi Lending Endgame: Scale is the Only Lever Left'
+title = 'The DeFi Lending Endgame'
 slug = 'defi-lending-endgame'
 +++
 
