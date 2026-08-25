@@ -7,8 +7,6 @@ slug = 'defi-lending-endgame'
 
 {{< img src="images/defi-lending-endgame/defi-lending-profit-pool-cover.png" alt="DeFi lending profit pool" >}}
 
-## Intro
-
 Lending is one of the oldest functions in finance. A lender lets a borrower turn $1 of collateral into more than $1 worth of financial exposure while charging interest for it. Homeowners do this with a home equity line of credit (HELOC), and options traders do this with margin. The modern economy relies on credit for various financial functions demonstrating a clear product-market fit.
 
 Crypto performs the same function through lending protocols. A user deposits an asset, borrows against it, and pays interest on the loan. Aave, the leading lending venue, accepts USDC, EUR, and gold-pegged assets as collateral and intermediates ~$10B in active loans. The base primitive supports cash-and-carry trades and long and short positions, and it has grown into curated vault products through protocols like Morpho which recently integrated with Coinbase. In structure these venues now resemble global FX markets.
@@ -82,16 +80,14 @@ Defensibility of take is inversely proportional to how much of it comes from the
 
 *Source: DefiLlama*
 
-*Trailing 12 months (2025-07 to 2026-06). Take matches the first table (Earnings ÷ Revenue, i.e. DefiLlama Revenue ÷ Fees); reserve fee and the interest split are the monthly P&L decomposition.*
-
 Lifting take means raising the reserve factor, which taxes suppliers and bleeds the scale a venue is chasing, or building secondary lines like liquidations and licensing, which are slow and not open to everyone.
 
 As a result, protocols are bucketed by where the capture comes from and whether it holds in a commoditizing market, which reveals 4 groups:
 
-1. Defensible Premium - a high take that holds because suppliers have no better home, whether from brand and liquidity depth (Aave) or from being the dominant venue on its chain (Kamino). Take is high and stable
-2. Ancillary take - High take rate that comes from lines that don't tax suppliers, including liquidations, flashloans, and licensing. Take rises without touching the reserve factor, so it doesn't impede scale (SparkLend, Fluid, and Euler)
-3. Capture sacrificed for scale - Take set to zero on purpose (Morpho)
-4. Reserve-factor-dependent take - A low take drawn almost entirely from the reserve factor, with no defensible premium or secondary lines to lean on. It is the least diversified take and the baseline the sector drifts toward as pricing power erodes (Compound and Jupiter Lend)
+1. **Defensible Premium** - a high take that holds because suppliers have no better home, whether from brand and liquidity depth (Aave) or from being the dominant venue on its chain (Kamino). Take is high and stable
+2. **Ancillary take** - High take rate that comes from lines that don't tax suppliers, including liquidations, flashloans, and licensing. Take rises without touching the reserve factor, so it doesn't impede scale (SparkLend, Fluid, and Euler)
+3. **Capture sacrificed for scale** - Take set to zero on purpose (Morpho)
+4. **Reserve-factor-dependent take** - A low take drawn almost entirely from the reserve factor, with no defensible premium or secondary lines to lean on. It is the least diversified take and the baseline the sector drifts toward as pricing power erodes (Compound and Jupiter Lend)
 
 {{< img src="images/defi-lending-endgame/defi-lending-take-rate-ttm.png" alt="Take rate across eight venues" >}}
 
@@ -113,14 +109,12 @@ The market is essentially betting on whose loan book can compound over time and 
 
 Most lending protocols are moving on from monolithic architecture and adopting modular designs where markets are isolated by asset and risk. However, even as architecture converges, the market is still separated by two competing business models: integrated, and unbundled.
 
-{{< img src="images/defi-lending-endgame/lending-integrated-unbundled.png" alt="Integrated versus unbundled lending models" >}}
-
-*Source: protocol docs*
-
 |                | Integrated (protocol curates)       | Unbundled (third parties curate) |
 | -------------- | ----------------------------------- | -------------------------------- |
 | **Monolithic** | Aave v3, Compound, Fluid, SparkLend | —                                |
 | **Modular**    | Aave v4, Jupiter Lend               | Morpho, Euler v2, Kamino         |
+
+*Source: protocol docs*
 
 On one hand, Aave is modular but integrated. It recently launched modular markets with v4 in late March 2026. In v4, hubs (markets) hold liquidity which seed multiple spokes (vaults). Although Aave v4 is modular in architecture it remains an integrated stack: the protocol still approves and vets every spoke. The protocol is the curator. It sets every LTV, oracle, and listing, bears the risk decision, and takes the reserve factor on borrow interest plus secondary skims (liquidations, flash loans, licensing).
 

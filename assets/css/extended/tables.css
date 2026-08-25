@@ -1,0 +1,8 @@
+/* Center content tables; the theme's reset makes them display: block, which
+   leaves the inner table shrink-wrapped and flush left. */
+.post-content table:not(.highlighttable, .highlight table, .gist .highlight) {
+  width: fit-content;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
