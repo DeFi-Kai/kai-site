@@ -4,7 +4,7 @@ title = 'About'
 ShowToc = false
 +++
 
-I’m a digital assets researcher with 5+ years of experience, focused on DeFi market structure and protocol risk. I combine protocol-level research with onchain data, using SQL and Python to investigate everything from liquidation mechanics and capital structures to protocol economics and valuation.
+I’m a digital asset researcher with 5+ years of experience, focused on DeFi market structure and protocol risk. I combine protocol-level research with onchain data, using SQL and Python to investigate everything from liquidation mechanics and capital structures to protocol economics and valuation.
 
 My work spans market structure research, risk analysis, investment research, and data infrastructure.
 
