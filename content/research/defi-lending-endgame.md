@@ -8,11 +8,6 @@ slug = 'defi-lending-endgame'
 
 {{< img src="images/defi-lending-endgame/defi-lending-profit-pool-cover.png" alt="DeFi lending profit pool" >}}
 
-
-*Originally published July 14, 2026. Updated August 25, 2026 to separate the [AAVE/MORPHO thesis]({{< relref "/research/aave-morpho-trade" >}}) into a standalone report.*
-
----
-
 Lending is one of the oldest functions in finance. A lender lets a borrower turn $1 of collateral into more than $1 worth of financial exposure while charging interest for it. Homeowners do this with a home equity line of credit (HELOC), and options traders do this with margin. The modern economy relies on credit for various financial functions demonstrating a clear product-market fit.
 
 Crypto performs the same function through lending protocols. A user deposits an asset, borrows against it, and pays interest on the loan. Aave, the leading lending venue, accepts USDC, EUR, and gold-pegged assets as collateral and intermediates ~$10B in active loans. The base primitive supports cash-and-carry trades and long and short positions, and it has grown into curated vault products through protocols like Morpho which recently integrated with Coinbase. In structure these venues now resemble global FX markets.
@@ -254,5 +249,6 @@ Aave understands this, and is using GHO to move from renting the dollar to issui
 While lending venues compete, the larger position is on who owns the dollar and who owns the user. Those two fights get settled on lending venues as the battlegrounds.
 
 ---
+**Publication note:** *Originally published July 14, 2026. Updated August 25, 2026 to separate the [AAVE/MORPHO thesis]({{< relref "/research/aave-morpho-trade" >}}) into a standalone report.*
 
-*This report is independent research provided for informational purposes. Any material commercial relationship with an entity discussed will be disclosed.*
+**Disclosure:** *This report is independent research provided for informational purposes. Any material commercial relationship with an entity discussed will be disclosed.*

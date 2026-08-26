@@ -6,9 +6,7 @@ title = 'The AAVE/MORPHO Trade'
 slug = 'aave-morpho-trade'
 +++
 
-_Originally published July 14, 2026 as part of the combined DeFi Lending Endgame report · Published as a standalone report August 25, 2026_
-
-*This trade is built on the framework in [The DeFi Lending Endgame]({{< relref "/research/defi-lending-endgame" >}}), which covers the economics of onchain lending facilities and the evolving competition.*
+*Companion investment thesis to [The DeFi Lending Endgame]({{< relref "/research/defi-lending-endgame" >}}), which covers the economics of onchain lending facilities and the evolving competition.*
 
 ---
 
@@ -157,5 +155,6 @@ The lending sector consists of high-margin venues that clear their cost of capit
 - **SparkLend.** Its top earning line is the Spark Liquidity Layer, which deploys the Sky stablecoin balance sheet into outside venues, so most of the earnings come from allocating capital elsewhere rather than from its own book. Returns track where it routes the balance sheet more than its own lending margin.
 
 ---
+**Publication note:** _Originally published July 14, 2026 as part of the combined DeFi Lending Endgame report · Published as a standalone report August 25, 2026_
 
 **Disclosure:** This report is provided for informational and research purposes only and does not constitute investment advice or a recommendation or solicitation to buy or sell any asset. I hold no position in AAVE or MORPHO as of publication. I may initiate, modify, or close positions discussed in this report after publication without notice. I received no compensation from Aave, Morpho, or their affiliates for producing this research. Any material commercial relationship with an entity discussed in my research will be disclosed.

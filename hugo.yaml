@@ -1,6 +1,6 @@
 baseURL: "https://defi-kai.github.io/kai-site/"
 languageCode: "en-us"
-title: "Kai — DeFi Research"
+title: "Kai - Digital Assets Research"
 author: "Kai"
 theme: "PaperMod"
 
@@ -12,7 +12,7 @@ markup:
     endLevel: 3
 
 params:
-  description: "DeFi market structure, onchain yield, and trading systems."
+  description: "DeFi market structure and digital asset markets, using onchain data."
   author: "Kai"
   defaultTheme: light
   disableThemeToggle: false
@@ -24,7 +24,7 @@ params:
   mainSections:
     - data
     - research
-    - journal
+    - projects
 
   assets:
     favicon: "images/ghost-mascot.png"
@@ -32,10 +32,10 @@ params:
     favicon32x32: "images/ghost-mascot.png"
 
   homeInfoParams:
-    Title: "Hi — I’m Kai"
+    Title: "Hi, I’m Kai"
     Content: |
-      I write about DeFi market structure, onchain yield, and trading systems.
-      This site is the canonical archive of my work.
+      I write about DeFi market structure and digital asset markets using onchain data.
+      This site is the canonical archive of my research.
 
   socialIcons:
     - name: x
@@ -51,8 +51,8 @@ menu:
     - name: Research
       url: /research/
       weight: 2
-    - name: Journal
-      url: /journal/
+    - name: Projects
+      url: /projects/
       weight: 3
     - name: About
       url: /about/
