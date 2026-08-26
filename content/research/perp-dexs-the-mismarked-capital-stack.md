@@ -1,6 +1,7 @@
 +++
 date = '2026-04-15T09:00:00-04:00'
 draft = false
+research_group = 'market-structure'
 title = 'Perp DEXs: The Mismarked Capital Stack'
 aliases = ['/research/lp-as-equity/']
 +++

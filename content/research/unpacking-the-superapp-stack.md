@@ -1,6 +1,7 @@
 +++
 date = '2025-07-30T09:00:00-04:00'
 draft = false
+research_group = 'market-structure'
 title = 'Unpacking the Superapp Stack'
 +++
 

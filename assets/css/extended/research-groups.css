@@ -1,0 +1,13 @@
+.research-group-heading {
+    margin: 40px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--secondary);
+}
+
+.research-group-heading:first-of-type {
+    margin-top: 8px;
+}

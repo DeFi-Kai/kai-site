@@ -1,6 +1,7 @@
 +++
 date = '2026-07-14T09:00:00-04:00'
 draft = false
+research_group = 'market-structure'
 title = 'The DeFi Lending Endgame'
 slug = 'defi-lending-endgame'
 +++

@@ -1,0 +1,52 @@
+{{- define "main" }}
+
+{{- if .Title }}
+<header class="page-header">
+  {{- partial "breadcrumbs.html" . }}
+  <h1>{{ .Title }}</h1>
+  {{- if .Description }}
+  <div class="post-description">
+    {{ .Description | markdownify }}
+  </div>
+  {{- end }}
+</header>
+{{- end }}
+
+{{- if .Content }}
+<div class="post-content">
+  {{- if not (.Param "disableAnchoredHeadings") }}
+  {{- partial "anchored_headings.html" .Content -}}
+  {{- else }}{{ .Content }}{{ end }}
+</div>
+{{- end }}
+
+{{/* Ordered group definitions. Posts opt in via `research_group` in front matter. */}}
+{{- $groups := slice
+  (dict "key" "market-structure" "title" "Market Structure & Risk")
+  (dict "key" "trade-ideas" "title" "Investment Research / Trade Ideas")
+}}
+
+{{- $all := .RegularPages }}
+{{- $grouped := slice }}
+
+{{- range $groups }}
+{{- $pages := where $all "Params.research_group" .key }}
+{{- if $pages }}
+{{- $grouped = $grouped | append $pages }}
+<h2 class="research-group-heading">{{ .title }}</h2>
+{{- range $pages }}
+{{- partial "research-entry.html" . }}
+{{- end }}
+{{- end }}
+{{- end }}
+
+{{/* Anything missing (or carrying an unknown) research_group still shows up. */}}
+{{- $ungrouped := complement $grouped $all }}
+{{- if $ungrouped }}
+<h2 class="research-group-heading">Other</h2>
+{{- range $ungrouped }}
+{{- partial "research-entry.html" . }}
+{{- end }}
+{{- end }}
+
+{{- end }}{{- /* end main */ -}}

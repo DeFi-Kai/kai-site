@@ -1,6 +1,7 @@
 +++
 date = '2026-03-07T10:30:00-05:00'
 draft = true
+research_group = 'trade-ideas'
 title = 'Aave Six Months Later'
 +++
 

@@ -1,6 +1,7 @@
 +++
 date = '2026-08-25T09:00:00-04:00'
 draft = false
+research_group = 'trade-ideas'
 title = 'The AAVE/MORPHO Trade'
 slug = 'aave-morpho-trade'
 +++

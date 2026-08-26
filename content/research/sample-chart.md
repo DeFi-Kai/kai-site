@@ -1,6 +1,7 @@
 +++
 date = '2026-03-07T10:00:00-05:00'
 draft = true
+research_group = 'market-structure'
 title = 'Sample Chart Post'
 summary = 'Placeholder post to validate chart rendering.'
 +++
