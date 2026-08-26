@@ -4,6 +4,7 @@ draft = false
 research_group = 'trade-ideas'
 title = 'The AAVE/MORPHO Trade'
 slug = 'aave-morpho-trade'
+hiddenInHomeList = true
 +++
 
 *Companion investment thesis to [The DeFi Lending Endgame]({{< relref "/research/defi-lending-endgame" >}}), which covers the economics of onchain lending facilities and the evolving competition.*
