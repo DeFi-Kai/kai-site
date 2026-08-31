@@ -1,7 +1,7 @@
 +++
 date = '2026-04-19T20:15:00-04:00'
 draft = false
-title = 'Automated ETL Pipeline for Onchain Analysis'
+title = 'Agentic data pipeline for onchain analytics'
 categories = ['Data']
 +++
 
@@ -21,7 +21,7 @@ We used this workflow to produce dashboards for [MetaDAO's ICO metrics](https://
 
 Here's how it works.
 
-## Dune ETL agent
+## Dune agent
 
 The data spec is the single entry point. The user fills out the target blockchain(s), API source(s), and a numbered list of visualizations with short descriptions. They then invoke `/run-spec <path>` (or paste the spec inline) to kick off the run.
 
