@@ -1,7 +1,7 @@
 +++
 date = '2026-04-19T20:15:00-04:00'
 draft = false
-title = 'Agentic data pipeline for onchain analytics'
+title = 'Building an Agentic Pipeline for Onchain Analytics'
 categories = ['Data']
 +++
 
