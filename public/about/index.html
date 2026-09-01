@@ -18,7 +18,7 @@ Analyzed $1.29M in liquidations during the October 10, 2025 mass liquidation eve
 The DeFi Lending Endgame">
 <meta name="author" content="Kai">
 <link rel="canonical" href="http://localhost:1313/about/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.8b11e950e0bd90d5968d6ce78ada19c3166a8ba92875aee0e8733789d203f711.css" integrity="sha256-ixHpUOC9kNWWjWznitoZwxZqi6koda7g6HM3idID9xE=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.dd939323a24b0ff6f5bae10d22f99cac5ab09e0430b1a1468c1a706fa0adc7fe.css" integrity="sha256-3ZOTI6JLD/b1uuENIvmcrFqwngQwsaFGjBpwb6Ctx/4=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/images/ghost-mascot.png">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/images/ghost-mascot.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/images/ghost-mascot.png">
@@ -150,7 +150,7 @@ The DeFi Lending Endgame">
 <p><strong>Research Analyst</strong> — <em><a href="https://www.blocmates.com/">Blocmates</a></em><br>
 <em>2024-2026</em></p>
 <ul>
-<li>Co-built an AI-driven analytics pipeline (<a href="https://defi-kai.github.io/kai-site/data/automated-etl-pipeline-for-onchain-analysis/">Claude Code → Dune → GitHub</a>) for data-backed reporting</li>
+<li>Co-built an AI-driven analytics pipeline (<a href="https://defi-kai.github.io/kai-site/data/building-an-agentic-pipeline-for-onchain-analytics/">Claude Code → Dune → GitHub</a>) for data-backed reporting</li>
 <li>Produced long-form, data-driven research on DeFi market structure, lending markets, stablecoins, tokenized assets, and onchain yield</li>
 </ul>
 <p><strong>Grants Council Member</strong> — <em><a href="https://github.com/metaplex-foundation/dao/discussions/9">Metaplex DAO Grants Program</a></em><br>
@@ -231,6 +231,45 @@ The DeFi Lending Endgame">
     anchor.setAttribute('target', '_blank');
     anchor.setAttribute('rel', 'noopener');
   });
+})();
+</script>
+
+<script>
+(() => {
+  const toc = document.querySelector('.data-toc');
+  if (!toc || !('IntersectionObserver' in window)) return;
+
+  const items = Array.from(toc.querySelectorAll('a[href^="#"]'))
+    .map((link) => ({
+      link,
+      heading: document.getElementById(decodeURIComponent(link.hash.slice(1)))
+    }))
+    .filter((item) => item.heading);
+
+  if (!items.length) return;
+
+  const setActive = (heading) => {
+    items.forEach(({ link, heading: itemHeading }) => {
+      const active = itemHeading === heading;
+      link.classList.toggle('is-active', active);
+      if (active) {
+        link.setAttribute('aria-current', 'location');
+      } else {
+        link.removeAttribute('aria-current');
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    const visible = entries
+      .filter((entry) => entry.isIntersecting)
+      .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+
+    if (visible[0]) setActive(visible[0].target);
+  }, { rootMargin: '-20% 0px -70% 0px' });
+
+  items.forEach(({ heading }) => observer.observe(heading));
+  setActive(items[0].heading);
 })();
 </script>
 

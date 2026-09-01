@@ -28,10 +28,10 @@
 &lt;p&gt;Crypto performs the same function through lending protocols. A user deposits an asset, borrows against it, and pays interest on the loan. Aave, the leading lending venue, accepts USDC, EUR, and gold-pegged assets as collateral and intermediates ~$10B in active loans. The base primitive supports cash-and-carry trades and long and short positions, and it has grown into curated vault products through protocols like Morpho which recently integrated with Coinbase. In structure these venues now resemble global FX markets.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Automated ETL Pipeline for Onchain Analysis</title>
-      <link>http://localhost:1313/data/automated-etl-pipeline-for-onchain-analysis/</link>
+      <title>Building an Agentic Pipeline for Onchain Analytics</title>
+      <link>http://localhost:1313/data/building-an-agentic-pipeline-for-onchain-analytics/</link>
       <pubDate>Sun, 19 Apr 2026 20:15:00 -0400</pubDate>
-      <guid>http://localhost:1313/data/automated-etl-pipeline-for-onchain-analysis/</guid>
+      <guid>http://localhost:1313/data/building-an-agentic-pipeline-for-onchain-analytics/</guid>
       <description>&lt;p&gt;For onchain analysis, the limiting factor is often SQL and data plumbing. Researchers end up spending too much time writing queries and moving data between Dune and external APIs.&lt;/p&gt;
 &lt;p&gt;At Blocmates, we solved this with an &lt;a href=&#34;https://github.com/DeFi-Kai/dune-etl-agent&#34;&gt;agent-driven ETL pipeline&lt;/a&gt; that automates dashboard production for the research team.&lt;/p&gt;
 &lt;p&gt;You fill out a data spec, the agent writes, tests, and pushes queries to Dune using GitHub for version control. If the spec involves heavy API usage, the agent sets up a GitHub Action to collect data and load it into Dune. Queries are generated in minutes and are then ready for visualization in Dune&amp;rsquo;s UI.&lt;/p&gt;</description>
@@ -49,9 +49,7 @@
       <link>http://localhost:1313/projects/building-local-ai-system/</link>
       <pubDate>Sun, 15 Mar 2026 09:00:00 -0500</pubDate>
       <guid>http://localhost:1313/projects/building-local-ai-system/</guid>
-      <description>&lt;img src=&#34;http://localhost:1313/images/building-local-ai-system/hero.png&#34; alt=&#34;Local AI system overview&#34; loading=&#34;lazy&#34; /&gt;
-
-&lt;p&gt;With Crypto operating 24/7 it&amp;rsquo;s challenging to keep up with current news while also going deep on a report. Writing forces you to focus on a project or sector deeply, but you still have to track headlines that could change your thesis or reframe the data.&lt;/p&gt;
+      <description>&lt;p&gt;With Crypto operating 24/7 it&amp;rsquo;s challenging to keep up with current news while also going deep on a report. Writing forces you to focus on a project or sector deeply, but you still have to track headlines that could change your thesis or reframe the data.&lt;/p&gt;
 &lt;p&gt;To solve this, I built an AI research assistant to keep me up to date with the latest news in crypto and finances everyday, in around 20 minutes reading time &amp;ndash; down from 1-2 hours. It runs on locally hosted models including OpenAI&amp;rsquo;s GPT OSS 20b, and Deepseek R1 via LM studio.&lt;/p&gt;</description>
     </item>
     <item>

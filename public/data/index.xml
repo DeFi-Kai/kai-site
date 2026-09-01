@@ -9,10 +9,10 @@
     <lastBuildDate>Sun, 19 Apr 2026 20:15:00 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/data/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Automated ETL Pipeline for Onchain Analysis</title>
-      <link>http://localhost:1313/data/automated-etl-pipeline-for-onchain-analysis/</link>
+      <title>Building an Agentic Pipeline for Onchain Analytics</title>
+      <link>http://localhost:1313/data/building-an-agentic-pipeline-for-onchain-analytics/</link>
       <pubDate>Sun, 19 Apr 2026 20:15:00 -0400</pubDate>
-      <guid>http://localhost:1313/data/automated-etl-pipeline-for-onchain-analysis/</guid>
+      <guid>http://localhost:1313/data/building-an-agentic-pipeline-for-onchain-analytics/</guid>
       <description>&lt;p&gt;For onchain analysis, the limiting factor is often SQL and data plumbing. Researchers end up spending too much time writing queries and moving data between Dune and external APIs.&lt;/p&gt;
 &lt;p&gt;At Blocmates, we solved this with an &lt;a href=&#34;https://github.com/DeFi-Kai/dune-etl-agent&#34;&gt;agent-driven ETL pipeline&lt;/a&gt; that automates dashboard production for the research team.&lt;/p&gt;
 &lt;p&gt;You fill out a data spec, the agent writes, tests, and pushes queries to Dune using GitHub for version control. If the spec involves heavy API usage, the agent sets up a GitHub Action to collect data and load it into Dune. Queries are generated in minutes and are then ready for visualization in Dune&amp;rsquo;s UI.&lt;/p&gt;</description>
