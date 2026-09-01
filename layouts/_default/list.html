@@ -6,7 +6,6 @@
 
 {{- if not .IsHome | and .Title }}
 <header class="page-header">
-  {{- partial "breadcrumbs.html" . }}
   <h1>
     {{ .Title }}
     {{- if and (or (eq .Kind `term`) (eq .Kind `section`)) (.Param "ShowRssButtonInSectionTermList") }}
@@ -41,8 +40,7 @@
 {{- $pages := union .RegularPages .Sections }}
 
 {{- if .IsHome }}
-{{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
-{{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true"  }}
+{{- $pages = slice }}
 {{- end }}
 
 {{- $paginator := .Paginate $pages }}
@@ -52,6 +50,7 @@
 {{- end }}
 
 {{- $term := .Data.Term }}
+{{- $isCategory := and (not .IsHome) (eq .Kind "section") }}
 {{- range $index, $page := $paginator.Pages }}
 
 {{- $class := "post-entry" }}
@@ -61,6 +60,9 @@
 {{- $class = "first-entry" }}
 {{- else if $term }}
 {{- $class = "post-entry tag-entry" }}
+{{- end }}
+{{- if $isCategory }}
+{{- $class = printf "%s category-entry" $class }}
 {{- end }}
 
 <article class="{{ $class }}">
@@ -84,7 +86,7 @@
     <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
   </div>
   {{- end }}
-  {{- if not (.Param "hideMeta") }}
+  {{- if and (not $isCategory) (not (.Param "hideMeta")) }}
   <footer class="entry-footer">
     {{- partial "post_meta.html" . -}}
   </footer>

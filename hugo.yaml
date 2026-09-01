@@ -16,6 +16,7 @@ params:
   author: "Kai"
   defaultTheme: light
   disableThemeToggle: false
+  hideFooter: true
   ShowReadingTime: true
   ShowToc: false
   UseHugoToc: true
@@ -30,6 +31,10 @@ params:
     favicon: "images/ghost-mascot.png"
     favicon16x16: "images/ghost-mascot.png"
     favicon32x32: "images/ghost-mascot.png"
+
+  label:
+    icon: "images/ghost-mascot.png"
+    iconHeight: 36
 
   homeInfoParams:
     Title: "Hi, I’m Kai"
