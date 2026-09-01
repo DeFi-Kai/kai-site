@@ -2,6 +2,8 @@
 date = '2026-04-19T20:15:00-04:00'
 draft = false
 title = 'Building an Agentic Pipeline for Onchain Analytics'
+slug = 'building-an-agentic-pipeline-for-onchain-analytics'
+aliases = ['/data/automated-etl-pipeline-for-onchain-analysis/']
 categories = ['Data']
 +++
 

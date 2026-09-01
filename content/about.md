@@ -24,7 +24,7 @@ My work spans market structure research, risk analysis, investment research, and
 
 **Research Analyst** — *[Blocmates](https://www.blocmates.com/)*  
 *2024-2026*  
-- Co-built an AI-driven analytics pipeline ([Claude Code → Dune → GitHub](https://defi-kai.github.io/kai-site/data/automated-etl-pipeline-for-onchain-analysis/)) for data-backed reporting
+- Co-built an AI-driven analytics pipeline ([Claude Code → Dune → GitHub](https://defi-kai.github.io/kai-site/data/building-an-agentic-pipeline-for-onchain-analytics/)) for data-backed reporting
 - Produced long-form, data-driven research on DeFi market structure, lending markets, stablecoins, tokenized assets, and onchain yield
 
 **Grants Council Member** — *[Metaplex DAO Grants Program](https://github.com/metaplex-foundation/dao/discussions/9)*  

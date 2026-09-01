@@ -1,0 +1,6 @@
+{{- if .TableOfContents }}
+<aside class="toc data-toc" aria-label="{{ .Title }}">
+  <h2 class="toc-title">{{ .Title }}</h2>
+  {{- .TableOfContents -}}
+</aside>
+{{- end -}}

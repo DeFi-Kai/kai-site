@@ -17,3 +17,42 @@
   });
 })();
 </script>
+
+<script>
+(() => {
+  const toc = document.querySelector('.data-toc');
+  if (!toc || !('IntersectionObserver' in window)) return;
+
+  const items = Array.from(toc.querySelectorAll('a[href^="#"]'))
+    .map((link) => ({
+      link,
+      heading: document.getElementById(decodeURIComponent(link.hash.slice(1)))
+    }))
+    .filter((item) => item.heading);
+
+  if (!items.length) return;
+
+  const setActive = (heading) => {
+    items.forEach(({ link, heading: itemHeading }) => {
+      const active = itemHeading === heading;
+      link.classList.toggle('is-active', active);
+      if (active) {
+        link.setAttribute('aria-current', 'location');
+      } else {
+        link.removeAttribute('aria-current');
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    const visible = entries
+      .filter((entry) => entry.isIntersecting)
+      .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+
+    if (visible[0]) setActive(visible[0].target);
+  }, { rootMargin: '-20% 0px -70% 0px' });
+
+  items.forEach(({ heading }) => observer.observe(heading));
+  setActive(items[0].heading);
+})();
+</script>

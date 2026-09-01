@@ -39,8 +39,7 @@ params:
   homeInfoParams:
     Title: "Hi, I’m Kai"
     Content: |
-      I write about DeFi market structure and digital asset markets using onchain data.
-      This site is the canonical archive of my research.
+      I'm a digital asset researcher focused on Decentralized Finance (DeFi) market structure and blockchain data analysis. This site is where I publish my research and technical notes.
 
   socialIcons:
     - name: x
