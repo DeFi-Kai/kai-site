@@ -1,91 +1,22 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Kai - Digital Asset Research</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on Kai - Digital Asset Research</description>
-    <generator>Hugo -- 0.162.1</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 25 Aug 2026 09:00:00 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>The AAVE/MORPHO Trade</title>
-      <link>http://localhost:1313/research/aave-morpho-trade/</link>
-      <pubDate>Tue, 25 Aug 2026 09:00:00 -0400</pubDate>
-      <guid>http://localhost:1313/research/aave-morpho-trade/</guid>
-      <description>&lt;p&gt;&lt;em&gt;Companion investment thesis to &lt;a href=&#34;http://localhost:1313/research/defi-lending-endgame/&#34;&gt;The DeFi Lending Endgame&lt;/a&gt;, which covers the economics of onchain lending facilities and the evolving competition.&lt;/em&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Kai - Digital Asset Research</title><link>https://defi-kai.github.io/kai-site/</link><description>Recent content on Kai - Digital Asset Research</description><generator>Hugo -- 0.162.1</generator><language>en-us</language><lastBuildDate>Tue, 25 Aug 2026 09:00:00 -0400</lastBuildDate><atom:link href="https://defi-kai.github.io/kai-site/index.xml" rel="self" type="application/rss+xml"/><item><title>The AAVE/MORPHO Trade</title><link>https://defi-kai.github.io/kai-site/research/aave-morpho-trade/</link><pubDate>Tue, 25 Aug 2026 09:00:00 -0400</pubDate><guid>https://defi-kai.github.io/kai-site/research/aave-morpho-trade/</guid><description>&lt;p&gt;&lt;em&gt;Companion investment thesis to &lt;a href="https://defi-kai.github.io/kai-site/research/defi-lending-endgame/"&gt;The DeFi Lending Endgame&lt;/a&gt;, which covers the economics of onchain lending facilities and the evolving competition.&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;Over the past year, Morpho has made headlines for its high-profile partnerships with exchanges like Coinbase and Kraken. The market believes Morpho will become the dominant lending platform, controlling RWA and stablecoin flows. The market prices Morpho according to that belief. I believe Morpho will capture a meaningful share of flows but its architecture keeps it from reliably taxing those flows and retaining durable earnings. In comparison, Aave captures similar flows through partnerships with EtherFi and Whop, but its terms let it tax that flow and retain durable earnings. For instance, the EtherFi Cash instance splits revenue 80/20 with the Aave DAO across the reserve factor, liquidations, and oracle recapture.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>The DeFi Lending Endgame</title>
-      <link>http://localhost:1313/research/defi-lending-endgame/</link>
-      <pubDate>Tue, 14 Jul 2026 09:00:00 -0400</pubDate>
-      <guid>http://localhost:1313/research/defi-lending-endgame/</guid>
-      <description>&lt;img src=&#34;http://localhost:1313/images/defi-lending-endgame/defi-lending-profit-pool-cover.png&#34; alt=&#34;DeFi lending profit pool&#34; loading=&#34;lazy&#34; /&gt;
-
+&lt;p&gt;Over the past year, Morpho has made headlines for its high-profile partnerships with exchanges like Coinbase and Kraken. The market believes Morpho will become the dominant lending platform, controlling RWA and stablecoin flows. The market prices Morpho according to that belief. I believe Morpho will capture a meaningful share of flows but its architecture keeps it from reliably taxing those flows and retaining durable earnings. In comparison, Aave captures similar flows through partnerships with EtherFi and Whop, but its terms let it tax that flow and retain durable earnings. For instance, the EtherFi Cash instance splits revenue 80/20 with the Aave DAO across the reserve factor, liquidations, and oracle recapture.&lt;/p&gt;</description></item><item><title>The DeFi Lending Endgame</title><link>https://defi-kai.github.io/kai-site/research/defi-lending-endgame/</link><pubDate>Tue, 14 Jul 2026 09:00:00 -0400</pubDate><guid>https://defi-kai.github.io/kai-site/research/defi-lending-endgame/</guid><description>&lt;img src="https://defi-kai.github.io/kai-site/images/defi-lending-endgame/defi-lending-profit-pool-cover.png" alt="DeFi lending profit pool" loading="lazy" /&gt;
 &lt;p&gt;Lending is one of the oldest functions in finance. A lender lets a borrower turn $1 of collateral into more than $1 worth of financial exposure while charging interest for it. Homeowners do this with a home equity line of credit (HELOC), and options traders do this with margin. The modern economy relies on credit for various financial functions demonstrating a clear product-market fit.&lt;/p&gt;
-&lt;p&gt;Crypto performs the same function through lending protocols. A user deposits an asset, borrows against it, and pays interest on the loan. Aave, the leading lending venue, accepts USDC, EUR, and gold-pegged assets as collateral and intermediates ~$10B in active loans. The base primitive supports cash-and-carry trades and long and short positions, and it has grown into curated vault products through protocols like Morpho which recently integrated with Coinbase. In structure these venues now resemble global FX markets.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Building an Agentic Pipeline for Onchain Analytics</title>
-      <link>http://localhost:1313/data/building-an-agentic-pipeline-for-onchain-analytics/</link>
-      <pubDate>Sun, 19 Apr 2026 20:15:00 -0400</pubDate>
-      <guid>http://localhost:1313/data/building-an-agentic-pipeline-for-onchain-analytics/</guid>
-      <description>&lt;p&gt;For onchain analysis, the limiting factor is often SQL and data plumbing. Researchers end up spending too much time writing queries and moving data between Dune and external APIs.&lt;/p&gt;
-&lt;p&gt;At Blocmates, we solved this with an &lt;a href=&#34;https://github.com/DeFi-Kai/dune-etl-agent&#34;&gt;agent-driven ETL pipeline&lt;/a&gt; that automates dashboard production for the research team.&lt;/p&gt;
-&lt;p&gt;You fill out a data spec, the agent writes, tests, and pushes queries to Dune using GitHub for version control. If the spec involves heavy API usage, the agent sets up a GitHub Action to collect data and load it into Dune. Queries are generated in minutes and are then ready for visualization in Dune&amp;rsquo;s UI.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Perp DEXs: The Mismarked Capital Stack</title>
-      <link>http://localhost:1313/research/perp-dexs-the-mismarked-capital-stack/</link>
-      <pubDate>Wed, 15 Apr 2026 09:00:00 -0400</pubDate>
-      <guid>http://localhost:1313/research/perp-dexs-the-mismarked-capital-stack/</guid>
-      <description>&lt;p&gt;Since the early days of GMX, the market has treated the token as the equity-like asset and the LP as the yield product. The token captures the narrative and gives investors a liquid claim on protocol growth. Meanwhile, the LP is usually evaluated on its APY.&lt;/p&gt;
-&lt;p&gt;That framing misses the risk structure of the exchange. Every leveraged position creates exposure that has to be priced and resolved, and in pool-based designs, the LP carries that exposure. When the system prices risk well, trading revenue accrues to LP NAV. When it does not, trader P&amp;amp;L from toxic flow hits the LP first. LP NAV therefore becomes a live mark on the protocol’s underwriting quality.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Building a Local AI System to Stay Ahead of the Crypto News Cycle</title>
-      <link>http://localhost:1313/projects/building-local-ai-system/</link>
-      <pubDate>Sun, 15 Mar 2026 09:00:00 -0500</pubDate>
-      <guid>http://localhost:1313/projects/building-local-ai-system/</guid>
-      <description>&lt;p&gt;With Crypto operating 24/7 it&amp;rsquo;s challenging to keep up with current news while also going deep on a report. Writing forces you to focus on a project or sector deeply, but you still have to track headlines that could change your thesis or reframe the data.&lt;/p&gt;
-&lt;p&gt;To solve this, I built an AI research assistant to keep me up to date with the latest news in crypto and finances everyday, in around 20 minutes reading time &amp;ndash; down from 1-2 hours. It runs on locally hosted models including OpenAI&amp;rsquo;s GPT OSS 20b, and Deepseek R1 via LM studio.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>MetaDAO Launchpad Query Notes (Dune/ TrinoSQL)</title>
-      <link>http://localhost:1313/data/metadao-launchpad-query-notes/</link>
-      <pubDate>Sat, 24 Jan 2026 09:00:00 -0500</pubDate>
-      <guid>http://localhost:1313/data/metadao-launchpad-query-notes/</guid>
-      <description>&lt;p&gt;While building the &lt;a href=&#34;https://dune.com/blocmates_research/metadao-blocmates-pro&#34;&gt;MetaDAO dashboard&lt;/a&gt; at Blocmates, &lt;a href=&#34;https://x.com/563defi&#34;&gt;@563defi&lt;/a&gt; and I spent some time digging into MetaDAO&amp;rsquo;s launchpad program to understand the existing Dune queries, build on them, and create new ones.&lt;/p&gt;
+&lt;p&gt;Crypto performs the same function through lending protocols. A user deposits an asset, borrows against it, and pays interest on the loan. Aave, the leading lending venue, accepts USDC, EUR, and gold-pegged assets as collateral and intermediates ~$10B in active loans. The base primitive supports cash-and-carry trades and long and short positions, and it has grown into curated vault products through protocols like Morpho which recently integrated with Coinbase. In structure these venues now resemble global FX markets.&lt;/p&gt;</description></item><item><title>Building an Agentic Pipeline for Onchain Analytics</title><link>https://defi-kai.github.io/kai-site/data/building-an-agentic-pipeline-for-onchain-analytics/</link><pubDate>Sun, 19 Apr 2026 20:15:00 -0400</pubDate><guid>https://defi-kai.github.io/kai-site/data/building-an-agentic-pipeline-for-onchain-analytics/</guid><description>&lt;p&gt;For onchain analysis, the limiting factor is often SQL and data plumbing. Researchers end up spending too much time writing queries and moving data between Dune and external APIs.&lt;/p&gt;
+&lt;p&gt;At Blocmates, we solved this with an &lt;a href="https://github.com/DeFi-Kai/dune-etl-agent"&gt;agent-driven ETL pipeline&lt;/a&gt; that automates dashboard production for the research team.&lt;/p&gt;
+&lt;p&gt;You fill out a data spec, the agent writes, tests, and pushes queries to Dune using GitHub for version control. If the spec involves heavy API usage, the agent sets up a GitHub Action to collect data and load it into Dune. Queries are generated in minutes and are then ready for visualization in Dune&amp;rsquo;s UI.&lt;/p&gt;</description></item><item><title>Perp DEXs: The Mismarked Capital Stack</title><link>https://defi-kai.github.io/kai-site/research/perp-dexs-the-mismarked-capital-stack/</link><pubDate>Wed, 15 Apr 2026 09:00:00 -0400</pubDate><guid>https://defi-kai.github.io/kai-site/research/perp-dexs-the-mismarked-capital-stack/</guid><description>&lt;p&gt;Since the early days of GMX, the market has treated the token as the equity-like asset and the LP as the yield product. The token captures the narrative and gives investors a liquid claim on protocol growth. Meanwhile, the LP is usually evaluated on its APY.&lt;/p&gt;
+&lt;p&gt;That framing misses the risk structure of the exchange. Every leveraged position creates exposure that has to be priced and resolved, and in pool-based designs, the LP carries that exposure. When the system prices risk well, trading revenue accrues to LP NAV. When it does not, trader P&amp;amp;L from toxic flow hits the LP first. LP NAV therefore becomes a live mark on the protocol’s underwriting quality.&lt;/p&gt;</description></item><item><title>Building a Local AI System to Stay Ahead of the Crypto News Cycle</title><link>https://defi-kai.github.io/kai-site/projects/building-local-ai-system/</link><pubDate>Sun, 15 Mar 2026 09:00:00 -0500</pubDate><guid>https://defi-kai.github.io/kai-site/projects/building-local-ai-system/</guid><description>&lt;p&gt;With Crypto operating 24/7 it&amp;rsquo;s challenging to keep up with current news while also going deep on a report. Writing forces you to focus on a project or sector deeply, but you still have to track headlines that could change your thesis or reframe the data.&lt;/p&gt;
+&lt;p&gt;To solve this, I built an AI research assistant to keep me up to date with the latest news in crypto and finances everyday, in around 20 minutes reading time &amp;ndash; down from 1-2 hours. It runs on locally hosted models including OpenAI&amp;rsquo;s GPT OSS 20b, and Deepseek R1 via LM studio.&lt;/p&gt;</description></item><item><title>MetaDAO Launchpad Query Notes (Dune/ TrinoSQL)</title><link>https://defi-kai.github.io/kai-site/data/metadao-launchpad-query-notes/</link><pubDate>Sat, 24 Jan 2026 09:00:00 -0500</pubDate><guid>https://defi-kai.github.io/kai-site/data/metadao-launchpad-query-notes/</guid><description>&lt;p&gt;While building the &lt;a href="https://dune.com/blocmates_research/metadao-blocmates-pro"&gt;MetaDAO dashboard&lt;/a&gt; at Blocmates, &lt;a href="https://x.com/563defi"&gt;@563defi&lt;/a&gt; and I spent some time digging into MetaDAO&amp;rsquo;s launchpad program to understand the existing Dune queries, build on them, and create new ones.&lt;/p&gt;
 &lt;p&gt;These are my notes, which I will be referring back to as I verify &amp;amp; build out more queries on MetaDAO&amp;rsquo;s activity. This can also be used as context to feed to an LLM for generating simple queries.&lt;/p&gt;
-&lt;p&gt;Hopefully this helps you understand the program structure and verify your queries are pulling the right data.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Unpacking the Superapp Stack</title>
-      <link>http://localhost:1313/research/unpacking-the-superapp-stack/</link>
-      <pubDate>Wed, 30 Jul 2025 09:00:00 -0400</pubDate>
-      <guid>http://localhost:1313/research/unpacking-the-superapp-stack/</guid>
-      <description>&lt;p&gt;Over the past year, trading platforms like Robinhood, Bybit, and Kraken have rolled out onchain protocols to extend their product offerings. By tapping into decentralized protocols they&amp;rsquo;re able to deliver new services at scale, ranging from tokenized equities to non-custodial trading.&lt;/p&gt;
+&lt;p&gt;Hopefully this helps you understand the program structure and verify your queries are pulling the right data.&lt;/p&gt;</description></item><item><title>Unpacking the Superapp Stack</title><link>https://defi-kai.github.io/kai-site/research/unpacking-the-superapp-stack/</link><pubDate>Wed, 30 Jul 2025 09:00:00 -0400</pubDate><guid>https://defi-kai.github.io/kai-site/research/unpacking-the-superapp-stack/</guid><description>&lt;p&gt;Over the past year, trading platforms like Robinhood, Bybit, and Kraken have rolled out onchain protocols to extend their product offerings. By tapping into decentralized protocols they&amp;rsquo;re able to deliver new services at scale, ranging from tokenized equities to non-custodial trading.&lt;/p&gt;
 &lt;p&gt;As this trend continues, the competition between Web2 and Web3 is converging into a race to build &lt;strong&gt;Superapps&lt;/strong&gt;: platforms that combine mobile-first distribution with blockchain infrastructure.&lt;/p&gt;
-&lt;img src=&#34;http://localhost:1313/images/superapp-stack/robinhood-vs-hyperliquid-2.png&#34; alt=&#34;Robinhood vs Hyperliquid chart 2&#34; class=&#34;centered-image&#34; loading=&#34;lazy&#34; /&gt;
-
-&lt;p&gt;Mobile-first apps like &lt;strong&gt;Robinhood&lt;/strong&gt; start from the top down: It already commands retail distribution and is now building on Arbitrum rails underneath to extend its product suite onchain. In contrast, &lt;strong&gt;Hyperliquid&lt;/strong&gt; runs the opposite playbook: It specializes in perp infrastructure and lets other frontends - mobile or web - plug in through Builder Codes.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>About</title>
-      <link>http://localhost:1313/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/</guid>
-      <description>&lt;p&gt;I’m a digital asset researcher with 5+ years of experience, focused on DeFi market structure and protocol risk. I combine protocol-level research with onchain data, using SQL and Python to investigate everything from liquidation mechanics and capital structures to protocol economics and valuation.&lt;/p&gt;
+&lt;img src="https://defi-kai.github.io/kai-site/images/superapp-stack/robinhood-vs-hyperliquid-2.png" alt="Robinhood vs Hyperliquid chart 2" class="centered-image" loading="lazy" /&gt;
+&lt;p&gt;Mobile-first apps like &lt;strong&gt;Robinhood&lt;/strong&gt; start from the top down: It already commands retail distribution and is now building on Arbitrum rails underneath to extend its product suite onchain. In contrast, &lt;strong&gt;Hyperliquid&lt;/strong&gt; runs the opposite playbook: It specializes in perp infrastructure and lets other frontends - mobile or web - plug in through Builder Codes.&lt;/p&gt;</description></item><item><title>About</title><link>https://defi-kai.github.io/kai-site/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://defi-kai.github.io/kai-site/about/</guid><description>&lt;p&gt;I’m a digital asset researcher with 5+ years of experience, focused on DeFi market structure and protocol risk. I combine protocol-level research with onchain data, using SQL and Python to investigate everything from liquidation mechanics and capital structures to protocol economics and valuation.&lt;/p&gt;
 &lt;p&gt;My work spans market structure research, risk analysis, investment research, and data infrastructure.&lt;/p&gt;
-&lt;h2 id=&#34;selected-work&#34;&gt;Selected Work&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://x.com/DefiVaults/status/1989206474468335981?s=20&#34;&gt;Jupiter Lend Liquidation Decoder&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id="selected-work"&gt;Selected Work&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href="https://x.com/DefiVaults/status/1989206474468335981?s=20"&gt;Jupiter Lend Liquidation Decoder&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Built a fully decoded Jupiter Lend liquidation table from raw Solana instruction data by reverse-engineering Anchor discriminators and inner instruction patterns in DuneSQL&lt;/li&gt;
 &lt;li&gt;Analyzed $1.29M in liquidations during the October 10, 2025 mass liquidation event&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://defi-kai.github.io/kai-site/research/defi-lending-endgame/&#34;&gt;The DeFi Lending Endgame&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+&lt;p&gt;&lt;strong&gt;&lt;a href="https://defi-kai.github.io/kai-site/research/defi-lending-endgame/"&gt;The DeFi Lending Endgame&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;</description></item></channel></rss>

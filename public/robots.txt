@@ -1,5 +1,5 @@
 User-agent: *
-Disallow: /
+Disallow:
 # Redirect handled by Hugo alias:
 # /research/lp-as-equity/ -> /research/perp-dexs-the-mismarked-capital-stack/
-Sitemap: http://localhost:1313/sitemap.xml
+Sitemap: https://defi-kai.github.io/kai-site/sitemap.xml
