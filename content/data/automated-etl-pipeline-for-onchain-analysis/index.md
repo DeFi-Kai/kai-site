@@ -23,7 +23,9 @@ Here's how it works.
 
 ## How it works
 
-Dune provides access to raw onchain data and acts as the query and visualization layer. It offers an API and an MCP server that let you create and update queries programmatically. The MCP server is designed to work directly with Claude and other LLMs but in our experience, the MCP used ~2x as many Dune credits as the API for the same tasks. MCPs often increase the margin for misinterpretation of instructions because they expose a large tool surface directly to the model. If the prompt is not precise the model may call more tools than necessary to complete the task. In contrast, when you use the API, you get to specify which endpoints to call but it comes at the cost of architectural overhead. We opted for the API because of its cost-efficiency and with the correct markdown files it could lead to a more deterministic process. 
+Dune provides access to raw onchain data and acts as the query and visualization layer. It offers an API and an MCP server that let you create and update queries programmatically. The MCP server is designed to work directly with Claude and other LLMs but in our experience, the MCP used ~2x as many Dune credits as the API for the same tasks. 
+
+MCPs often increase the chances of an LLM misinterpreting instructions because they expose a large tool surface directly to the model. If the prompt is not precise the model may call more tools than necessary to complete the task. In contrast, when you use the API, you get to specify which endpoints to call but it comes at the cost of architectural overhead. We opted for the API because of its cost-efficiency and with the correct markdown files it could lead to a more deterministic process. 
 
 The harness is made up of markdown files that provide instructions, references and domain knowledge, and inform the agent what to do and when to do things. Certain skills reference Python scripts for verification and API calls. 
 
