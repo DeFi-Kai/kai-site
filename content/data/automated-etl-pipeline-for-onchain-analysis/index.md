@@ -13,12 +13,6 @@ We wanted to go from idea to final report as fast as possible at Blocmates, so w
 
 [MetaDAO’s ICO dashboard](https://dune.com/blocmates_research/metadao-blocmates-pro) and [Chain GDP](https://dune.com/blocmatesresearch/chain-gdp) were both created using this workflow.
 
-![MetaDAO dashboard produced by the ETL pipeline](images/Screenshot%20From%202026-04-19%2019-57-37.png)
-*MetaDAO ICO dashboard*
-
-![Chain GDP dashboard produced by the ETL pipeline](images/Screenshot%20From%202026-04-20%2012-54-30.png)
-*Chain GDP dashboard*
-
 Here's how it works.
 
 ## How it works
