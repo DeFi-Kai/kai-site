@@ -21,9 +21,13 @@ We used this workflow to produce dashboards for [MetaDAO's ICO metrics](https://
 
 Here's how it works.
 
-## Dune agent
+## How it works
 
-The data spec is the single entry point. The user fills out the target blockchain(s), API source(s), and a numbered list of visualizations with short descriptions. They then invoke `/run-spec <path>` (or paste the spec inline) to kick off the run.
+Dune provides access to raw onchain data and acts as the query and visualization layer. It offers an API and an MCP server that let you create and update queries programmatically. The MCP server is designed to work directly with Claude and other LLMs but in our experience, the MCP used ~2x as many Dune credits as the API for the same tasks. MCPs often increase the margin for misinterpretation of instructions because they expose a large tool surface directly to the model. If the prompt is not precise the model may call more tools than necessary to complete the task. In contrast, when you use the API, you get to specify which endpoints to call but it comes at the cost of architectural overhead. We opted for the API because of its cost-efficiency and with the correct markdown files it could lead to a more deterministic process. 
+
+The harness is made up of markdown files that provide instructions, references and domain knowledge, and inform the agent what to do and when to do things. Certain skills reference Python scripts for verification and API calls. 
+
+We begin each run by filling out a data spec with the target blockchain(s), API source(s), and a numbered list of visualizations with short descriptions. They then invoke `/run-spec <path>` (or paste the spec inline) to kick off the run.
 
 On each run, the agent (via Claude Code) loads a DuneSQL best practices skill covering query structure, optimization, and error handling. Depending on the spec, the agent can also load two additional skills:
 
@@ -59,17 +63,18 @@ refresh: daily 06:00 UTC
 
 _Example data spec._
 
+Each query is processed through `verify.py`, which runs static lint checks and a dry run against Dune. If a query fails, the agent revisits the best-practices error-handling guidance and retries, with a cap of two revisions per query. On the third failure, it stops and surfaces the error.
+
+Each dashboard is assigned a yaml file that lists queries with a unique ID and link to the live query on Dune. If you start a new session and want to make an edit you can reference the URL, ID, or the dashboard name so the agent can identify which query to access. 
+
+After the query is created, we manually configure the visualizations in Dune's UI. We perform row-level spot checks, and check math by hand to validate the datas correctness. When live sources exist, we check directly against them. 
+
 ## Handling API limits
 
 By default, APIs are called inline through LiveFetch. But Dune enforces limits: 5-second timeout per request, 4 MB response size, and 80 requests per second per proxy.
 
 When the agent hits a data limit error (for example, HTTP 429), it asks the user to approve creating a new data source. If approved, it creates a Python script (triggered by GitHub Actions) to fetch JSON directly from the API, save a CSV in the repo, and load it as a dataset on Dune.
 
-## Verification and iteration
-
-Each query is processed through `verify.py`, which runs static lint checks and a dry run against Dune. If a query fails, the agent revisits the best-practices error-handling guidance and retries, with a cap of two revisions per query. On the third failure, it stops and surfaces the error.
-
-Once queries are created successfully, the user validates outputs in Dune's UI and configures visualizations there. Additional edits can be prompted by referencing a query ID.
 
 ## Publishing workflow
 
