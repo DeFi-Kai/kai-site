@@ -29,6 +29,8 @@ MCPs often increase the chances of an LLM misinterpreting instructions because t
 
 The harness is made up of markdown files that provide instructions, references and domain knowledge, and inform the agent what to do and when to do things. Certain skills reference Python scripts for verification and API calls. 
 
+![Automated ETL pipeline architecture](images/automated-etl-pipeline-onchain-analysis-architecture.svg)
+
 We begin each run by filling out a data spec with the target blockchain(s), API source(s), and a numbered list of visualizations with short descriptions. They then invoke `/run-spec <path>` (or paste the spec inline) to kick off the run.
 
 On each run, the agent (via Claude Code) loads a DuneSQL best practices skill covering query structure, optimization, and error handling. Depending on the spec, the agent can also load two additional skills:
@@ -37,8 +39,6 @@ On each run, the agent (via Claude Code) loads a DuneSQL best practices skill co
 2. Chain references skill: shared techniques for querying chain tables on Dune. It points to per-chain leaves (`chain-solana`, `chain-ethereum`, and others) with table lists, partition windows, and chain-specific quirks.
 
 Skills are separated this way to avoid context bloat. Documentation is required for each unique data source, but loading every source on every run would be expensive and unreliable. Skill files are only loaded when the spec declares a matching chain or API.
-
-![Automated ETL pipeline architecture](images/automated-etl-pipeline-onchain-analysis-architecture.svg)
 
 If the spec includes onchain data, the agent loads the chain references skill plus the chain leaf (for example, `chain-solana` or `chain-ethereum`). The leaf contains recommended tables, schema notes, and chain-specific guidance.
 
