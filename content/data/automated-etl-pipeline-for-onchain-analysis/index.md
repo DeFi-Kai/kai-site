@@ -7,7 +7,7 @@ aliases = ['/data/automated-etl-pipeline-for-onchain-analysis/']
 categories = ['Data']
 +++
 
-Building a dataset can take longer than writing the actual report. An analyst might have to query raw onchain data, call external APIs, and join these sources to create the required dataset. All of this can take up to weeks before you even begin writing. 
+Building a dataset can take longer than writing the actual report. An analyst might have to query raw onchain data, call external APIs, and join these sources to create the required dataset. And all of this can take up to weeks before you even begin writing. 
 
 We wanted to go from idea to final report as fast as possible at Blocmates, so we created an [agentic pipeline](https://github.com/DeFi-Kai/dune-etl-agent) for onchain data analysis. You fill out a data spec and the agent fetches data from external APIs, writes SQL queries, tests them, and pushes the files to Dune using GitHub for version control. 
 
