@@ -1,1 +1,12 @@
 public/
+.obsidian/
+.hugo_build.lock
+__pycache__/
+*.pyc
+content/about-archive.md
+content/research/aave-trojan-horse.md
+content/research/aave-six-months-later.md
+content/research/prime-intellects-case-for-decentralized-ai/
+static/images/aave-the-bank-of-defi/
+static/images/aave-six-months-later/
+static/briefs/latest/index.html
