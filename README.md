@@ -1,6 +1,6 @@
 # Kai - Digital Asset Research
 
-This repository contains the Hugo source for Kai's digital asset research site. The site publishes research and technical notes on DeFi market structure, protocol risk, and blockchain data analysis.
+This repo contains the Hugo source for my personal website where I publish research and technical notes on DeFi market structure, protocol risk, and blockchain data analysis.
 
 ## Sections
 
