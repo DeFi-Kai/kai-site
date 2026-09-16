@@ -1,6 +1,6 @@
 # Digital Asset Research Portfolio
 
-This repo contains the Hugo source for my personal website where I publish research and technical notes on DeFi market structure, protocol risk, and blockchain data analysis.
+This repo hosts my personal website where I publish research and technical notes on DeFi market structure, protocol risk, and blockchain data analysis.
 
 ## Sections
 
