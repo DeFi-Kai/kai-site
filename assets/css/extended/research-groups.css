@@ -1,4 +1,5 @@
-.research-group-heading {
+.research-group-heading,
+.writing-group-heading {
     margin: 40px 0 16px;
     padding-bottom: 8px;
     border-bottom: 1px solid var(--border);
@@ -8,6 +9,7 @@
     color: var(--secondary);
 }
 
-.research-group-heading:first-of-type {
+.research-group-heading:first-of-type,
+.writing-group-heading:first-of-type {
     margin-top: 8px;
 }

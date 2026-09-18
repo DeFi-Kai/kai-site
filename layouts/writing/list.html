@@ -1,0 +1,50 @@
+{{- define "main" }}
+
+{{- if .Title }}
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+  {{- if .Description }}
+  <div class="post-description">
+    {{ .Description | markdownify }}
+  </div>
+  {{- end }}
+</header>
+{{- end }}
+
+{{- if .Content }}
+<div class="post-content">
+  {{- if not (.Param "disableAnchoredHeadings") }}
+  {{- partial "anchored_headings.html" .Content -}}
+  {{- else }}{{ .Content }}{{ end }}
+</div>
+{{- end }}
+
+{{- $groups := slice
+  (dict "key" "technical-writing" "title" "Technical Writing")
+  (dict "key" "research-analysis" "title" "Research & Analysis")
+  (dict "key" "investment-research" "title" "Investment Research")
+}}
+
+{{- $all := .RegularPages }}
+{{- $grouped := slice }}
+
+{{- range $groups }}
+{{- $pages := where $all "Params.writing_category" .key }}
+{{- if $pages }}
+{{- $grouped = $grouped | append $pages }}
+<h2 class="writing-group-heading">{{ .title }}</h2>
+{{- range $pages }}
+{{- partial "research-entry.html" . }}
+{{- end }}
+{{- end }}
+{{- end }}
+
+{{- $ungrouped := complement $grouped $all }}
+{{- if $ungrouped }}
+<h2 class="writing-group-heading">Other</h2>
+{{- range $ungrouped }}
+{{- partial "research-entry.html" . }}
+{{- end }}
+{{- end }}
+
+{{- end }}{{- /* end main */ -}}

@@ -4,7 +4,8 @@ draft = false
 title = 'The DeFi Lending Endgame'
 slug = 'defi-lending-endgame'
 aliases = ['/research/defi-lending-endgame/']
-tags = ['Research & Analysis', 'Technical Writing']
+writing_category = 'research-analysis'
+tags = ['Research & Analysis']
 +++
 
 {{< img src="images/defi-lending-endgame/defi-lending-profit-pool-cover.png" alt="DeFi lending profit pool" >}}

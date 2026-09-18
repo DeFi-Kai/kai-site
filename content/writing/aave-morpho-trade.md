@@ -4,7 +4,8 @@ draft = false
 title = 'The AAVE/MORPHO Trade'
 slug = 'aave-morpho-trade'
 aliases = ['/research/aave-morpho-trade/']
-tags = ['Investment Research', 'Technical Writing']
+writing_category = 'investment-research'
+tags = ['Investment Research']
 hiddenInHomeList = true
 +++
 
