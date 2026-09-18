@@ -4,7 +4,7 @@ draft = false
 title = 'Building an Agentic Pipeline for Onchain Analytics'
 slug = 'building-an-agentic-pipeline-for-onchain-analytics'
 aliases = ['/data/automated-etl-pipeline-for-onchain-analysis/']
-categories = ['Data']
+tags = ['Data & Methods', 'Technical Writing']
 +++
 
 Building a dataset can take longer than writing the actual report. An analyst might have to query raw onchain data, call external APIs, and join these sources to create the required dataset. And all of this can take up to weeks before you even begin writing. 

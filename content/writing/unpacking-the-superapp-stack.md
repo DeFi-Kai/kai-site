@@ -1,8 +1,9 @@
 +++
 date = '2025-07-30T09:00:00-04:00'
 draft = false
-research_group = 'market-structure'
 title = 'Unpacking the Superapp Stack'
+aliases = ['/research/unpacking-the-superapp-stack/']
+tags = ['Research & Analysis', 'Technical Writing']
 +++
 
 Over the past year, trading platforms like Robinhood, Bybit, and Kraken have rolled out onchain protocols to extend their product offerings. By tapping into decentralized protocols they're able to deliver new services at scale, ranging from tokenized equities to non-custodial trading.

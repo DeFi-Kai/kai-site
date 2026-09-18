@@ -1,9 +1,10 @@
 +++
 date = '2026-07-14T09:00:00-04:00'
 draft = false
-research_group = 'market-structure'
 title = 'The DeFi Lending Endgame'
 slug = 'defi-lending-endgame'
+aliases = ['/research/defi-lending-endgame/']
+tags = ['Research & Analysis', 'Technical Writing']
 +++
 
 {{< img src="images/defi-lending-endgame/defi-lending-profit-pool-cover.png" alt="DeFi lending profit pool" >}}
@@ -249,6 +250,6 @@ Aave understands this, and is using GHO to move from renting the dollar to issui
 While lending venues compete, the larger position is on who owns the dollar and who owns the user. Those two fights get settled on lending venues as the battlegrounds.
 
 ---
-**Publication note:** *Originally published July 14, 2026. Updated August 25, 2026 to separate the [AAVE/MORPHO thesis]({{< relref "/research/aave-morpho-trade" >}}) into a standalone report.*
+**Publication note:** *Originally published July 14, 2026. Updated August 25, 2026 to separate the [AAVE/MORPHO thesis]({{< relref "/writing/aave-morpho-trade" >}}) into a standalone report.*
 
 **Disclosure:** *This report is independent research provided for informational purposes. Any material commercial relationship with an entity discussed will be disclosed.*

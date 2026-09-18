@@ -2,6 +2,8 @@
 date = '2026-01-24T09:00:00-05:00'
 draft = false
 title = 'MetaDAO Launchpad Query Notes (Dune/ TrinoSQL)'
+aliases = ['/data/metadao-launchpad-query-notes/']
+tags = ['Data & Methods', 'Technical Writing']
 +++
 
 While building the [MetaDAO dashboard](https://dune.com/blocmates_research/metadao-blocmates-pro) at Blocmates, [@563defi](https://x.com/563defi) and I spent some time digging into MetaDAO's launchpad program to understand the existing Dune queries, build on them, and create new ones.

@@ -1,13 +1,14 @@
 +++
 date = '2026-08-25T09:00:00-04:00'
 draft = false
-research_group = 'trade-ideas'
 title = 'The AAVE/MORPHO Trade'
 slug = 'aave-morpho-trade'
+aliases = ['/research/aave-morpho-trade/']
+tags = ['Investment Research', 'Technical Writing']
 hiddenInHomeList = true
 +++
 
-*Companion investment thesis to [The DeFi Lending Endgame]({{< relref "/research/defi-lending-endgame" >}}), which covers the economics of onchain lending facilities and the evolving competition.*
+*Companion investment thesis to [The DeFi Lending Endgame]({{< relref "/writing/defi-lending-endgame" >}}), which covers the economics of onchain lending facilities and the evolving competition.*
 
 ---
 

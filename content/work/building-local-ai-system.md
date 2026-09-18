@@ -2,7 +2,8 @@
 date = '2026-03-15T09:00:00-05:00'
 draft = false
 title = 'Building a Local AI System to Stay Ahead of the Crypto News Cycle'
-aliases = ['/journal/building-local-ai-system/']
+aliases = ['/projects/building-local-ai-system/', '/journal/building-local-ai-system/']
+tags = ['Data & Methods', 'Technical Writing']
 +++
 
 With Crypto operating 24/7 it's challenging to keep up with current news while also going deep on a report. Writing forces you to focus on a project or sector deeply, but you still have to track headlines that could change your thesis or reframe the data. 
