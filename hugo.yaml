@@ -39,9 +39,7 @@ params:
   homeInfoParams:
     Title: "Technical Research & Analytics"
     Content: |
-      I investigate complex technical and financial systems, test them with data and code, and turn the results into clear research, explanations, and decisions.
-
-      My work has focused on fintech, digital assets, financial systems, APIs, data workflows, and AI-assisted research tooling.
+      I investigate complex technical and financial systems, test them with data and code, and turn the results into clear research, explanations, and decisions. My work has focused on fintech, digital assets, financial systems, APIs, data workflows, and AI-assisted research tooling.
 
   socialIcons:
     - name: x
