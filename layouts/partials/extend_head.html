@@ -1,3 +1,6 @@
 {{- if .Page.HasShortcode "chart" -}}
   <link rel="stylesheet" href="{{ "css/chart.css" | relURL }}">
 {{- end -}}
+{{- if (.Param "cte_explorer") -}}
+  <link rel="stylesheet" href="{{ "css/cte-explorer.css" | relURL }}">
+{{- end -}}

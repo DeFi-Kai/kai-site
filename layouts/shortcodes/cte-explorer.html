@@ -1,0 +1,299 @@
+<div class="cte-explorer" data-cte-explorer>
+  <aside class="cte-explorer__detail" id="cte-explorer-detail" aria-live="polite">
+    <p class="cte-explorer__eyebrow">Selected CTE</p>
+    <h2>liq_keys</h2>
+    <p>Defines the successful Jupiter Lend liquidation contexts that every downstream CTE uses.</p>
+    <dl>
+      <dt>Receives</dt>
+      <dd><code>solana.instruction_calls</code></dd>
+      <dt>Produces</dt>
+      <dd><code>tx_id</code>, <code>outer_instruction_index</code>, and <code>block_time</code></dd>
+    </dl>
+  </aside>
+
+  <section class="cte-explorer__query" aria-label="Interactive DuneSQL query">
+    <div class="cte-explorer__query-header">
+      <span>Click a CTE to inspect the pipeline</span>
+      <span>October 10, 2025</span>
+    </div>
+
+    <div class="cte-explorer__code">
+      <pre class="cte-explorer__prefix"><code>-- JUPITER LEND LIQUIDATIONS (BASE TABLE)
+
+WITH</code></pre>
+
+      <section class="cte-explorer__block" data-cte-block="liq_keys">
+        <button class="cte-explorer__select" type="button" data-cte-target="liq_keys" aria-controls="cte-explorer-detail" aria-pressed="true"><code>liq_keys AS (</code></button>
+        <pre><code>    SELECT
+        block_time,
+        outer_instruction_index,
+        tx_id 
+    FROM solana.instruction_calls
+    WHERE executing_account = 'jupr81YtYssSyPt8jbnGuiWon5f6x9TcDEFxYe3Bdzi'
+      AND substr("data", 1, 8) = from_hex('dfb3e27d302e274a')
+      --AND inner_instruction_index IS NULL 
+      AND tx_success = TRUE
+      AND block_time &gt;= TIMESTAMP '2025-10-10 00:00:00 UTC'
+      AND block_time &lt; TIMESTAMP '2025-10-11 00:00:00 UTC'
+),</code></pre>
+      </section>
+
+      <section class="cte-explorer__block" data-cte-block="inners_raw">
+        <button class="cte-explorer__select" type="button" data-cte-target="inners_raw" aria-controls="cte-explorer-detail" aria-pressed="false"><code>inners_raw AS (</code></button>
+        <pre><code>    SELECT
+        a.block_time,
+        a.tx_id,
+        a.account_arguments,
+        a.outer_instruction_index,
+        a.inner_instruction_index,
+        a."data" AS inner_data
+    FROM solana.instruction_calls a
+    JOIN liq_keys b
+      ON a.tx_id = b.tx_id
+     AND a.outer_instruction_index = b.outer_instruction_index
+    WHERE a.inner_instruction_index IS NOT NULL
+      AND a.block_time &gt;= TIMESTAMP '2025-10-10 00:00:00 UTC'
+      AND a.block_time &lt; TIMESTAMP '2025-10-11 00:00:00 UTC'
+),</code></pre>
+      </section>
+
+      <section class="cte-explorer__block" data-cte-block="operate_ranked">
+        <button class="cte-explorer__select" type="button" data-cte-target="operate_ranked" aria-controls="cte-explorer-detail" aria-pressed="false"><code>operate_ranked AS (</code></button>
+        <pre><code>    SELECT
+        tx_id,
+        outer_instruction_index,
+        inner_instruction_index,
+        inner_data,
+        ROW_NUMBER() OVER (
+            PARTITION BY tx_id, outer_instruction_index
+            ORDER BY inner_instruction_index ASC
+        ) AS rn
+    FROM inners_raw
+    WHERE substr(inner_data, 1, 8) = from_hex('d96ad06374972a87')
+),</code></pre>
+      </section>
+
+      <section class="cte-explorer__block" data-cte-block="op_decoded">
+        <button class="cte-explorer__select" type="button" data-cte-target="op_decoded" aria-controls="cte-explorer-detail" aria-pressed="false"><code>op_decoded AS (</code></button>
+        <pre><code>    SELECT
+        tx_id,
+        outer_instruction_index,
+        rn,
+        CAST(
+          from_big_endian_64(
+            reverse(substr(inner_data, 9, 8))
+          ) AS DECIMAL(38, 0)
+        ) AS arg1_i128,
+        CAST(
+          from_big_endian_64(
+            reverse(substr(inner_data, 25, 8))
+          ) AS DECIMAL(38, 0)
+        ) AS arg2_i128
+    FROM operate_ranked
+),</code></pre>
+      </section>
+
+      <section class="cte-explorer__block" data-cte-block="op_ui_per_rn">
+        <button class="cte-explorer__select" type="button" data-cte-target="op_ui_per_rn" aria-controls="cte-explorer-detail" aria-pressed="false"><code>op_ui_per_rn AS (</code></button>
+        <pre><code>    SELECT
+        tx_id,
+        outer_instruction_index,
+        rn,
+        CASE
+            WHEN rn = 1 THEN
+                CASE WHEN arg1_i128 &lt;&gt; 0 THEN arg1_i128 ELSE arg2_i128 END
+        END AS borrow_raw_i128,
+        CASE
+            WHEN rn = 2 THEN
+                CASE WHEN arg1_i128 &lt;&gt; 0 THEN arg1_i128 ELSE arg2_i128 END
+        END AS supply_raw_i128
+    FROM op_decoded
+),</code></pre>
+      </section>
+
+      <section class="cte-explorer__block" data-cte-block="op_ui">
+        <button class="cte-explorer__select" type="button" data-cte-target="op_ui" aria-controls="cte-explorer-detail" aria-pressed="false"><code>op_ui AS (</code></button>
+        <pre><code>    SELECT
+        tx_id,
+        outer_instruction_index,
+        MAX(borrow_raw_i128) AS borrow_raw_i128,
+        MAX(supply_raw_i128) AS supply_raw_i128
+    FROM op_ui_per_rn
+    GROUP BY 1, 2
+),</code></pre>
+      </section>
+
+      <section class="cte-explorer__block" data-cte-block="liq_meta">
+        <button class="cte-explorer__select" type="button" data-cte-target="liq_meta" aria-controls="cte-explorer-detail" aria-pressed="false"><code>liq_meta AS (</code></button>
+        <pre><code>    SELECT
+        sc.block_time,
+        sc.tx_id,
+        sc.outer_instruction_index,
+        sc.tx_signer            AS liquidator,
+        sc.account_arguments,
+        sc.account_arguments[7]  AS supply_mint,
+        sc.account_arguments[8]  AS borrow_mint,
+        sc.account_arguments[14] AS position,
+        sc.executing_account,
+        to_hex(substr(sc."data", 1, 8)) AS discr_hex
+    FROM solana.instruction_calls sc
+    JOIN liq_keys lk
+      ON sc.tx_id = lk.tx_id
+     AND sc.outer_instruction_index = lk.outer_instruction_index
+    --WHERE sc.inner_instruction_index IS NULL
+      WHERE substr(sc."data", 1, 8) = from_hex('dfb3e27d302e274a')
+      AND sc.block_time &gt;= TIMESTAMP '2025-10-10 00:00:00 UTC'
+      AND sc.block_time &lt; TIMESTAMP '2025-10-11 00:00:00 UTC'
+)</code></pre>
+      </section>
+
+      <section class="cte-explorer__block" data-cte-block="final_output">
+        <button class="cte-explorer__select" type="button" data-cte-target="final_output" aria-controls="cte-explorer-detail" aria-pressed="false"><code>SELECT ... FROM liq_meta</code></button>
+        <pre><code>SELECT
+    lm.block_time AS block_time,
+    lm.tx_id,
+    lm.outer_instruction_index,
+    lm.borrow_mint AS debt_mint,
+    pb.symbol AS debt_symbol,
+    lm.supply_mint AS collateral_mint,
+    ps.symbol AS collateral_symbol,
+    lm.liquidator,
+    lm.position,
+
+    ABS(CAST(ou.supply_raw_i128 AS DOUBLE))
+        / POWER(10, ps.decimals) AS collateral_seized_token,
+    ABS(CAST(ou.supply_raw_i128 AS DOUBLE))
+        / POWER(10, ps.decimals)
+        * ps.price AS collateral_seized_usd,
+    ABS(CAST(ou.borrow_raw_i128 AS DOUBLE))
+        / POWER(10, pb.decimals) AS debt_repaid_token,
+    ABS(CAST(ou.borrow_raw_i128 AS DOUBLE))
+        / POWER(10, pb.decimals)
+        * pb.price AS debt_repaid_usd,
+
+    SUM(
+        ABS(CAST(ou.supply_raw_i128 AS DOUBLE))
+        / POWER(10, ps.decimals)
+        * ps.price
+    ) OVER (
+        ORDER BY lm.block_time, lm.tx_id, lm.outer_instruction_index
+        ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+    ) AS cumulative_collateral_seized_usd,
+
+    SUM(
+        ABS(CAST(ou.borrow_raw_i128 AS DOUBLE))
+        / POWER(10, pb.decimals)
+        * pb.price
+    ) OVER (
+        ORDER BY lm.block_time, lm.tx_id, lm.outer_instruction_index
+        ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+    ) AS cumulative_debt_repaid_usd
+FROM liq_meta lm
+LEFT JOIN op_ui ou
+    ON lm.tx_id = ou.tx_id
+   AND lm.outer_instruction_index = ou.outer_instruction_index
+LEFT JOIN prices.hour pb
+  ON pb.contract_address = from_base58(lm.borrow_mint)
+ AND pb.timestamp = DATE_TRUNC('hour', lm.block_time)
+ AND pb.blockchain = 'solana'
+LEFT JOIN prices.hour ps
+  ON ps.contract_address = from_base58(lm.supply_mint)
+ AND ps.timestamp = DATE_TRUNC('hour', lm.block_time)
+ AND ps.blockchain = 'solana';</code></pre>
+      </section>
+    </div>
+  </section>
+
+  <template data-cte-detail="liq_keys">
+    <p class="cte-explorer__eyebrow">Step 1</p>
+    <h2>Define liquidation contexts</h2>
+    <p><code>liq_keys</code> finds successful Jupiter Lend <code>liquidate</code> rows in the analysis window.</p>
+    <dl>
+      <dt>Receives</dt>
+      <dd><code>solana.instruction_calls</code></dd>
+      <dt>Produces</dt>
+      <dd><code>tx_id</code>, <code>outer_instruction_index</code>, <code>block_time</code></dd>
+      <dt>Key clauses</dt>
+      <dd>Program ID, liquidation discriminator, success flag, and UTC time window.</dd>
+    </dl>
+    <p class="cte-explorer__note">The published dataset includes both top-level and nested liquidation rows because the inner-index filter remains commented out.</p>
+  </template>
+
+  <template data-cte-detail="inners_raw">
+    <p class="cte-explorer__eyebrow">Step 2</p>
+    <h2>Collect inner instructions</h2>
+    <p><code>inners_raw</code> joins the raw table back to <code>liq_keys</code> using the transaction ID and containing outer instruction index.</p>
+    <dl>
+      <dt>Filters</dt>
+      <dd>Non-null <code>inner_instruction_index</code> and the same UTC time window.</dd>
+      <dt>Produces</dt>
+      <dd>The inner instruction data that belongs to each liquidation context.</dd>
+    </dl>
+  </template>
+
+  <template data-cte-detail="operate_ranked">
+    <p class="cte-explorer__eyebrow">Step 3</p>
+    <h2>Select and order amount calls</h2>
+    <p>This CTE keeps inner rows matching the <code>operate</code> discriminator and ranks them by execution order.</p>
+    <dl>
+      <dt>Partition</dt>
+      <dd><code>tx_id</code> plus <code>outer_instruction_index</code>.</dd>
+      <dt>Order</dt>
+      <dd><code>inner_instruction_index ASC</code>.</dd>
+      <dt>Observed rule</dt>
+      <dd><code>rn = 1</code> is debt repayment; <code>rn = 2</code> is collateral withdrawal.</dd>
+    </dl>
+    <p class="cte-explorer__note">This ordering is an observed pattern used by the published dataset, not a universal protocol guarantee.</p>
+  </template>
+
+  <template data-cte-detail="op_decoded">
+    <p class="cte-explorer__eyebrow">Step 4</p>
+    <h2>Carry decoded arguments forward</h2>
+    <p><code>op_decoded</code> applies the byte ranges and little-endian conversion explained in Part 1, exposing <code>arg1_i128</code> and <code>arg2_i128</code>.</p>
+    <p class="cte-explorer__note">The published query reads eight bytes from each serialized 16-byte amount field. It is not a full arbitrary-range <code>i128</code> decoder.</p>
+  </template>
+
+  <template data-cte-detail="op_ui_per_rn">
+    <p class="cte-explorer__eyebrow">Step 5</p>
+    <h2>Assign the two liquidation legs</h2>
+    <p>The outer <code>CASE</code> assigns the value by rank. The inner <code>CASE</code> selects whichever decoded argument is non-zero.</p>
+    <dl>
+      <dt><code>rn = 1</code></dt>
+      <dd>Populates <code>borrow_raw_i128</code>.</dd>
+      <dt><code>rn = 2</code></dt>
+      <dd>Populates <code>supply_raw_i128</code>.</dd>
+    </dl>
+  </template>
+
+  <template data-cte-detail="op_ui">
+    <p class="cte-explorer__eyebrow">Step 6</p>
+    <h2>Collapse both legs</h2>
+    <p><code>op_ui</code> groups by the liquidation context and uses <code>MAX()</code> to move the one non-null value in each leg column onto a single row.</p>
+    <p>Downstream joins now operate on one event-level amount row per observed liquidation context.</p>
+  </template>
+
+  <template data-cte-detail="liq_meta">
+    <p class="cte-explorer__eyebrow">Step 7</p>
+    <h2>Attach event metadata</h2>
+    <p><code>liq_meta</code> joins the liquidation instruction back to <code>liq_keys</code> and retrieves the fields mapped in Part 1.</p>
+    <dl>
+      <dt>Accounts</dt>
+      <dd><code>[7]</code> supply mint, <code>[8]</code> borrow mint, <code>[14]</code> position.</dd>
+      <dt>Signer</dt>
+      <dd><code>tx_signer</code>, used as the dataset's operational liquidator definition.</dd>
+    </dl>
+  </template>
+
+  <template data-cte-detail="final_output">
+    <p class="cte-explorer__eyebrow">Steps 8-9</p>
+    <h2>Price and project the final row</h2>
+    <p>The final projection joins <code>prices.hour</code> twice, converts base units using token decimals, and multiplies by hourly prices for USD values.</p>
+    <dl>
+      <dt>Price joins</dt>
+      <dd>Borrow and supply mints are converted with <code>from_base58()</code> and matched to the liquidation hour.</dd>
+      <dt>Windows</dt>
+      <dd>Cumulative totals use <code>block_time</code>, <code>tx_id</code>, and <code>outer_instruction_index</code>.</dd>
+    </dl>
+    <p class="cte-explorer__note">Missing hourly price rows remain visible because the price joins are left joins, but their USD fields are null.</p>
+  </template>
+</div>
