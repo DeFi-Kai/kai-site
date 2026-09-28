@@ -1,13 +1,19 @@
 .cte-explorer {
+  --cte-detail-width: 420px;
+  --cte-gap: 1rem;
   --cte-border: var(--border, #e5e7eb);
   --cte-muted: var(--secondary, #6b7280);
   --cte-panel: var(--theme, #ffffff);
   --cte-code: #17202a;
   --cte-code-text: #e8edf2;
   display: grid;
-  grid-template-columns: minmax(0, 1.75fr) minmax(220px, 0.75fr);
+  width: min(
+    calc(100% + var(--cte-detail-width) + var(--cte-gap)),
+    calc(50vw + var(--main-width) / 2 - var(--gap))
+  );
+  grid-template-columns: minmax(0, 1fr) var(--cte-detail-width);
   grid-template-areas: "query detail";
-  gap: 1rem;
+  gap: var(--cte-gap);
   margin: 2rem 0;
   align-items: start;
 }
@@ -140,14 +146,17 @@
 
 @media (max-width: 800px) {
   .cte-explorer {
+    width: 100%;
     grid-template-columns: 1fr;
     grid-template-areas:
-      "query"
-      "detail";
+      "detail"
+      "query";
   }
 
   .cte-explorer__detail {
-    position: static;
+    position: sticky;
+    top: 0.75rem;
+    z-index: 2;
   }
 }
 
