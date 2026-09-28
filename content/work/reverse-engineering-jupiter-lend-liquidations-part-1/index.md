@@ -26,6 +26,8 @@ This is the first part of a three-part series. In this guide, we'll walk through
 - liquidator
 - liquidated position
 
+![Transaction-level Jupiter Lend liquidation dataset on Dune](<images/Screenshot From 2026-09-27 18-22-49.png>)
+
 
 https://dune.com/queries/8711844/12764525
 
@@ -34,8 +36,12 @@ This is an intermediate-to-advanced guide for analysts familiar with SQL who wan
 
 Dune ingests and indexes Solana’s real-time activity in its data warehouse. Analysts query this data with [DuneSQL](https://docs.dune.com/query-engine/overview) to create datasets and visualizations. 
 
+![Dune's Solana data layers](<images/Screenshot 2026-09-21 at 4.24.37 PM.png>)
+
 
 Dune's data is organized into three buckets: Raw data, Decoded data, and Curated data. Raw data contains unfiltered transactions indexed directly from RPC nodes. Decoded data reveals explicit smart contract events and function calls extracted from Raw data. Finally, curated data translate the decoded tables into human-readable columns with labels corresponding to financial semantics.
+
+![Solana data analysis guide](<images/899647ad-ce7f-46e0-8645-b7de9340e61e_1182x684.webp>)
 
 https://read.cryptodatabytes.com/p/starter-guide-to-solana-data-analysis
 
@@ -62,10 +68,14 @@ On Jupiter Lend, users deposit cryptocurrencies or tokenized assets as collatera
 
 When a position crosses its liquidation threshold, Jupiter Lend can programmatically liquidate part of the position to reduce the risk of default and bad debt for the protocol.
 
+![Jupiter Lend liquidation flow diagram](<images/Drawing 2026-09-27 16.36.40.excalidraw.png>)
+
 
 Liquidations are carried out by a permissionless network of liquidators that monitor borrowing positions. During a partial liquidation, a liquidator repays a portion of the borrower’s debt and receives collateral in return, including a liquidation penalty.
 ### How liquidations appear on-chain
 Jupiter Lend is made up of multiple programs, each responsible for specific logic. For this walkthrough, we'll focus on the `Jupiter Lend Borrow` program, which handles the logic for borrowing and repayment activity, including liquidations.
+
+![Jupiter Lend program diagram](<images/Image 4.png>)
 
 Jupiter Lend Programs
 [https://dev.jup.ag/docs/lend](https://dev.jup.ag/docs/lend)
@@ -106,6 +116,8 @@ To find example liquidation transactions:
 5. Select the `liquidate` instruction and click `filter`.
 6. Open two or three transactions and compare their instruction sequences and asset flows.
 
+![Jupiter Lend Borrow program's Solscan transaction page](<images/Screenshot 2026-09-21 at 8.13.19 PM.png>)
+
 https://solscan.io/account/jupr81YtYssSyPt8jbnGuiWon5f6x9TcDEFxYe3Bdzi
 
 We'll use the transaction [vaupfN...](https://solscan.io/tx/vaupfNDZKX9siireKzdK63ZVpqzJMxarsw3LWeBdSZuRMHTFptd2soXiYaRq2nMgtK5X24YAniBsPyrcLYWnUpR) as the canonical example for this guide. It succeeded on October 10, 2025, contained `Jupiter Lend Borrow: Liquidate` at outer instruction index 4, and repaid USDC and received WSOL. The transaction also included a flashloan, but we'll exclude the flashloan logic from this guide.
@@ -118,6 +130,7 @@ The goal is to identify every `Jupiter Lend Borrow: Liquidate` instruction conta
 We'll start by inspecting the [canonical transaction](https://solscan.io/tx/vaupfNDZKX9siireKzdK63ZVpqzJMxarsw3LWeBdSZuRMHTFptd2soXiYaRq2nMgtK5X24YAniBsPyrcLYWnUpR). On Solscan, scroll down to the "Instruction Details" section, and you'll notice the transaction has seven instructions. For now, we'll focus on the `Jupiter Lend Borrow: Liquidate` instruction at index 4.
 
 `Jupiter Lend Borrow: Liquidate` instruction at index 4
+![Canonical liquidation instruction at index 4 on Solscan](<images/Screenshot From 2026-09-22 15-36-21 1.png>)
 https://solscan.io/tx/vaupfNDZKX9siireKzdK63ZVpqzJMxarsw3LWeBdSZuRMHTFptd2soXiYaRq2nMgtK5X24YAniBsPyrcLYWnUpR
 
 Dune records the index for outer instructions in the `outer_instruction_index` column. For the canonical transaction, Solscan displays the liquidation at instruction #4, and Dune returns `outer_instruction_index = 4`.
@@ -132,9 +145,13 @@ Let's locate both of these values on Solscan.
 
 To locate the `Jupiter Lend Borrow` program ID, click the down arrow to the right of the instruction's name to reveal the "Instruction Details" section. The ID appears in the "Interact With" column: `jupr81YtYssSyPt8jbnGuiWon5f6x9TcDEFxYe3Bdzi`.
 
+![Jupiter Lend Borrow program ID in Solscan instruction details](<images/Screenshot From 2026-09-27 21-30-36.png>)
+
 https://solscan.io/tx/vaupfNDZKX9siireKzdK63ZVpqzJMxarsw3LWeBdSZuRMHTFptd2soXiYaRq2nMgtK5X24YAniBsPyrcLYWnUpR
 
 To view the `Liquidate` instruction's serialized data, click the "Raw" toggle in the upper-right corner of an instruction. The data appears on one line next to "Instruction Data".
+
+![Raw serialized data for the liquidation instruction](<images/Screenshot From 2026-09-23 14-36-55.png>)
 
 https://solscan.io/tx/vaupfNDZKX9siireKzdK63ZVpqzJMxarsw3LWeBdSZuRMHTFptd2soXiYaRq2nMgtK5X24YAniBsPyrcLYWnUpR
 
@@ -154,6 +171,8 @@ Since each byte is represented by 2 hexadecimal characters, the 8-byte discrimin
 The next step is to locate the transaction ID and timestamp. We'll use these values along with the outer instruction index to identify each liquidation uniquely. 
 
 At the top of the Solscan page, the first fields are the "Signature," which records the transaction's unique ID, and the "Block & Timestamp," which records the block height and UTC timestamp of the transaction. For this query, the block height won't be necessary.
+
+![Transaction signature and timestamp on Solscan](<images/Screenshot From 2026-09-25 12-57-49.png>)
 
 https://solscan.io/tx/vaupfNDZKX9siireKzdK63ZVpqzJMxarsw3LWeBdSZuRMHTFptd2soXiYaRq2nMgtK5X24YAniBsPyrcLYWnUpR
 
@@ -214,6 +233,8 @@ In the dataset, I define `liquidator` as the transaction signer exposed by Dune'
 
 On Solscan, the signer account appears in the overview section in the "Signer" row. In the canonical transaction, the signer supplies the repayment asset and receives the seized collateral. The debt repayment and collateral movements are visible in the "Transaction Actions" section in Summary Mode.
 
+![Liquidator signer and transaction actions on Solscan](<images/Screenshot From 2026-09-22 17-51-54.png>)
+
 https://solscan.io/tx/vaupfNDZKX9siireKzdK63ZVpqzJMxarsw3LWeBdSZuRMHTFptd2soXiYaRq2nMgtK5X24YAniBsPyrcLYWnUpR
 
 This relationship is observed across the following successful transactions:
@@ -256,6 +277,8 @@ Identifying the supply and borrow mint addresses lets us label assets that were 
 
 Each of these addresses is passed into the `Jupiter Lend Borrow: Liquidate` instruction as an argument. On Solscan, these arguments appear under "Input Accounts" when you expand an instruction. Within the canonical transaction, the supply mint, borrow mint, and borrow position address appear at the 7th, 8th, and 14th positions, respectively.
 
+![Supply mint, borrow mint, and borrow-position accounts](<images/Screenshot From 2026-09-22 17-13-47.png>)
+
 https://solscan.io/tx/vaupfNDZKX9siireKzdK63ZVpqzJMxarsw3LWeBdSZuRMHTFptd2soXiYaRq2nMgtK5X24YAniBsPyrcLYWnUpR
 
 This relationship is observable across additional example transactions:
@@ -270,6 +293,8 @@ This relationship is observable across additional example transactions:
 *Note: This assumption does not automatically apply across program upgrades or different instruction definitions.*
 
 The supply and borrow tokens have clear labels. However, account #14, labeled “Vault Borrow Position on Liquidity,” is less descriptive. To determine whether it represents the borrow position, copy its address from Solscan and search for other occurrences on the transaction page.
+
+![Borrow-position address occurrences on Solscan](<images/Screenshot From 2026-09-22 17-28-46.png>)
 
 https://solscan.io/tx/vaupfNDZKX9siireKzdK63ZVpqzJMxarsw3LWeBdSZuRMHTFptd2soXiYaRq2nMgtK5X24YAniBsPyrcLYWnUpR
 
@@ -308,6 +333,8 @@ Identifying the debt repaid and collateral seized amounts will reveal the value 
 
 To locate these values, we'll begin by inspecting the transaction in "Summary Mode" on Solscan. You'll notice that the signer transfers (liquidates) tokens to Jupiter Lend in a dollar-denominated asset like USDC, and then receives (redeems) tokens in WSOL, a volatile asset.
 
+![Debt repayment and collateral received in Solscan transaction summary](<images/Screenshot From 2026-09-22 18-43-21.png>)
+
 https://solscan.io/tx/vaupfNDZKX9siireKzdK63ZVpqzJMxarsw3LWeBdSZuRMHTFptd2soXiYaRq2nMgtK5X24YAniBsPyrcLYWnUpR
 
 These transfers happen within the `Jupiter Lend Borrow: Liquidate` instruction as inner instructions.
@@ -334,6 +361,7 @@ To locate these values, follow these steps:
 The search reveals an inner `Jupiter Lend Liquidity: Operate` instruction containing a negative integer for the debt repaid (`borrow_amount`) and `0` for the collateral seized (`supply_amount`).
 
 The `Jupiter Lend Liquidity: Operate` instruction revealing the debt repaid (`borrow_amount`).
+![Debt repaid in a Jupiter Lend Liquidity Operate instruction](<images/Screenshot From 2026-09-22 18-35-51.png>)
 https://solscan.io/tx/vaupfNDZKX9siireKzdK63ZVpqzJMxarsw3LWeBdSZuRMHTFptd2soXiYaRq2nMgtK5X24YAniBsPyrcLYWnUpR
 
 *Note: The debt-repaid value also appears in the `debt_amt` field of the `Jupiter Lend Borrow: Liquidate` event data. This provides an independent validation point, but event data is not exposed in the `solana.instruction_calls` table, so the query extracts the amount from the inner `Operate` instruction's `data` instead.*
@@ -341,6 +369,7 @@ https://solscan.io/tx/vaupfNDZKX9siireKzdK63ZVpqzJMxarsw3LWeBdSZuRMHTFptd2soXiYa
 When we repeat this process for the redeemed (collateral-seized) SOL value, `1151768749`, we find the integer in a subsequent `Jupiter Lend Liquidity: Operate` instruction. This time, however, there's a negative integer for collateral seized (`supply_amount`) and a `0` for the debt repaid (`borrow_amount`) field.
 
 The `Jupiter Lend Liquidity: Operate` instruction revealing the collateral seized (`supply_amount`).
+![Collateral seized in a Jupiter Lend Liquidity Operate instruction](<images/Screenshot From 2026-09-22 18-36-03.png>)
 https://solscan.io/tx/vaupfNDZKX9siireKzdK63ZVpqzJMxarsw3LWeBdSZuRMHTFptd2soXiYaRq2nMgtK5X24YAniBsPyrcLYWnUpR
 
 This search reveals a clear pattern: debt repaid appears within a `Jupiter Lend Liquidity: Operate` instruction as a negative integer listed under `borrow_amount`, and collateral seized appears within the subsequent `Jupiter Lend Liquidity: Operate` instruction as a negative integer listed under `supply_amount`.
@@ -365,6 +394,8 @@ Since these are raw base unit values, `246103542` represents `246.103542 USDC`, 
 *Note: The raw amount must be divided by `10^decimals` for the asset and then multiplied by its historical price to determine its USD value.*
 
 These values are recorded as serialized arguments in the instruction's data payload, which appears after the 8-byte discriminator. To view the serialized payload for the instruction on Solscan, select the "Raw" toggle in the upper-right corner of each `Jupiter Lend Liquidity: Operate` instruction.
+
+![Serialized Operate instruction payload in Solscan](<images/Screenshot From 2026-09-24 14-47-31.png>)
 
 https://solscan.io/tx/vaupfNDZKX9siireKzdK63ZVpqzJMxarsw3LWeBdSZuRMHTFptd2soXiYaRq2nMgtK5X24YAniBsPyrcLYWnUpR
 
