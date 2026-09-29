@@ -229,8 +229,8 @@ LEFT JOIN prices.hour ps
     <h2><code>liq_keys</code></h2>
     <p>This phase finds successful Jupiter Lend <code>liquidate</code> instructions in the analysis window. <code>liq_keys</code> keeps the transaction ID, containing outer-instruction index, and timestamp as the key for downstream reconstruction.</p>
     <dl>
-      <dt>Input grain</dt><dd>Instruction-call rows</dd>
-      <dt>Output grain</dt><dd>One row per matched liquidation instruction</dd>
+      <dt>Input</dt><dd>Instruction-call rows</dd>
+      <dt>Output</dt><dd>One row per matched liquidation instruction</dd>
       <dt>Filter</dt><dd>Program ID, liquidation discriminator, success flag, and UTC time window.</dd>
     </dl>
     <p class="cte-explorer__note">The dataset includes top-level and nested liquidation rows; the inner-index filter is intentionally not applied.</p>
@@ -241,8 +241,8 @@ LEFT JOIN prices.hour ps
     <h2><code>inners_raw</code></h2>
     <p>This phase turns the CPI sequence into one debt-repayment amount and one collateral-withdrawal amount for each liquidation. <code>inners_raw</code> collects the child instructions belonging to each liquidation context.</p>
     <dl>
-      <dt>Input grain</dt><dd>One row per liquidation context</dd>
-      <dt>Output grain</dt><dd>One row per inner instruction in those contexts</dd>
+      <dt>Input</dt><dd>One row per liquidation context</dd>
+      <dt>Output</dt><dd>One row per inner instruction in those contexts</dd>
       <dt>Join key</dt><dd><code>tx_id</code> plus <code>outer_instruction_index</code></dd>
     </dl>
   </template>
@@ -286,8 +286,8 @@ LEFT JOIN prices.hour ps
     <h2><code>op_ui</code></h2>
     <p><code>op_ui</code> groups the ranked rows by liquidation context and uses <code>MAX()</code> to carry each non-null leg onto the same row.</p>
     <dl>
-      <dt>Input grain</dt><dd>Two ranked amount rows per observed context</dd>
-      <dt>Output grain</dt><dd>One row with debt and collateral raw amounts per context</dd>
+      <dt>Input</dt><dd>Two ranked amount rows per observed context</dd>
+      <dt>Output</dt><dd>One row with debt and collateral raw amounts per context</dd>
     </dl>
   </template>
 
