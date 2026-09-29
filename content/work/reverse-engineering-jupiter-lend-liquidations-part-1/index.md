@@ -13,7 +13,7 @@ This selloff raised a related question: how did [blockchain credit markets](http
 
 I wanted to analyze liquidations on [Jupiter Lend](https://jup.ag/lend/earn), a newly launched credit market on the Solana blockchain, to understand how many liquidations were processed, the notional value of liquidations, and the breadth of its liquidator network. 
 
-Decoded datasets are often published on [Dune](https://dune.com/), a data platform for blockchains. However, there are no query-ready tables for Jupiter Lend yet. Moreover, Jupiter Lend's documentation is thin and the team hasn't published an [Interface Description Language (IDL)](https://www.anchor-lang.com/docs/basics/idl) file exposing how instructions and accounts are structured. 
+Decoded datasets are often published on [Dune](https://dune.com/), a data platform for blockchains. But in this case, there are no query-ready tables for Jupiter Lend yet. Moreover, Jupiter Lend's documentation is limited, and the team has not published an [Interface Description Language (IDL)](https://www.anchor-lang.com/docs/basics/idl) file yet.
 
 To produce a dataset of Jupiter Lend liquidations, I reverse-engineered the program by examining its instructions on Solscan, mapping them to Dune's tables, and writing SQL queries to decode them.
 
