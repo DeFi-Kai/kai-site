@@ -1,29 +1,33 @@
 <div class="cte-explorer" data-cte-explorer>
   <aside class="cte-explorer__detail" id="cte-explorer-detail" aria-live="polite">
-    <p class="cte-explorer__eyebrow">Selected CTE</p>
-    <h2>liq_keys</h2>
-    <p>Defines the successful Jupiter Lend liquidation contexts that every downstream CTE uses.</p>
-    <dl>
-      <dt>Receives</dt>
-      <dd><code>solana.instruction_calls</code></dd>
-      <dt>Produces</dt>
-      <dd><code>tx_id</code>, <code>outer_instruction_index</code>, and <code>block_time</code></dd>
-    </dl>
+    <p class="cte-explorer__eyebrow">Pipeline overview</p>
+    <h2>From raw instructions to liquidation rows</h2>
+    <p>The query reconstructs one event-level record for each observed liquidation context.</p>
+    <ol class="cte-explorer__phase-list">
+      <li><strong>Identify liquidation contexts</strong><br>Find successful <code>liquidate</code> instructions.</li>
+      <li><strong>Reconstruct the amount legs</strong><br>Decode the debt repaid and collateral seized.</li>
+      <li><strong>Attach liquidation metadata</strong><br>Add the signer, assets, position, and timestamp.</li>
+      <li><strong>Value and present the results</strong><br>Convert raw amounts to token units and USD.</li>
+    </ol>
+    <p class="cte-explorer__note">Select a CTE to see how it advances the data through its phase.</p>
   </aside>
 
   <section class="cte-explorer__query" aria-label="Interactive DuneSQL query">
     <div class="cte-explorer__query-header">
-      <span>Click a CTE to inspect the pipeline</span>
+      <span>Select a CTE to inspect its role in the pipeline</span>
       <span>October 10, 2025</span>
     </div>
+
+    <button class="cte-explorer__overview-select" type="button" data-cte-target="overview" aria-controls="cte-explorer-detail" aria-pressed="true">Pipeline overview</button>
 
     <div class="cte-explorer__code">
       <pre class="cte-explorer__prefix"><code>-- JUPITER LEND LIQUIDATIONS (BASE TABLE)
 
 WITH</code></pre>
 
+      <p class="cte-explorer__phase-label"><span>Phase 1</span> Identify liquidation contexts</p>
       <section class="cte-explorer__block" data-cte-block="liq_keys">
-        <button class="cte-explorer__select" type="button" data-cte-target="liq_keys" aria-controls="cte-explorer-detail" aria-pressed="true"><code>liq_keys AS (</code></button>
+        <button class="cte-explorer__select" type="button" data-cte-target="liq_keys" aria-controls="cte-explorer-detail" aria-pressed="false"><code>liq_keys AS (</code></button>
         <pre><code>    SELECT
         block_time,
         outer_instruction_index,
@@ -38,6 +42,7 @@ WITH</code></pre>
 ),</code></pre>
       </section>
 
+      <p class="cte-explorer__phase-label"><span>Phase 2</span> Reconstruct the amount legs</p>
       <section class="cte-explorer__block" data-cte-block="inners_raw">
         <button class="cte-explorer__select" type="button" data-cte-target="inners_raw" aria-controls="cte-explorer-detail" aria-pressed="false"><code>inners_raw AS (</code></button>
         <pre><code>    SELECT
@@ -123,6 +128,7 @@ WITH</code></pre>
 ),</code></pre>
       </section>
 
+      <p class="cte-explorer__phase-label"><span>Phase 3</span> Attach liquidation metadata</p>
       <section class="cte-explorer__block" data-cte-block="liq_meta">
         <button class="cte-explorer__select" type="button" data-cte-target="liq_meta" aria-controls="cte-explorer-detail" aria-pressed="false"><code>liq_meta AS (</code></button>
         <pre><code>    SELECT
@@ -147,6 +153,7 @@ WITH</code></pre>
 )</code></pre>
       </section>
 
+      <p class="cte-explorer__phase-label"><span>Phase 4</span> Value and present the results</p>
       <section class="cte-explorer__block" data-cte-block="final_output">
         <button class="cte-explorer__select" type="button" data-cte-target="final_output" aria-controls="cte-explorer-detail" aria-pressed="false"><code>SELECT ... FROM liq_meta</code></button>
         <pre><code>SELECT
@@ -204,95 +211,103 @@ LEFT JOIN prices.hour ps
     </div>
   </section>
 
+  <template data-cte-detail="overview">
+    <p class="cte-explorer__eyebrow">Pipeline overview</p>
+    <h2>From raw instructions to liquidation rows</h2>
+    <p>The query reconstructs one event-level record for each observed liquidation context.</p>
+    <ol class="cte-explorer__phase-list">
+      <li><strong>Identify liquidation contexts</strong><br>Find successful <code>liquidate</code> instructions.</li>
+      <li><strong>Reconstruct the amount legs</strong><br>Decode the debt repaid and collateral seized.</li>
+      <li><strong>Attach liquidation metadata</strong><br>Add the signer, assets, position, and timestamp.</li>
+      <li><strong>Value and present the results</strong><br>Convert raw amounts to token units and USD.</li>
+    </ol>
+    <p class="cte-explorer__note">Select a CTE to see how it advances the data through its phase.</p>
+  </template>
+
   <template data-cte-detail="liq_keys">
-    <p class="cte-explorer__eyebrow">Step 1</p>
-    <h2>Define liquidation contexts</h2>
-    <p><code>liq_keys</code> finds successful Jupiter Lend <code>liquidate</code> rows in the analysis window.</p>
+    <p class="cte-explorer__eyebrow">Phase 1 of 4 · Identify liquidation contexts</p>
+    <h2><code>liq_keys</code></h2>
+    <p>This phase finds successful Jupiter Lend <code>liquidate</code> instructions in the analysis window. <code>liq_keys</code> keeps the transaction ID, containing outer-instruction index, and timestamp as the key for downstream reconstruction.</p>
     <dl>
-      <dt>Receives</dt>
-      <dd><code>solana.instruction_calls</code></dd>
-      <dt>Produces</dt>
-      <dd><code>tx_id</code>, <code>outer_instruction_index</code>, <code>block_time</code></dd>
-      <dt>Key clauses</dt>
-      <dd>Program ID, liquidation discriminator, success flag, and UTC time window.</dd>
+      <dt>Input grain</dt><dd>Instruction-call rows</dd>
+      <dt>Output grain</dt><dd>One row per matched liquidation instruction</dd>
+      <dt>Filter</dt><dd>Program ID, liquidation discriminator, success flag, and UTC time window.</dd>
     </dl>
-    <p class="cte-explorer__note">The published dataset includes both top-level and nested liquidation rows because the inner-index filter remains commented out.</p>
+    <p class="cte-explorer__note">The dataset includes top-level and nested liquidation rows; the inner-index filter is intentionally not applied.</p>
   </template>
 
   <template data-cte-detail="inners_raw">
-    <p class="cte-explorer__eyebrow">Step 2</p>
-    <h2>Collect inner instructions</h2>
-    <p><code>inners_raw</code> joins the raw table back to <code>liq_keys</code> using the transaction ID and containing outer instruction index.</p>
+    <p class="cte-explorer__eyebrow">Phase 2 of 4 · Reconstruct the amount legs</p>
+    <h2><code>inners_raw</code></h2>
+    <p>This phase turns the CPI sequence into one debt-repayment amount and one collateral-withdrawal amount for each liquidation. <code>inners_raw</code> collects the child instructions belonging to each liquidation context.</p>
     <dl>
-      <dt>Filters</dt>
-      <dd>Non-null <code>inner_instruction_index</code> and the same UTC time window.</dd>
-      <dt>Produces</dt>
-      <dd>The inner instruction data that belongs to each liquidation context.</dd>
+      <dt>Input grain</dt><dd>One row per liquidation context</dd>
+      <dt>Output grain</dt><dd>One row per inner instruction in those contexts</dd>
+      <dt>Join key</dt><dd><code>tx_id</code> plus <code>outer_instruction_index</code></dd>
     </dl>
   </template>
 
   <template data-cte-detail="operate_ranked">
-    <p class="cte-explorer__eyebrow">Step 3</p>
-    <h2>Select and order amount calls</h2>
-    <p>This CTE keeps inner rows matching the <code>operate</code> discriminator and ranks them by execution order.</p>
+    <p class="cte-explorer__eyebrow">Phase 2 of 4 · Reconstruct the amount legs</p>
+    <h2><code>operate_ranked</code></h2>
+    <p>This CTE keeps inner rows matching the <code>operate</code> discriminator and ranks the amount calls within each liquidation context.</p>
     <dl>
-      <dt>Partition</dt>
-      <dd><code>tx_id</code> plus <code>outer_instruction_index</code>.</dd>
-      <dt>Order</dt>
-      <dd><code>inner_instruction_index ASC</code>.</dd>
-      <dt>Observed rule</dt>
-      <dd><code>rn = 1</code> is debt repayment; <code>rn = 2</code> is collateral withdrawal.</dd>
+      <dt>Partition</dt><dd><code>tx_id</code> plus <code>outer_instruction_index</code></dd>
+      <dt>Order</dt><dd><code>inner_instruction_index ASC</code></dd>
+      <dt>Observed assignment</dt><dd><code>rn = 1</code> is debt repayment; <code>rn = 2</code> is collateral withdrawal.</dd>
     </dl>
-    <p class="cte-explorer__note">This ordering is an observed pattern used by the published dataset, not a universal protocol guarantee.</p>
+    <p class="cte-explorer__note">This ordering is observed in the analyzed transactions; it is not a universal protocol guarantee.</p>
   </template>
 
   <template data-cte-detail="op_decoded">
-    <p class="cte-explorer__eyebrow">Step 4</p>
-    <h2>Carry decoded arguments forward</h2>
-    <p><code>op_decoded</code> applies the byte ranges and little-endian conversion explained in Part 1, exposing <code>arg1_i128</code> and <code>arg2_i128</code>.</p>
-    <p class="cte-explorer__note">The published query reads eight bytes from each serialized 16-byte amount field. It is not a full arbitrary-range <code>i128</code> decoder.</p>
+    <p class="cte-explorer__eyebrow">Phase 2 of 4 · Reconstruct the amount legs</p>
+    <h2><code>op_decoded</code></h2>
+    <p><code>op_decoded</code> applies the byte offsets and little-endian conversion established in Part 1, carrying the two serialized amount arguments forward for leg assignment.</p>
+    <dl>
+      <dt>Input</dt><dd>Ranked <code>operate</code> instructions</dd>
+      <dt>Output</dt><dd>Decoded <code>arg1</code> and <code>arg2</code> values</dd>
+    </dl>
+    <p class="cte-explorer__note">The query reads eight bytes from each serialized 16-byte amount field. It is not a full arbitrary-range <code>i128</code> decoder.</p>
   </template>
 
   <template data-cte-detail="op_ui_per_rn">
-    <p class="cte-explorer__eyebrow">Step 5</p>
-    <h2>Assign the two liquidation legs</h2>
-    <p>The outer <code>CASE</code> assigns the value by rank. The inner <code>CASE</code> selects whichever decoded argument is non-zero.</p>
+    <p class="cte-explorer__eyebrow">Phase 2 of 4 · Reconstruct the amount legs</p>
+    <h2><code>op_ui_per_rn</code></h2>
+    <p>This CTE assigns each decoded amount to its observed economic leg: debt repaid or collateral seized. The outer <code>CASE</code> uses the rank; the inner <code>CASE</code> selects the non-zero argument.</p>
     <dl>
-      <dt><code>rn = 1</code></dt>
-      <dd>Populates <code>borrow_raw_i128</code>.</dd>
-      <dt><code>rn = 2</code></dt>
-      <dd>Populates <code>supply_raw_i128</code>.</dd>
+      <dt>Rank 1</dt><dd>Sets <code>borrow_raw_i128</code> (debt repaid).</dd>
+      <dt>Rank 2</dt><dd>Sets <code>supply_raw_i128</code> (collateral seized).</dd>
     </dl>
+    <p class="cte-explorer__note">The leg labels depend on the observed ordering rule described above.</p>
   </template>
 
   <template data-cte-detail="op_ui">
-    <p class="cte-explorer__eyebrow">Step 6</p>
-    <h2>Collapse both legs</h2>
-    <p><code>op_ui</code> groups by the liquidation context and uses <code>MAX()</code> to move the one non-null value in each leg column onto a single row.</p>
-    <p>Downstream joins now operate on one event-level amount row per observed liquidation context.</p>
+    <p class="cte-explorer__eyebrow">Phase 2 of 4 · Reconstruct the amount legs</p>
+    <h2><code>op_ui</code></h2>
+    <p><code>op_ui</code> groups the ranked rows by liquidation context and uses <code>MAX()</code> to carry each non-null leg onto the same row.</p>
+    <dl>
+      <dt>Input grain</dt><dd>Two ranked amount rows per observed context</dd>
+      <dt>Output grain</dt><dd>One row with debt and collateral raw amounts per context</dd>
+    </dl>
   </template>
 
   <template data-cte-detail="liq_meta">
-    <p class="cte-explorer__eyebrow">Step 7</p>
-    <h2>Attach event metadata</h2>
-    <p><code>liq_meta</code> joins the liquidation instruction back to <code>liq_keys</code> and retrieves the fields mapped in Part 1.</p>
+    <p class="cte-explorer__eyebrow">Phase 3 of 4 · Attach liquidation metadata</p>
+    <h2><code>liq_meta</code></h2>
+    <p>This phase reconnects the liquidation instruction to the metadata mapped in Part 1. <code>liq_meta</code> supplies the timestamp, signer, token mints, and position for the final event row.</p>
     <dl>
-      <dt>Accounts</dt>
-      <dd><code>[7]</code> supply mint, <code>[8]</code> borrow mint, <code>[14]</code> position.</dd>
-      <dt>Signer</dt>
-      <dd><code>tx_signer</code>, used as the dataset's operational liquidator definition.</dd>
+      <dt>Account arguments</dt><dd><code>[7]</code> supply mint, <code>[8]</code> borrow mint, <code>[14]</code> position</dd>
+      <dt>Liquidator field</dt><dd><code>tx_signer</code>, the dataset's operational definition</dd>
     </dl>
   </template>
 
   <template data-cte-detail="final_output">
-    <p class="cte-explorer__eyebrow">Steps 8-9</p>
-    <h2>Price and project the final row</h2>
-    <p>The final projection joins <code>prices.hour</code> twice, converts base units using token decimals, and multiplies by hourly prices for USD values.</p>
+    <p class="cte-explorer__eyebrow">Phase 4 of 4 · Value and present the results</p>
+    <h2>Final projection</h2>
+    <p>This phase combines the reconstructed amounts, liquidation metadata, and hourly token prices to produce one valued row per liquidation.</p>
     <dl>
-      <dt>Price joins</dt>
-      <dd>Borrow and supply mints are converted with <code>from_base58()</code> and matched to the liquidation hour.</dd>
-      <dt>Windows</dt>
-      <dd>Cumulative totals use <code>block_time</code>, <code>tx_id</code>, and <code>outer_instruction_index</code>.</dd>
+      <dt>Value amounts</dt><dd>Join <code>prices.hour</code> for each mint, divide by token decimals, and multiply by the hourly price.</dd>
+      <dt>Cumulative totals</dt><dd>Order by <code>block_time</code>, <code>tx_id</code>, and <code>outer_instruction_index</code>.</dd>
     </dl>
     <p class="cte-explorer__note">Missing hourly price rows remain visible because the price joins are left joins, but their USD fields are null.</p>
   </template>

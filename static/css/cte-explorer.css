@@ -61,6 +61,15 @@
   margin: 0.2rem 0 0;
 }
 
+.cte-explorer__phase-list {
+  margin: 1rem 0;
+  padding-left: 1.4rem;
+}
+
+.cte-explorer__phase-list li + li {
+  margin-top: 0.65rem;
+}
+
 .cte-explorer__note {
   padding-top: 0.9rem;
   border-top: 1px solid var(--cte-border);
@@ -108,6 +117,44 @@
 .cte-explorer__prefix {
   padding-bottom: 0.4rem !important;
   color: #aebbc7 !important;
+}
+
+.cte-explorer__overview-select {
+  display: block;
+  width: 100%;
+  padding: 0.65rem 1rem;
+  border: 0;
+  border-bottom: 1px solid rgb(255 255 255 / 12%);
+  border-radius: 0;
+  color: #7dd3fc;
+  background: transparent;
+  font: 600 0.78rem/1.4 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  text-align: left;
+  cursor: pointer;
+}
+
+.cte-explorer__overview-select:hover,
+.cte-explorer__overview-select:focus-visible,
+.cte-explorer__overview-select[aria-pressed="true"] {
+  color: #bae6fd;
+  background: rgb(125 211 252 / 12%);
+  outline: none;
+}
+
+.cte-explorer__phase-label {
+  margin: 1rem 0 0.35rem;
+  padding: 0.55rem 1rem 0.3rem;
+  border-top: 1px solid rgb(255 255 255 / 12%);
+  color: #aebbc7;
+  font: 600 0.7rem/1.45 ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.cte-explorer__phase-label span {
+  display: inline-block;
+  margin-right: 0.45rem;
+  color: #7dd3fc;
 }
 
 .cte-explorer__block {
@@ -168,7 +215,8 @@
   }
 
   .cte-explorer__code pre,
-  .cte-explorer__select {
+  .cte-explorer__select,
+  .cte-explorer__overview-select {
     font-size: 0.7rem;
   }
 }
