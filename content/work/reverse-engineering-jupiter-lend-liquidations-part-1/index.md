@@ -9,11 +9,11 @@ tags = ['Data & Methods', 'Technical Writing']
 
 Most onchain analysis starts with the assumption that someone has already decoded the dataset. On platforms like Dune, analysts can usually query human-readable tables without having to interpret the raw bytes recorded onchain.
 
-But, what if a decoded dataset doesn't exist?
+But, what if the dataset you need doesn't exist?
 
 I ran into this problem while trying to analyze liquidations on [Jupiter Lend](https://jup.ag/lend/earn), during the [October 10, 2025 market selloff](https://www.fticonsulting.com/insights/articles/crypto-crash-october-2025-leverage-met-liquidity). I wanted to understand how many liquidations were processed and the total value of liquidations.
 
-However, there were no query-ready tables for Jupiter Lend yet, the projects documentation was limited, and they hadn't published an [Interface Description Language (IDL)](https://www.anchor-lang.com/docs/basics/idl) file.
+However, there were no query-ready tables for Jupiter Lend, the projects documentation was limited, and they hadn't published an [Interface Description Language (IDL)](https://www.anchor-lang.com/docs/basics/idl) file.
 
 Before analyzing liquidations, I had to build the dataset first.
 
