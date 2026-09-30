@@ -7,9 +7,7 @@ description = 'A guide to decoding Jupiter Lend liquidation instructions from ra
 tags = ['Data & Methods', 'Technical Writing']
 +++
 
-Most onchain analysis starts with the assumption that someone has already decoded the dataset.
-
-On platforms like Dune, analysts can usually query human-readable tables without having to interpret the raw bytes recorded onchain.
+Most onchain analysis starts with the assumption that someone has already decoded the dataset. On platforms like Dune, analysts can usually query human-readable tables without having to interpret the raw bytes recorded onchain.
 
 But, what if a decoded dataset doesn't exist?
 
