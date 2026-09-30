@@ -36,6 +36,32 @@ This is an intermediate-to-advanced guide for analysts familiar with SQL who wan
 
 
 https://dune.com/queries/8711844/12764525
+
+## Mental Model for Reverse-Engineering
+
+To reverse-engineer a program, you need an example transaction. All transactions are visible on Solscan.io, which tracks Solana's historical transactions. With an example transaction, you can inspect asset flows and instruction positioning to identify patterns. Those patterns will inform assumptions that you can test in Dune to validate other transactions as liquidations. Once we identify the relevant values, we can use SQL to filter rows and select the correct columns.
+
+Throughout this guide, you'll want to have three tabs open, including:
+- This guide
+- Solscan.io
+- Dune.com
+
+You'll need to reference all three pages to work through the examples.
+
+Conceptually, we're building an event-level table for liquidations with the following columns:
+
+| Column                  | Description                    |
+| ----------------------- | ------------------------------ |
+| `tx_id`                 | Transaction ID                 |
+| `block_time`            | Time of liquidation            |
+| `liquidator`            | Liquidator address             |
+| `position`              | Liquidated position ID         |
+| `collateral_asset`      | Collateral asset seized        |
+| `debt_asset`            | Debt asset repaid              |
+| `collateral_amount_usd` | USD value of collateral seized |
+| `debt_amount_usd`       | USD value of debt repaid       |
+
+The final table will include additional columns with raw values for verification and further analysis.
 ## Using Dune to Query Data
 
 Dune ingests and indexes Solana’s real-time activity in its data warehouse. Analysts query this data with [DuneSQL](https://docs.dune.com/query-engine/overview) to create datasets and visualizations. 
@@ -85,32 +111,7 @@ Jupiter Lend Programs
 [https://dev.jup.ag/docs/lend](https://dev.jup.ag/docs/lend)
 
 A liquidation triggers a `Jupiter Lend Borrow: Liquidate` instruction that identifies the borrow position, collateral seized, debt repaid, and other details. It also triggers two `Jupiter Lend Liquidity: Operate` [cross-program invocation (CPI)](https://solana.com/docs/core/cpi) calls that transfer the debt repaid and collateral seized from the protocol-owned vaults to the liquidator.
-## Mental Model for Reverse-Engineering
-
-To reverse-engineer a program, you need an example transaction. All transactions are visible on Solscan.io, which tracks Solana's historical transactions. With an example transaction, you can inspect asset flows and instruction positioning to identify patterns. Those patterns will inform assumptions that you can test in Dune to validate other transactions as liquidations. Once we identify the relevant values, we can use SQL to filter rows and select the correct columns. 
-
-Throughout this guide, you'll want to have three tabs open, including:
-- This guide
-- Solscan.io
-- Dune.com
-
-You'll need to reference all three pages to work through the examples.
-
-Conceptually, we're building an event-level table for liquidations with the following columns:
-
-| Column                  | Description                    |
-| ----------------------- | ------------------------------ |
-| `tx_id`                 | Transaction ID                 |
-| `block_time`            | Time of liquidation            |
-| `liquidator`            | Liquidator address             |
-| `position`              | Liquidated position ID         |
-| `collateral_asset`      | Collateral asset seized        |
-| `debt_asset`            | Debt asset repaid              |
-| `collateral_amount_usd` | USD value of collateral seized |
-| `debt_amount_usd`       | USD value of debt repaid       |
-
-The final table will include additional columns with raw values for verification and further analysis. 
-### Inspecting a known liquidation transaction
+## Inspecting a known liquidation transaction
 
 To find example liquidation transactions:
 1. Visit [Solscan.io](https://solscan.io/).
