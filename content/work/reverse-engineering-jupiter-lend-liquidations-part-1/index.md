@@ -7,17 +7,25 @@ description = 'A guide to decoding Jupiter Lend liquidation instructions from ra
 tags = ['Data & Methods', 'Technical Writing']
 +++
 
-During the [October 10, 2025 market selloff](https://www.fticonsulting.com/insights/articles/crypto-crash-october-2025-leverage-met-liquidity), more than $19 billion in leveraged positions were liquidated within 24 hours across derivatives markets.
+Most onchain analysis starts with the assumption that someone has already decoded the dataset.
 
-This selloff raised a related question: how did [blockchain credit markets](https://www.bankofcanada.ca/2026/04/staff-analytical-paper-2026-13/) handle the same shock?
+On platforms like Dune, analysts can usually query human-readable tables without having to interpret the raw bytes recorded onchain.
 
-I wanted to analyze liquidations on [Jupiter Lend](https://jup.ag/lend/earn), a newly launched credit market on the Solana blockchain, to understand how many liquidations were processed, the notional value of liquidations, and the breadth of its liquidator network. 
+But, what if a decoded dataset doesn't exist?
 
-Decoded datasets are often published on [Dune](https://dune.com/), a data platform for blockchains. But in this case, there are no query-ready tables for Jupiter Lend yet. Moreover, Jupiter Lend's documentation is limited, and the team has not published an [Interface Description Language (IDL)](https://www.anchor-lang.com/docs/basics/idl) file yet.
+I ran into this problem while trying to analyze liquidations on [Jupiter Lend](https://jup.ag/lend/earn), during the [October 10, 2025 market selloff](https://www.fticonsulting.com/insights/articles/crypto-crash-october-2025-leverage-met-liquidity). I wanted to understand how many liquidations were processed and the total value of liquidations.
 
-To produce a dataset of Jupiter Lend liquidations, I reverse-engineered the program by examining its instructions on Solscan, mapping them to Dune's tables, and writing SQL queries to decode them.
+However, there were no query-ready tables for Jupiter Lend yet, the projects documentation was limited, and they hadn't published an [Interface Description Language (IDL)](https://www.anchor-lang.com/docs/basics/idl) file.
 
-This is the first part of a three-part series. In this guide, we'll walk through how to decode the relevant instructions to reverse-engineer Jupiter Lend liquidations. Part two covers building the final dataset, and part three analyzes the results of the October 10, 2025 dataset.
+Before analyzing liquidations, I had to build the dataset first.
+
+To do this, I reverse-engineered the program by examining its instructions on Solscan, mapping them to Dune's tables, and writing SQL queries to decode them.
+
+This three part series walks through that process. In this guide, you'll learn how to reverse-engineer instructions and identify Jupiter Lend liquidations to extract the core fields. Part two covers building the final dataset, and part three analyzes the results of the October 10, 2025 dataset.
+
+This is an intermediate-to-advanced guide for analysts familiar with SQL who want to query Solana programs (written in Anchor) from scratch. By the end, you'll have a repeatable approach for investigating an Anchor program even when no decoded dataset or public IDL is available.
+
+## What we're building
 
 **The final dataset includes transaction-level liquidation records with:**
 - collateral seized
@@ -30,8 +38,6 @@ This is the first part of a three-part series. In this guide, we'll walk through
 
 
 https://dune.com/queries/8711844/12764525
-
-This is an intermediate-to-advanced guide for analysts familiar with SQL who want to query Solana programs (written in Anchor) from scratch. The methods used in this guide serve as a generalizable approach for decoding and querying undocumented Anchor programs. 
 ## Using Dune to Query Data
 
 Dune ingests and indexes Solana’s real-time activity in its data warehouse. Analysts query this data with [DuneSQL](https://docs.dune.com/query-engine/overview) to create datasets and visualizations. 
