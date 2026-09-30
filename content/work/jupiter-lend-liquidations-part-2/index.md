@@ -8,7 +8,7 @@ tags = ['Data & Methods', 'Technical Writing']
 cte_explorer = true
 +++
 
-In [part one](https://defi-kai.github.io/kai-site/work/reverse-engineering-jupiter-lend-liquidations-part-1/), we used Solscan to observe liquidation transactions and mapped them to columns on Dune's [`solana.instruction_calls`](https://dune.com/data/solana.instruction_calls) table. In this walkthrough we assemble those findings into one event-level dataset using common table expressions (CTEs) and join the results to the [`prices.hour`](https://dune.com/data/prices.hour) table to compute the value of liquidations.
+In [part one](https://defi-kai.github.io/kai-site/work/reverse-engineering-jupiter-lend-liquidations-part-1/), we observed liquidations on Solscan.io and mapped them to columns on Dune's [Solana instruction calls](https://dune.com/data/solana.instruction_calls) table. In this walkthrough we assemble those findings into one event-level dataset using common table expressions (CTEs) and join the results to the [`prices.hour`](https://dune.com/data/prices.hour) table to compute the value of liquidations.
 
 This walkthrough focuses on the order of the CTEs and the data passed between them.
 
