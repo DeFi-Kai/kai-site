@@ -19,32 +19,8 @@
 </div>
 {{- end }}
 
-{{- $groups := slice
-  (dict "key" "technical-writing" "title" "Technical Writing")
-  (dict "key" "research-analysis" "title" "Research & Analysis")
-  (dict "key" "investment-research" "title" "Investment Research")
-}}
-
-{{- $all := .RegularPages }}
-{{- $grouped := slice }}
-
-{{- range $groups }}
-{{- $pages := where $all "Params.writing_category" .key }}
-{{- if $pages }}
-{{- $grouped = $grouped | append $pages }}
-<h2 class="writing-group-heading">{{ .title }}</h2>
-{{- range $pages }}
+{{- range .RegularPages }}
 {{- partial "research-entry.html" . }}
-{{- end }}
-{{- end }}
-{{- end }}
-
-{{- $ungrouped := complement $grouped $all }}
-{{- if $ungrouped }}
-<h2 class="writing-group-heading">Other</h2>
-{{- range $ungrouped }}
-{{- partial "research-entry.html" . }}
-{{- end }}
 {{- end }}
 
 {{- end }}{{- /* end main */ -}}

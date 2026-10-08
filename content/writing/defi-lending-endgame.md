@@ -251,6 +251,6 @@ Aave understands this, and is using GHO to move from renting the dollar to issui
 While lending venues compete, the larger position is on who owns the dollar and who owns the user. Those two fights get settled on lending venues as the battlegrounds.
 
 ---
-**Publication note:** *Originally published July 14, 2026. Updated August 25, 2026 to separate the [AAVE/MORPHO thesis]({{< relref "/writing/aave-morpho-trade" >}}) into a standalone report.*
+**Publication note:** *Originally published July 14, 2026. Updated August 25, 2026 to separate the [AAVE/MORPHO thesis](/writing/aave-morpho-trade/) into a standalone report.*
 
 **Disclosure:** *This report is independent research provided for informational purposes. Any material commercial relationship with an entity discussed will be disclosed.*

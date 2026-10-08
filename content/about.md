@@ -4,18 +4,16 @@ title = 'About'
 ShowToc = false
 +++
 
-I'm a technical researcher and data analyst focused on complex technical and financial systems. I use SQL, Python, APIs, documentation, and blockchain data to investigate system behavior, build datasets, analyze results, and explain them clearly.
+I'm a technical writer and data analyst.
 
-My background is in fintech and digital assets, where I have researched DeFi market structure, lending economics, financial-product mechanics, and blockchain activity.
+Over the past four years, my interest in understanding complex systems has led me to complement writing with data and code to measure how those systems behave. Across my roles, my work has revolved around three core skills:
 
-Previously a Research Analyst at [Blocmates](https://www.blocmates.com/), I’ve also worked across ecosystem analytics, grants, and protocol research with Metaplex, IslandDAO, and Streamflow, and produced research for teams including [Reserve Protocol](https://reserve.org/) and [Arkham](https://intel.arkm.com/).
+1. **Research** - Discover what exists.
+2. **Data analysis** - Measure it.
+3. **Documentation** - Communicate it.
 
-Some of my recent projects include [Jupiter Lend Liquidation Decoder](https://x.com/DefiVaults/status/1989206474468335981?s=20), an analysis that decoded Solana liquidation instructions and examined $1.29M in liquidations during the October 10, 2025 mass liquidation event, and [The DeFi Lending Endgame](https://defi-kai.github.io/kai-site/writing/defi-lending-endgame/), a report on DeFi credit market structure, protocol economics, competitive dynamics, and risk architecture.
+Much of my work has focused on financial software and blockchain infrastructure, but my interests extend to AI, data workflows, and building tools that make research and everyday work easier.
 
----
+Before that, I studied English and began my career as an editorial assistant at [Increment](https://increment.com/teams/letter-from-the-editor/), Stripe's quarterly magazine for software development teams.
 
-**Data and analysis:** SQL, TrinoSQL, SnowflakeSQL, Python, BigQuery, Dune, Allium
-
-**Systems and research:** API ingestion, Solana instruction decoding, GitHub, dashboards, technical documentation
-
-- [Solana Turbin3](https://www.turbin3.org/) Q4 2025 Graduate
+Outside of work, I enjoy reading (currently *The Devotion of Suspect X* by Keigo Higashino), running, and experimenting with my homelab.

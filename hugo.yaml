@@ -37,9 +37,9 @@ params:
     iconHeight: 36
 
   homeInfoParams:
-    Title: "Technical Research & Analytics"
+    Title: "Hi, I'm Kai."
     Content: |
-      I investigate complex technical and financial systems, test them with data and code, and turn the results into clear research, explanations, and decisions. My work has focused on fintech, digital assets, financial systems, APIs, data workflows, and AI-assisted research tooling.
+      I like to write about technology and build tools for data analysis and research. This site is where I publish my work and what I've learned along the way.
 
   socialIcons:
     - name: x

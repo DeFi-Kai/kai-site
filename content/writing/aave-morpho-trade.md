@@ -1,10 +1,10 @@
 +++
 date = '2026-08-25T09:00:00-04:00'
-draft = false
+draft = true
 title = 'The AAVE/MORPHO Trade'
 slug = 'aave-morpho-trade'
 aliases = ['/research/aave-morpho-trade/']
-writing_category = 'investment-research'
+writing_category = 'research-analysis'
 tags = ['Investment Research']
 hiddenInHomeList = true
 +++

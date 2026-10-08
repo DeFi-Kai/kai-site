@@ -3,7 +3,7 @@ date = '2025-07-30T09:00:00-04:00'
 draft = false
 title = 'Unpacking the Superapp Stack'
 aliases = ['/research/unpacking-the-superapp-stack/']
-writing_category = 'technical-writing'
+writing_category = 'research-analysis'
 tags = ['Technical Writing']
 +++
 

@@ -4,6 +4,7 @@ draft = false
 title = 'Jupiter Lend Under Stress: Analyzing the October 10 Liquidation Event'
 slug = 'jupiter-lend-under-stress-october-10-liquidation-event'
 tags = ['Data & Methods', 'Technical Writing']
+writing_category = 'research-analysis'
 +++
 
 Read [part one](https://defi-kai.github.io/kai-site/work/reverse-engineering-jupiter-lend-liquidations-part-1/) and [part two](https://defi-kai.github.io/kai-site/work/jupiter-lend-liquidations-part-2/) of this series.
