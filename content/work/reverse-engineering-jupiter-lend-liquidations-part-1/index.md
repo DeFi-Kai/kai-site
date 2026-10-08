@@ -5,6 +5,7 @@ title = 'Reverse-Engineering Jupiter Lend Liquidations: Part 1'
 slug = 'reverse-engineering-jupiter-lend-liquidations-part-1'
 description = 'A guide to decoding Jupiter Lend liquidation instructions from raw Solana data using Solscan and DuneSQL.'
 tags = ['Data & Methods', 'Technical Writing']
+data_toc = true
 +++
 
 Most onchain analysis starts with the assumption that someone has already decoded the dataset. On platforms like Dune, analysts can usually query human-readable tables without having to interpret the raw bytes recorded onchain.
