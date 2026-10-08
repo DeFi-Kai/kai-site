@@ -1,6 +1,6 @@
 +++
 date = '2026-04-15T09:00:00-04:00'
-draft = false
+draft = true
 title = 'Perp DEXs: The Mismarked Capital Stack'
 aliases = ['/research/perp-dexs-the-mismarked-capital-stack/', '/research/lp-as-equity/']
 writing_category = 'research-analysis'
