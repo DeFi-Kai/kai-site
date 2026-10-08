@@ -7,13 +7,15 @@ aliases = ['/data/automated-etl-pipeline-for-onchain-analysis/']
 tags = ['Data & Methods', 'Technical Writing']
 +++
 
-Building a dataset can take longer than writing the actual report. An analyst might have to query raw onchain data, call external APIs, and join these sources to create the required dataset. And all of this can take up to weeks before you even begin writing. 
+If you're a research analyst, then you know that building a dataset can take longer than writing the actual report. You might have to query raw onchain data, call external APIs, and join these sources to create the required dataset. And all of this can take up to weeks before you even begin writing. 
 
-We wanted to go from idea to final report as fast as possible at Blocmates, so we created an [agentic pipeline](https://github.com/DeFi-Kai/dune-etl-agent) for onchain data analysis. You fill out a data spec and the agent fetches data from external APIs, writes SQL queries, tests them, and pushes the files to Dune using GitHub for version control. 
+**At Blocmates, we're all too familiar with the pitfalls that come from using LLMs for blockchain data analysis, so we created a system to automate the most laborious tasks: An agentic pipeline for onchain analysis.**
 
-[MetaDAO’s ICO dashboard](https://dune.com/blocmates_research/metadao-blocmates-pro) and [Chain GDP](https://dune.com/blocmatesresearch/chain-gdp) were both created using this workflow.
+You fill out a dataspec and the agent loads the necessary context, writes SQL queries, fetches data from APIs, dry runs the queries, and pushes the files to Dune, using GitHub Actions to run continuous API calls and GitHub for version control. Once the dataset is created, you pick up the query in Dune's UI for final verification and to configure the visualizations. 
 
-Here's how it works.
+We used this workflow to create custom datasets for the [MetaDAO’s ICO dashboard](https://dune.com/blocmates_research/metadao-blocmates-pro)and [Chain GDP dashboard](https://dune.com/blocmatesresearch/chain-gdp).
+
+Here, we walkthrough the setup including the architecture and design choices, in case you want to fork the project or create something similar. 
 
 ## How it works
 
