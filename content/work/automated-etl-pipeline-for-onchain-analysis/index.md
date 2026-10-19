@@ -11,9 +11,9 @@ Using an LLM for data analysis can sometimes create more problems than it solves
 
 At Blocmates, we created an agentic pipeline to automate these tasks. Instead of manually providing context and coordinating each step, the analyst fills out a data specification and sends it to Claude Code. The agent loads the necessary context, writes SQL queries, fetches data from APIs, dry-runs the queries, and publishes them to Dune.
 
-The pipeline uses GitHub for version control and GitHub Actions to coordinate scheduled API ingestion to update datasets in Dune. Once the queries are published, analysts can inspect them in Dune's interface for final verification and configure the visualizations.
+The pipeline uses GitHub for version control and GitHub Actions to coordinate scheduled API ingestion for updating datasets in Dune. Once the queries are published, analysts can inspect them in Dune's interface for final verification and configure the visualizations.
 
-We used this workflow to create custom datasets for the [MetaDAO ICO dashboard](https://dune.com/blocmates_research/metadao-blocmates-pro) and [Chain GDP dashboard](https://dune.com/blocmatesresearch/chain-gdp).
+We used this workflow to generate queries and create custom datasets for the [MetaDAO ICO dashboard](https://dune.com/blocmates_research/metadao-blocmates-pro) and [Chain GDP dashboard](https://dune.com/blocmatesresearch/chain-gdp).
 
 Here, we walkthrough the setup including the architecture and design choices so you can fork the project or build something similar.
 
