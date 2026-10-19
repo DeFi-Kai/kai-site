@@ -7,12 +7,6 @@ tags = ['Data & Methods', 'Technical Writing']
 writing_category = 'research-analysis'
 +++
 
-Read [part one](https://defi-kai.github.io/kai-site/work/reverse-engineering-jupiter-lend-liquidations-part-1/) and [part two](https://defi-kai.github.io/kai-site/work/jupiter-lend-liquidations-part-2/) of this series.
-
-Parts one and two of this series covered how I reverse-engineered Jupiter Lend’s liquidation instructions and used them to build a transaction-level liquidation dataset. In this report, we use that dataset to examine how the October 10 selloff affected Jupiter Lend during its first major market-wide stress event.
-
----
-
 On October 10, 2025, U.S. President Donald Trump announced that the U.S. would impose an additional 100% tariff on Chinese imports. This announcement was followed by a rapid market selloff: over the course of October 10, the price of ETH fell as much as 12% and SOL fell as much as 24%. 
 
 The wave of selling ultimately triggered $19B in liquidations across derivative markets. But how did this affect other venues that offer leverage, like credit markets?
