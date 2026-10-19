@@ -8,14 +8,10 @@ tags = ['Data & Methods', 'Technical Writing']
 cte_explorer = true
 +++
 
-In [part one](https://defi-kai.github.io/kai-site/work/reverse-engineering-jupiter-lend-liquidations-part-1/), we observed liquidation instructions on Solscan and wrote SQL queries mapping them to columns on Dune. In this walk through we assemble those findings into one event-level dataset using common table expressions (CTEs). We also introduce the [`prices.hour`](https://dune.com/data/prices.hour) table which we'll join to the final select statement to compute the value of liquidations.
+In [Part 1](https://defi-kai.github.io/kai-site/work/reverse-engineering-jupiter-lend-liquidations-part-1/), we identified Jupiter Lend's liquidation instructions, mapped their account arguments, and decoded the raw amounts of debt repaid and collateral seized.
 
-The final query is organized into four phases:
-1. identify liquidation contexts: `liq_keys`
-2. reconstruct the amount legs: `inners_raw`, `operate_ranked`, `op_decoded`, `op_ui_per_rn`
-3. attach liquidation metadata: `liq_meta`
-4. value and present the results: the final `SELECT` and price joins
+In this walkthrough, we'll combine those findings into a single DuneSQL query using common table expressions (CTEs). The query reconstructs liquidation records from raw instructions and joins Dune's [`prices.hour`](https://dune.com/data/prices.hour) table to calculate the USD value of debt repaid and collateral seized.
 
-We'll focus on the order of the CTEs and the data passed between them. Click a CTE in the query to see what it does, and how it advances the data through its phase.
+We'll work through the query in four phases, following how each CTE transforms and passes data to the next. **Select a CTE in the interactive query below** to explore its role in building the final dataset.
 
 {{< cte-explorer >}}
