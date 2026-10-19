@@ -14,4 +14,6 @@ In this walkthrough, we'll combine those findings into a single DuneSQL query us
 
 We'll work through the query in four phases, following how each CTE transforms and passes data to the next. **Select a CTE in the interactive query below** to explore its role in building the final dataset.
 
+You can [view the complete query on Dune](https://dune.com/queries/8711844/12764525) or explore the [source code and exported dataset on GitHub](https://github.com/DeFi-Kai/Jupiter-lend-liquidation-risk).
+
 {{< cte-explorer >}}
