@@ -1,21 +1,21 @@
 +++
 date = '2026-04-19T20:15:00-04:00'
 draft = false
-title = 'Building an Agentic Pipeline for Onchain Analytics'
+title = 'Building an Agentic Pipeline for Onchain Data Analysis'
 slug = 'building-an-agentic-pipeline-for-onchain-analytics'
 aliases = ['/data/automated-etl-pipeline-for-onchain-analysis/']
 tags = ['Data & Methods', 'Technical Writing']
 +++
 
-If you're a research analyst, then you know that building a dataset can take longer than writing the actual report. You might have to query raw onchain data, call external APIs, and join these sources to create the required dataset. And all of this can take up to weeks before you even begin writing. 
+Using an LLM for data analysis can sometimes create more problems than it solves. In a chat-based workflow, the analyst still has to supply table schemas, API documentation, and project-specific context while copying and pasting data between multiple interfaces and tools. If you're not careful this setup can increase token costs and introduce errors -- undermining the time saved by using an LLM in the first place.
 
-**At Blocmates, we're all too familiar with the pitfalls that come from using LLMs for blockchain data analysis, so we created a system to automate the most laborious tasks: An agentic pipeline for onchain analysis.**
+At Blocmates, we created an agentic pipeline to automate these tasks. Instead of manually providing context and coordinating each step, the analyst fills out a data specification and sends it to Claude Code. The agent loads the necessary context, writes SQL queries, fetches data from APIs, dry-runs the queries, and publishes them to Dune.
 
-You fill out a dataspec and the agent loads the necessary context, writes SQL queries, fetches data from APIs, dry runs the queries, and pushes the files to Dune, using GitHub Actions to run continuous API calls and GitHub for version control. Once the dataset is created, you pick up the query in Dune's UI for final verification and to configure the visualizations. 
+The pipeline uses GitHub for version control and GitHub Actions to coordinate scheduled API ingestion to update datasets in Dune. Once the queries are published, analysts can inspect them in Dune's interface for final verification and configure the visualizations.
 
-We used this workflow to create custom datasets for the [MetaDAO’s ICO dashboard](https://dune.com/blocmates_research/metadao-blocmates-pro)and [Chain GDP dashboard](https://dune.com/blocmatesresearch/chain-gdp).
+We used this workflow to create custom datasets for the [MetaDAO ICO dashboard](https://dune.com/blocmates_research/metadao-blocmates-pro) and [Chain GDP dashboard](https://dune.com/blocmatesresearch/chain-gdp).
 
-Here, we walkthrough the setup including the architecture and design choices, in case you want to fork the project or create something similar. 
+Here, we walkthrough the setup including the architecture and design choices so you can fork the project or build something similar.
 
 ## How it works
 
