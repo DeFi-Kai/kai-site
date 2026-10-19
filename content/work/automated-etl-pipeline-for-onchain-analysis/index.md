@@ -9,7 +9,7 @@ tags = ['Data & Methods', 'Technical Writing']
 
 Using an LLM for data analysis can sometimes create more problems than it solves. In a chat-based workflow, the analyst still has to supply table schemas, API documentation, and project-specific context while copying and pasting data between multiple interfaces and tools. If you're not careful this setup can increase token costs and introduce errors -- undermining the time saved by using an LLM in the first place.
 
-At Blocmates, we created an agentic pipeline to automate these tasks. Instead of manually providing context and coordinating each step, the analyst fills out a data specification and sends it to Claude Code. The agent loads the necessary context, writes SQL queries, fetches data from APIs, dry-runs the queries, and publishes them to Dune.
+At Blocmates, we created an agentic pipeline to automate these tasks. Instead of manually providing context and coordinating each step, the analyst starts by filling out a data specification and sends it to Claude Code. The agent loads the necessary context, writes SQL queries, fetches data from APIs, dry-runs the queries, and publishes them to Dune.
 
 The pipeline uses GitHub for version control and GitHub Actions for coordinating scheduled API ingestion to update datasets in Dune. Once the queries are published, analysts can inspect them in Dune's interface for final verification and configure the visualizations.
 
