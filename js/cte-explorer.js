@@ -17,6 +17,7 @@
       if (!template) return;
 
       detail.innerHTML = template.innerHTML;
+      detail.scrollTop = 0;
       buttons.forEach((button) => {
         const active = button.dataset.cteTarget === key;
         button.setAttribute('aria-pressed', String(active));

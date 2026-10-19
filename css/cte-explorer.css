@@ -26,6 +26,8 @@
   border: 1px solid var(--cte-border);
   border-radius: 10px;
   background: var(--cte-panel);
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 .cte-explorer__detail h2 {
@@ -74,7 +76,7 @@
   padding-top: 0.9rem;
   border-top: 1px solid var(--cte-border);
   color: var(--cte-muted);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 .cte-explorer__query {
@@ -204,6 +206,41 @@
     position: sticky;
     top: 0.75rem;
     z-index: 2;
+    max-height: 45vh;
+    max-height: 45svh;
+    overflow-y: auto;
+    padding: 0.85rem;
+    font-size: 0.85rem;
+  }
+
+  .cte-explorer__detail h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+
+  .cte-explorer__detail p {
+    margin-bottom: 0.5rem;
+  }
+
+  .cte-explorer__detail dl {
+    margin-top: 0.65rem;
+  }
+
+  .cte-explorer__detail dl dt {
+    margin-top: 0.55rem;
+  }
+
+  .cte-explorer__phase-list {
+    margin: 0.65rem 0;
+  }
+
+  .cte-explorer__phase-list li + li {
+    margin-top: 0.4rem;
+  }
+
+  .cte-explorer__note {
+    padding-top: 0.65rem;
+    font-size: 0.8rem;
   }
 }
 
