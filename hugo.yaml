@@ -58,9 +58,6 @@ menu:
     - name: Research
       url: /writing/
       weight: 3
-    - name: Notes
-      url: /notes/
-      weight: 4
     - name: About
       url: /about/
       weight: 5
