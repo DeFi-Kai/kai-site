@@ -20,7 +20,7 @@ Before analyzing liquidations, I had to build the dataset first.
 
 To do this, I reverse-engineered the program by examining its instructions on Solscan, mapping them to Dune's tables, and writing SQL queries to decode them.
 
-This three part series walks through that process. In this guide, you'll learn how to reverse-engineer instructions and identify Jupiter Lend liquidations to extract the core fields. [Part 2](https://defi-kai.github.io/kai-site/work/reverse-engineering-jupiter-lend-liquidations-part-2/) covers building the final dataset, and [part 3](https://defi-kai.github.io/kai-site/writing/jupiter-lend-under-stress-october-10-liquidation-event/) analyzes the results of the October 10, 2025 dataset.
+This two part series walks through that process. In this guide, you'll learn how to reverse-engineer instructions and identify Jupiter Lend liquidations to extract the core fields. [Part 2](https://defi-kai.github.io/kai-site/work/reverse-engineering-jupiter-lend-liquidations-part-2/) covers building the final dataset.
 
 This is an intermediate-to-advanced guide for analysts familiar with SQL who want to query Solana programs (written in Anchor) from scratch. By the end, you'll have a repeatable approach for investigating an Anchor program even when there's no decoded dataset or public IDL available.
 ## What we're building
