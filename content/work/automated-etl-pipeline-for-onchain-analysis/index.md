@@ -7,7 +7,7 @@ aliases = ['/data/automated-etl-pipeline-for-onchain-analysis/']
 tags = ['Data & Methods', 'Technical Writing']
 +++
 
-Using an LLM for data analysis can sometimes create more problems than it solves. In a chat-based workflow, the analyst still has to supply table schemas, API documentation, and project-specific context while copying and pasting data between multiple interfaces and tools. If you're not careful this setup can increase token costs and introduce errors -- undermining the time saved by using an LLM in the first place.
+Using an LLM for data analysis can sometimes create more problems than it solves. In a chat-based workflow, the analyst still has to supply table schemas, API documentation, and project-specific context while copying and pasting data between multiple interfaces and tools. If you're not careful, this setup can increase token costs and introduce errors -- undermining the time saved by using an LLM in the first place.
 
 At [Blocmates](https://x.com/blocmates), we created an agentic pipeline to automate these tasks. Instead of manually providing context and coordinating each step, the analyst starts by filling out a data specification and sends it to Claude Code. The agent loads the necessary context, writes SQL queries, fetches data from APIs, and tests and publishes the queries to Dune.
 
@@ -15,7 +15,7 @@ The pipeline uses GitHub for version control and GitHub Actions for coordinating
 
 We used this workflow to generate queries and create custom datasets for the [MetaDAO ICO dashboard](https://dune.com/blocmates_research/metadao-blocmates-pro) and [Chain GDP dashboard](https://dune.com/blocmatesresearch/chain-gdp).
 
-Here, we walkthrough the setup including the architecture and design choices so you can fork the project or build something similar.  The [source code and setup instructions are available on GitHub](https://github.com/DeFi-Kai/dune-etl-agent).
+Here, we walk through the setup including the architecture and design choices so you can fork the project or build something similar.  The [source code and setup instructions are available on GitHub](https://github.com/DeFi-Kai/dune-etl-agent).
 ## Architecture/design choices
 
 Our original workflow required switching between Claude, Dune and external APIs. We generated SQL queries in Claude, tested and executed them in Dune, and occasionally used Claude to write Python scripts for external data.
@@ -25,15 +25,15 @@ The first iteration of the pipeline connected Claude Code to Dune's API. This al
 Dune offers an API and an MCP server that let you create and update queries. We chose Dune's API to create, test, and publish queries programmatically. We also tested Dune's MCP server, but in our tests it consumed ~2x as many Dune credits for equivalent tasks. In contrast, using the API gave us more control over which endpoints were called, although it required writing and maintaining the integration code.
 ### Context management and resource selection
 
-Connecting Claude to Dune solved the problem of manually transfering data between interfaces, but it didn't address how we managed context across projects.
+Connecting Claude to Dune solved the problem of manually transferring data between interfaces, but it didn't address how we managed context across projects.
 
-Each new project required submitting the same sets of information which became reptitive. To avoid this I tried to use the same chat for multiple projects, but it cuased me to hit context usage limits faster and resulted in queries that included data from the wrong project.
+Each new project required submitting the same sets of information, which became repetitive. To avoid this, I tried to use the same chat for multiple projects, but it caused me to hit context usage limits faster and resulted in queries that included data from the wrong project.
 
 To fix this, I created a standardized framework for Claude to access the necessary information.
 
 ![Automated ETL pipeline architecture](images/automated-etl-pipeline-onchain-analysis-architecture.svg)
 
-We use `CLAUDE.md` as the "master-guide" for project-wide instructions and separate skill files for source-specific knowledge. I also created a data specification template that identifies the blockchains and APIs required for each analysis. Skill files are only loaded when the spec declares a matching chain or API. This gives the agent a structured way to select relevant references instead of loading every available source.
+We use `CLAUDE.md` as the "master guide" for project-wide instructions and separate skill files for source-specific knowledge. I also created a data specification template that identifies the blockchains and APIs required for each analysis. Skill files are only loaded when the spec declares a matching chain or API. This gives the agent a structured way to select relevant references instead of loading every available source.
 
 This setup requires maintaining structured documentation, but it ultimately reduces the amount of irrelevant context supplied on each run.
 ### GitHub for version control and GitHub Actions for refreshing datasets
@@ -53,7 +53,7 @@ This helped motivate the data specification template, which identifies the requi
 
 ## How it works
 
-We begin each run by filling out a data spec with the target blockchain(s), API source(s), and a numbered list of visualizations with short descriptions. They then invoke `/run-spec <path>` (or paste the spec inline) to kick off the run. We use Claude code for our workflow.
+We begin each run by filling out a data spec with the target blockchain(s), API source(s), and a numbered list of visualizations with short descriptions. Next, we invoke `/run-spec <path>` (or paste the spec inline) to kick off the run. We use Claude Code for our workflow.
 
 ```markdown
 ---
@@ -74,7 +74,7 @@ refresh: daily 06:00 UTC
 
 _Example data spec._
 
-When the agent begins it loads a DuneSQL best practices skill covering query structure, optimization, and error handling. Depending on the spec, the agent can also load two additional skills:
+When the agent begins, it loads a DuneSQL best practices skill covering query structure, optimization, and error handling. Depending on the spec, the agent can also load two additional skills:
 
 1. API references skill: shared techniques for Dune LiveFetch (`http_get`, `http_post`, JSON parsing, and error handling). It points to per-API leaves such as `api-defillama` for endpoints, auth, and rate limits.
 2. Chain references skill: shared techniques for querying chain tables on Dune. It points to per-chain leaves (`chain-solana`, `chain-ethereum`, and others) with table lists, partition windows, and chain-specific quirks.
@@ -89,9 +89,9 @@ The starter ships with `chain-solana` and `api-defillama` as worked examples and
 
 Each query is processed through `verify.py`, which runs static lint checks and a dry run against Dune. If a query fails, the agent revisits the best-practices error-handling guidance and retries, with a cap of two revisions per query. On the third failure, it stops and surfaces the error.
 
-Each dashboard is assigned a yaml file that lists queries with a unique ID and link to the live query on Dune. If you start a new session and want to make an edit you can reference the URL, ID, or the dashboard name so the agent can identify which query to access. 
+Each dashboard is assigned a YAML file that lists queries, each with a unique ID and a link to the live query on Dune. If you start a new session and want to make an edit, you can reference the URL, ID, or dashboard name so the agent can identify which query to access.
 
-After the query is created, we manually configure the visualizations in Dune's UI. We perform row-level spot checks, and check math by hand to validate the datas correctness. When live sources exist, we check directly against them. 
+After the query is created, we manually configure the visualizations in Dune's UI. We perform row-level spot checks and check the math by hand to validate the accuracy of the data. When live sources exist, we check directly against them.
 
 ### Handling API limits
 
