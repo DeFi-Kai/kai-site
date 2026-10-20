@@ -39,7 +39,13 @@ params:
   homeInfoParams:
     Title: "Hi, I'm Kai."
     Content: |
-      I like to write about technology and build tools for data analysis and research. This site is where I publish my work and what I've learned along the way.
+      I like to write about technology and build tools for data analysis and research. This is where I publish my work and what I've learned along the way.
+    FeaturedWork: |
+      **Featured work**
+
+      - [Reverse-Engineering Jupiter Lend Liquidations](./work/reverse-engineering-jupiter-lend-liquidations-part-1/) — Technical tutorial on decoding Solana instructions and building a SQL dataset.
+      - [Dune ETL Agent Documentation](https://github.com/DeFi-Kai/dune-etl-agent) — Developer documentation for an AI-assisted SQL development tool.
+      - [Building an Agentic Pipeline](./work/building-an-agentic-pipeline-for-onchain-analytics/) — Architecture and design case study for AI-assisted SQL development tool.
 
   socialIcons:
     - name: x

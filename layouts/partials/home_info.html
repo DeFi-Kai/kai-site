@@ -6,5 +6,10 @@
     <div class="entry-content">
         {{ .Content | markdownify }}
     </div>
+    {{- with .FeaturedWork }}
+    <div class="featured-work">
+        {{ . | markdownify }}
+    </div>
+    {{- end }}
 </article>
 {{- end -}}
