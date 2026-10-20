@@ -204,6 +204,25 @@ https://solscan.io/tx/vaupfNDZKX9siireKzdK63ZVpqzJMxarsw3LWeBdSZuRMHTFptd2soXiYa
 I checked the same relationship across three additional successful liquidations: [Example 1](https://solscan.io/tx/5guPqgEj9FadRp4A2xJrn2rnBhRpRk4etLxjfYG75z16cZiFiQaqsH91q3XJvvqj3mDCWUEqHck2WG2kmCZ3xrau), [Example 2](https://solscan.io/tx/3LrpNDZVxsMAwceue1QRuGAUxa7yajryChcrSUgD7X2g8NVrzQzoZNWbBvTowfP2vJCmnZXJq2bCXN8Vg31sdBNe), and [Example 3](https://solscan.io/tx/3169fyF7pcfUvm2GYUu33o4VQ6BoRyiiEYXt38j4o7JxU3Uo6BMRnpX1XJN8dvdAVjWK6BAaXcV2ukz8xpuxYbdA).
 
 Based on these observations, we'll use Dune's `tx_signer` column as the liquidator address. This is a working definition based on the transactions examined, rather than a guarantee that the signer always receives the collateral.
+
+Here's an example query that selects `tx_signer` and renames the column to `liquidator`:
+
+```sql
+SELECT
+	block_time,
+	tx_id,
+	outer_instruction_index,
+	inner_instruction_index,
+	tx_signer AS liquidator
+FROM solana.instruction_calls
+WHERE tx_id = 'vaupfNDZKX9siireKzdK63ZVpqzJMxarsw3LWeBdSZuRMHTFptd2soXiYaRq2nMgtK5X24YAniBsPyrcLYWnUpR'
+	AND executing_account = 'jupr81YtYssSyPt8jbnGuiWon5f6x9TcDEFxYe3Bdzi'
+    AND substr("data", 1, 8) = from_hex('dfb3e27d302e274a')
+	AND tx_success = TRUE
+```
+https://dune.com/queries/8822173
+
+This query reuses the program ID, liquidation discriminator, and success filters introduced in the previous section.
 ### Locating the supply token, borrow token, and borrow position
 
 Next, we need the mint addresses of the collateral seized and debt repaid.
