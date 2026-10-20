@@ -53,7 +53,7 @@ This helped motivate the data specification template, which identifies the requi
 
 ## How it works
 
-We begin each run by filling out a data spec with the target blockchain(s), API source(s), and a numbered list of visualizations with short descriptions. Next, we invoke `/run-spec <path>` (or paste the spec inline) to kick off the run. We use Claude Code for our workflow.
+We begin each run by filling out a data spec with the target blockchain(s), API source(s), and a numbered list of visualizations with short descriptions. Next, we invoke `/run-spec <path>` (or paste the spec inline) to kick off the run using Claude Code.
 
 ```markdown
 ---
