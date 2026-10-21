@@ -11,17 +11,18 @@ Most onchain analysis starts with the assumption that someone has already decode
 
 But what if the dataset you need doesn't exist?
 
-I ran into this problem while trying to analyze liquidations on Jupiter Lend during the [October 10, 2025 market selloff](https://www.fticonsulting.com/insights/articles/crypto-crash-october-2025-leverage-met-liquidity). I wanted to understand how many liquidations were processed and the total value of liquidations.
+I ran into this problem while trying to analyze liquidations on Jupiter Lend during the [market selloff on October 10, 2025](https://www.fticonsulting.com/insights/articles/crypto-crash-october-2025-leverage-met-liquidity). I wanted to determine how many liquidations were processed and their total value.
 
 However, there were no query-ready tables for Jupiter Lend, the project's documentation was limited, and I couldn't locate a publicly available [Interface Description Language (IDL)](https://www.anchor-lang.com/docs/basics/idl) file.
 
-Before analyzing liquidations, I had to build the dataset first.
+Before analyzing liquidations, I had to build the dataset.
 
 To do this, I reverse-engineered the program by examining its instructions on Solscan, mapping them to Dune's tables, and writing SQL queries to decode them.
 
 This two-part series walks through that process. In this guide, you'll learn how to reverse-engineer instructions and identify Jupiter Lend liquidations to extract the core fields. [Part 2](https://defi-kai.github.io/kai-site/work/reverse-engineering-jupiter-lend-liquidations-part-2/) covers building the final dataset.
 
 This is an intermediate-to-advanced guide for analysts familiar with SQL who want to query Solana programs (written in Anchor) from scratch. By the end, you'll have a repeatable approach for investigating an Anchor program even when there's no decoded dataset or public IDL available.
+
 ## What we're building
 
 We're building an event-level dataset to track Jupiter Lend liquidations. Each row captures a liquidation, including the assets involved, debt repaid, and collateral seized.
@@ -46,7 +47,8 @@ The complete dataset includes additional fields, such as token mint addresses, t
 You can find the [completed dataset](https://github.com/DeFi-Kai/Jupiter-lend-liquidation-risk/blob/master/data/liquidations_2025-10-10.csv) and [source code](https://github.com/DeFi-Kai/Jupiter-lend-liquidation-risk/tree/master) on GitHub.
 
 This dataset can help risk management teams and researchers identify periods of elevated liquidation activity, measure the value of debt repaid and collateral seized, and assess stress within Jupiter Lend's lending markets.
-## How Jupiter Lend Liquidations Work
+
+## How Jupiter Lend liquidations work
 
 On Jupiter Lend, users deposit cryptocurrencies or tokenized assets as collateral and can borrow another asset up to a specified loan-to-value (LTV) ratio. Each market also has a liquidation threshold that determines when a borrowing position becomes undercollateralized enough to be eligible for liquidation.
 
@@ -55,7 +57,9 @@ When a position crosses its liquidation threshold, Jupiter Lend can programmatic
 ![Jupiter Lend liquidation flow diagram](<images/Drawing 2026-09-27 16.36.40.excalidraw.png>)
 
 Liquidations are carried out by a permissionless network of liquidators that monitor borrowing positions. During a partial liquidation, a liquidator repays a portion of the borrower’s debt and receives collateral in return, including a liquidation penalty.
+
 ### How liquidations appear on-chain
+
 Jupiter Lend uses multiple programs to handle different operations. For this walkthrough, we'll focus on two: `Jupiter Lend Borrow`, which manages borrowing positions and liquidations, and `Jupiter Lend Liquidity`, which manages the underlying assets and token transfers.
 
 ![Jupiter Lend program diagram](<images/Image 4.png>)
@@ -66,7 +70,8 @@ Jupiter Lend Programs
 When a liquidation occurs, the Borrow program executes a `Jupiter Lend Borrow: Liquidate` instruction. In the transactions examined here, this instruction invokes the Liquidity program twice through [cross-program invocations (CPIs)](https://solana.com/docs/core/cpi). These appear as two `Jupiter Lend Liquidity: Operate` instructions: one records the debt repayment, while the other records the collateral withdrawal.
 
 Together, these instructions provide the account information and raw amounts we'll need to reconstruct each liquidation.
-## Mental Model for Reverse-Engineering
+
+## Mental model for reverse-engineering
 
 To reverse-engineer Jupiter Lend's liquidation instructions, we'll start with a confirmed transaction and inspect its instructions for characteristics that distinguish liquidations from other activity. We'll use these findings to construct SQL filters in Dune, then validate them against additional confirmed liquidation transactions.
 
@@ -74,7 +79,8 @@ To follow along, keep three tabs open:
 - This guide
 - Solscan.io - Solana block explorer
 - Dune.com - Blockchain data warehouse
-## Using Dune to Query Data
+
+## Using Dune to query data
 
 Dune ingests and indexes blockchain transactions, allowing analysts to query the data using [DuneSQL](https://docs.dune.com/query-engine/overview) to create datasets and visualizations.
 
@@ -92,6 +98,7 @@ https://read.cryptodatabytes.com/p/starter-guide-to-solana-data-analysis
 Dune recommends using decoded tables for performant queries, but Jupiter Lend's program isn't decoded yet, so we'll query raw data to create a curated table. 
 
 For this walkthrough, we'll use the raw [`solana.instruction_calls`](https://dune.com/data/solana.instruction_calls) table to inspect Jupiter Lend instructions and decode their contents.
+
 ## Inspecting a known liquidation transaction
 
 To find example liquidation transactions:
@@ -109,6 +116,7 @@ https://solscan.io/account/jupr81YtYssSyPt8jbnGuiWon5f6x9TcDEFxYe3Bdzi
  For this guide, we'll use the transaction [vaupfN...](https://solscan.io/tx/vaupfNDZKX9siireKzdK63ZVpqzJMxarsw3LWeBdSZuRMHTFptd2soXiYaRq2nMgtK5X24YAniBsPyrcLYWnUpR) as the canonical example. It succeeded on October 10, 2025, contained `Jupiter Lend Borrow: Liquidate` at outer instruction index 4, and repaid USDC and received WSOL. The transaction also included a flashloan, but we'll exclude the flashloan logic from this guide.
 
 In the following sections, we'll use this transaction to identify the liquidation instruction, map accounts, and decode the liquidation amounts. We'll begin each section with observations on Solscan and then map the desired fields to SQL on Dune. 
+
 ## Identifying the liquidation instruction
 
 Our first step is to identify `Jupiter Lend Borrow: Liquidate` instructions in successful transactions and extract three fields:
@@ -128,13 +136,13 @@ On Solscan, the program label and instruction name appear together as `Jupiter L
 
 Let's locate both of these values on Solscan.
 
-We can find the program ID by expanding the liquidation instruction on Solscan. Under **Interact With**, the address of the Program ID is `jupr81YtYssSyPt8jbnGuiWon5f6x9TcDEFxYe3Bdzi`.
+We can find the program ID by expanding the liquidation instruction on Solscan. Under **Interact With**, the program ID is `jupr81YtYssSyPt8jbnGuiWon5f6x9TcDEFxYe3Bdzi`.
 
 ![Jupiter Lend Borrow program ID in Solscan instruction details](<images/Screenshot From 2026-09-27 21-30-36.png>)
 
 https://solscan.io/tx/vaupfNDZKX9siireKzdK63ZVpqzJMxarsw3LWeBdSZuRMHTFptd2soXiYaRq2nMgtK5X24YAniBsPyrcLYWnUpR
 
-Next, to view the `Liquidate` instruction's serialized data, click the "Raw" toggle in the upper-right corner of an instruction. The data appears on one line next to "Instruction Data".
+Next, to view the `Liquidate` instruction's serialized data, click the "Raw" toggle in the upper-right corner of an instruction. The data appears on one line next to "Instruction Data."
 
 ![Raw serialized data for the liquidation instruction](<images/Screenshot From 2026-09-23 14-36-55.png>)
 
@@ -187,14 +195,16 @@ To isolate `Liquidate` instructions of the Jupiter Lend Borrow program, the disc
 The remaining conditions exclude failed transactions using `tx_success = TRUE` and restrict the analysis to October 10, 2025, using `block_time`.
 
 We can now use `tx_id` and `outer_instruction_index` to retrieve the account arguments and related inner instructions needed to reconstruct each liquidation.
+
 ## Mapping the liquidation accounts
 
 Now that we've identified the liquidation instructions, we can extract the liquidator and the accounts associated with the collateral and debt assets.
+
 ### Locating the liquidator account
 
 In the dataset, I define `liquidator` as the transaction signer exposed by Dune's `tx_signer` column. 
 
-On Solscan, the transaction signer appears in the overview under "Signer". In our canonical transaction, the signer's token accounts supply the debt repayment asset (USDC) and receive the seized collateral (WSOL), as shown under "Transaction Actions" in Summary Mode.
+On Solscan, the transaction signer appears in the overview under "Signer." In our canonical transaction, the signer's token accounts supply the debt repayment asset (USDC) and receive the seized collateral (WSOL), as shown under "Transaction Actions" in Summary Mode.
 
 ![Liquidator signer and transaction actions on Solscan](<images/Screenshot From 2026-09-22 17-51-54.png>)
 
@@ -222,13 +232,14 @@ WHERE tx_id = 'vaupfNDZKX9siireKzdK63ZVpqzJMxarsw3LWeBdSZuRMHTFptd2soXiYaRq2nMgt
 https://dune.com/queries/8822173
 
 This query reuses the program ID, liquidation discriminator, and success filters introduced in the previous section.
+
 ### Locating the supply token, borrow token, and borrow position
 
 Next, we need the mint addresses of the collateral seized and debt repaid.
 
 Identifying the supply and borrow mint addresses lets us label assets that were seized as collateral and repaid as debt for each liquidation. The borrow position links those asset flows to the position being liquidated. 
 
-On Solscan, expand the `Jupiter Lend Borrow: Liquidate` instruction and look under "Input Accounts". In our canonical transaction, the supply and borrow token mints appear at positions 7 and 8, respectively. Lastly, the borrow account appears at position 14. 
+On Solscan, expand the `Jupiter Lend Borrow: Liquidate` instruction and look under "Input Accounts." In our canonical transaction, the supply and borrow token mints appear at positions 7 and 8, respectively. Lastly, the borrow account appears at position 14.
 
 ![Supply mint, borrow mint, and borrow-position accounts](<images/Screenshot From 2026-09-22 17-13-47.png>)
 
@@ -260,9 +271,10 @@ https://dune.com/queries/8822928
 The query reuses the program ID and discriminator filters from the previous section. It retrieves the token mint addresses and borrow position using their positions in `account_arguments`.
 
 Now we have the core metadata for each liquidation. The current query displays the mint addresses of the tokens. In Part 2, we'll use token metadata and price data to identify the assets and calculate their USD values.
+
 ## Decoding liquidation amounts
 
-Next, we need to extract the amount of debt repaid and collateral seized during each liquidation, which will reveal the value of each liquidation.
+Next, we need to extract the amounts of debt repaid and collateral seized during each liquidation, which will reveal the value of each liquidation.
 
 In our [canonical transaction](https://solscan.io/tx/vaupfNDZKX9siireKzdK63ZVpqzJMxarsw3LWeBdSZuRMHTFptd2soXiYaRq2nMgtK5X24YAniBsPyrcLYWnUpR), Solscan shows the liquidator repaying 246.103542 USDC and receiving 1.151768749 WSOL.
 
@@ -270,7 +282,8 @@ In our [canonical transaction](https://solscan.io/tx/vaupfNDZKX9siireKzdK63ZVpqz
 
 https://solscan.io/tx/vaupfNDZKX9siireKzdK63ZVpqzJMxarsw3LWeBdSZuRMHTFptd2soXiYaRq2nMgtK5X24YAniBsPyrcLYWnUpR
 
-These amounts appear in two `Jupiter Lend Liquidity: Operate` inner-instructions nested within the `Jupiter Lend Borrow: Liquidate` instruction. 
+These amounts appear in two `Jupiter Lend Liquidity: Operate` inner instructions nested within the `Jupiter Lend Borrow: Liquidate` instruction.
+
 ### Locating amounts
 
 To find the corresponding instructions, scroll down to the "Instruction Details" section and click the down arrow to the right of each instruction's name to expand it. Next, search the page (Ctrl + F) for the raw token amounts.
@@ -298,7 +311,7 @@ Here's what the two instructions reveal:
 | 4           | `borrow_amount` | `-246103542`  | 246.103542 USDC debt repaid        |
 | 5           | `supply_amount` | `-1151768749` | 1.151768749 WSOL collateral seized |
 
-Since these are raw base unit values, `246103542` represents `246.103542 USDC`, while `1151768749` represents `1.151768749 WSOL` after applying each token's decimals.
+Since these are raw base-unit values, `246103542` represents `246.103542 USDC`, while `1151768749` represents `1.151768749 WSOL` after applying each token's decimals.
 
 I checked this pattern across three additional liquidations ([Example 1](https://solscan.io/tx/5guPqgEj9FadRp4A2xJrn2rnBhRpRk4etLxjfYG75z16cZiFiQaqsH91q3XJvvqj3mDCWUEqHck2WG2kmCZ3xrau), [Example 2](https://solscan.io/tx/3LrpNDZVxsMAwceue1QRuGAUxa7yajryChcrSUgD7X2g8NVrzQzoZNWbBvTowfP2vJCmnZXJq2bCXN8Vg31sdBNe), and [Example 3](https://solscan.io/tx/3169fyF7pcfUvm2GYUu33o4VQ6BoRyiiEYXt38j4o7JxU3Uo6BMRnpX1XJN8dvdAVjWK6BAaXcV2ukz8xpuxYbdA)) and found the same relationship.
 
@@ -383,7 +396,7 @@ Here's how the decoding expression works, starting from the innermost clause:
 - `substr("data", 9, 8)` extracts the 8 bytes containing the supply amount.
 - `reverse(...)` reverses the byte order because the value is stored in little-endian format.
 - `from_big_endian_64(...)` reads the reversed bytes as a 64-bit integer.
-- The live query reads only the lower 8 bytes of each 16-byte `i128` field. This works for the observed amounts because they fit within signed 64-bit range and the remaining bytes are sign extension; the full 16-byte fields should be inspected before applying the shortcut to larger values.
+- The live query reads only the lower 8 bytes of each 16-byte `i128` field. This works for the observed amounts because they fit within the signed 64-bit range and the remaining bytes are sign extension; the full 16-byte fields should be inspected before applying the shortcut to larger values.
 - `CAST(... AS DECIMAL(38, 0))` converts the result to a precise whole-number decimal; `38` allows up to 38 total digits and `0` allows no digits after the decimal point.
 - `CAST(... AS DOUBLE)` converts the decimal to a floating-point number for later arithmetic, but floating-point conversion can lose precision for sufficiently large raw amounts.
 - `ABS(...)` removes the negative sign and returns the positive amount.
@@ -405,7 +418,8 @@ The same process is used for the debt side, starting at byte 25:
 
 The query returns raw token amounts, not human-readable quantities or USD values. To convert them, we divide by `10^decimals` for each token and multiply the resulting quantity by its historical USD price.
 
-In part 2, we'll rank the inner `Jupiter Lend Liquidity: Operate` instructions and join them with token metadata and historical prices from the [`prices.hour`](https://dune.com/data/prices.hour)  table to calculate their USD values.
+In Part 2, we'll rank the inner `Jupiter Lend Liquidity: Operate` instructions and join them with token metadata and historical prices from the [`prices.hour`](https://dune.com/data/prices.hour) table to calculate their USD values.
+
 ## Conclusion
 
 This walkthrough established how to map transaction fields from Solscan to Dune's `solana.instruction_calls` table and decode signed raw amount fields from the canonical liquidation.
