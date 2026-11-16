@@ -19,7 +19,7 @@
 </div>
 {{- end }}
 
-{{- range .RegularPages }}
+{{- range .RegularPages.ByDate.Reverse }}
 {{- partial "research-entry.html" . }}
 {{- end }}
 

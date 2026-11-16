@@ -2,8 +2,7 @@
 date = '2026-04-15T09:00:00-04:00'
 draft = true
 title = 'Perp DEXs: The Mismarked Capital Stack'
-aliases = ['/research/perp-dexs-the-mismarked-capital-stack/', '/research/lp-as-equity/']
-writing_category = 'research-analysis'
+aliases = ['/writing/perp-dexs-the-mismarked-capital-stack/', '/research/perp-dexs-the-mismarked-capital-stack/', '/research/lp-as-equity/']
 tags = ['Research & Analysis']
 +++
 Since the early days of GMX, the market has treated the token as the equity-like asset and the LP as the yield product. The token captures the narrative and gives investors a liquid claim on protocol growth. Meanwhile, the LP is usually evaluated on its APY.

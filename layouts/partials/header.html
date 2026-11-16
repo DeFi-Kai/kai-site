@@ -3,7 +3,7 @@
         <div class="logo">
             {{- $label_text := (site.Params.label.text | default site.Title) }}
             {{- if site.Title }}
-            <a href="{{ "" | absLangURL }}" accesskey="h" title="{{ $label_text }} (Alt + H)">
+            <a class="home-link" href="{{ "" | absLangURL }}" accesskey="h" title="Home (Alt + H)" aria-label="Home"{{ if .IsHome }} aria-current="page"{{ end }}>
                 {{- if site.Params.label.icon }}
                 {{- $img := resources.Get site.Params.label.icon }}
                 {{- if $img }}

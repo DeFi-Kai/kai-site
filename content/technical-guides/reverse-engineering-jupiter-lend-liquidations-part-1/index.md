@@ -3,6 +3,7 @@ date = '2026-09-28T09:00:00-04:00'
 draft = false
 title = 'Reverse-Engineering Jupiter Lend Liquidations: Part 1'
 slug = 'reverse-engineering-jupiter-lend-liquidations-part-1'
+aliases = ['/work/reverse-engineering-jupiter-lend-liquidations-part-1/']
 tags = ['Data & Methods', 'Technical Writing']
 data_toc = true
 +++
@@ -19,7 +20,7 @@ Before analyzing liquidations, I had to build the dataset.
 
 To do this, I reverse-engineered the program by examining its instructions on Solscan, mapping them to Dune's tables, and writing SQL queries to decode them.
 
-This two-part series walks through that process. In this guide, you'll learn how to reverse-engineer instructions and identify Jupiter Lend liquidations to extract the core fields. [Part 2](https://defi-kai.github.io/kai-site/work/reverse-engineering-jupiter-lend-liquidations-part-2/) covers building the final dataset.
+This two-part series walks through that process. In this guide, you'll learn how to reverse-engineer instructions and identify Jupiter Lend liquidations to extract the core fields. [Part 2]({{< relref "/technical-guides/jupiter-lend-liquidations-part-2" >}}) covers building the final dataset.
 
 This is an intermediate-to-advanced guide for analysts familiar with SQL who want to query Solana programs (written in Anchor) from scratch. By the end, you'll have a repeatable approach for investigating an Anchor program even when there's no decoded dataset or public IDL available.
 
@@ -424,4 +425,4 @@ In Part 2, we'll rank the inner `Jupiter Lend Liquidity: Operate` instructions a
 
 This walkthrough established how to map transaction fields from Solscan to Dune's `solana.instruction_calls` table and decode signed raw amount fields from the canonical liquidation.
 
-In [Part 2](https://defi-kai.github.io/kai-site/work/reverse-engineering-jupiter-lend-liquidations-part-2/), we'll combine these steps into a reusable query that reconstructs liquidation records and calculates their USD values.
+In [Part 2]({{< relref "/technical-guides/jupiter-lend-liquidations-part-2" >}}), we'll combine these steps into a reusable query that reconstructs liquidation records and calculates their USD values.

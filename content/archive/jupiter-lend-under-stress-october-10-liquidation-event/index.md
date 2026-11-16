@@ -3,8 +3,8 @@ date = '2026-10-05T09:00:00-04:00'
 draft = false
 title = 'Jupiter Lend Under Stress: Analyzing the October 10 Liquidation Event'
 slug = 'jupiter-lend-under-stress-october-10-liquidation-event'
+aliases = ['/writing/jupiter-lend-under-stress-october-10-liquidation-event/']
 tags = ['Data & Methods', 'Technical Writing']
-writing_category = 'research-analysis'
 +++
 
 On October 10, 2025, U.S. President Donald Trump announced that the U.S. would impose an additional 100% tariff on Chinese imports. This announcement was followed by a rapid market selloff: over the course of October 10, the price of ETH fell as much as 12% and SOL fell as much as 24%. 

@@ -8,7 +8,15 @@
     </div>
     {{- with .FeaturedWork }}
     <div class="featured-work">
-        {{ . | markdownify }}
+        <strong>Featured work</strong>
+        <ul>
+            {{- range . }}
+            <li>
+                <a href="{{ .url | relURL }}">{{ .title }}</a>
+                <span class="featured-work-description">{{ .description }}</span>
+            </li>
+            {{- end }}
+        </ul>
     </div>
     {{- end }}
 </article>

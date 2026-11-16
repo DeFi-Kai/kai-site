@@ -7,7 +7,7 @@
   </header>
   <div class="post-content">
     {{- if $externalUrl }}
-    <p>This post lives on X. <a href="{{ $externalUrl }}" target="_blank" rel="noopener noreferrer">Open the original post</a>.</p>
+    <p><a href="{{ $externalUrl }}" target="_blank" rel="noopener noreferrer">{{ .Title }}</a></p>
     {{- else }}
     <p>This post links to an external source.</p>
     {{- end }}

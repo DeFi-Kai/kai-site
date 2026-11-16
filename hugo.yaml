@@ -23,8 +23,9 @@ params:
   ShowCodeCopyButtons: true
   ShowBreadCrumbs: true
   mainSections:
-    - work
-    - writing
+    - case-studies
+    - technical-guides
+    - essays
     - notes
 
   assets:
@@ -39,13 +40,21 @@ params:
   homeInfoParams:
     Title: "Hi, I'm Kai."
     Content: |
-      I like to write about technology and build tools for data analysis and research. This is where I publish my work and what I've learned along the way.
-    FeaturedWork: |
-      **Featured work**
+      I write about technology and build tools and workflows that solve practical problems.
 
-      - [Reverse-Engineering Jupiter Lend Liquidations](./work/reverse-engineering-jupiter-lend-liquidations-part-1/) — Technical tutorial on decoding Solana instructions and building a SQL dataset.
-      - [Dune ETL Agent Documentation](https://github.com/DeFi-Kai/dune-etl-agent) — Developer documentation for an AI-assisted SQL development tool.
-      - [Building an Agentic Pipeline](./work/building-an-agentic-pipeline-for-onchain-analytics/) — Architecture and design case study for AI-assisted SQL development tool.
+      My path into technology started with writing. I began my career as an editorial assistant at Increment, Stripe's quarterly magazine for software development teams. Since then, I've expanded beyond writing into technical research, data analysis, and software implementation.
+
+      [More about me →](./about/)
+    FeaturedWork:
+      - title: "Building an Agentic Pipeline for Data Analysis"
+        url: /case-studies/building-an-agentic-pipeline-for-onchain-analytics/
+        description: "Case Study · AI, Automation, and Data Analysis"
+      - title: "Building a Local AI System for Financial Markets & Digital Asset Intelligence"
+        url: /case-studies/building-local-ai-system/
+        description: "Case Study · AI & Automation"
+      - title: "Reverse-Engineering Jupiter Lend Liquidations: Part 1"
+        url: /technical-guides/reverse-engineering-jupiter-lend-liquidations-part-1/
+        description: "Technical Guide · Data Analysis"
 
   socialIcons:
     - name: x
@@ -55,15 +64,15 @@ params:
 
 menu:
   main:
-    - name: Home
-      url: /
-      weight: 1
-    - name: Work
-      url: /work/
+    - name: Case Studies
+      url: /case-studies/
       weight: 2
-    - name: Research
-      url: /writing/
+    - name: Technical Guides
+      url: /technical-guides/
       weight: 3
+    - name: Essays
+      url: /essays/
+      weight: 4
     - name: About
       url: /about/
       weight: 5

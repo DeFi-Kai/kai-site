@@ -6,12 +6,14 @@
     if (anchor.closest('.logo')) return;
     if (anchor.closest('.post-entry')) return;
     if (anchor.closest('.breadcrumbs')) return;
+    if (anchor.closest('.home-info .featured-work')) return;
     const href = anchor.getAttribute('href');
     if (!href) return;
     if (href.startsWith('#')) return;
     if (href.startsWith('javascript:')) return;
     if (href.startsWith('mailto:')) return;
     if (href.startsWith('tel:')) return;
+    if (anchor.href === new URL('{{ "about/" | relURL }}', window.location.href).href) return;
     anchor.setAttribute('target', '_blank');
     anchor.setAttribute('rel', 'noopener');
   });

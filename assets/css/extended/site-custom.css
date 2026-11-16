@@ -1,3 +1,8 @@
+body,
+body.list {
+    background: var(--code-bg);
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-size: 17px;
@@ -9,6 +14,33 @@ body {
 
 .logo a img {
     image-rendering: pixelated;
+}
+
+.logo .home-link {
+    position: relative;
+}
+
+.home-link[aria-current="page"]::before,
+.home-link[aria-current="page"]::after {
+    content: "";
+    position: absolute;
+    background: var(--secondary);
+    clip-path: polygon(50% 0, 61% 39%, 100% 50%, 61% 61%, 50% 100%, 39% 61%, 0 50%, 39% 39%);
+    pointer-events: none;
+}
+
+.home-link[aria-current="page"]::before {
+    width: 10px;
+    height: 10px;
+    top: calc(50% - 23px);
+    right: 2px;
+}
+
+.home-link[aria-current="page"]::after {
+    width: 7px;
+    height: 7px;
+    top: calc(50% + 9px);
+    left: -5px;
 }
 
 h1,
@@ -64,7 +96,9 @@ a:hover {
     text-indent: 0;
 }
 
-[data-theme="dark"] body {
+[data-theme="dark"] body,
+[data-theme="dark"] body.list {
+    background: var(--theme);
     color: var(--primary);
 }
 
@@ -95,6 +129,10 @@ a:hover {
     margin-top: 8px;
 }
 
+.home-info .entry-content > p:not(:last-child) {
+    margin-bottom: 24px;
+}
+
 .home-info .featured-work {
     border-top: 1px solid var(--border);
     margin-top: 10px;
@@ -114,5 +152,11 @@ a:hover {
 }
 
 .home-info .featured-work li + li {
-    margin-top: 10px;
+    margin-top: 16px;
+}
+
+.home-info .featured-work-description {
+    display: block;
+    margin-top: 4px;
+    font-size: 14px;
 }
