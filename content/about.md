@@ -4,7 +4,7 @@ title = 'About'
 ShowToc = false
 +++
 
-I'm a liberal arts graduate who got increasingly technical.
+I'm Malachi (Kai) Dofat. I'm a liberal arts graduate who got increasingly technical.
 
 I studied English and began my career as an editorial assistant at [Increment](https://increment.com/teams/letter-from-the-editor/), Stripe's quarterly magazine for software development teams.
 
