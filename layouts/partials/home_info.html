@@ -11,8 +11,12 @@
         <strong>Featured work</strong>
         <ul>
             {{- range . }}
+            {{- $page := site.GetPage .pageRef }}
+            {{- if not $page }}
+                {{- errorf "Featured work page not found: %s" .pageRef }}
+            {{- end }}
             <li>
-                <a href="{{ .url | relURL }}">{{ .title }}</a>
+                <a href="{{ $page.RelPermalink }}">{{ .title }}</a>
                 <span class="featured-work-description">{{ .description }}</span>
             </li>
             {{- end }}

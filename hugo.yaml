@@ -47,13 +47,13 @@ params:
       [More about me →](./about/)
     FeaturedWork:
       - title: "Building an Agentic Pipeline for Data Analysis"
-        url: /case-studies/building-an-agentic-pipeline-for-onchain-analytics/
+        pageRef: /case-studies/automated-etl-pipeline-for-onchain-analysis
         description: "Case Study · AI, Automation, and Data Analysis"
       - title: "Building a Local AI System for Financial Markets & Digital Asset Intelligence"
-        url: /case-studies/building-local-ai-system/
+        pageRef: /case-studies/building-local-ai-system
         description: "Case Study · AI & Automation"
       - title: "Reverse-Engineering Jupiter Lend Liquidations: Part 1"
-        url: /technical-guides/reverse-engineering-jupiter-lend-liquidations-part-1/
+        pageRef: /technical-guides/reverse-engineering-jupiter-lend-liquidations-part-1
         description: "Technical Guide · Data Analysis"
 
   socialIcons:
