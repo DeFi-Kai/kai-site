@@ -57,8 +57,6 @@ params:
         description: "Technical Guide · Data Analysis"
 
   socialIcons:
-    - name: x
-      url: "https://x.com/defivaults"
     - name: github
       url: "https://github.com/DeFi-Kai"
     - name: linkedin
