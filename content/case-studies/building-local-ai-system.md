@@ -1,5 +1,5 @@
 +++
-date = '2026-03-15T09:00:00-05:00'
+date = '2026-02-15T09:00:00-05:00'
 draft = false
 title = 'Building a Local AI System for Financial Markets & Digital Asset Intelligence'
 aliases = ['/work/building-local-ai-system/', '/projects/building-local-ai-system/', '/journal/building-local-ai-system/']

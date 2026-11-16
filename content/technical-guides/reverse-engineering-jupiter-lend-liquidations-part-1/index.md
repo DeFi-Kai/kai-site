@@ -1,5 +1,5 @@
 +++
-date = '2026-09-28T09:00:00-04:00'
+date = '2025-11-26T09:00:00-04:00'
 draft = false
 title = 'Reverse-Engineering Jupiter Lend Liquidations: Part 1'
 slug = 'reverse-engineering-jupiter-lend-liquidations-part-1'

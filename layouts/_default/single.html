@@ -18,9 +18,9 @@
       </span>
       {{- end }}
     </h1>
-    {{- if and $isPost (not (.Param "hideMeta")) }}
+    {{- if and (ne .Section "") (not (.Param "hideMeta")) }}
     <div class="post-meta">
-      By <a href="{{ "about/" | relLangURL }}">Kai</a>&nbsp;·&nbsp;{{ .Date | time.Format "January 2006" }}
+      By <a href="{{ (site.GetPage "/about").RelPermalink }}">Malachi (Kai) Dofat</a>&nbsp;·&nbsp;<time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date | time.Format "January 2006" }}</time>
       {{- partial "translation_list.html" . -}}
       {{- partial "edit_post.html" . -}}
       {{- partial "post_canonical.html" . -}}
