@@ -46,15 +46,15 @@ params:
 
       [More about me →](./about/)
     FeaturedWork:
+      - title: "Why I still draft in the age of AI: A practical guide to writing with LLMs"
+        pageRef: /essays/writing-with-llms
+        description: "Essay · AI & Writing"
       - title: "Building an Agentic Pipeline for Data Analysis"
         pageRef: /case-studies/automated-etl-pipeline-for-onchain-analysis
         description: "Case Study · AI, Automation, and Data Analysis"
       - title: "Building a Local AI System for Financial Markets & Digital Asset Intelligence"
         pageRef: /case-studies/building-local-ai-system
         description: "Case Study · AI & Automation"
-      - title: "Why I still draft in the age of AI: A practical guide to writing with LLMs"
-        pageRef: /essays/writing-with-llms
-        description: "Essay · AI & Writing"
 
   socialIcons:
     - name: github
