@@ -6,9 +6,9 @@ aliases = ['/work/building-local-ai-system/', '/projects/building-local-ai-syste
 tags = ['Data & Methods', 'Technical Writing']
 +++
 
-Financial markets generate an enormous amount of information every day, from macroeconomic developments to digital asset markets and protocol governance. Keeping up with these developments while writing research reports can be time-consuming.
+Financial markets generate an enormous amount of information every day, from macroeconomic developments to digital asset markets and protocol governance. In the past, I've struggled to keep up with these developments while writing research reports.
 
-To streamline my research process, I built a locally hosted AI system that aggregates news and market data, identifies important developments, and generates daily research briefings. Using locally hosted language models, the system has reduced my daily news intake from 1–2 hours to approximately 20 minutes.
+So to streamline my research process, I built a locally hosted AI system that aggregates news and market data, identifies important developments, and generates daily research briefings. Using locally hosted language models, the system has reduced my daily news intake from 1–2 hours to approximately 20 minutes.
 
 The first version focuses primarily on digital assets, with plans to expand coverage to traditional financial markets and broader industry developments.
 ## How does it work?

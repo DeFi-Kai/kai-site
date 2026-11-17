@@ -1,0 +1,6 @@
+<details class="prompt-disclosure">
+  <summary>{{ .Get "summary" | default "View prompt" }}</summary>
+  <div class="prompt-disclosure-content">
+    <pre><code>{{ .Inner | strings.TrimSpace | htmlEscape | safeHTML }}</code></pre>
+  </div>
+</details>

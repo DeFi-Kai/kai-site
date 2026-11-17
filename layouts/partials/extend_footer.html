@@ -22,6 +22,10 @@
 
 <script src="{{ "js/cte-explorer.js" | relURL }}" defer></script>
 
+{{- if .IsPage }}
+{{ partial "image-viewer.html" . }}
+{{- end }}
+
 <script>
 (() => {
   const toc = document.querySelector('.data-toc');
