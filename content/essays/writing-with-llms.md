@@ -6,7 +6,7 @@ title = 'Why I still draft in the age of AI: A practical guide to writing with L
 
 When ChatGPT was released in 2022, my employers encouraged me to use it for writing, but no one explained _how_, or better yet, how _not to_ use it.
 
-Like many people, I used it to generate first drafts, but I spent more time rewriting its arguments to reflect what I actually thought. This also raised a moral concern: letting AI develop my arguments felt unethical because I was skipping the intellectual work.
+Like many people, I used it to generate first drafts, but I spent more time rewriting its arguments to reflect what I actually thought. This also raised a moral concern: letting AI develop my arguments felt unethical because I was skipping the intellectual work of developing them myself.
 
 Then I took a different approach. I wrote everything myself and used AI to revise my drafts. But it did more than what I intended. Editing everything in one sweep was effectively undoing the intellectual work I put into the draft, which stripped away my original ideas or turned the prose into slop.
 
