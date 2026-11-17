@@ -2,6 +2,11 @@
 date = '2026-11-16T09:00:00-05:00'
 draft = false
 title = 'Why I still draft in the age of AI: A practical guide to writing with LLMs'
+
+[cover]
+image = 'images/writing-with-llms/cover.png'
+alt = 'Screenshot of an early draft of Why I still draft in the age of AI'
+hiddenInSingle = true
 +++
 
 When ChatGPT was released in 2022, my employers encouraged me to use it for writing, but no one explained _how_, or better yet, how _not to_ use it.
