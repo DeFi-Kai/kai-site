@@ -52,9 +52,9 @@ params:
       - title: "Building a Local AI System for Financial Markets & Digital Asset Intelligence"
         pageRef: /case-studies/building-local-ai-system
         description: "Case Study · AI & Automation"
-      - title: "Reverse-Engineering Jupiter Lend Liquidations: Part 1"
-        pageRef: /technical-guides/reverse-engineering-jupiter-lend-liquidations-part-1
-        description: "Technical Guide · Data Analysis"
+      - title: "Why I still draft in the age of AI: A practical guide to writing with LLMs"
+        pageRef: /essays/writing-with-llms
+        description: "Essay · AI & Writing"
 
   socialIcons:
     - name: github
