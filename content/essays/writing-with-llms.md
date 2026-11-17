@@ -4,37 +4,40 @@ draft = false
 title = 'Why I still draft in the age of AI: A practical guide to writing with LLMs'
 +++
 
-When ChatGPT was released in 2022, my employers encouraged me to use it for writing, but no one explained *how*, or better yet, how *not to* use it.
+When ChatGPT was released in 2022, my employers encouraged me to use it for writing, but no one explained _how_, or better yet, how _not to_ use it.
 
-Like many people, I used it to generate first drafts but I noticed that I was spending more time rewriting its arguments to reflect my actually thoughts. This also raised a moral concern: letting AI develop my arguments felt unethical because I was skipping the intellectual work of developing them myself.
+Like many people, I used it to generate first drafts, but I spent more time rewriting its arguments to reflect what I actually thought. This also raised a moral concern: letting AI develop my arguments felt unethical because I was skipping the intellectual work.
 
-Then I took a different approach. I wrote everything myself and used AI to revise my drafts. But it did more than that. Editing everything in one sweep was effectively undoing the intellectual work I put into the draft which could strip away my original ideas or convert the prose to slop. 
+Then I took a different approach. I wrote everything myself and used AI to revise my drafts. But it did more than what I intended. Editing everything in one sweep was effectively undoing the intellectual work I put into the draft, which stripped away my original ideas or turned the prose into slop.
 
-These early experiments led me to read more about the craft of writing to understand what I was missing. Looking back, my biggest mistake was treating each stage of writing as if it required the same kind of thinking. In reality, each stage of writing flexes a different "mental muscle." Drafting, for instance, helps us get our ideas out onto the page and work through them. Editing, on the other hand, actually involves three distinct stages that many people treat as one. Developmental editing requires us to evaluate and develop our arguments, line editing helps us improve our prose, and copy editing fixes grammar mistakes.
+These early experiments led me to read more about the craft of writing to understand what I was missing.
 
-Understanding these differences changed how I approached AI. Instead of automating writing as a whole, I developed an editorial process that uses AI to support each stage. As I draft, AI helps by questioning my ideas and drawing out insights I might've missed. Once I have a draft, AI's role changes across three editing stages: developmental, line, and copy editing.  
+Looking back, my biggest mistake was treating each stage of writing as if it required the same kind of thinking. In reality, each stage of writing flexes a different "mental muscle." Drafting, for instance, helps us get our ideas out onto the page and work through them. Editing, on the other hand, actually involves three distinct stages that many people treat as one: developmental editing helps us evaluate and develop our arguments, line editing improves our prose, and copy editing fixes grammar mistakes.
+
+Understanding these differences changed how I approached AI. Instead of automating writing as a whole, I developed an editorial process that uses AI to support each stage. As I draft, AI helps by questioning my ideas and drawing out insights I might've missed. Then, it organizes the draft into an outline without rewriting my prose. Once I have a complete draft, AI's role changes across three editing stages: developmental, line, and copy editing.
 
 I'll walk through each stage of my process for long-form writing, explaining where I've found AI most useful and sharing the prompts and tools I use. **You can also find the complete collection of prompts on [GitHub.](https://github.com/DeFi-Kai/writing-with-llms-toolkit/tree/main)**
 ## Drafting & outlining  
 
 The first stage of writing is exploratory: you record your rough thoughts and figure out what you're really trying to say. As you develop those notes, they'll become your draft.
 
-Begin with a braindump: write down all your thoughts and motivations related to the topic. Then spend at least another session reviewing your notes and rewriting the ideas that are the least clear until they reflect your actual viewpoint. The rewrite will help you understand your own position before being influenced by AI.  
+Begin with a brain dump: write down all your thoughts and motivations related to the topic. Then spend at least another session reviewing your notes and rewriting the ideas that are the least clear until they reflect your actual viewpoint. The rewrite will help you understand your own position before being influenced by AI.
 
-This may seem counterproductive since the goal is to use AI to speed things up, but there are some parts of writing you just cant skip. As [Paul Graham](https://paulgraham.com/read.html) puts it:
+This may seem counterproductive since the goal is to use AI to speed things up, but there are some parts of writing you just can't skip. As [Paul Graham](https://paulgraham.com/read.html) puts it:
 
 > There is a kind of thinking that can only be done by writing.
 
 The notes you produce in this stage give AI more original context to work with. They also give you a reference for judging whether its suggestions reflect your intended argument.
 
-Once you have a working title and rough notes, it's time to consult AI so that you can test your initial position and develop your draft. 
+Once you have a working title and rough notes, it's time to consult AI so that you can test your initial position and develop your draft.
 
 I created a three-phase prompt to help you develop and organize your ideas through guided questions. By the end, it produces an outline and organizes the material you've written into the appropriate sections.
 
 To begin, paste the prompt into your chat with the following inputs:
+
 - Topic (required) - The working title of your article.
-- Article type (required) - The type of writing (eg. personal essay, case study, or tutorial.)
-- Intended audience (required) - Who you're writing for (eg. developers, project managers, or people curious about AI.)
+- Article type (required) - The type of writing (e.g., personal essay, case study, or tutorial).
+- Intended audience (required) - Who you're writing for (e.g., developers, project managers, or people curious about AI).
 - Rough notes (required) - Your initial brain dump of ideas.
 
 {{< prompt summary="View the editorial planning prompt." >}}
@@ -172,17 +175,17 @@ If I specify a stage, start there using the material I provide. Otherwise, begin
 
 Here's how the three phases work:
 
-**For the first stage** AI gives you tailored questions, which you copy into your editor (Google docs, Obsidian, etc.) and answer independently. The questions help you discover what you think and identify ideas you haven't explored. Your answers also provide the LLM with more original context.
+**For the first stage,** AI gives you tailored questions, which you copy into your editor (Google Docs, Obsidian, etc.) and answer independently. The questions help you discover what you think and identify ideas you haven't explored. Your answers also provide the LLM with more original context.
 
 For example, while planning my [case study on building an AI-assisted analytics pipeline](https://defi-kai.github.io/kai-site/work/building-an-agentic-pipeline-for-onchain-analytics/), I received a question that helped me consider what readers might learn from my experience:
 
 {{< img src="images/writing-with-llms/editorial-planning-worksheet.png" alt="Writing worksheet response about reader assumptions and context management in an analytics pipeline" >}}
 
-Answering this question helped me recognize that readers might already know Claude can generate SQL queries, but might not understand the challenges of managing documentation and context. I incorporated that insight into the introduction and used it to develop the [**Context management and resource selection**](https://defi-kai.github.io/kai-site/work/building-an-agentic-pipeline-for-onchain-analytics/#context-management-and-resource-selection) sub-section explaining my approach to context management.
+Answering this question helped me recognize that readers might already know Claude can generate SQL queries, but might not understand the challenges of managing documentation and context. I incorporated that insight into the introduction and used it to develop the [**Context management and resource selection**](https://defi-kai.github.io/kai-site/work/building-an-agentic-pipeline-for-onchain-analytics/#context-management-and-resource-selection) subsection explaining my approach to context management.
 
-**For the second stage**, you bring your responses back to the chat. AI helps you examine connections, weak points, and possible angles by asking up to three follow-up questions. After testing your reasoning, you'll choose a working direction and leave with a planning note. You can use that note to sketch your own outline or have AI create one in the next stage.
+**For the second stage,** you bring your responses back to the chat. AI helps you examine connections, weak points, and possible angles by asking up to three follow-up questions. After testing your reasoning, you'll choose a working direction and leave with a planning note. You can use that note to sketch your own outline or have AI create one in the next stage.
 
-**For the third stage**, you and AI review the order of your outline and identify where your existing material belongs. The goal is to organize your ideas into a coherent argument. The prompt then outputs each section's main idea, your existing prose under the appropriate headings, and any gaps you still need to fill.
+**For the third stage,** you and AI review the order of your outline and identify where your existing material belongs. The goal is to organize your ideas into a coherent argument. The prompt then outputs each section's main idea, your existing prose under the appropriate headings, and any gaps you still need to fill.
 
 ---
 
@@ -194,7 +197,7 @@ You don't have to follow these phases in a strict order. Feel free to use indivi
 
 As you fill in the draft, you might stumble on an idea that AI's questions never prompted. If that idea significantly changes the direction of your article, consider revisiting your original plan.
 
-You may also need to consult AI for research or data analysis during drafting. It's ok to use AI to help surface the information, but don't let those tasks turn into AI creating content for you. 
+You may also need to consult AI for research or data analysis during drafting. It's OK to use AI to help surface the information, but don't let those tasks turn into AI creating content for you.
 
 ## Editing workflow
 
@@ -601,8 +604,8 @@ To get you started, here's some writing that shaped how I think about writing:
 - [Show, Don't Tell: Why it Works](https://www.youtube.com/watch?v=IC1tpzA4NWg) — Writing with Andrew
 ## Conclusion
 
-When we draft and develop our own ideas we're more likely to avoid AI slop in the process. The workflow helps surface original insights to produce writing that emphasizes your viewpoint and style. AI stays involved to amplify our ideas and speed up execution for tasks that require less judgement. 
+When we draft and develop our own ideas, we're less likely to produce AI slop. This workflow helps us surface original insights and produce writing that reflects our viewpoints and style. AI remains involved, helping us build on those ideas and move faster through tasks that require less judgment.
 
-As AI tools evolve I believe it will always be important to know what you want to say, and have the judgement to determine how you should say it. As humans, we earn our viewpoints through lived experiences, something that AI is not capable of. AI can only communicate preferences and experiences based on input from other humans. The loop begins with us. 
+As AI tools evolve, I believe we'll always need to know what we want to say and exercise judgment about how to say it. As humans, we earn our viewpoints through lived experience, something AI can't have. AI can only draw on the preferences and experiences humans share with it. The loop begins with us. The loop begins with us. 
 
-Whatever the future holds, we should continue flexing our "writing muscles" to become better communicators and create writing that humans actually want to read.
+Whatever the future holds, we should continue flexing our “writing muscles” to become better communicators and write things people actually want to read.
