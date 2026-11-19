@@ -12,7 +12,7 @@ hiddenInList = true
 
 When ChatGPT was released in 2022, my employers encouraged me to use it for writing, but no one explained how to use it, let alone how not to.
 
-Like many people, I started by using it to generate first drafts. I'd read through the first draft and realize I didn't agree with half the arguments. By the time I'd corrected the reasoning and rewritten the paragraphs, I could've written the whole thing myself. There was something else that bothered me. If I let AI develop my arguments, was I really doing the intellectual work of writing?
+Like many people, I started by using it to generate first drafts. I'd read through the first draft and realize I didn't agree with half the arguments. After spending hours correcting the reasoning and rewriting paragraphs, I'd realize I could've written the whole thing myself. There was something else that bothered me. If I let AI develop my arguments, was I really doing the intellectual work of writing?
 
 So I tried the opposite approach. I wrote everything myself and used AI only for editing. But that created another problem. When I asked it to revise an entire draft, it often stripped away the ideas and phrasing I'd worked to develop. I'd solved the problem of AI writing my arguments, only to have it rewrite them during editing.
 
