@@ -10,19 +10,19 @@ hiddenInSingle = true
 hiddenInList = true
 +++
 
-When ChatGPT was released in 2022, my employers encouraged me to use it for writing, but no one explained _how_, or better yet, how _not to_ use it.
+When ChatGPT was released in 2022, my employers encouraged me to use it for writing, but no one explained how to use it, let alone how not to.
 
-Like many people, I used it to generate first drafts, but I spent more time rewriting its arguments to reflect what I actually thought. This also raised a moral concern: letting AI develop my arguments felt unethical because I was skipping the intellectual work of developing them myself.
+Like many people, I started by using it to generate first drafts. I'd read through the first draft and realize I didn't agree with half the arguments. By the time I'd corrected the reasoning and rewritten the paragraphs, I could've written the whole thing myself. There was something else that bothered me. If I let AI develop my arguments, was I really doing the intellectual work of writing?
 
-Then I took a different approach. I wrote everything myself and used AI to revise my drafts. But it did more than what I intended. Editing everything in one sweep was effectively undoing the intellectual work I put into the draft, which stripped away my original ideas or turned the prose into slop.
+So I tried the opposite approach. I wrote everything myself and used AI only for editing. But that created another problem. When I asked it to revise an entire draft, it often stripped away the ideas and phrasing I'd worked to develop. I'd solved the problem of AI writing my arguments, only to have it rewrite them during editing.
 
-These early experiments led me to read more about the craft of writing to understand what I was missing.
+After both approaches failed, I went looking for answers. I read books and essays and watched videos about the writing process, trying to understand what I was missing.
 
-Looking back, my biggest mistake was treating each stage of writing as if it required the same kind of thinking. In reality, each stage of writing flexes a different "mental muscle." Drafting, for instance, helps us get our ideas out onto the page and work through them. Editing, on the other hand, actually involves three distinct stages that many people treat as one: developmental editing helps us evaluate and develop our arguments, line editing improves our prose, and copy editing fixes grammar mistakes.
+Looking back, my biggest mistake was treating every stage of writing as if it required the same kind of thinking. In reality, drafting and editing call for different skills: in one you're creating and in the other you're constantly evaluating. More than that, editing isn't just editing. I was asking AI to evaluate my arguments and improve my prose in a single pass, without specifying what I wanted it to focus on.
 
-Understanding these differences changed how I approached AI. Instead of automating writing as a whole, I developed an editorial process that uses AI to support each stage. As I draft, AI helps by questioning my ideas and drawing out insights I might've missed. Then, it organizes the draft into an outline without rewriting my prose. Once I have a complete draft, AI's role changes across three editing stages: developmental, line, and copy editing.
+Understanding these differences changed how I used AI. Instead of automating the entire writing process, I developed a workflow with distinct prompts for each stage, giving AI a specific role while keeping the thinking and decisions in my hands.
 
-I'll walk through each stage of my process for long-form writing, explaining where I've found AI most useful and sharing the prompts and tools I use. **You can also find the complete collection of prompts on [GitHub.](https://github.com/DeFi-Kai/writing-with-llms-toolkit/tree/main)**
+I’ll walk through each stage of my long-form writing process, explaining where I’ve found AI most useful and sharing the prompts and tools I use. **You can also find the complete collection of prompts on [GitHub.](https://github.com/DeFi-Kai/writing-with-llms-toolkit/tree/main)**
 ## Drafting & outlining  
 
 The first stage of writing is exploratory: you record your rough thoughts and figure out what you're really trying to say. As you develop those notes, they'll become your draft.
