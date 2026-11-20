@@ -46,7 +46,7 @@ params:
 
       [More about me →](./about/)
     FeaturedWork:
-      - title: "Why I still draft in the age of AI: A practical guide to writing with LLMs"
+      - title: "How I Write With AI Without Outsourcing My Thinking"
         pageRef: /essays/writing-with-llms
         description: "Essay · AI & Writing"
       - title: "Building an Agentic Pipeline for Data Analysis"
