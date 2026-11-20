@@ -10,9 +10,9 @@ hiddenInSingle = true
 hiddenInList = true
 +++
 
-When ChatGPT launched in 2022, my employers encouraged us to experiment with it, so I started using it to generate first drafts. I'd read through them and realize I didn't agree with half the arguments. By the time I finished correcting the reasoning and rewriting paragraphs, I realized I could've written the whole thing myself.
+When ChatGPT launched in 2022, my employers encouraged us to experiment with it, so I started using it to generate first drafts. But when I read through them, I realized I didn't agree with half the arguments. I'd edit them, and by the time I finished rewriting paragraphs, I realized I could've written the whole thing myself.
 
-So I tried the opposite approach. I wrote everything myself and used AI only for editing. But that created another problem. When I asked it to revise an entire draft, it usually stripped away the ideas and phrasing that I worked to develop. I had solved the problem of AI writing my arguments, only to have it rewrite them during editing.
+So I tried the opposite approach. I wrote everything myself and used AI only for editing. But that created another problem. When I asked it to revise an entire draft, it usually stripped away my ideas and phrasing. I had solved the problem of AI writing my arguments, only to have it rewrite them during editing.
 
 Looking back, my biggest mistake was treating drafting and editing as tasks I could hand over entirely to AI. In reality, drafting and editing call for different kinds of judgement. More than that, editing isn't just editing. I was asking AI to evaluate my arguments and improve my prose in a single pass, without specifying what I wanted it to focus on.
 
