@@ -1,7 +1,7 @@
 +++
 date = '2026-11-16T09:00:00-05:00'
 draft = false
-title = 'Why I still draft in the age of AI: A practical guide to writing with LLMs'
+title = 'How I Write With AI Without Outsourcing My Thinking'
 
 [cover]
 image = 'images/writing-with-llms/cover.png'
@@ -10,13 +10,11 @@ hiddenInSingle = true
 hiddenInList = true
 +++
 
-When ChatGPT released in 2022, my employers encouraged me to use it for writing, but no one explained how to use it.
-
-Like many people, I started by using it to generate first drafts. I'd read through a draft and realize I didn't agree with half the arguments. By the time I finished correcting the reasoning and rewriting paragraphs, I realized that I could've written the whole thing myself.
+Like many people, I started using AI to generate first drafts. But I'd read through them and realize I didn't agree with half the arguments. By the time I finished correcting the reasoning and rewriting paragraphs, I realized I could've written the whole thing myself.
 
 So I tried the opposite approach. I wrote everything myself and used AI only for editing. But that created another problem. When I asked it to revise an entire draft, it usually stripped away the ideas and phrasing that I worked to develop. I had solved the problem of AI writing my arguments, only to have it rewrite them during editing.
 
-Looking back, my biggest mistake was treating every stage of writing as if it required the same kind of thinking. In reality, drafting and editing call for different skills: in one you're creating and in the other you're constantly evaluating. More than that, editing isn't just editing. I was asking AI to evaluate my arguments and improve my prose in a single pass, without specifying what I wanted it to focus on.
+Looking back, my biggest mistake was treating drafting and editing as tasks I could hand over entirely to AI. In reality, drafting and editing call for different kinds of judgement. More than that, editing isn't just editing. I was asking AI to evaluate my arguments and improve my prose in a single pass, without specifying what I wanted it to focus on.
 
 Understanding these differences changed how I used AI. Instead of automating the entire writing process, I developed a workflow with distinct prompts for each stage, giving AI a specific role while keeping the thinking and decisions in my hands.
 
