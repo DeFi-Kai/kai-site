@@ -1,7 +1,7 @@
 +++
 date = '2026-11-16T09:00:00-05:00'
 draft = false
-title = 'How I Write With AI Without Outsourcing My Thinking'
+title = 'How to Write With AI Without Letting It Write for You'
 
 [cover]
 image = 'images/writing-with-llms/cover.png'
@@ -10,13 +10,13 @@ hiddenInSingle = true
 hiddenInList = true
 +++
 
-When ChatGPT launched in 2022, my employers encouraged us to experiment with it, so I started using it to generate first drafts. But when I read through them, I realized I didn't agree with half the arguments. I'd edit them, and by the time I finished rewriting paragraphs, I realized I could've written the whole thing myself.
+When ChatGPT launched in 2022, my employers encouraged us to experiment with it, so I started using it to generate first drafts. I came into it with high hopes that I could 10x my productivity. But when I read through the drafts, it didn't sound like me and I didn't agree with half the arguments. I'd edit them, and by the time I finished rewriting paragraphs, I realized I could've just written it myself. 
 
-So I tried the opposite approach. I wrote everything myself and used AI only for editing. But that created another problem. When I asked it to revise an entire draft, it usually stripped away my ideas and phrasing. I had solved the problem of AI writing my arguments, only to have it rewrite them during editing.
+If AI couldn't draft for me, maybe it was a better editor? So I tried writing everything myself and using AI only for editing. But that created another problem. When I asked it to revise an entire draft in one sweep, it would strip away my ideas and change the way said things.  
 
-Looking back, my biggest mistake was treating drafting and editing as tasks I could hand over entirely to AI. In reality, drafting and editing call for different kinds of judgement. More than that, editing isn't just editing. I was asking AI to evaluate my arguments and improve my prose in a single pass, without specifying what I wanted it to focus on.
+My best results came when I stopped handing over entire tasks to AI. Instead of giving it a prompt and letting it run wild, I started assigning it a specific role at each stage of writing. For drafting, I found that AI could ask questions that helped me develop my own ideas. Editing was another story. I found that it worked better when I separated it into three stages: developmental editing to question my arguments, line editing to identify opportunities to improve flow, and copy editing to catch grammar and punctuation mistakes.
 
-Understanding these differences changed how I used AI. Instead of automating the entire writing process, I developed a workflow with distinct prompts for each stage, giving AI a specific role while keeping the thinking and decisions in my hands.
+This approach keeps me involved in the thinking and decisions while using AI to support different parts of the writing process. It can make the process faster but it isn't a shortcut around thinking. Keep in mind that the more decisions you hand over to AI, the more likely you are to produce slop.
 
 I’ll walk through each stage of my long-form writing process, explaining where I’ve found AI most useful and sharing the prompts and tools I use. **You can also find the complete collection of prompts on [GitHub.](https://github.com/DeFi-Kai/writing-with-llms-toolkit/tree/main)**
 ## Drafting & outlining  
