@@ -5,7 +5,7 @@ title = 'How to Write With AI Without Letting It Write for You'
 
 [cover]
 image = 'images/writing-with-llms/cover.png'
-alt = 'Prompt folders for copy editing, developmental editing, editorial planning, and line editing'
+alt = 'Writing workflow folders for editorial planning, developmental editing, line editing, and copy editing'
 hiddenInSingle = true
 hiddenInList = true
 +++
