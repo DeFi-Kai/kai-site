@@ -10,13 +10,13 @@ hiddenInSingle = true
 hiddenInList = true
 +++
 
-When ChatGPT launched in 2022, my employers encouraged us to experiment with it, so I started using it to generate first drafts. I came into it with high hopes that I could 10x my productivity. But when I read through the drafts, it didn't sound like me and I didn't agree with half the arguments. I'd edit them, and by the time I finished rewriting paragraphs, I realized I could've just written it myself. 
+When ChatGPT launched in 2022, my employers encouraged us to experiment with it, so I started using it to generate first drafts. I came into hoping that I could 10x my productivity. But when I read through the drafts, it didn't sound like me and I didn't agree with half the arguments. I'd edit them, and by the time I finished rewriting it, I realized I could've just written the whole thing myself. 
 
-If AI couldn't draft for me, maybe it was a better editor? So I tried writing everything myself and using AI only for editing. But that created another problem. When I asked it to revise an entire draft in one sweep, it would strip away my ideas and change the way said things.  
+If AI couldn't draft for me, maybe it was a better editor? So I tried writing everything myself and using AI only for editing. But that created another problem. When I asked it to revise an entire draft in one sweep, it would change my ideas when I only intended to fix the grammar.  
 
 My best results came when I stopped handing over entire tasks to AI. Instead of giving it a prompt and letting it run wild, I started assigning it a specific role at each stage of writing. For drafting, I found that AI could ask questions that helped me develop my own ideas. Editing was another story. I found that it worked better when I separated it into three stages: developmental editing to question my arguments, line editing to identify opportunities to improve flow, and copy editing to catch grammar and punctuation mistakes.
 
-This approach keeps me involved in the thinking and decisions while using AI to support different parts of the writing process. It can make the process faster but it isn't a shortcut around thinking. Keep in mind that the more decisions you hand over to AI, the more likely you are to produce slop.
+This approach helps keep me involved in the thinking and decisions while using AI to support different parts of the writing process. It can make the process faster but it isn't a shortcut around thinking. After all, the more decisions you hand over to AI, the more likely you are to produce slop.
 
 I’ll walk through each stage of my long-form writing process, explaining where I’ve found AI most useful and sharing the prompts and tools I use. **You can also find the complete collection of prompts on [GitHub.](https://github.com/DeFi-Kai/writing-with-llms-toolkit/tree/main)**
 ## Drafting & outlining  
