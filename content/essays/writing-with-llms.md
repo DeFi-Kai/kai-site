@@ -12,6 +12,8 @@ hiddenInSingle = true
 hiddenInList = true
 +++
 
+---
+
 When ChatGPT launched in 2022, my employers encouraged us to experiment with it. I started using it to generate first drafts hoping that it would 10x my productivity. But when I read through the drafts, they didn't sound like me and I didn't agree with half the arguments. I'd edit them, and by the time I finished rewriting them, I realized I could've just written the whole thing myself.
 
 If AI couldn't draft for me, maybe it was a better editor? So I tried writing everything myself and using AI only for editing. But that created another problem. I had sentences I wanted to rephrase and grammar mistakes I wanted to fix, but I expected AI to figure out what needed changing and what should be left alone. When I asked it to edit an entire draft in one sweep, it would sometimes change arguments or phrasing that I wanted to keep. 

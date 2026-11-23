@@ -11,7 +11,7 @@ At [Blocmates](https://x.com/blocmates), we used Claude to help us write SQL que
 
 Each new analysis required us to provide Claude with table schemas, API documentation, and other project-specific information. We also had to copy and paste code between Claude, Dune, and other tools. These repetitive tasks took time and introduced opportunities for errors-- undermining the time saved by using an LLM in the first place.
 
-To address these problems, we built an agentic pipeline that automates context management, SQL generation, and testing. Instead of manually providing context and copying & pasting data across platforms, the analyst fills out a data specification and sends it to Claude Code. The agent loads the necessary context, writes SQL queries, fetches data from APIs, and tests and publishes the queries to Dune. Once the queries are published, analysts can inspect them in Dune's interface for final verification and configure the visualizations.
+To address these problems, we built an agentic pipeline that automates SQL generation, and testing while handling the context for each project. Instead of manually providing documentation and copying & pasting data across platforms, the analyst fills out a data specification and sends it to Claude Code. The agent loads the necessary context, writes SQL queries, fetches data from APIs, and tests and publishes the queries to Dune. Once the queries are published, analysts can inspect them in Dune's interface for final verification and configure the visualizations.
 
 We used this workflow to generate queries and create custom datasets for the [MetaDAO ICO dashboard](https://dune.com/blocmates_research/metadao-blocmates-pro) and [Chain GDP dashboard](https://dune.com/blocmatesresearch/chain-gdp).
 

@@ -2,11 +2,15 @@
 date = '2025-11-26T09:00:00-04:00'
 draft = false
 title = 'Reverse-Engineering Jupiter Lend Liquidations: Part 1'
+description = '''How do you analyze activity on a blockchain protocol when there's no ready-made dataset? In this guide, I demonstrate how to write SQL queries in Dune and use Solscan to reverse-engineer Solana program instructions, using Jupiter Lend liquidations as a practical example.'''
+description_italic = true
 slug = 'reverse-engineering-jupiter-lend-liquidations-part-1'
 aliases = ['/work/reverse-engineering-jupiter-lend-liquidations-part-1/']
 tags = ['Data & Methods', 'Technical Writing']
 data_toc = true
 +++
+
+---
 
 Most onchain analysis starts with the assumption that someone has already decoded the dataset. On platforms like Dune, analysts can usually query human-readable tables without having to interpret the raw bytes recorded onchain.
 
