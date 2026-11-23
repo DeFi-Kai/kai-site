@@ -40,13 +40,11 @@ params:
   homeInfoParams:
     Title: "Hi, I'm Kai."
     Content: |
-      I write about technology and build tools and workflows that solve practical problems.
-
-      My path into technology started with writing. I began my career as an editorial assistant at Increment, Stripe's quarterly magazine for software development teams. Since then, I've expanded beyond writing into technical research, data analysis, and software implementation.
+      I write about technology and build tools and workflows that solve practical problems. My path into technology started with writing. I began my career as an editorial assistant at Increment, Stripe’s quarterly magazine for software development teams. Since then, I’ve expanded beyond writing into technical research, data analysis, and software implementation.
 
       [More about me →](./about/)
     FeaturedWork:
-      - title: "How I Write With AI Without Outsourcing My Thinking"
+      - title: "How to Write With AI Without Letting It Write for You"
         pageRef: /essays/writing-with-llms
         description: "Essay · AI & Writing"
       - title: "Building an Agentic Pipeline for Data Analysis"

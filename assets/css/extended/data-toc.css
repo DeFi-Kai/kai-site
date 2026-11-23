@@ -102,4 +102,13 @@
     grid-column: 2;
     grid-row: 1;
   }
+
+  /* Let the header provide the spacing above an opening divider. */
+  .data-post-layout .post-content:has(> hr:first-child) {
+    margin-top: 0;
+  }
+
+  .data-post-layout .post-content > hr:first-child {
+    margin-top: 0;
+  }
 }

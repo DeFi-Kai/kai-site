@@ -12,9 +12,7 @@ data_toc = true
 
 ---
 
-Most onchain analysis starts with the assumption that someone has already decoded the dataset. On platforms like Dune, analysts can usually query human-readable tables without having to interpret the raw bytes recorded onchain.
-
-But what if the dataset you need doesn't exist?
+On platforms like Dune, analysts can usually query human-readable tables without having to interpret the raw bytes recorded onchain. But what if the dataset you need doesn't exist?
 
 I ran into this problem while trying to analyze liquidations on Jupiter Lend during the [market selloff on October 10, 2025](https://www.fticonsulting.com/insights/articles/crypto-crash-october-2025-leverage-met-liquidity). I wanted to determine how many liquidations were processed and their total value.
 
