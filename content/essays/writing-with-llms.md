@@ -2,7 +2,7 @@
 date = '2026-11-16T09:00:00-05:00'
 draft = false
 title = 'How to Write With AI Without Letting It Write for You'
-description = '''How can you use AI to make writing more productive without losing control of your ideas? This guide walks through my approach to writing with LLMs, including how I use AI to develop ideas, evaluate arguments, improve prose, and catch mistakes. I've also included the prompts I use at each stage.'''
+description = '''This guide walks through my approach to writing with LLMs, including how I use AI to develop ideas, evaluate arguments, improve prose, and catch mistakes. I've also included the prompts I use at each stage.'''
 description_italic = true
 
 [cover]
