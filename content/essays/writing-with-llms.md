@@ -2,6 +2,8 @@
 date = '2026-11-16T09:00:00-05:00'
 draft = false
 title = 'How to Write With AI Without Letting It Write for You'
+description = '''How can you use AI to make writing more productive without losing control of your ideas? This guide walks through my approach to writing with LLMs, including how I use AI to develop ideas, evaluate arguments, improve prose, and catch mistakes. I've also included the prompts I use at each stage.'''
+description_italic = true
 
 [cover]
 image = 'images/writing-with-llms/cover.png'
@@ -9,9 +11,8 @@ alt = 'Screenshot of an early draft of Why I still draft in the age of AI'
 hiddenInSingle = true
 hiddenInList = true
 +++
-![[Screenshot 2026-11-22 at 1.49.19 AM.png|389]]
 
-When ChatGPT launched in 2022, my employers encouraged us to experiment with it, so I started using it to generate first drafts. I came into it hoping that I could 10x my productivity. But when I read through the drafts, they didn't sound like me and I didn't agree with half the arguments. I'd edit them, and by the time I finished rewriting them, I realized I could've just written the whole thing myself. 
+When ChatGPT launched in 2022, my employers encouraged us to experiment with it. I started using it to generate first drafts hoping that it would 10x my productivity. But when I read through the drafts, they didn't sound like me and I didn't agree with half the arguments. I'd edit them, and by the time I finished rewriting them, I realized I could've just written the whole thing myself.
 
 If AI couldn't draft for me, maybe it was a better editor? So I tried writing everything myself and using AI only for editing. But that created another problem. I had sentences I wanted to rephrase and grammar mistakes I wanted to fix, but I expected AI to figure out what needed changing and what should be left alone. When I asked it to edit an entire draft in one sweep, it would sometimes change arguments or phrasing that I wanted to keep. 
 

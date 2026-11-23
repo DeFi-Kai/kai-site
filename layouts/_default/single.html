@@ -34,7 +34,7 @@
     {{- if not $isPost }}
     {{- if .Description }}
     <div class="post-description">
-      {{ .Description }}
+      {{ if .Param "description_italic" }}<em>{{ .Description }}</em>{{ else }}{{ .Description }}{{ end }}
     </div>
     {{- end }}
     {{- end }}
