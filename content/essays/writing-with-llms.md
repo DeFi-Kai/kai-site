@@ -5,16 +5,17 @@ title = 'How to Write With AI Without Letting It Write for You'
 
 [cover]
 image = 'images/writing-with-llms/cover.png'
-alt = 'Writing workflow folders for editorial planning, developmental editing, line editing, and copy editing'
+alt = 'Screenshot of an early draft of Why I still draft in the age of AI'
 hiddenInSingle = true
 hiddenInList = true
 +++
+![[Screenshot 2026-11-22 at 1.49.19 AM.png|389]]
 
 When ChatGPT launched in 2022, my employers encouraged us to experiment with it, so I started using it to generate first drafts. I came into it hoping that I could 10x my productivity. But when I read through the drafts, they didn't sound like me and I didn't agree with half the arguments. I'd edit them, and by the time I finished rewriting them, I realized I could've just written the whole thing myself. 
 
 If AI couldn't draft for me, maybe it was a better editor? So I tried writing everything myself and using AI only for editing. But that created another problem. I had sentences I wanted to rephrase and grammar mistakes I wanted to fix, but I expected AI to figure out what needed changing and what should be left alone. When I asked it to edit an entire draft in one sweep, it would sometimes change arguments or phrasing that I wanted to keep. 
 
-My best results came when I stopped handing over entire tasks to AI. Instead of giving it a prompt and letting it run wild, I started assigning it a specific role at each stage of writing. For drafting, I found that AI could ask questions that helped me develop my own ideas. Editing was another story. It worked best when I separated it into three stages: developmental editing to question my arguments, line editing to identify opportunities to improve flow, and copy editing to catch grammar and punctuation mistakes. 
+**My best results came when I stopped handing over entire tasks to AI.** Instead of giving it a prompt and letting it run wild, I started assigning it a specific role at each stage of writing. For drafting, I found that AI could ask questions that helped me develop my own ideas. Editing was another story. It worked best when I separated it into three stages: developmental editing to question my arguments, line editing to identify opportunities to improve flow, and copy editing to catch grammar and punctuation mistakes. 
 
 This approach uses AI to improve efficiency while keeping me in the loop. Let's be clear, though: it isn't a shortcut around thinking. After all, the more decisions you outsource to AI, the more likely you are to produce slop.
 

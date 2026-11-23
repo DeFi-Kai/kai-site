@@ -7,11 +7,11 @@ aliases = ['/work/building-an-agentic-pipeline-for-onchain-analytics/', '/data/a
 tags = ['Data & Methods', 'Technical Writing']
 +++
 
-Using an LLM for data analysis can sometimes create more problems than it solves. In a chat-based workflow, the analyst still has to supply table schemas, API documentation, and project-specific context while copying and pasting data between multiple interfaces and tools. If you're not careful, this setup can increase token costs and introduce errors -- undermining the time saved by using an LLM in the first place.
+At [Blocmates](https://x.com/blocmates), we used Claude to help us write SQL queries and Python scripts for data analysis. This helped us finish research reports faster, but it also introduced another problem: managing context.
 
-At [Blocmates](https://x.com/blocmates), we created an agentic pipeline to automate these tasks. Instead of manually providing context and coordinating each step, the analyst fills out a data specification and sends it to Claude Code. The agent loads the necessary context, writes SQL queries, fetches data from APIs, and tests and publishes the queries to Dune.
+Each new analysis required us to provide Claude with table schemas, API documentation, and other project-specific information. We also had to copy and paste code between Claude, Dune, and other tools. These repetitive tasks took time and introduced opportunities for errors-- undermining the time saved by using an LLM in the first place.
 
-The pipeline uses GitHub for version control and GitHub Actions for coordinating scheduled API ingestion to update datasets in Dune. Once the queries are published, analysts can inspect them in Dune's interface for final verification and configure the visualizations.
+To address these problems, we built an agentic pipeline that automates context management, SQL generation, and testing. Instead of manually providing context and copying & pasting data across platforms, the analyst fills out a data specification and sends it to Claude Code. The agent loads the necessary context, writes SQL queries, fetches data from APIs, and tests and publishes the queries to Dune. Once the queries are published, analysts can inspect them in Dune's interface for final verification and configure the visualizations.
 
 We used this workflow to generate queries and create custom datasets for the [MetaDAO ICO dashboard](https://dune.com/blocmates_research/metadao-blocmates-pro) and [Chain GDP dashboard](https://dune.com/blocmatesresearch/chain-gdp).
 
