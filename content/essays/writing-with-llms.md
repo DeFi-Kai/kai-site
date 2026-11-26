@@ -2,7 +2,7 @@
 date = '2026-11-16T09:00:00-05:00'
 draft = false
 title = 'How to Write With AI Without Letting It Write for You'
-description = '''This guide covers how I use LLMs to make writing more productive while staying involved in the thinking and decision-making throughout the process. I also share the prompts I've developed to support my workflow without outsourcing my ideas or judgment to AI.'''
+description = '''This guide covers how I use LLMs to make writing more productive while staying involved in the thinking throughout the process.'''
 description_italic = true
 
 [cover]
@@ -14,15 +14,15 @@ hiddenInList = true
 
 ---
 
-When ChatGPT launched in 2022, my employers encouraged us to experiment with it. I started using it to generate first drafts hoping that it would 10x my productivity. But when I read through the drafts, they didn't sound like me and I didn't agree with half the arguments. I'd edit them, and by the time I finished rewriting them, I realized I could've just written the whole thing myself.
+When ChatGPT launched in 2022, my employers encouraged us to experiment with it, so I started using it to generate first drafts. With all the hype surrounding "AI workflows," I was hoping AI would 10x my productivity. But when I read through the drafts, the tone felt sterile and I didn’t agree with half the arguments. By the time I finished rewriting them, I realized I could’ve just written the whole thing myself.
 
-If AI couldn't draft for me, maybe it was a better editor? So I tried writing everything myself and using AI only for editing. But that created another problem. I had sentences I wanted to rephrase and grammar mistakes I wanted to fix, but I expected AI to figure out what needed changing and what should be left alone. When I asked it to edit an entire draft in one sweep, it would sometimes change arguments or phrasing that I wanted to keep. 
+If AI couldn’t draft for me, maybe it was a better editor? So I tried writing everything myself and using AI only for editing. But that created another problem. When I asked it to edit an entire draft in one sweep, it would sometimes change arguments or phrasing that I wanted to keep. I wrote the drafts myself, only to have AI inject its arguments into my writing.
 
-**My best results came when I stopped handing over entire tasks to AI.** Instead of giving it a prompt and letting it run wild, I started assigning it a specific role at each stage of writing. For drafting, I found that AI could ask questions that helped me develop my own ideas. Editing was another story. It worked best when I separated it into three stages: developmental editing to question my arguments, line editing to identify opportunities to improve flow, and copy editing to catch grammar and punctuation mistakes. 
+Neither of these approaches was efficient. And looking back, I made the same mistake in both attempts: I handed over an entire task to AI without considering the kind of judgment it required. The problem with that approach is that each stage of the writing process exercises a different "mental muscle." Drafting, for instance, helps us get our thoughts out, while editing helps us evaluate and refine our ideas. The goal is to use AI in a way that promotes this sort of original thinking rather than replacing it. Since each stage of writing involves a different kind of judgment, AI's role needs to adapt accordingly.
 
-This approach uses AI to improve efficiency while keeping me in the loop. Let's be clear, though: it isn't a shortcut around thinking. After all, the more decisions you outsource to AI, the more likely you are to produce slop.
+That realization changed the way I approached writing with AI.
 
-I’ll walk through each stage of my long-form writing process, explaining where I’ve found AI most useful and sharing the prompts and tools I use. **You can also find the complete collection of prompts on [GitHub.](https://github.com/DeFi-Kai/writing-with-llms-toolkit/tree/main)**
+I’ll walk through each stage of my writing process, sharing how I use AI along with my prompts and tools. **You can also find the complete collection of prompts on [GitHub.](https://github.com/DeFi-Kai/writing-with-llms-toolkit/tree/main)**
 ## Drafting & outlining  
 
 The first stage of writing is exploratory: you record your rough thoughts and figure out what you're really trying to say. As you develop those notes, they'll become your draft.
