@@ -18,9 +18,7 @@ When ChatGPT launched in 2022, my employers encouraged us to experiment with it,
 
 If AI couldn’t draft for me, maybe it was a better editor? So I tried writing everything myself and using AI only for editing. But that created another problem. When I asked it to edit an entire draft in one sweep, it would sometimes change arguments or phrasing that I wanted to keep. I wrote the drafts myself, only to have AI inject its arguments into my writing.
 
-Neither of these approaches was efficient. And looking back, I made the same mistake in both attempts: I handed over an entire task to AI without considering the kind of judgment it required. The problem with that approach is that each stage of the writing process exercises a different "mental muscle." Drafting, for instance, helps us get our thoughts out, while editing helps us evaluate and refine our ideas. The goal is to use AI in a way that promotes this sort of original thinking rather than replacing it. Since each stage of writing involves a different kind of judgment, AI's role needs to adapt accordingly.
-
-That realization changed the way I approached writing with AI.
+Neither of these approaches was efficient. And looking back, I made the same mistake in both attempts: I handed over an entire task to AI without considering the kind of judgment it required. The problem with that approach is that each stage of the writing process exercises a different "mental muscle." Drafting, for instance, helps us get our thoughts out, while editing helps us evaluate and refine our ideas. The goal is to use AI in a way that promotes this sort of original thinking rather than replacing it. And since each stage of writing involves a different kind of judgment, AI's role needs to adapt accordingly.
 
 I’ll walk through each stage of my writing process, sharing how I use AI along with my prompts and tools. **You can also find the complete collection of prompts on [GitHub.](https://github.com/DeFi-Kai/writing-with-llms-toolkit/tree/main)**
 ## Drafting & outlining  
